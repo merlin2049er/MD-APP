@@ -85,7 +85,7 @@ class ProductsController < ApplicationController
     def product_params
       # params.fetch(:product, {})
       
-        params.require(:product).permit(:title, :template, :price, :msrp, :Startdate, :enddate, :draft, :active, :funded )
+        params.require(:product).permit(:title, :template, :price, :msrp, :Startdate, :enddate, :draft, :active, :funded, :category_id)
         
     end
     
