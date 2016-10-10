@@ -1,0 +1,24 @@
+<% if user_signed_in? %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @category.name %>
+</p>
+
+<%= link_to 'Edit', edit_category_path(@category) %> |
+<%= link_to 'Back', categories_path %>
+
+<% else %>
+
+  <div class="alert alert-warning" role="alert">You must be signed in to see the category.</div>
+  
+<% end %>
+
+<% @products.each do |product| %>
+  
+  <h3> <%= link_to product.title, product %> </h3>
+  <p> <%= product.template %>  </p>
+
+<% end %>

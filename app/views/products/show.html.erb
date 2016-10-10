@@ -1,0 +1,90 @@
+<% if user_signed_in? %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <H1><%= @product.title %></H1>
+ 
+</p>
+ <div class="well well-lg"> 
+ 
+ <% start_time =  @product.Startdate %>
+ <% end_time   =  @product.enddate %>
+ 
+
+ 
+ 
+ <% time_now = Time.now  %>
+ 
+  
+ 
+ 
+ <%  if @product.active == true %>
+     Active campaign.  Start date: <%= @product.Startdate %>;  End date: <%= @product.enddate %>.
+      <% else %> 
+       Campaign ended. 
+     <% end %> 
+<br/>
+ 
+ Duration, <%=   distance_of_time_in_words(start_time, end_time)  %>.<br/>
+ 
+ <% if time_now >=	start_time  %>
+ 
+     Time remaining, <%=   distance_of_time_in_words(time_now, end_time)  %>.<br/>
+ <% end %>
+ 
+<!--  <%= ( @product.enddate.to_date - time_now.to_date).to_i %>  -->
+<!-- <%= (  @product.enddate.to_date - @product.Startdate.to_date ).to_i %> -->
+
+ 
+ 
+  <% if time_now  <= start_time  %>
+      Campaign has not started yet.
+  <% else %>
+  
+     <div class="progress">
+          <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"  style="width: <%=  ((( @product.enddate.to_date - time_now.to_date).to_f)  / ((  @product.enddate.to_date - @product.Startdate.to_date ).to_f)  *100).to_i  %>%;">
+         <%= distance_of_time_in_words(time_now, end_time)  %>
+      </div>
+    </div>
+  <% end %>
+ 
+ 
+ </div>
+ 
+ <div class="well well-lg"> 
+ 
+ <%  if @product.funded == true %>
+     Successfully 
+      <% else %> 
+          Not
+     <% end %> 
+ Funded.
+ 
+ 
+ </div>
+ 
+ 
+   
+<p>
+  <div class="well well-lg">    <%= @product.template %><br/>   </div>
+   
+   <%= @product.price %> MSDP<br/>
+   <%= @product.msrp %> MSRP<br/>
+  
+   
+  
+</p>   
+
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>
+
+
+<% else %>
+
+<!-- <h1>You must be signed in to see the product.</h1> -->
+
+<div class="alert alert-warning" role="alert">You must be signed in to see the product.</div>
+
+<% end %>

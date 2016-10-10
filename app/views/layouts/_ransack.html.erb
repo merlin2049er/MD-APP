@@ -1,0 +1,18 @@
+<%= search_form_for @search do |f| %>
+    <div class="field">
+  <%= f.label :title_or_template_cont, "Search" %>
+
+       
+      <%= f.text_field :title_or_template_cont %>
+      
+       
+  <div class="actions">
+ 
+    <%= f.submit "Search" %>
+ 
+    </div>
+
+    
+  </div>
+  
+  <% end %>
