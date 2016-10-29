@@ -7,7 +7,7 @@ gem 'rails', '4.2.5'
 # gem 'sqlite3'
 
 # use Postgres on Heroku
-gem 'pg'
+# gem 'pg'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
