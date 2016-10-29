@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161027152840) do
+ActiveRecord::Schema.define(version: 20161029184851) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -93,6 +93,14 @@ ActiveRecord::Schema.define(version: 20161027152840) do
   end
 
   add_index "commontator_threads", ["commontable_id", "commontable_type"], name: "index_commontator_threads_on_c_id_and_c_type", unique: true
+
+  create_table "contacts", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.text     "message"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "impressions", force: :cascade do |t|
     t.string   "impressionable_type"

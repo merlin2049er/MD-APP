@@ -9,8 +9,9 @@ class PagesController < ApplicationController
     add_breadcrumb "home", index_path
   end
 
-  def contact
+  def contacts
      add_breadcrumb "contact", contact_path
+      @contact = Contact.new
   end
 
   def about

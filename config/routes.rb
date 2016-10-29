@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :users
   resources :categories
   resources :notifications
+  resources :contacts
  
   
   root to: 'pages#index'
