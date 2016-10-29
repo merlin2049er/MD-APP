@@ -57,6 +57,12 @@ gem 'faker'
 
 gem 'validates_timeliness', '~> 4.0'
 
+gem "breadcrumbs_on_rails"
+
+gem 'impressionist'
+
+gem 'commontator'
+
 
 
 group :development, :test do
@@ -70,7 +76,14 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  
-  
+  gem "better_errors"
+
 end
+
+group :production do
+    gem 'pg'
+    gem 'rails_12factor'
+end
+
+
 

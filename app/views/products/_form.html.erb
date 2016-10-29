@@ -5,9 +5,9 @@
  <!-- fix this -->
  <div class = "field">
     
-    <%= f.label :category %><br/>
+    <%= f.label :category_id %><br/>
     
-    <%= f.collection_select :category, Category.all, :id, :name %>
+    <%= f.collection_select :category_id, Category.all, :id, :name %>
   </div>
   <!-- fix this, it should save the category to the model -->
   
@@ -15,6 +15,7 @@
     
     <%= f.input :active %>
     <%= f.input :funded %>
+    <%= f.input :picurl %>
     <%= f.input :title %>
     <%= f.input :template %>
     <%= f.input :price %>

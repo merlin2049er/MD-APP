@@ -4,9 +4,15 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Products</h1>
+<!--
+<h1>Products</h1>
+-->
 
-  <%= render 'layouts/ransack' %>
+  <%#= render 'layouts/ransack' %>
+
+<!--
+  <%#= @products.product.count %> records<br/>
+-->
 
 <table>
   <thead>
@@ -18,10 +24,15 @@
   <tbody>
     <% @products.each do |product| %>
       <tr>
+         <td><%= link_to product.title , product  %></td>
+        <!-- 
         <td><%= product.title %></td>
+      
+        
         <td><%= link_to 'Show', product %></td>
         <td><%= link_to 'Edit', edit_product_path(product) %></td>
         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      -->
       </tr>
     <% end %>
   </tbody>
@@ -31,8 +42,9 @@
 
 <%= will_paginate @product, renderer: BootstrapPagination::Rails %><br/>
 
+<!-- 
 <%= link_to 'New Product', new_product_path %>
-
+-->
 
 <% else %>
 

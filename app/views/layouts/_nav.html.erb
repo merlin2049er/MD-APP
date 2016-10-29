@@ -8,24 +8,25 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-           <a class="navbar-brand" href="#">MASSDUMP</a>     
+           <a class="navbar-brand" href="/">MASSDUMP</a>     
     
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-         <li ><%= link_to "About",  pages_about_path %> <span class="sr-only">(current)</span></li>
-        
-        <li><%= link_to "Contact", pages_contact_path %></li>
+         <li ><%= link_to "About",  about_path %> <span class="sr-only">(current)</span></li>
+    
+     
+        <li><%= link_to "Contact", contact_path %></li>
+   
+     
         
       <%= render 'layouts/categorydropdown' %> 
-   
+     
        </ul>
-       
-    <%= render 'layouts/searchbox' %>   
-        
-    
+     
+       <%= render 'layouts/searchbox' %> 
           
           
         <!-- <li><a href="#">Link</a></li> -->
@@ -41,11 +42,14 @@
         
        <% end %>
         
+       
+        
         <% if !current_user %>
          <ul class="nav navbar-nav navbar-right">
+               <li><%= link_to "Terms", terms_path %></li> 
         <li><%= link_to "Sign Up", new_user_registration_path %></li>  
         
-         <ul class="nav navbar-nav navbar-right">
+        <!-- <ul class="nav navbar-nav navbar-right">  -->
         <li><%= link_to "Log in", new_user_session_path %></li>
         
       <% end %>
@@ -56,9 +60,10 @@
             
       <% end %>
             
-          </ul>
+          <!-- </ul> -->
         </li>
       </ul>
+      
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>

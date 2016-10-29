@@ -5,5 +5,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
          
 
-  has_many :notifications         
+  has_many :notifications
+  has_and_belongs_to_many :product
+  
+  acts_as_commontator
+  
 end

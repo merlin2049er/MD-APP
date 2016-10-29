@@ -1,14 +1,18 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   
+  add_breadcrumb "MASSDUMP", :root_path
+  
   # GET /products
   # GET /products.json
   def index
    
    # @search = Product.search(params[:search])
+   
+    add_breadcrumb "products", products_path
     
     #ransack
-    @search = Product.search(params[:q])
+    @search = Product.where('draft' => false, 'active' => true).search(params[:q])
     @products = @search.result.paginate(page: params[:page] , per_page: 10)
       
     # @products = Product.all
@@ -19,20 +23,29 @@ class ProductsController < ApplicationController
     #@product = Product.paginate(:page => params[:page], per_page: 10)
     #Product.paginate(:page => params[:page], per_page: 10)
     
+    
+    
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
+    add_breadcrumb "product", products_path
+     commontator_thread_show(@product)
+    
+    impressionist(@product)
+    
   end
 
   # GET /products/new
   def new
+    add_breadcrumb "product", products_path
     @product = Product.new
   end
 
   # GET /products/1/edit
   def edit
+    add_breadcrumb "product", products_path
   end
 
   # POST /products
@@ -85,7 +98,7 @@ class ProductsController < ApplicationController
     def product_params
       # params.fetch(:product, {})
       
-        params.require(:product).permit(:title, :template, :price, :msrp, :Startdate, :enddate, :draft, :active, :funded )
+        params.require(:product).permit(:title, :picurl, :template, :price, :msrp, :Startdate, :enddate, :draft, :active, :funded, :category_id )
         
     end
     

@@ -10,6 +10,7 @@ class ApplicationController < ActionController::Base
  
   def all_categories
       @categories = Category.all
+      @categories = Category.order(:name)
   end
   
   def all_products
@@ -19,5 +20,13 @@ class ApplicationController < ActionController::Base
   def all_notifications
     @notifications = Notification.all
   end 
+
+  rescue_from ActiveRecord::RecordNotFound, with: :show_errors
+ 
+  
+  def show_errors
+     render 'pages/error'
+  end 
+  
 
 end

@@ -6,15 +6,24 @@ Rails.application.routes.draw do
   # devise_for :users
   devise_for :users, :controllers => { registrations: 'registrations' }
   
+  mount Commontator::Engine => '/commontator'
+  
   resources :users
   resources :categories
   resources :notifications
  
   
   root to: 'pages#index'
-  get 'pages/index'
-  get 'pages/contact'
-  get 'pages/about'
+  get 'index', to: 'pages#index'
+  get 'contact', to: 'pages#contact'
+  get 'about', to: 'pages#about'
+  get 'error', to: 'pages#error'
+  get 'terms', to: 'pages#terms'
+  #get 'categories', to: 'categories#categories'
+  
+  
+  
+  get "*path", to: redirect("/error") 
   
   #ActiveAdmin.routes(self)
 
