@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161030204255) do
+ActiveRecord::Schema.define(version: 20161030220031) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -100,6 +100,8 @@ ActiveRecord::Schema.define(version: 20161030204255) do
     t.text     "message"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "registered_user"
+    t.boolean  "supplier"
   end
 
   create_table "impressions", force: :cascade do |t|
