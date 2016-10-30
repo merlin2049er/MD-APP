@@ -1,8 +1,5 @@
 class ContactsController < ApplicationController
- 
-def index
-# redirect_to '/contact' 
-end
+
 
  def new
  @contact = Contact.new

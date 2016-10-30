@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :notifications
   resources :contacts
  
+  get 'pages/contact'
   
   root to: 'pages#index'
   get 'index', to: 'pages#index'
