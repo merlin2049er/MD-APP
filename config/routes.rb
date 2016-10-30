@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :products
   mount ForestLiana::Engine => '/forest'
   # devise_for :users
-  devise_for :users, :controllers => { registrations: 'registrations' }
+  devise_for :users, :controllers => { registrations: 'registrations', confirmations: 'confirmations' }
   
   mount Commontator::Engine => '/commontator'
   
