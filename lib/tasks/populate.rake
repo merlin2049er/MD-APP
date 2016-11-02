@@ -1,6 +1,6 @@
 namespace :db do
     desc "Erase and fill database"
-    task :populate => :environment do
+    task :populate => :envirnonment do
         require 'populator'
         
         [Category, Product].each(&:delete_all)
