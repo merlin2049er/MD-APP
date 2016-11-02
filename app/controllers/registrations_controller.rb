@@ -2,7 +2,7 @@ class RegistrationsController < Devise::RegistrationsController
  
   add_breadcrumb "MASSDUMP", :root_path
   #add_breadcrumb  "sign up", :new_user_registration
-  #add_breadcrumb "sign up", :contacts_path
+  add_breadcrumb "sign up", :contacts_path
   
  
   def edit
