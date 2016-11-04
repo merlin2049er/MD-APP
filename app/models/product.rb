@@ -1,7 +1,7 @@
 class Product < ActiveRecord::Base
     
-     include PublicActivity::Model
-     tracked
+     #include PublicActivity::Model
+     #tracked owner: Proc.new{ |controller, model| controller.current_user }
     
     is_impressionable
     acts_as_commontable

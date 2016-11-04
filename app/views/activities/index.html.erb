@@ -1,8 +1,27 @@
-<h1>Activity</h1>
+<#% if user_signed_in? %> 
 
-<% @activities.each do |activity| %>
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Activity<br/>
+                    <small>I'm as mad as hell, and I'm not going to take this anymore!</small>
+                </h1>
+                <% @activities.each do |activity| %>
     <div class ="activity">
     <%= @activity.inspect %>
     
     </div>
 <% end %>
+                <!--
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, explicabo dolores ipsam aliquam inventore corrupti eveniet quisquam quod totam laudantium repudiandae obcaecati ea consectetur debitis velit facere nisi expedita vel?</p>
+                -->
+            </div>
+</div>
+
+<!-- <h1>You must be signed in to see the products.</h1> -->
+
+<#% else %>
+<div class="alert alert-warning" role="alert"> You must be signed in to see the activity log.</div>
+  
+<#% end %> 
