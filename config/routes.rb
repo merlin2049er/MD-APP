@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :categories
   resources :notifications
   resources :contacts
+  resources :activities
  
   get 'pages/contact'
   
@@ -21,6 +22,7 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   get 'error', to: 'pages#error'
   get 'terms', to: 'pages#terms'
+  #get 'activities', to: 'pages#activity'
   #get 'categories', to: 'categories#categories'
   
   

@@ -10,4 +10,7 @@ class User < ActiveRecord::Base
   
   acts_as_commontator
   
+  include PublicActivity::Model
+  tracked owner: ->(controller,model) {controller.current_user}
+  
 end

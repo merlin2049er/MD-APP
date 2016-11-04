@@ -31,4 +31,6 @@ class PagesController < ApplicationController
   end
   
   
+  
+  
 end

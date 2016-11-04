@@ -1,5 +1,8 @@
 class Product < ActiveRecord::Base
     
+     include PublicActivity::Model
+     tracked
+    
     is_impressionable
     acts_as_commontable
     
@@ -20,6 +23,8 @@ class Product < ActiveRecord::Base
     
     validates_date :Startdate, :before => :enddate, 
                                :before_message => "must be at before the end date."
+                               
+
     
 def edit
     

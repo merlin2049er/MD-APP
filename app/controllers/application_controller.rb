@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   helper_method :all_products
   helper_method :all_notifications
   
+  include PublicActivity::StoreController
  
   def all_categories
       @categories = Category.all

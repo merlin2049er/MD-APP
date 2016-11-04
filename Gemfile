@@ -67,6 +67,7 @@ gem 'impressionist'
 
 gem 'commontator'
 
+gem 'public_activity', '~> 1.5'
 
 
 group :development, :test do
