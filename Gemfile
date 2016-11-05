@@ -37,7 +37,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 #devise
-gem 'devise', '~>3.4.1'
+gem 'devise', '~> 3.5', '>= 3.5.6'
 
 #sassy
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
@@ -82,6 +82,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem "better_errors"
+  gem 'sqlite3'
 
 end
 
