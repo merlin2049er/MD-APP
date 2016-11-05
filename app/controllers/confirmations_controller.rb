@@ -5,6 +5,6 @@ class ConfirmationsController < Devise::ConfirmationsController
   
   private
   def after_confirmation_path_for(pages, index)
-    your_new_after_confirmation_path
+    new_user_session_path
   end
 end
