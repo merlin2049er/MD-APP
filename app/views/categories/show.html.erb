@@ -19,7 +19,7 @@
 <% @products.each do |product| %>
   
   <h3> <%= link_to product.title, product %> </h3>
-  <p> <%= product.template %>  </p>
+  <p> <%= truncate (product.template,  30, "... (continued)") %>  </p>
   <% end %>
   
   <% else %>
