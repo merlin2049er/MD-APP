@@ -18,6 +18,7 @@
   <button type="button" class="btn btn-primary active">Add to Cart</button>
   <!--
   <button type="button" class="btn btn-primary disabled">Disabled Primary</button>
+  added qty
   -->
   
 </p>
@@ -36,7 +37,7 @@
  
  
  <%  if @product.active == true && time_now <= end_time %>
-     Active campaign.  Start date: <%= @product.Startdate %>;  End date: <%= @product.enddate %>.
+     Active campaign. Quantity: <%= @product.qty %>; Start date: <%= @product.Startdate %>;  End date: <%= @product.enddate %>.
       Duration, <%=   distance_of_time_in_words(start_time, end_time)  %>.<br/>
       
       <% if time_now >=	start_time  %>

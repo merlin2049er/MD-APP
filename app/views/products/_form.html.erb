@@ -9,7 +9,7 @@
     
     <%= f.collection_select :category_id, Category.all, :id, :name %>
   </div>
-  <!-- fix this, it should save the category to the model -->
+  <!-- fix this, it should save the category to the model, added qty -->
   
   <div class="form-inputs">
     
@@ -17,6 +17,7 @@
     <%= f.input :funded %>
     <%= f.input :picurl %>
     <%= f.input :title %>
+    <%= f.input :qty %>
     <%= f.input :template %>
     <%= f.input :price %>
     <%= f.input :msrp %>
