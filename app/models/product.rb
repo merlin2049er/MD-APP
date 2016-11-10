@@ -10,7 +10,8 @@ class Product < ActiveRecord::Base
     
     after_initialize :set_defaults
     
-    has_and_belongs_to_many :users
+    # has_and_belongs_to_many :users
+    # add cart here...
     belongs_to :category
     
     validates_presence_of :title
