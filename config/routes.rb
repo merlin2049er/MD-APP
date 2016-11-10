@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   
+  resources :transactions
   resources :carts
   resources :products
   mount ForestLiana::Engine => '/forest'
