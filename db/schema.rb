@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161110001824) do
+ActiveRecord::Schema.define(version: 20161110014348) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -154,12 +154,6 @@ ActiveRecord::Schema.define(version: 20161110001824) do
   add_index "impressions", ["impressionable_type", "impressionable_id", "session_hash"], name: "poly_session_index"
   add_index "impressions", ["impressionable_type", "message", "impressionable_id"], name: "impressionable_type_message_index"
   add_index "impressions", ["user_id"], name: "index_impressions_on_user_id"
-
-  create_table "notications", force: :cascade do |t|
-    t.string   "notify_msg"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "notifications", force: :cascade do |t|
     t.string   "notify_msg"
