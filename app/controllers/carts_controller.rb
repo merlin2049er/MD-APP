@@ -1,12 +1,18 @@
 class CartsController < ApplicationController
     
-  before_action :set_carts, only: [:show]
-  before_action :authenticate_user!
+  before_action :set_carts, only: [:show, :edit, :update, :destroy]
+  #before_action :authenticate_user!
+  
+  add_breadcrumb "MASSDUMP", :root_path
+
 
   # GET /articles
   # GET /articles.json
   def index
-    @Carts = Cart.all
+      
+     add_breadcrumb "shopping cart", carts_path 
+
+    @carts = Cart.all
   end
 
   # GET /articles/1
@@ -30,8 +36,8 @@ class CartsController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def article_params
-      #
+    def carts_params
+      params.require(:cart).permit(:name)
     end
     
 end
