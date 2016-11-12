@@ -10,7 +10,7 @@ class CategoriesController < ApplicationController
     add_breadcrumb "categories", categories_path 
       
     @categories = Category.all
-    @categories = Category.order(:name).page(parms[:page]).per(2)
+    @categories = Category.order(:name)
     
   end
 

@@ -13,20 +13,7 @@
 <%= link_to 'Edit', edit_category_path(@category) %> |
 -->
 <%= link_to 'Back', categories_path %>
-<span class="pull-right">
-  <div class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Sort by
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li><%= link_to "Oldest", categories_path(sort_by: "oldest") %> </a></li>
-    <li><%= link_to "Newest", categories_path(sort_by: "newest") %> </a></li>
-    <li><%= link_to "Name", categories_path(sort_by: "name") %> </a></li>
-  </ul>
-</div>
-  
-</span>
+
 
 
 
