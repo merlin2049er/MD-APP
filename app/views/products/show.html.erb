@@ -15,8 +15,11 @@
 <p>
   <H2><%= @product.title %></H2>
   
+  <%= button_to "Add to Cart", action: "add_to_cart" %>
+  
+  <!-- 
   <button type="button" class="btn btn-primary active">Add to Cart</button>
-  <!--
+ 
   <button type="button" class="btn btn-primary disabled">Disabled Primary</button>
   added qty
   -->
