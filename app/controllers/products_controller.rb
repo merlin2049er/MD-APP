@@ -103,6 +103,12 @@ class ProductsController < ApplicationController
     end
     
     
+    def add_to_cart
+      # flash message here... add to cart
+      
+      
+    end
+    
     
     
 end
