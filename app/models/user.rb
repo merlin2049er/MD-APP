@@ -10,8 +10,9 @@ class User < ActiveRecord::Base
   #has_and_belongs_to_many :product
   
   acts_as_commontator
+
   
-  include PublicActivity::Model
-  tracked owner: ->(controller,model) {controller && controller.current_user}
+ # include PublicActivity::Model
+ #  tracked owner: ->(controller,model) {controller && controller.current_user}
   
 end

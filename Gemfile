@@ -67,7 +67,7 @@ gem 'impressionist'
 
 gem 'commontator'
 
-gem 'public_activity', github: 'pokonski/public_activity'
+# gem 'public_activity', github: 'pokonski/public_activity'
 
 
 group :development, :test do
