@@ -30,7 +30,4 @@ class PagesController < ApplicationController
      add_breadcrumb "terms", terms_path
   end
   
-  
-  
-  
 end

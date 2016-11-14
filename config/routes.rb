@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   get 'error', to: 'pages#error'
   get 'terms', to: 'pages#terms'
-  #get 'activities', to: 'pages#activity'
+    #get 'activities', to: 'pages#activity'
   #get 'categories', to: 'categories#categories'
   
   
