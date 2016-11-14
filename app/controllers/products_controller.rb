@@ -105,7 +105,7 @@ class ProductsController < ApplicationController
     
     def add_to_cart
       # flash message here... add to cart
-      
+      render (layout/small_modal)
       
     end
     
