@@ -20,7 +20,7 @@
 <% @products.each do |product| %>
   
   <h3> <%= link_to product.title, product %> </h3>
-  <p> <%= product.picurl %> </p>
+  <p> <%= image_tag(product.picurl, height: '50', width: '50')  %> </p>
   <p> <%= product.template.truncate_words(15, omission: '... (continued)') %>  </p>
   <% end %>
   
