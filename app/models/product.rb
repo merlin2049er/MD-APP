@@ -48,7 +48,7 @@ end
 def set_defaults
     self.msrp  ||= 0.0
     self.price ||= 0.0
-    self.picurl ||= 'https://massdump-merlin2049er.c9users.io/assets/photo_not_available.png'
+    self.picurl ||= 'https://cryptic-inlet-13518.herokuapp.com/photo_not_available.png'
     self.qty ||= 1
 end
 

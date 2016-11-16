@@ -24,7 +24,11 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   get 'error', to: 'pages#error'
   get 'terms', to: 'pages#terms'
-  get 'add_to_cart', to: 'products#add_to_cart'
+  
+  # resources :products do
+  #   post '/add_to_cart' => 'products#add_to_cart', as: add_to_cart
+  # end
+  
   
   #get 'activities', to: 'pages#activity'
   #get 'categories', to: 'categories#categories'
