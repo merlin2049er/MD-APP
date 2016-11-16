@@ -26,7 +26,6 @@ class CategoriesController < ApplicationController
     @title = @category.name
     @products = @category.products
     
-    @product.template :align => :left  # does this work?  will it align it to the top left of the image?
     
     add_breadcrumb "category / " << @title, categories_path 
     
