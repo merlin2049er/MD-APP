@@ -12,7 +12,7 @@ class ModalController < ApplicationController
 
   def add_to_cart 
      add_breadcrumb "add to cart"
-     render "modal/small_modal"
+     render "modal/_small_modal.html.erb"
   end
   
 end
