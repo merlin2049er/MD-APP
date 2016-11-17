@@ -1,6 +1,6 @@
-class ModalController 
+class ModalController < ApplicationController
   
-#  add_breadcrumb "MASSDUMP", :root_path
+  add_breadcrumb "MASSDUMP", :root_path
 #  add_breadcrumb "contacts", :contact_path
 #  add_breadcrumb "about", :about_path
 #  add_breadcrumb "error", :error_path
@@ -11,7 +11,8 @@ class ModalController
 
 
   def add_to_cart 
- #    add_breadcrumb "add to cart"
+     add_breadcrumb "add to cart"
+     render(modal/small_modal)
   end
   
 end
