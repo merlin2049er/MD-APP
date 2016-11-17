@@ -1,4 +1,4 @@
-class ModalController < ApplicationController
+class ModalController 
   
   add_breadcrumb "MASSDUMP", :root_path
 #  add_breadcrumb "contacts", :contact_path
