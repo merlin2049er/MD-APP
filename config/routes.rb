@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   resources :contacts
   resources :activities
  
-  get 'pages/contact'
+  #get 'pages/contact'
   
   root to: 'pages#index'
   get 'index', to: 'pages#index'
