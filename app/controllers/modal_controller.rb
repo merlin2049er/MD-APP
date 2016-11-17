@@ -11,7 +11,7 @@ class ModalController < ApplicationController
 
 
   def add_to_cart 
-     
+     add_breadcrumb "add to cart"
   end
   
 end
