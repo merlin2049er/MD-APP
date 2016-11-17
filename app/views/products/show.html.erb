@@ -19,7 +19,8 @@
   <%#= button_to "Add to Cart", action: "add_to_cart" %>
   -->
   
-  <%= link_to "Add to Cart",  render "modal/_small_modal.html.erb" %>
+  
+  <%= link_to "Add to Cart", "#my-modal", :class => "btn", "data-toggle" => "modal" %>
   <!--
   <button type="button" class="btn btn-primary active">Add to Cart</button>
   -->
@@ -152,3 +153,16 @@
 
 <% end %>
 
+
+<div class="modal hide fade" id="my-modal" title="My modal">
+  <div class="modal-header">
+    <button aria-hidden="true" class="close" data-dismiss="modal" type="button">×</button>
+    <h3 id="myModalLabel">Modal header</h3>
+  </div>
+  <div class="modal-body">
+    Modal Body
+  </div>
+  <div class="modal-footer">
+    <button aria-hidden="true" class="btn" data-dismiss="modal">Close</button>
+  </div>
+</div>
