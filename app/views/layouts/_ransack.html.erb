@@ -1,0 +1,19 @@
+<%= search_form_for @search do |f| %>
+    <div class="field">
+ 
+  <%#= f.label :title_or_template_cont %>
+
+       
+      <%= f.text_field :title_or_template_cont , placeholder: "Search" %>
+      
+       
+  <div class="actions">
+ 
+    <%= f.submit "Submit" %>
+ 
+    </div>
+
+    
+  </div>
+  
+  <% end %>

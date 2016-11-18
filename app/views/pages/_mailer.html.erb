@@ -1,0 +1,9 @@
+
+ <%= simple_form_for @contact do |f| %>
+ <%= f.input :name %>
+ <%= f.input :email %>
+ <%= f.input :registered_user %>
+ <%= f.input :supplier %>
+ <%= f.input :message %>
+ <%= f.submit "Get in touch!", class: "btn btn-info" %>
+ <% end %>

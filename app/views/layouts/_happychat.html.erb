@@ -1,0 +1,20 @@
+<!--Start of HappyFox Live Chat Script-->
+<script>
+ window.HFCHAT_CONFIG = {
+     EMBED_TOKEN: "faab41f0-7b4b-11e6-9459-ab9d38f923c8",
+     ACCESS_TOKEN: "b097b4c561b141f0aae10902ffee5d97",
+     HOST_URL: "https://happyfoxchat.com",
+     ASSETS_URL: "https://d1l7z5ofrj6ab8.cloudfront.net/visitor"
+ };
+
+(function() {
+  var scriptTag = document.createElement('script');
+  scriptTag.type = 'text/javascript';
+  scriptTag.async = true;
+  scriptTag.src = window.HFCHAT_CONFIG.ASSETS_URL + '/js/widget-loader.js';
+
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(scriptTag, s);
+})();
+</script>
+<!--End of HappyFox Live Chat Script-->

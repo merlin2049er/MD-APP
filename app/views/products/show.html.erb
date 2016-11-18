@@ -1,0 +1,155 @@
+
+<% if user_signed_in? %>
+
+<p id="notice"><%= notice %></p>
+
+<ul class="nav nav-tabs">
+  <li class="active"><a data-toggle="tab" href="#Product">Product</a></li>
+  <li><a data-toggle="tab" href="#Discussion">Discussion</a></li>
+</ul>
+
+<div class="tab-content">
+  <div id="Product" class="tab-pane fade in active">
+  
+<p>
+  <H2><%= @product.title %></H2>
+  
+  <!--
+  <%#= button_to "Add to Cart", action: "add_to_cart" %>
+  -->
+  
+  
+  
+  <!--
+  <button type="button" class="btn btn-primary active">Add to Cart</button>
+  -->
+ <!--
+  <button type="button" class="btn btn-primary disabled">Disabled Primary</button>
+  added qty
+  -->
+  
+</p>
+
+ <div class="well well-sm"> 
+ 
+ <% start_time =  @product.Startdate %>
+ <% end_time   =  @product.enddate %>
+ 
+
+ 
+ 
+ <% time_now = Time.now  %>
+ 
+  
+ 
+ 
+ <%  if @product.active == true && time_now <= end_time %>
+     Active campaign. Quantity: <%= @product.qty %>; Start date: <%= @product.Startdate %>;  End date: <%= @product.enddate %>.
+      Duration, <%=   distance_of_time_in_words(start_time, end_time)  %>.<br/>
+      
+      <% if time_now >=	start_time  %>
+ 
+     Time remaining, <%=   distance_of_time_in_words(time_now, end_time)  %>.<br/>
+    
+     
+     <% end %>
+ 
+<!--  <%= ( @product.enddate.to_date - time_now.to_date).to_i %>  -->
+<!-- <%= (  @product.enddate.to_date - @product.Startdate.to_date ).to_i %> -->
+
+ 
+ 
+  <% if time_now  <= start_time  %>
+      Campaign has not started yet.
+  <% else %>
+     <div class="progress">
+          <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"  style="width: <%=  ((( @product.enddate.to_date - time_now.to_date).to_f)  / ((  @product.enddate.to_date - @product.Startdate.to_date ).to_f)  *100).to_i  %>%;">
+         <%= distance_of_time_in_words(time_now, end_time)  %>
+      </div>
+    </div>
+    
+  <% end %>
+      
+      
+      <% else %> 
+       Campaign ended. 
+     <% end %> 
+<br/>
+ 
+
+ 
+ </div>
+ 
+ <div class="well well-sm"> 
+ 
+ <%  if @product.funded == true %>
+     Successfully 
+      <% else %> 
+          Not
+     <% end %> 
+ Funded.
+ 
+
+ 
+ </div>
+ 
+
+ 
+ <p>
+  <div class="well well-sm">      
+         
+     <img src= <%= @product.picurl %> >
+     
+  </div>
+</p>  
+ 
+ 
+   
+<p>
+  <div class="well well-sm">    <%= @product.template %><br/>   </div>
+   
+   
+   <%= @product.impressionist_count(:filter => :ip_address) %> Views <br/> 
+   <% if @product.msrp != 0 && @product.price != 0 then %>
+   <%= @product.price %> MSDP<br/>
+   <%= @product.msrp %> MSRP<br/>
+   
+   <%= Discount.calculate_percentage_discount(@product.msrp, @product.price) %> Discount %<br/> 
+    <% end %>
+    
+  
+
+</p>   
+
+   <!-- add to cart button -->
+
+<!-- 
+<%= link_to 'Edit', edit_product_path(@product) %> |
+-->
+
+<%= link_to 'Back', products_path %>
+
+  </div>
+
+<div id="Discussion" class="tab-pane fade">
+  
+  <H2><%= @product.title %></H2>
+</p>
+
+ <div class="well well-sm"> 
+    <%= commontator_thread(@product) %>
+    </div> 
+    
+    </div>
+     
+</div>
+
+<% else %>
+
+<!-- <h1>You must be signed in to see the product.</h1> -->
+
+<div class="alert alert-warning" role="alert">You must be signed in to see the product.</div>
+
+<% end %>
+
+

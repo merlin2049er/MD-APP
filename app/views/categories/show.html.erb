@@ -1,0 +1,31 @@
+<% if user_signed_in? %>
+
+<p id="notice"><%= notice %></p>
+
+<!--
+<p>
+  <strong>Name:</strong>
+  <%#= @category.name %>
+</p>
+-->
+
+<!-- 
+<%= link_to 'Edit', edit_category_path(@category) %> |
+-->
+<%= link_to 'Back', categories_path %>
+
+
+
+
+<% @products.each do |product| %>
+  
+  <h3> <%= link_to product.title, product %> </h3>
+  <p> <%= image_tag(product.picurl, height: '75', width: '75')  %> 
+    <%= product.template.truncate_words(15, omission: '... (continued)') %>  </p>
+  <% end %>
+  
+  <% else %>
+
+  <div class="alert alert-warning" role="alert">You must be signed in to see the category.</div>
+  
+<% end %>
