@@ -1,31 +1,34 @@
 class NotificationsController < ApplicationController
   before_action :set_notification, only: [:show, :edit, :update, :destroy]
   
-  add_breadcrumb "MASSDUMP", :root_path
+  add_breadcrumb 'MASSDUMP', :root_path
 
   # GET /notifications
   # GET /notifications.json
   def index
-    add_breadcrumb "notifications", notifications_path 
-    
-    @notifications = Notification.all
+    add_breadcrumb 'notifications', notifications_path
+
+    @notifications = Notification.where('user_id =?', current_user.id)
+    #@notifications = Notification.all
+
   end
 
   # GET /notifications/1
   # GET /notifications/1.json
   def show
-    add_breadcrumb "notification", notifications_path 
+    add_breadcrumb 'notification', notifications_path
+
   end
 
   # GET /notifications/new
   def new
-    add_breadcrumb "notification", notifications_path 
+    add_breadcrumb 'notification', notifications_path
     @notification = Notification.new
   end
 
   # GET /notifications/1/edit
   def edit
-    add_breadcrumb "notification", notifications_path 
+    add_breadcrumb 'notification', notifications_path
   end
 
   # POST /notifications

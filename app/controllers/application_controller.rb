@@ -19,15 +19,23 @@ class ApplicationController < ActionController::Base
   end 
   
   def all_notifications
-    @notifications = Notification.all
-  end 
+     @notifications = Notification.where("user_id =?", current_user.id)
+
+
+  end
 
   rescue_from ActiveRecord::RecordNotFound, with: :show_errors
  
   
   def show_errors
      render 'pages/error'
-  end 
-  
+  end
+
+  private
+  # Use callbacks to share common setup or constraints between actions.
+  def set_notifications
+    @notifications = Notifications.find(params[:id])
+
+  end
 
 end

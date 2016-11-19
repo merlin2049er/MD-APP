@@ -88,6 +88,14 @@ class ProductsController < ApplicationController
     end
   end
 
+  def add_to_cart
+    # flash message here... add to cart
+    render (layout/small_modal)
+
+  end
+
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
@@ -103,11 +111,7 @@ class ProductsController < ApplicationController
     end
     
     
-    def add_to_cart
-      # flash message here... add to cart
-      render (layout/small_modal)
-      
-    end
+
     
     
     

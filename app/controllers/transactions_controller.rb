@@ -1,15 +1,19 @@
 class TransactionsController < ApplicationController
   before_action :set_transaction, only: [:show, :edit, :update, :destroy]
 
+  add_breadcrumb 'MASSDUMP', :root_path
   # GET /transactions
   # GET /transactions.json
   def index
-    @transactions = Transaction.all
+    add_breadcrumb 'transactions', transactions_path
+    # @transactions = Transaction.all
+    @transactions = Transaction.where('user_id =?', current_user.id)
   end
 
   # GET /transactions/1
   # GET /transactions/1.json
   def show
+    add_breadcrumb 'transaction', transactions_path
   end
 
   # GET /transactions/new

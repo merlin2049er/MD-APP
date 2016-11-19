@@ -1,4 +1,21 @@
-<p id="notice"><%= notice %></p>
+<% if user_signed_in? %>
 
+    <p id="notice"><%= notice %></p>
+
+    <p>
+      <strong>Transaction:</strong>
+      <%= @transaction.transaction_msg %>
+    </p>
+
+    <!--
 <%= link_to 'Edit', edit_transaction_path(@transaction) %> |
+-->
 <%= link_to 'Back', transactions_path %>
+
+<% else %>
+
+
+<div class="alert alert-warning" role="alert">You must be signed in to see the notification.</div>
+
+
+<% end %>
