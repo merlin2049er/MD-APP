@@ -1,6 +1,6 @@
 class RemoveNotificationIdFromUsers < ActiveRecord::Migration
   def change
     
-     remove_column :Users, :notification_id
+     remove_column :users, :notification_id
   end
 end
