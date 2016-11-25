@@ -8,6 +8,12 @@ class ApplicationController < ActionController::Base
   helper_method :all_categories
   helper_method :all_products
   helper_method :all_notifications
+
+  before_filter :set_search
+
+  def set_search
+    @search=Product.search(params[:q])
+  end
  
   def all_categories
       @categories = Category.all
