@@ -1,11 +1,15 @@
 class Cart < ActiveRecord::Base
 
 
+  def edit
+  end
 
-    cart = Cart.new(user_id:  1, product_id: 21 )
-    cart.save
+  def index
+
+  end
 
 
-
+  def show
+  end
 
 end
