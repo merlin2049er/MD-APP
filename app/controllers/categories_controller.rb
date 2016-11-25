@@ -11,22 +11,19 @@ class CategoriesController < ApplicationController
       
     @categories = Category.all
     @categories = Category.order(:name)
-    
+
   end
 
   # GET /categories/1
   # GET /categories/1.json
   def show
     # added 9/24
-    
-    
-    
+
     @category = Category.find(params[:id])
     
     @title = @category.name
-    @products = @category.products
-    
-    
+    @products = @category.products.where('draft' => false, 'active' => true)
+
     add_breadcrumb "category / " << @title, categories_path 
     
   end

@@ -22,7 +22,9 @@ class ProductsController < ApplicationController
     #paginate
     #@product = Product.paginate(:page => params[:page], per_page: 10)
     #Product.paginate(:page => params[:page], per_page: 10)
-    
+
+    #@records = Product.where('draft' => false, 'active' => true)
+
     
     
   end

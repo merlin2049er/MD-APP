@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
          
 
   has_many :notifications
+  has_many :transactions
   # add cart here
   #has_and_belongs_to_many :product
   
