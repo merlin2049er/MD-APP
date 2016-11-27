@@ -16,7 +16,7 @@
   <tbody>
     <% @notifications.each do |notification| %>
       <tr>
-        <td><%= notification.created_at %> | <%= link_to notification.notify_msg , notification  %></td>
+        <td><%= notification.created_at.strftime("%m/%d/%Y")   %> | <%= link_to notification.notify_msg , notification  %></td>
         <!--
         <td><%= notification.notify_msg %></td>
         <td><%= link_to 'Show', notification %></td>
