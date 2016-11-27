@@ -12,7 +12,7 @@ class ProductsController < ApplicationController
     add_breadcrumb "products", products_path
     
     #ransack
-    @search = Product.where('draft' => false, 'active' => true).search(params[:q])
+    @search = Product.where('draft' => false, 'active' => true, 'funded' => false).search(params[:q])
     @products = @search.result.paginate(page: params[:page] , per_page: 10)
       
     # @products = Product.all

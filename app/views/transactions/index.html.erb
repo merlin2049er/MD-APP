@@ -15,7 +15,7 @@
   <tbody>
     <% @transactions.each do |transaction| %>
       <tr>
-        <td><%= link_to transaction.transaction_msg , transaction  %></td>
+        <td><%= transaction.created_at %> |  <%= link_to transaction.transaction_msg , transaction  %></td>
         <!--
         <td><%= link_to 'Show', transaction %></td>
         <td><%= link_to 'Edit', edit_transaction_path(transaction) %></td>

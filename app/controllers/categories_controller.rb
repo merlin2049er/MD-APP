@@ -22,7 +22,7 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id])
     
     @title = @category.name
-    @products = @category.products.where('draft' => false, 'active' => true)
+    @products = @category.products.where('draft' => false, 'active' => true, 'funded' => false)
 
     add_breadcrumb "category / " << @title, categories_path 
     
