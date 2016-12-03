@@ -42,7 +42,7 @@
  
  
  <%  if @product.active == true && time_now <= end_time %>
-     Active campaign. Quantity: <%= @product.qty %>; Start date: <%= @product.Startdate %>;  End date: <%= @product.enddate %>.
+     Active campaign. Start date: <%= @product.Startdate %>;  End date: <%= @product.enddate %>.
       Duration, <%=   distance_of_time_in_words(start_time, end_time)  %>.<br/>
       
       <% if time_now >=	start_time  %>
@@ -77,8 +77,20 @@
 
  
  </div>
- 
- <div class="well well-sm"> 
+
+    <div class="well well-sm">
+      Quantity: <%= @product.qty %>;   Remaining: <%= %>
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"  style="width: <%=  ((( @product.enddate.to_date - time_now.to_date).to_f)  / ((  @product.enddate.to_date - @product.Startdate.to_date ).to_f)  *100).to_i  %>%;">
+          <%#= remaining quantity   %>
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <div class="well well-sm">
  
  <%  if @product.funded == true %>
      Successfully 
