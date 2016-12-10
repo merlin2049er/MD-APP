@@ -539,7 +539,7 @@
       <workItem from="1480726470793" duration="28000" />
       <workItem from="1480726578508" duration="4311000" />
       <workItem from="1481122391734" duration="608000" />
-      <workItem from="1481336515656" duration="805000" />
+      <workItem from="1481336515656" duration="861000" />
     </task>
     <task id="LOCAL-00001" summary="hmm, just record counts for categories">
       <created>1480035534764</created>
@@ -611,11 +611,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481337295893</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="fixed text align top of product image">
+      <created>1481337359620</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1481337359620</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49951000" />
+    <option name="totallyTimeSpent" value="50007000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1107" y="26" width="1242" height="953" extended-state="0" />
@@ -684,7 +691,8 @@
     <MESSAGE value="formated date" />
     <MESSAGE value="carts, still working on it..." />
     <MESSAGE value="fixed the route to the add to cart button, delete from cart works" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed the route to the add to cart button, delete from cart works" />
+    <MESSAGE value="fixed text align top of product image" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed text align top of product image" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
