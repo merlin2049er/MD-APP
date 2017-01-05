@@ -70,6 +70,7 @@ gem 'commontator'
 
 gem 'tzinfo-data'
 
+gem 'cancan'
 
 
 group :development, :test do

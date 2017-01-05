@@ -1,5 +1,8 @@
- <% if user_signed_in? %>  <!-- fix this change to admin user -->
-   
+ <!-- fix this change to admin user   <#% if user_signed_in? %>  -->
+
+
+
+     <% if can? :manage, @category %>
 
 <h1>New Category</h1>
 
