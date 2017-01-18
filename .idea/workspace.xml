@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7331a777-2244-45ce-afdd-3c1ae6d6fb83" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/products_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/products_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/products/show.html.erb" afterPath="$PROJECT_DIR$/app/views/products/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/forest_liana.rb" afterPath="$PROJECT_DIR$/config/initializers/forest_liana.rb" />
     </list>
     <ignored path="MD-APP-master.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -627,7 +624,7 @@
       <workItem from="1484702334824" duration="680000" />
       <workItem from="1484703020301" duration="30000" />
       <workItem from="1484703236783" duration="777000" />
-      <workItem from="1484707410259" duration="166000" />
+      <workItem from="1484707410259" duration="221000" />
     </task>
     <task id="LOCAL-00001" summary="hmm, just record counts for categories">
       <created>1480035534764</created>
@@ -720,11 +717,18 @@
       <option name="project" value="LOCAL" />
       <updated>1484700735998</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="forestliana keys removed from initalizer&#10;&#10;added system time to product show page">
+      <created>1484707616243</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1484707616243</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57988000" />
+    <option name="totallyTimeSpent" value="58043000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="38" y="23" width="1242" height="714" extended-state="0" />
@@ -796,7 +800,8 @@
     <MESSAGE value="fixed text align top of product image" />
     <MESSAGE value="added cancan and ability.rb" />
     <MESSAGE value="fixed new cart for cancan" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed new cart for cancan" />
+    <MESSAGE value="forestliana keys removed from initalizer&#10;&#10;added system time to product show page" />
+    <option name="LAST_COMMIT_MESSAGE" value="forestliana keys removed from initalizer&#10;&#10;added system time to product show page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
