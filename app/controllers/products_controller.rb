@@ -10,6 +10,7 @@ class ProductsController < ApplicationController
    # @search = Product.search(params[:search])
    
     add_breadcrumb "products", products_path
+
     
     #ransack
     @search = Product.where('draft' => false, 'active' => true, 'funded' => false).search(params[:q])
@@ -34,8 +35,12 @@ class ProductsController < ApplicationController
   def show
     add_breadcrumb "product", products_path
      commontator_thread_show(@product)
-    
+
     impressionist(@product)
+
+      # time = Time.new
+   # values = time.to_a
+   # @current_time = Time.utc(*values)
     
   end
 
