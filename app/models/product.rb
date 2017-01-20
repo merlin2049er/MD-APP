@@ -13,6 +13,8 @@ class Product < ActiveRecord::Base
     # has_and_belongs_to_many :users
     # add cart here...
     belongs_to :category
+    has_many :photos
+
     
     validates_presence_of :title
     validates_presence_of :picurl

@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dlfodsgbd
+  api_key: '941679291439751'
+  api_secret: BuSU1DfH9-zXcQdpxHiLL7jBxvI
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: dlfodsgbd
+  api_key: '941679291439751'
+  api_secret: BuSU1DfH9-zXcQdpxHiLL7jBxvI
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: dlfodsgbd
+  api_key: '941679291439751'
+  api_secret: BuSU1DfH9-zXcQdpxHiLL7jBxvI
+  enhance_image_tag: true
+  static_image_support: false

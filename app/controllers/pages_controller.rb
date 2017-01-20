@@ -26,8 +26,13 @@ class PagesController < ApplicationController
      add_breadcrumb "error", error_path
   end
   
-  def terms 
+  def terms
      add_breadcrumb "terms", terms_path
   end
-  
+
+  def cloudinary
+    add_breadcrumb "cloudinary", cloudinary_path
+  end
+
+
 end
