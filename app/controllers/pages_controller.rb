@@ -32,6 +32,8 @@ class PagesController < ApplicationController
 
   def cloudinary
     add_breadcrumb "cloudinary", cloudinary_path
+
+    @photo = Photo.where('enabled' => true)
   end
 
 

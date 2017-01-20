@@ -13,6 +13,8 @@
  *= require_tree .
  *= require_self
  *= require commontator/application
+ *= require owl.carousel
+ *= require owl.theme
  */
 
 @import "bootstrap-sprockets";
@@ -22,3 +24,4 @@
 @import "font-awesome";
 /* @import "cosmos"; */
 @import "yeti";
+
