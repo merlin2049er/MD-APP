@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7331a777-2244-45ce-afdd-3c1ae6d6fb83" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/MD-APP-master.iml" afterPath="$PROJECT_DIR$/.idea/MD-APP-master.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/pages_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/pages_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/cloudinary.html.erb" afterPath="$PROJECT_DIR$/app/views/pages/cloudinary.html.erb" />
     </list>
     <ignored path="MD-APP-master.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -682,7 +673,7 @@
       <workItem from="1484856859275" duration="924000" />
       <workItem from="1484857803006" duration="1278000" />
       <workItem from="1484931766877" duration="4073000" />
-      <workItem from="1484940476825" duration="3304000" />
+      <workItem from="1484940476825" duration="3345000" />
     </task>
     <task id="LOCAL-00001" summary="hmm, just record counts for categories">
       <created>1480035534764</created>
@@ -796,11 +787,18 @@
       <option name="project" value="LOCAL" />
       <updated>1484932343195</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="added owlcarousel , need to figure out how to get it to work">
+      <created>1484947585040</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1484947585040</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67965000" />
+    <option name="totallyTimeSpent" value="68006000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="38" y="23" width="1242" height="714" extended-state="0" />
@@ -874,7 +872,8 @@
     <MESSAGE value="fixed new cart for cancan" />
     <MESSAGE value="forestliana keys removed from initalizer&#10;&#10;added system time to product show page" />
     <MESSAGE value="added photos model, linked to products model" />
-    <option name="LAST_COMMIT_MESSAGE" value="added photos model, linked to products model" />
+    <MESSAGE value="added owlcarousel , need to figure out how to get it to work" />
+    <option name="LAST_COMMIT_MESSAGE" value="added owlcarousel , need to figure out how to get it to work" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
