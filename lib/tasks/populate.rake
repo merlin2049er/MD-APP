@@ -18,8 +18,8 @@ namespace :db do
          product.funded = [true, false]
          product.category_id = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
          product.qty = [5,10,15]
-         product.Startdate = ['2016-11-18' ]
-         product.enddate = ['2016-12-18']
+         product.Startdate = ['2017-1-24' ]
+         product.enddate = ['2017-2-12']
          product.picurl = ['https://cryptic-inlet-13518.herokuapp.com/photo_not_available.png']
     
       end  

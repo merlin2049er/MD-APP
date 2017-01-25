@@ -11,23 +11,9 @@
 <div class="tab-content">
   <div id="Product" class="tab-pane fade in active">
   
-<p>
+
   <H2><%= @product.title %></H2>
-  
-
-  <%#= link_to 'Add to Cart', action: 'modal#add_to_cart' %>
-
-   <!-- <button type="button" class="btn btn-primary active">Add to Cart</button> -->
-
     <%= button_to 'Add to Cart', add_to_cart_path, method: :post %>
-
- <!--
-  <button type="button" class="btn btn-primary disabled">Disabled Primary</button>
-  added qty
-  -->
-  
-</p>
-
  <div class="well well-sm"> 
  
  <% start_time =  @product.Startdate %>
@@ -37,7 +23,8 @@
  
  
  System time: <%= time_now = Time.now  %> <br/>
- 
+ End Date: <%= @product.enddate %> <br/>
+
   
  
  
@@ -104,17 +91,17 @@
  
 
  
- <p>
+
   <div class="well well-sm">      
          
-     <img src= <%= @product.picurl %> >
+     <img src= <%= @product.picurl %> alt ="" >
      
   </div>
-</p>  
+
  
  
    
-<p>
+
   <div class="well well-sm">    <%= @product.template %><br/>   </div>
    
    
@@ -125,12 +112,6 @@
    
    <%= Discount.calculate_percentage_discount(@product.msrp, @product.price) %> Discount %<br/> 
     <% end %>
-    
-  
-
-</p>   
-
-   <!-- add to cart button -->
 
 <!-- 
 <%= link_to 'Edit', edit_product_path(@product) %> |
@@ -143,12 +124,12 @@
 <div id="Discussion" class="tab-pane fade">
   
   <H2><%= @product.title %></H2>
-</p>
+
 
  <div class="well well-sm"> 
     <%= commontator_thread(@product) %>
-    </div> 
-    
+    </div>
+
     </div>
      
 </div>
@@ -160,5 +141,3 @@
 <div class="alert alert-warning" role="alert">You must be signed in to see the product.</div>
 
 <% end %>
-
-

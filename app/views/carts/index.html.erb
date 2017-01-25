@@ -16,10 +16,10 @@
     
     <% @carts.each do |cart| %>
       <tr>
-        <td> <%=    %>  </td>
-        <td><%= link_to 'Show', cart %></td>
-        <!-- <td><%= link_to 'Edit', edit_cart_path(cart) %></td> -->
-        <td><%= link_to 'Delete', cart, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td> <%=  cart.product_id  %>  </td>
+        <td><%#= link_to 'Show', cart %></td>
+        <td><%#= link_to 'Edit', edit_cart_path(cart) %></td>
+        <td><%= link_to 'Remove', cart, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
