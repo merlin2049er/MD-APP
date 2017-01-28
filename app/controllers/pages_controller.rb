@@ -30,17 +30,4 @@ class PagesController < ApplicationController
      add_breadcrumb "terms", terms_path
   end
 
-  def cloudinary
-    add_breadcrumb "cloudinary", cloudinary_path
-
-    @photo = Photo.where('enabled' => true)
-  end
-
-
-  def cariousel_in_grid
-    add_breadcrumb "carousel", carousel_in_grid_path
-
-
-  end
-
 end
