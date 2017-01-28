@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   get 'error', to: 'pages#error'
   get 'terms', to: 'pages#terms'
   get 'cloudinary', to: 'pages#cloudinary'
+
   
   post 'add_to_cart', to: 'carts#index'
   

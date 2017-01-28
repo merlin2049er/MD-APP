@@ -1,4 +1,28 @@
 
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        $("#owl-carousel").owlCarousel({
+
+            navigation: true, // Show next and prev buttons
+            slideSpeed: 300,
+            paginationSpeed: 400,
+            singleItem: true
+
+// "singleItem:true" is a shortcut for:
+// items : 1,
+// itemsDesktop : false,
+// itemsDesktopSmall : false,
+// itemsTablet: false,
+// itemsMobile : false
+
+        });
+
+    });
+</script>
+
+
+
 <% if user_signed_in? %>
 
 <p id="notice"><%= notice %></p>
@@ -93,9 +117,30 @@
  
 
   <div class="well well-sm">      
-         
-     <img src= <%= @product.picurl %>  >
-     
+
+    <!--
+     <img src= <%#= @product.picurl %>  >
+      -->
+
+  <!--
+    <div class="col-md-6"> -->
+      <div id="owl-carousel">
+
+        <img src= <%= @product.picurl %>  >
+
+        <% @photo.each do | p| %>
+
+            <div>  <%= cl_image_tag(p.uri) %></div>
+
+        <% end %>
+
+
+
+      </div>
+<!--
+    </div> -->
+
+
   </div>
 
  

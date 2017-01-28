@@ -74,6 +74,7 @@ gem 'cancan'
 
 gem 'cloudinary'
 
+# gem 'bootswatch-rails'
 gem 'owlcarousel-rails'
 
 # gem 'owlcarousel2-rails', '~> 2.1'

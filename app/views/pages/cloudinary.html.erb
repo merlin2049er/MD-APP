@@ -1,54 +1,44 @@
 
 
-<script>
+<script type="text/javascript">
+    $(document).ready(function() {
 
-    $( document ).ready(function() {
-        console.log( "ready!" );
+        $("#owl-carousel").owlCarousel({
 
-        $('.owl-carousel').owlCarousel({
-            loop:true,
-            margin:10,
-            nav:true,
-            responsive:{
-                0:{
-                    items:1
-                },
-                600:{
-                    items:3
-                },
-                1000:{
-                    items:5
-                }
-            }
-        })
+            navigation: true, // Show next and prev buttons
+            slideSpeed: 300,
+            paginationSpeed: 400,
+            singleItem: true
+
+// "singleItem:true" is a shortcut for:
+// items : 1,
+// itemsDesktop : false,
+// itemsDesktopSmall : false,
+// itemsTablet: false,
+// itemsMobile : false
+
+        });
+
     });
-
 </script>
 
-<div class="owl-carousel owl-theme">
-  <div class="item"><h4>1</h4></div>
-  <div class="item"><h4>2</h4></div>
-  <div class="item"><h4>3</h4></div>
-  <div class="item"><h4>4</h4></div>
-  <div class="item"><h4>5</h4></div>
-  <div class="item"><h4>6</h4></div>
-  <div class="item"><h4>7</h4></div>
-  <div class="item"><h4>8</h4></div>
-  <div class="item"><h4>9</h4></div>
-  <div class="item"><h4>10</h4></div>
-  <div class="item"><h4>11</h4></div>
-  <div class="item"><h4>12</h4></div>
-</div>
 
+<div class="col-md-6">
+  <div id="owl-carousel">
 
+    <% @photo.each do | p| %>
 
-<div class="owl-carousel2">
+        <div>  <%= cl_image_tag(p.uri) %></div>
 
-  <% @photo.each do | p| %>
+    <% end %>
 
-  <div>  <%= cl_image_tag(p.uri) %></div>
+    <!--
+    <div> <%= image_tag("duckula.jpg") %></div>
+    <div> <%= image_tag("darkwing.jpg") %> </div>
+    <div> <%= image_tag("duckula.jpg") %></div>
+    <div> <%= image_tag("darkwing.jpg") %> </div>
+    -->
 
-  <% end %>
+  </div>
 
 </div>
-

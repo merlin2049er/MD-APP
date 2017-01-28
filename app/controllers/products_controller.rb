@@ -14,6 +14,8 @@ class ProductsController < ApplicationController
     #ransack
     @search = Product.where( 'draft' => false,  'active' => true, 'funded' => false).search(params[:q])
     @products = @search.result.paginate(page: params[:page] , per_page: 10)
+
+
       
     # @products = Product.all
     
@@ -36,6 +38,8 @@ class ProductsController < ApplicationController
      commontator_thread_show(@product)
 
     impressionist(@product)
+
+    @photo = Photo.where('enabled' => true)
 
       # time = Time.new
    # values = time.to_a

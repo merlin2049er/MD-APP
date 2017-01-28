@@ -37,4 +37,10 @@ class PagesController < ApplicationController
   end
 
 
+  def cariousel_in_grid
+    add_breadcrumb "carousel", carousel_in_grid_path
+
+
+  end
+
 end
