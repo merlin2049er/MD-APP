@@ -6,10 +6,11 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-   
-   # @search = Product.search(params[:search])
+
+    # @search = Product.search(params[:search])
    
     add_breadcrumb "products", products_path
+
 
     #ransack
     @search = Product.where( 'draft' => false,  'active' => true, 'funded' => false).search(params[:q])
