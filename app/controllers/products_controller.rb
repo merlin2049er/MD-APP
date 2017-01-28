@@ -39,7 +39,7 @@ class ProductsController < ApplicationController
 
     impressionist(@product)
 
-    @photo = Photo.where('enabled' => true)
+    @photo = Photo.where('enabled' => true )
 
       # time = Time.new
    # values = time.to_a

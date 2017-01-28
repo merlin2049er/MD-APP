@@ -13,6 +13,7 @@ class CartsController < ApplicationController
      add_breadcrumb "shopping cart", carts_path 
 
      @carts  = Cart.where('user_id =?', current_user.id)
+    # @products = Product.where('product_id =?', carts_product_id)
 
   end
 

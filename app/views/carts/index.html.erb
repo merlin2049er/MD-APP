@@ -16,7 +16,7 @@
     
     <% @carts.each do |cart| %>
       <tr>
-        <td> <%=  cart.product_id  %>  </td>
+        <td><%= cart.created_at.strftime("%m/%d/%Y")    %> |  <%=  cart.product_id  %>  </td>
         <td><%#= link_to 'Show', cart %></td>
         <td><%#= link_to 'Edit', edit_cart_path(cart) %></td>
         <td><%= link_to 'Remove', cart, method: :delete, data: { confirm: 'Are you sure?' } %></td>
