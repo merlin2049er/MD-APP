@@ -27,8 +27,6 @@ class ApplicationController < ActionController::Base
   
   def all_notifications
      @notifications = Notification.where("user_id =?", current_user.id)
-
-
   end
 
   rescue_from ActiveRecord::RecordNotFound, with: :show_errors

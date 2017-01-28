@@ -66,18 +66,13 @@ gem 'impressionist'
 
 gem 'commontator'
 
-# gem 'public_activity', github: 'pokonski/public_activity'
-
 gem 'tzinfo-data'
 
 gem 'cancan'
 
 gem 'cloudinary'
 
-# gem 'bootswatch-rails'
 gem 'owlcarousel-rails'
-
-# gem 'owlcarousel2-rails', '~> 2.1'
 
 
 group :development, :test do
