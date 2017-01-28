@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7331a777-2244-45ce-afdd-3c1ae6d6fb83" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/carts_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/carts_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/products_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/products_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/carts/index.html.erb" afterPath="$PROJECT_DIR$/app/views/carts/index.html.erb" />
     </list>
     <ignored path="MD-APP-master.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -734,7 +731,7 @@
       <workItem from="1485577651700" duration="492000" />
       <workItem from="1485620331519" duration="439000" />
       <workItem from="1485623138339" duration="1383000" />
-      <workItem from="1485626229757" duration="1562000" />
+      <workItem from="1485626229757" duration="1594000" />
     </task>
     <task id="LOCAL-00001" summary="hmm, just record counts for categories">
       <created>1480035534764</created>
@@ -904,11 +901,18 @@
       <option name="project" value="LOCAL" />
       <updated>1485624774240</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="time stamp on shopping cart">
+      <created>1485627948260</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1485627948260</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88844000" />
+    <option name="totallyTimeSpent" value="88876000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="38" y="23" width="1242" height="709" extended-state="0" />
@@ -986,7 +990,8 @@
     <MESSAGE value="added owlcarousel , need to figure out how to get it to work" />
     <MESSAGE value="cleaned up some html" />
     <MESSAGE value="owl carousel working on product" />
-    <option name="LAST_COMMIT_MESSAGE" value="owl carousel working on product" />
+    <MESSAGE value="time stamp on shopping cart" />
+    <option name="LAST_COMMIT_MESSAGE" value="time stamp on shopping cart" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
