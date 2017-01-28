@@ -731,7 +731,7 @@
       <workItem from="1485577651700" duration="492000" />
       <workItem from="1485620331519" duration="439000" />
       <workItem from="1485623138339" duration="1383000" />
-      <workItem from="1485626229757" duration="1594000" />
+      <workItem from="1485626229757" duration="1606000" />
     </task>
     <task id="LOCAL-00001" summary="hmm, just record counts for categories">
       <created>1480035534764</created>
@@ -908,11 +908,18 @@
       <option name="project" value="LOCAL" />
       <updated>1485627948260</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="time stamp on shopping cart">
+      <created>1485627958820</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1485627958820</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88876000" />
+    <option name="totallyTimeSpent" value="88888000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="38" y="23" width="1242" height="709" extended-state="0" />
