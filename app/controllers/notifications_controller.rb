@@ -1,6 +1,8 @@
 class NotificationsController < ApplicationController
   before_action :set_notification, only: [:show, :edit, :update, :destroy]
-  
+  before_action :authenticate_user!
+
+
   add_breadcrumb 'MASSDUMP', :root_path
 
   # GET /notifications
@@ -9,7 +11,6 @@ class NotificationsController < ApplicationController
     add_breadcrumb 'notifications', notifications_path
 
     @notifications = Notification.where('user_id =?', current_user.id)
-    #@notifications = Notification.all
 
   end
 

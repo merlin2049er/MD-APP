@@ -12,8 +12,7 @@
   </thead>
 
   <tbody>
-      
-    
+
     <% @carts.each do |cart| %>
       <tr>
         <td><%= cart.created_at.strftime("%m/%d/%Y")    %> |  <%=  cart.product_id  %>  </td>

@@ -1,5 +1,7 @@
 class TransactionsController < ApplicationController
   before_action :set_transaction, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
+
 
   add_breadcrumb 'MASSDUMP', :root_path
   # GET /transactions
@@ -20,6 +22,8 @@ class TransactionsController < ApplicationController
 
   # GET /transactions/new
   def new
+    add_breadcrumb 'transaction', transactions_path
+
     @transaction = Transaction.new
   end
 

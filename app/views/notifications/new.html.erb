@@ -1,4 +1,6 @@
-<% if user_signed_in? %>  <!-- fix this change to admin user -->
+ <!-- <#% if user_signed_in? %>   <!--fix this change to admin user -->
+
+     <% if can? :manage, @notification %>
 
 <h1>New Notification</h1>
 
