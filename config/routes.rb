@@ -26,7 +26,7 @@ Rails.application.routes.draw do
   get 'terms', to: 'pages#terms'
 
   
-  post 'add_to_cart', to: 'carts#index'
+  post 'add_to_cart', to: 'products#add_to_cart'
   
   # resources :products do
   #   post '/add_to_cart' => 'products#add_to_cart', as: add_to_cart

@@ -108,8 +108,18 @@ class ProductsController < ApplicationController
   end
 
   def add_to_cart
-    # flash message here... add to cart
-    render (layout/small_modal)
+
+    @cart = Cart.new(:user_id => 1, :product_id => 4)
+
+    respond_to do |format|
+      if @cart.save
+        format.html { redirect_to @cart, notice: 'Product was successfully added to cart.' }
+        format.json { render :show, status: :created, location: @cart }
+      else
+        format.html { render :new }
+        format.json { render json: @cart.errors, status: :unprocessable_entity }
+      end
+    end
 
   end
 
@@ -128,8 +138,14 @@ class ProductsController < ApplicationController
         params.require(:product).permit(:title, :picurl, :template, :price, :msrp, :Startdate, :enddate, :draft, :active, :funded, :category_id, :qty  )
         
     end
-    
-    
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def cart_params
+    # params.fetch(:cart, {})
+    params.require(:cart).permit(:user_id,  :product_id )
+
+
+  end
 
     
     
