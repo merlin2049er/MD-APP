@@ -11,9 +11,17 @@ class ProductsController < ApplicationController
    
     add_breadcrumb "products", products_path
 
+    require 'time'
 
-    #ransack
-    @search = Product.where( 'draft' => false,  'active' => true, 'funded' => false).search(params[:q])
+    todaydate = Time.new
+#    set 'todaydate' equal to the current date/time.
+
+    todaydate = todaydate.year.to_s + "-" + todaydate.month.to_s + "-" + todaydate.day.to_s
+
+
+
+#ransack
+    @search = Product.where( 'draft' => false,  'active' => true, 'funded' => false).where( 'enddate > ?', todaydate ).search(params[:q])
     @products = @search.result.paginate(page: params[:page] , per_page: 10)
 
 

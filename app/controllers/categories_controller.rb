@@ -20,9 +20,19 @@ class CategoriesController < ApplicationController
     # added 9/24
 
     @category = Category.find(params[:id])
-    
+
+    require 'time'
+
+    todaydate = Time.new
+#    set 'todaydate' equal to the current date/time.
+
+    todaydate = todaydate.year.to_s + "-" + todaydate.month.to_s + "-" + todaydate.day.to_s
+
+
     @title = @category.name
-    @products = @category.products.where( 'draft' => false, 'active' => true, 'funded' => false )
+    @products = @category.products.where( 'draft' => false, 'active' => true, 'funded' => false).where( 'enddate > ?', todaydate )
+
+    #@products = @category.products.where( 'enddate > ?', todaydate )
 
     add_breadcrumb "category / " << @title, categories_path 
     
