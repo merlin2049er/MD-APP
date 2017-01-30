@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   get 'error', to: 'pages#error'
   get 'terms', to: 'pages#terms'
+  get 'dashboard', to: 'pages#dashboard'
 
   
   post 'add_to_cart', to: 'products#add_to_cart'

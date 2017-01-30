@@ -6,7 +6,9 @@
             <li><%#= link_to "Sign Up", new_user_registration_path %></li>
             <li><li><%#= link_to "Log in", new_user_session_path %></li></li>
     -->
-
+    <li><%= link_to "Dashboard", dashboard_path %></li>
+    <li><%= link_to "Photos listing", photos_path %></li>
+    <li><hr></li>
     <li><%= link_to "New Category", new_category_path %></li>
     <li><%=link_to "New Notification", new_notification_path %></li>
     <li><%=link_to "New Product",  new_product_path %></li>
