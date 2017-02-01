@@ -57,7 +57,7 @@ class PagesController < ApplicationController
     @successfully =Product.where('funded' => true).count
     @unsuccessfully =Product.where('funded' => false).count
 
-    @unconfirmeduser = User.where('confirmed_at =?', "" ).count
+    @unconfirmeduser = User.where('confirmed_at =?', nil ).count
     @registeredusers = User.count
 
     @totalnotifications = Notification.count
