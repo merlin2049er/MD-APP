@@ -21,7 +21,7 @@ class PhotosController < ApplicationController
 
   def new
     add_breadcrumb "Photos", photos_path
-    @photos = Photo.new
+    @photo = Photo.new
 
 
   end
@@ -33,12 +33,12 @@ class PhotosController < ApplicationController
 
   def create
 
-    @photos = Photo.new(photo_params)
+    @photo = Photo.new(photo_params)
 
     respond_to do |format|
-      if @photos.save
+      if @photo.save
         format.html { redirect_to @photo, notice: 'Product image was successfully created.' }
-        format.json { render :show, status: :created, location: @photos }
+        format.json { render :show, status: :created, location: @photo }
       else
         format.html { render :new }
         format.json { render json: @product.errors, status: :unprocessable_entity }
@@ -50,7 +50,7 @@ class PhotosController < ApplicationController
   def update
 
     respond_to do |format|
-      if @photos.update(photo_params)
+      if @photo.update(photo_params)
         format.html { redirect_to @photo, notice: 'Product image was successfully updated.' }
         format.json { render :show, status: :ok, location: @photo }
       else
@@ -63,7 +63,7 @@ class PhotosController < ApplicationController
 
   def destroy
 
-    @photos.destroy
+    @photo.destroy
     respond_to do |format|
       format.html { redirect_to photos_url, notice: 'Product image was successfully destroyed.' }
       format.json { head :no_content }
@@ -76,7 +76,7 @@ class PhotosController < ApplicationController
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_photos
-    @photos = Photo.find(params[:id])
+    @photo = Photo.find(params[:id])
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
