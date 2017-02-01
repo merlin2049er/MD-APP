@@ -7,5 +7,171 @@
     <!--
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, explicabo dolores ipsam aliquam inventore corrupti eveniet quisquam quod totam laudantium repudiandae obcaecati ea consectetur debitis velit facere nisi expedita vel?</p>
     -->
+
+
+
+    <table>
+      <thead>
+      <tr>
+        <th colspan="3"></th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <th>Super users</th>
+
+      <% @superuser.each do |su| %>
+          <tr>
+            <td><%= su.created_at.strftime("%m/%d/%Y") %> |  <%=  su.firstname  %> <%= su.lastname %>  </td>
+            <td><%#= link_to 'Show', cart %></td>
+            <td><%#= link_to 'Edit', edit_cart_path(cart) %></td>
+            <td><%#= link_to 'Remove', su, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+
+    <table>
+      <thead>
+      <tr>
+        <th colspan="3"></th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <th>Top ten returning users</th>
+
+      <% @toptenlogin.each do |topten| %>
+          <tr>
+            <td><%= topten.created_at.strftime("%m/%d/%Y") %> |  <%=  topten.firstname  %> <%= topten.lastname %>  <%= topten.sign_in_count %>  </td>
+            <td><%#= link_to 'Show', cart %></td>
+            <td><%#= link_to 'Edit', edit_cart_path(cart) %></td>
+            <td><%#= link_to 'Remove', su, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+
+    <table>
+      <thead>
+      <tr>
+        <th colspan="3"></th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <th>Last ten visting users</th>
+
+      <% @lasttenlogin.each do |lastten| %>
+          <tr>
+            <td><%= lastten.created_at.strftime("%m/%d/%Y") %> |  <%=  lastten.firstname  %> <%= lastten.lastname %>  <%= lastten.last_sign_in_at %>  </td>
+            <td><%#= link_to 'Show', cart %></td>
+            <td><%#= link_to 'Edit', edit_cart_path(cart) %></td>
+            <td><%#= link_to 'Remove', su, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+
+    <table>
+      <thead>
+      <tr>
+        <th colspan="3"></th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <th>Top ten products campaigns ending</th>
+
+      <% @toptenending.each do |tenending| %>
+          <tr>
+            <td><%= tenending.created_at.strftime("%m/%d/%Y") %> |  <%=  tenending.title  %> <%= tenending.enddate %>  <%= tenending.price %>  </td>
+            <td><%#= link_to 'Show', cart %></td>
+            <td><%#= link_to 'Edit', edit_cart_path(cart) %></td>
+            <td><%#= link_to 'Remove', su, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+    <table>
+      <thead>
+      <tr>
+        <th colspan="3"></th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <th>Top ten products campaigns started</th>
+
+      <% @toptenproductsstarted.each do |tenstarted| %>
+          <tr>
+            <td><%= tenstarted.created_at.strftime("%m/%d/%Y") %> |  <%=  tenstarted.title  %> <%= tenstarted.Startdate %>  <%= tenstarted.price %>  </td>
+            <td><%#= link_to 'Show', cart %></td>
+            <td><%#= link_to 'Edit', edit_cart_path(cart) %></td>
+            <td><%#= link_to 'Remove', su, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+    <table>
+      <thead>
+      <tr>
+        <th colspan="3"></th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <th>Top ten expensive products </th>
+
+      <% @toptenpricy.each do |tenpricy| %>
+          <tr>
+            <td><%= tenpricy.created_at.strftime("%m/%d/%Y") %> |  <%=  tenpricy.title  %> <%= tenpricy.Startdate %>  <%= tenpricy.enddate %>  <%= tenpricy.price %> <%= tenpricy.draft  %> <%= tenpricy.active  %> <%= tenpricy.funded  %> </td>
+            <td><%#= link_to 'Show', cart %></td>
+            <td><%#= link_to 'Edit', edit_cart_path(cart) %></td>
+            <td><%#= link_to 'Remove', su, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+    <table>
+      <thead>
+      <tr>
+        <th colspan="3"></th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <th>Top ten lest expensive products </th>
+
+      <% @toptencheap.each do |tencheap| %>
+          <tr>
+            <td><%= tencheap.created_at.strftime("%m/%d/%Y") %> |  <%=  tencheap.title  %> <%= tencheap.Startdate %>  <%= tencheap.enddate %>  <%= tencheap.price %> <%= tencheap.draft  %> <%= tencheap.active  %> <%= tencheap.funded  %> </td>
+            <td><%#= link_to 'Show', cart %></td>
+            <td><%#= link_to 'Edit', edit_cart_path(cart) %></td>
+            <td><%#= link_to 'Remove', su, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+<br/>
+
+    <p>Total unconfirmed users: <%= @unconfirmeduser %> </p>
+    <p>Total registered users: <%= @registeredusers %> </p>
+
+    <p>Total items in shopping cart: <%= @cartcount %> </p>
+    <p>Total products in draft: <%= @draftcount %> </p>
+    <p>Total products in campaign ended successfully: <%= @successfully %> </p>
+    <p>Total products in campaign ended unsuccessfully: <%= @unsuccessfully %> </p>
+
+    <p>Total notification messages: <%= @totalnotifications %> </p>
+    <p>Total transaction messages: <%= @totaltransactions %> </p>
+
+
   </div>
 </div>

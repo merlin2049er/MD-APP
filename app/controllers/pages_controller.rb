@@ -32,6 +32,38 @@ class PagesController < ApplicationController
 
   def dashboard
     add_breadcrumb "dashboard", dashboard_path
+
+    # user model queries
+    @superuser = User.where('admin' => true )
+
+    @toptenlogin = User.limit(10).order("sign_in_count DESC")
+
+    @lasttenlogin = User.limit(10).order("last_sign_in_at DESC")
+
+
+    # products model queries
+
+    @toptenending = Product.limit(10).order("enddate DESC")
+    @toptenproductsstarted = Product.limit(10).order("Startdate ASC")
+
+    @toptenpricy = Product.limit(10).order("Price DESC")
+    @toptencheap = Product.limit(10).order("Price ASC")
+
+   # counts
+    #items in cart
+    @cartcount = Cart.count
+    @draftcount =Product.where('draft' => true).count
+
+    @successfully =Product.where('funded' => true).count
+    @unsuccessfully =Product.where('funded' => false).count
+
+    @unconfirmeduser = User.where('confirmed_at =?', "" ).count
+    @registeredusers = User.count
+
+    @totalnotifications = Notification.count
+    @totaltransactions = Transaction.count
+
+
   end
 
 end
