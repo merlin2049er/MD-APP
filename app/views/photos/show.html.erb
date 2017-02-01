@@ -1,0 +1,24 @@
+<% if user_signed_in? %>
+
+    <p id="notice"><%= notice %></p>
+
+    <p>
+      <strong>Photo:</strong>
+      <%= @photos.uri %><br/>
+
+      <%= cl_image_tag(@photos.uri ) %>
+
+    </p>
+
+    <!--
+    <%#= link_to 'Edit', edit_photos_path(@photos) %> |
+-->
+    <%= link_to 'Back', photos_path %>
+
+<% else %>
+
+
+    <div class="alert alert-warning" role="alert">You must be signed in to see the photos.</div>
+
+
+<% end %>

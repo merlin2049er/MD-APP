@@ -1,0 +1,18 @@
+<!-- fix this change to admin user <#% if user_signed_in? %>  -->
+
+    <% if can? :manage, @photos %>
+
+<h1>New Photos</h1>
+    <p><i>Log into <a href="http:\\www.cloudinary.com"> Cloudinary</a>, upload your photos there...add them to the database here.</i></p>
+
+<%= render 'form' %>
+
+<%= link_to 'Back', photos_path %>
+
+<% else %>
+
+<!-- <h1>Please sign in as administrator to add products.</h1> -->
+
+<div class="alert alert-warning" role="alert">Please sign in as administrator to add products.</div>
+
+<% end %>
