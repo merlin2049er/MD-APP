@@ -44,7 +44,7 @@ class PagesController < ApplicationController
     # products model queries
 
     @toptenending = Product.limit(10).order("enddate DESC")
-     @toptenproductsstarted = Product.limit(10).order("Startdate ASC")
+     @toptenproductsstarted = Product.limit(10).order("startdate ASC")
 
     @toptenpricy = Product.limit(10).order("Price DESC")
     @toptencheap = Product.limit(10).order("Price ASC")

@@ -109,7 +109,7 @@
 
       <% @toptenproductsstarted.each do |tenstarted| %>
           <tr>
-            <td><%= tenstarted.created_at.strftime("%m/%d/%Y") %> |  <%=  tenstarted.title  %> <%= tenstarted.Startdate %>  <%= tenstarted.price %>  </td>
+            <td><%= tenstarted.created_at.strftime("%m/%d/%Y") %> |  <%=  tenstarted.title  %> <%= tenstarted.startdate %>  <%= tenstarted.price %>  </td>
             <td><%#= link_to 'Show', cart %></td>
             <td><%#= link_to 'Edit', edit_cart_path(cart) %></td>
             <td><%#= link_to 'Remove', su, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -130,7 +130,7 @@
 
       <% @toptenpricy.each do |tenpricy| %>
           <tr>
-            <td><%= tenpricy.created_at.strftime("%m/%d/%Y") %> |  <%=  tenpricy.title  %> <%= tenpricy.Startdate %>  <%= tenpricy.enddate %>  <%= tenpricy.price %> <%= tenpricy.draft  %> <%= tenpricy.active  %> <%= tenpricy.funded  %> </td>
+            <td><%= tenpricy.created_at.strftime("%m/%d/%Y") %> |  <%=  tenpricy.title  %> <%= tenpricy.startdate %>  <%= tenpricy.enddate %>  <%= tenpricy.price %> <%= tenpricy.draft  %> <%= tenpricy.active  %> <%= tenpricy.funded  %> </td>
             <td><%#= link_to 'Show', cart %></td>
             <td><%#= link_to 'Edit', edit_cart_path(cart) %></td>
             <td><%#= link_to 'Remove', su, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -151,7 +151,7 @@
 
       <% @toptencheap.each do |tencheap| %>
           <tr>
-            <td><%= tencheap.created_at.strftime("%m/%d/%Y") %> |  <%=  tencheap.title  %> <%= tencheap.Startdate %>  <%= tencheap.enddate %>  <%= tencheap.price %> <%= tencheap.draft  %> <%= tencheap.active  %> <%= tencheap.funded  %> </td>
+            <td><%= tencheap.created_at.strftime("%m/%d/%Y") %> |  <%=  tencheap.title  %> <%= tencheap.startdate %>  <%= tencheap.enddate %>  <%= tencheap.price %> <%= tencheap.draft  %> <%= tencheap.active  %> <%= tencheap.funded  %> </td>
             <td><%#= link_to 'Show', cart %></td>
             <td><%#= link_to 'Edit', edit_cart_path(cart) %></td>
             <td><%#= link_to 'Remove', su, method: :delete, data: { confirm: 'Are you sure?' } %></td>

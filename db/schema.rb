@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170120170838) do
+ActiveRecord::Schema.define(version: 20170201233649) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "trackable_id"
@@ -149,7 +149,7 @@ ActiveRecord::Schema.define(version: 20170120170838) do
     t.integer  "category_id"
     t.boolean  "active"
     t.boolean  "funded"
-    t.date     "Startdate"
+    t.date     "startdate"
     t.string   "picurl"
     t.integer  "qty"
   end
