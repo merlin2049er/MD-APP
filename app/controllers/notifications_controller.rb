@@ -10,7 +10,7 @@ class NotificationsController < ApplicationController
   def index
     add_breadcrumb 'notifications', notifications_path
 
-    @notifications = Notification.where('user_id =?', current_user.id)
+    @notifications = Notification.where('user_id =?', current_user.id).paginate(page: params[:page] , per_page: 10)
 
   end
 
