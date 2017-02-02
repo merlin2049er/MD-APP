@@ -40,7 +40,7 @@
     <%= button_to 'Add to Cart', add_to_cart_path, method: :post %>
  <div class="well well-sm"> 
  
- <% start_time =  @product.Startdate %>
+ <% start_time =  @product.startdate %>
  <% end_time   =  @product.enddate %>
  
 
@@ -53,7 +53,7 @@
  
  
  <%  if @product.active == true && time_now <= end_time %>
-     Active campaign. Start date: <%= @product.Startdate %>;  End date: <%= @product.enddate %>.
+     Active campaign. Start date: <%= @product.startdate %>;  End date: <%= @product.enddate %>.
       Duration, <%=   distance_of_time_in_words(start_time, end_time)  %>.<br/>
       
       <% if time_now >=	start_time  %>
@@ -63,7 +63,7 @@
      <% end %>
  
 <!--  <%= ( @product.enddate.to_date - time_now.to_date).to_i %>  -->
-<!-- <%= (  @product.enddate.to_date - @product.Startdate.to_date ).to_i %> -->
+<!-- <%= (  @product.enddate.to_date - @product.startdate.to_date ).to_i %> -->
 
  
  
