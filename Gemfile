@@ -46,7 +46,7 @@ gem 'bootstrap-sass-extras', '~> 0.0.7'
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
 
 # forest admin
-gem 'forest_liana'
+#gem 'forest_liana'
 
 # metasearch replacement
 gem 'ransack', github: 'activerecord-hackery/ransack'
