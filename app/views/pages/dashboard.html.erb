@@ -13,7 +13,7 @@
     <table>
       <thead>
       <tr>
-        <th colspan="3"></th>
+        <th colspan="1"></th>
       </tr>
       </thead>
 
@@ -23,9 +23,7 @@
       <% @superuser.each do |su| %>
           <tr>
             <td><%= su.created_at.strftime("%m/%d/%Y") %> |  <%=  su.firstname  %> <%= su.lastname %>  </td>
-            <td><%#= link_to 'Show', cart %></td>
-            <td><%#= link_to 'Edit', edit_cart_path(cart) %></td>
-            <td><%#= link_to 'Remove', su, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
           </tr>
       <% end %>
       </tbody>
@@ -35,7 +33,7 @@
     <table>
       <thead>
       <tr>
-        <th colspan="3"></th>
+        <th colspan="1"></th>
       </tr>
       </thead>
 
@@ -45,9 +43,7 @@
       <% @toptenlogin.each do |topten| %>
           <tr>
             <td><%= topten.created_at.strftime("%m/%d/%Y") %> |  <%=  topten.firstname  %> <%= topten.lastname %>  <%= topten.sign_in_count %>  </td>
-            <td><%#= link_to 'Show', cart %></td>
-            <td><%#= link_to 'Edit', edit_cart_path(cart) %></td>
-            <td><%#= link_to 'Remove', su, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
           </tr>
       <% end %>
       </tbody>
@@ -57,7 +53,7 @@
     <table>
       <thead>
       <tr>
-        <th colspan="3"></th>
+        <th colspan="1"></th>
       </tr>
       </thead>
 
@@ -67,9 +63,6 @@
       <% @lasttenlogin.each do |lastten| %>
           <tr>
             <td><%= lastten.created_at.strftime("%m/%d/%Y") %> |  <%=  lastten.firstname  %> <%= lastten.lastname %>  <%= lastten.last_sign_in_at %>  </td>
-            <td><%#= link_to 'Show', cart %></td>
-            <td><%#= link_to 'Edit', edit_cart_path(cart) %></td>
-            <td><%#= link_to 'Remove', su, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
       <% end %>
       </tbody>
@@ -79,7 +72,7 @@
     <table>
       <thead>
       <tr>
-        <th colspan="3"></th>
+        <th colspan="1"></th>
       </tr>
       </thead>
 
@@ -89,9 +82,7 @@
       <% @toptenending.each do |tenending| %>
           <tr>
             <td><%= tenending.created_at.strftime("%m/%d/%Y") %> |  <%=  tenending.title  %> <%= tenending.enddate %>  <%= tenending.price %>  </td>
-            <td><%#= link_to 'Show', cart %></td>
-            <td><%#= link_to 'Edit', edit_cart_path(cart) %></td>
-            <td><%#= link_to 'Remove', su, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
           </tr>
       <% end %>
       </tbody>
@@ -102,7 +93,7 @@
     <table>
       <thead>
       <tr>
-        <th colspan="3"></th>
+        <th colspan="1"></th>
       </tr>
       </thead>
 
@@ -112,9 +103,7 @@
       <%# @toptenproductsstarted.each do |tenstarted| %>
           <tr>
             <td><%#= tenstarted.created_at.strftime("%m/%d/%Y") %> |  <%#=  tenstarted.title  %> <%#= tenstarted.startdate %>  <%#= tenstarted.price %>  </td>
-            <td><%#= link_to 'Show', cart %></td>
-            <td><%#= link_to 'Edit', edit_cart_path(cart) %></td>
-            <td><%#= link_to 'Remove', su, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
           </tr>
       <%# end %>
       </tbody>
@@ -125,7 +114,7 @@
     <table>
       <thead>
       <tr>
-        <th colspan="3"></th>
+        <th colspan="1"></th>
       </tr>
       </thead>
 
@@ -135,9 +124,6 @@
       <% @toptenpricy.each do |tenpricy| %>
           <tr>
             <td><%= tenpricy.created_at.strftime("%m/%d/%Y") %> |  <%=  tenpricy.title  %> <%= tenpricy.startdate %>  <%= tenpricy.enddate %>  <%= tenpricy.price %> <%= tenpricy.draft  %> <%= tenpricy.active  %> <%= tenpricy.funded  %> </td>
-            <td><%#= link_to 'Show', cart %></td>
-            <td><%#= link_to 'Edit', edit_cart_path(cart) %></td>
-            <td><%#= link_to 'Remove', su, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
       <% end %>
       </tbody>
@@ -146,19 +132,17 @@
     <table>
       <thead>
       <tr>
-        <th colspan="3"></th>
+        <th colspan="1"></th>
       </tr>
       </thead>
 
       <tbody>
-      <th>Top ten lest expensive products </th>
+      <th>Top ten least expensive products </th>
 
       <% @toptencheap.each do |tencheap| %>
           <tr>
             <td><%= tencheap.created_at.strftime("%m/%d/%Y") %> |  <%=  tencheap.title  %> <%= tencheap.startdate %>  <%= tencheap.enddate %>  <%= tencheap.price %> <%= tencheap.draft  %> <%= tencheap.active  %> <%= tencheap.funded  %> </td>
-            <td><%#= link_to 'Show', cart %></td>
-            <td><%#= link_to 'Edit', edit_cart_path(cart) %></td>
-            <td><%#= link_to 'Remove', su, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
           </tr>
       <% end %>
       </tbody>
