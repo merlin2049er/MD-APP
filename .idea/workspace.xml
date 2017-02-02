@@ -59,8 +59,8 @@
       <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/products/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="131" column="0" lean-forward="true" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+            <state relative-caret-position="1920">
+              <caret line="128" column="55" lean-forward="true" selection-start-line="128" selection-start-column="55" selection-end-line="128" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -742,14 +742,7 @@
       <workItem from="1485901831910" duration="8045000" />
       <workItem from="1485916137248" duration="3616000" />
       <workItem from="1485992136213" duration="380000" />
-      <workItem from="1485992613698" duration="6028000" />
-    </task>
-    <task id="LOCAL-00003" summary="fixed some html">
-      <created>1480045665564</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1480045665564</updated>
+      <workItem from="1485992613698" duration="6241000" />
     </task>
     <task id="LOCAL-00004" summary="working on carts / cart controller">
       <created>1480047755151</created>
@@ -1087,11 +1080,18 @@
       <option name="project" value="LOCAL" />
       <updated>1486000338147</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="changed picurl to cloudinary tag">
+      <created>1486001567727</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1486001567728</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132159000" />
+    <option name="totallyTimeSpent" value="132372000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -1153,7 +1153,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed text align top of product image" />
     <MESSAGE value="added cancan and ability.rb" />
     <MESSAGE value="fixed new cart for cancan" />
     <MESSAGE value="forestliana keys removed from initalizer&#10;&#10;added system time to product show page" />
@@ -1178,7 +1177,8 @@
     <MESSAGE value="dashboard fix?  yes" />
     <MESSAGE value="fixed products show page {startdate}" />
     <MESSAGE value="fixed product page layout removed extra enddate." />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed product page layout removed extra enddate." />
+    <MESSAGE value="changed picurl to cloudinary tag" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed picurl to cloudinary tag" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1553,8 +1553,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/products/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="131" column="0" lean-forward="true" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+        <state relative-caret-position="1920">
+          <caret line="128" column="55" lean-forward="true" selection-start-line="128" selection-start-column="55" selection-end-line="128" selection-end-column="55" />
           <folding />
         </state>
       </provider>
