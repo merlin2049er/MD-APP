@@ -47,13 +47,13 @@
  
  
  System time: <%= time_now = Time.now  %> <br/>
- End Date: <%= @product.enddate %> <br/>
+ <!-- End Date: <%= @product.enddate %> <br/> -->
 
   
  
  
  <%  if @product.active == true && time_now <= end_time %>
-     Active campaign. Start date: <%= @product.startdate %>;  End date: <%= @product.enddate %>.
+     Active campaign.<br/> Start date: <%= @product.startdate %>;  End date: <%= @product.enddate %><br/>
       Duration, <%=   distance_of_time_in_words(start_time, end_time)  %>.<br/>
       
       <% if time_now >=	start_time  %>
