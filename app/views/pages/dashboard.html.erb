@@ -81,7 +81,7 @@
 
       <% @toptenending.each do |tenending| %>
           <tr>
-            <td><%= tenending.created_at.strftime("%m/%d/%Y") %> |  <%=  tenending.title  %> <%= tenending.enddate %>  <%= tenending.price %>  </td>
+            <td><%= tenending.created_at.strftime("%m/%d/%Y") %> |  <%=  tenending.title  %>  <%= tenending.startdate %> <%= tenending.enddate %>  <%= tenending.price %>  </td>
 
           </tr>
       <% end %>
@@ -89,7 +89,7 @@
     </table>
 
 
-    <!--
+
     <table>
       <thead>
       <tr>
@@ -100,16 +100,15 @@
       <tbody>
       <th>Top ten products campaigns started</th>
 
-      <%# @toptenproductsstarted.each do |tenstarted| %>
+      <% @toptenproductsstarted.each do |tenstarted| %>
           <tr>
-            <td><%#= tenstarted.created_at.strftime("%m/%d/%Y") %> |  <%#=  tenstarted.title  %> <%#= tenstarted.startdate %>  <%#= tenstarted.price %>  </td>
+            <td><%= tenstarted.created_at.strftime("%m/%d/%Y") %> |  <%=  tenstarted.title  %> <%= tenstarted.startdate %> <%= tenstarted.enddate %>  <%= tenstarted.price %>  </td>
 
           </tr>
-      <%# end %>
+      <% end %>
       </tbody>
     </table>
 
-    -->
 
     <table>
       <thead>
