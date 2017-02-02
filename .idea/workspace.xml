@@ -69,8 +69,8 @@
       <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/products/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1322">
-              <caret line="70" column="35" lean-forward="true" selection-start-line="70" selection-start-column="35" selection-end-line="70" selection-end-column="35" />
+            <state relative-caret-position="164">
+              <caret line="42" column="36" lean-forward="false" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -88,9 +88,9 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>img</find>
-      <find>Startdate</find>
       <find>startdate</find>
       <find>@product.destroy     respond_to do |format|       format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }       format.json { head :no_content }     end</find>
+      <find>Startdate</find>
     </findStrings>
     <replaceStrings>
       <replace>startdate</replace>
@@ -742,7 +742,7 @@
       <workItem from="1485901831910" duration="8045000" />
       <workItem from="1485916137248" duration="3616000" />
       <workItem from="1485992136213" duration="380000" />
-      <workItem from="1485992613698" duration="4632000" />
+      <workItem from="1485992613698" duration="4813000" />
     </task>
     <task id="LOCAL-00001" summary="hmm, just record counts for categories">
       <created>1480035534764</created>
@@ -1080,11 +1080,18 @@
       <option name="project" value="LOCAL" />
       <updated>1485998205374</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="fixed products show page {startdate}">
+      <created>1485998520342</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1485998520342</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130763000" />
+    <option name="totallyTimeSpent" value="130944000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -1146,7 +1153,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="carts, still working on it..." />
     <MESSAGE value="fixed the route to the add to cart button, delete from cart works" />
     <MESSAGE value="fixed text align top of product image" />
     <MESSAGE value="added cancan and ability.rb" />
@@ -1171,7 +1177,8 @@
     <MESSAGE value="fixed photo controller" />
     <MESSAGE value="dashboard fix?" />
     <MESSAGE value="dashboard fix?  yes" />
-    <option name="LAST_COMMIT_MESSAGE" value="dashboard fix?  yes" />
+    <MESSAGE value="fixed products show page {startdate}" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed products show page {startdate}" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1545,8 +1552,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/products/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1322">
-          <caret line="70" column="35" lean-forward="true" selection-start-line="70" selection-start-column="35" selection-end-line="70" selection-end-column="35" />
+        <state relative-caret-position="164">
+          <caret line="42" column="36" lean-forward="false" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="36" />
           <folding />
         </state>
       </provider>
