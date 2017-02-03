@@ -38,10 +38,8 @@ def edit
 end
 
 def index
-
     
 end
-
     
 def show
    
@@ -54,6 +52,4 @@ def set_defaults
     self.qty ||= 1
 end
 
-
-    
 end
