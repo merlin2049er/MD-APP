@@ -43,9 +43,10 @@
 
 <% @products.each do |product| %>
         <div class="img">
-  <h4> <%= link_to product.title, product %> </h4>
+
   <!-- <p > <%#= image_tag(product.picurl, height: '75', width: '75' )  %> -->
          <%= image_tag(product.picurl, height: '75', width: '75' ) %>
+          <h4><i> <%= link_to product.title, product %> </i></h4>
     <div class="desc" > <%= product.template.truncate_words(15, omission: '... (continued)') %>  </div>
         </div>
   <% end %>

@@ -69,8 +69,8 @@
       <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/categories/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            <state relative-caret-position="196">
+              <caret line="48" column="60" lean-forward="false" selection-start-line="48" selection-start-column="60" selection-end-line="48" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -746,14 +746,7 @@
       <workItem from="1485992613698" duration="6881000" />
       <workItem from="1486135346935" duration="1502000" />
       <workItem from="1486166929888" duration="6597000" />
-      <workItem from="1486180023227" duration="1725000" />
-    </task>
-    <task id="LOCAL-00010" summary="fixed the route to the add to cart button, delete from cart works">
-      <created>1481337295893</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1481337295893</updated>
+      <workItem from="1486180023227" duration="1983000" />
     </task>
     <task id="LOCAL-00011" summary="fixed text align top of product image">
       <created>1481337359620</created>
@@ -1091,11 +1084,18 @@
       <option name="project" value="LOCAL" />
       <updated>1486174816746</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="gallery view in category show page">
+      <created>1486182189634</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1486182189635</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142836000" />
+    <option name="totallyTimeSpent" value="143094000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="709" extended-state="0" />
@@ -1157,7 +1157,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added photos model, linked to products model" />
     <MESSAGE value="added owlcarousel , need to figure out how to get it to work" />
     <MESSAGE value="cleaned up some html" />
     <MESSAGE value="owl carousel working on product" />
@@ -1182,7 +1181,8 @@
     <MESSAGE value="removed forest admin and references {commented them out for now}" />
     <MESSAGE value="fix to populate rake command" />
     <MESSAGE value="fixed dashboard, looks alot nicer." />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed dashboard, looks alot nicer." />
+    <MESSAGE value="gallery view in category show page" />
+    <option name="LAST_COMMIT_MESSAGE" value="gallery view in category show page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1549,8 +1549,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/categories/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        <state relative-caret-position="196">
+          <caret line="48" column="60" lean-forward="false" selection-start-line="48" selection-start-column="60" selection-end-line="48" selection-end-column="60" />
           <folding />
         </state>
       </provider>
