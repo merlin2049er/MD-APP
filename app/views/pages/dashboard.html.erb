@@ -66,12 +66,12 @@
 
       <% @toptenlogin.each do |topten| %>
           <tr>
-            <td><%= topten.created_at.strftime("%m/%d/%Y") %> </td>
-            <td><%= topten.firstname %></td>
-            <td <%= topten.lastname %>  </td>
-            <td <%= topten.sign_in_count %>  </td>
-
+            <td> <%= topten.created_at.strftime("%m/%d/%Y") %> </td>
+            <td> <%= topten.firstname %> </td>
+            <td> <%= topten.lastname %> </td>
+            <td> <%= topten.sign_in_count %> </td>
           </tr>
+
       <% end %>
       </tbody>
     </table>
