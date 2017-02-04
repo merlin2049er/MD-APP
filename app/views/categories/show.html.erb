@@ -1,3 +1,27 @@
+<style>
+  div.img {
+    margin: 5px;
+    border: 0px solid #ccc;
+    float: left;
+    width: 180px;
+  }
+
+  div.img:hover {
+    border: 0px solid #777;
+  }
+
+  div.img img {
+    width: 100%;
+    height: auto;
+  }
+
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+</style>
+
+
 <% if user_signed_in? %>
 
 <p id="notice"><%= notice %></p>
@@ -14,14 +38,16 @@
 -->
 <%= link_to 'Back', categories_path %><br/>
 
-<%= @products.count %> items in this category.
+<%= @products.count %> items in this category.<br/>
 
 
 <% @products.each do |product| %>
-  
-  <h3> <%= link_to product.title, product %> </h3>
-  <p > <%= image_tag(product.picurl, height: '75', width: '75' )  %>
-   <%= product.template.truncate_words(15, omission: '... (continued)') %>  </p>
+        <div class="img">
+  <h4> <%= link_to product.title, product %> </h4>
+  <!-- <p > <%#= image_tag(product.picurl, height: '75', width: '75' )  %> -->
+         <%= image_tag(product.picurl, height: '75', width: '75' ) %>
+    <div class="desc" > <%= product.template.truncate_words(15, omission: '... (continued)') %>  </div>
+        </div>
   <% end %>
   
   <% else %>
