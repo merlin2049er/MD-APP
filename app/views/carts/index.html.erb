@@ -13,6 +13,10 @@
 
   <tbody>
 
+    <% if @carts.empty?  %>
+      <h4>Nothing here...</h4>
+        <% end %>
+
     <% @carts.each do |cart| %>
       <tr>
         <td><%= cart.created_at.strftime("%m/%d/%Y")    %> |  <%=  cart.product_id  %>  </td>

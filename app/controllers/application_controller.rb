@@ -26,7 +26,7 @@ class ApplicationController < ActionController::Base
   end 
   
   def all_notifications
-     @notifications = Notification.where("user_id =?", current_user.id)
+     @notifications = Notification.where("user_id =?", current_user.id).order('created_at DESC')
   end
 
   rescue_from ActiveRecord::RecordNotFound, with: :show_errors
