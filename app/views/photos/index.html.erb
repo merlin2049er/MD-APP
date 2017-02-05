@@ -14,15 +14,20 @@
   -->
     <%=   @photos.count %> Photos<br/><br/>
 
-<table>
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Photo listing</div>
+      <div class="panel-body">
+
+<table class="table">
   <thead>
     <tr>
-      <th colspan="1"></th>
+      <th colspan="4"></th>
     </tr>
   </thead>
 
   <tbody>
-  <th>Id </th><th> Product Id </th><th>Uri</th>
+  <th>Id </th><th> Product Id </th><th>Uri</th><th>Action</th>
     <% @photos.each do |photo| %>
       <tr>
 
@@ -41,7 +46,8 @@
     <% end %>
   </tbody>
 </table>
-
+      </div>
+    </div>
 <br>
 
 <%= will_paginate @photo, renderer: BootstrapPagination::Rails %><br/>
