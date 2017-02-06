@@ -29,6 +29,9 @@ Rails.application.routes.draw do
 
   
   post 'add_to_cart', to: 'products#add_to_cart'
+
+  match 'active'  => 'sessions#active',  via: :get
+  match 'timeout' => 'sessions#timeout', via: :get
   
   # resources :products do
   #   post '/add_to_cart' => 'products#add_to_cart', as: add_to_cart

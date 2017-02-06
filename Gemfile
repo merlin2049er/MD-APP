@@ -74,6 +74,12 @@ gem 'cloudinary'
 
 gem 'owlcarousel-rails'
 
+gem 'auto-session-timeout'
+
+gem 'auto-session-timeout-warning'
+
+
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -11,6 +11,10 @@ class ApplicationController < ActionController::Base
 
   before_filter :set_search
 
+  auto_session_timeout 10.minutes  # 10 minutes to test, 30 minutes for production
+  before_timedout_action
+
+
   def set_search
 
     @search=Product.search(params[:q])
@@ -41,6 +45,12 @@ class ApplicationController < ActionController::Base
   def set_notifications
     @notifications = Notifications.find(params[:id])
 
+  end
+
+  protected
+  #override before_timedout
+  def before_timedout
+    #your custom code here
   end
 
 end
