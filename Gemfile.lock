@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/activerecord-hackery/ransack.git
-  revision: 4adfd103983ca9bdecab6207963c20c9a72998b1
+  revision: 8ca8c95c6543c5da9b98a4e2747a0a4023d60bfc
   specs:
     ransack (1.8.2)
       actionpack (>= 3.0)
@@ -104,7 +104,7 @@ GEM
       unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
     execjs (2.7.0)
-    faker (1.7.2)
+    faker (1.7.3)
       i18n (~> 0.5)
     ffi (1.9.17-x64-mingw32)
     ffi (1.9.17-x86-mingw32)

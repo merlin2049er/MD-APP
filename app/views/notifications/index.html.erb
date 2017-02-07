@@ -14,6 +14,11 @@
   </thead>
 
   <tbody>
+
+  <% if @notifications.empty?  %>
+      <h4>Vacuous...</h4>
+  <% end %>
+
     <% @notifications.each do |notification| %>
       <tr>
         <td><%= notification.created_at.strftime("%m/%d/%Y")   %> | <%= link_to notification.notify_msg , notification  %></td>
