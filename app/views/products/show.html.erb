@@ -89,7 +89,7 @@
  </div>
 
     <div class="well well-sm">
-      Quantity: <%= @product.qty %>;   Remaining: <%= %>
+      Quantity: <%= @product.qty %>;   Remaining: <%=  %>
       <div class="progress">
         <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"  style="width: <%=  ((( @product.enddate.to_date - time_now.to_date).to_f)  / ((  @product.enddate.to_date - @product.startdate.to_date ).to_f)  *100).to_i  %>%;">
           <%#= remaining quantity   %>
