@@ -52,6 +52,10 @@ class ProductsController < ApplicationController
 
     @photo = Photo.where('enabled' => true ).where('product_id' => @product)
 
+    @taken = Cart.where('product_id' => @product).count
+
+    @remaining = @product.qty - @taken
+
       # time = Time.new
    # values = time.to_a
    # @current_time = Time.utc(*values)
