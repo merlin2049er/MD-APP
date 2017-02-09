@@ -34,10 +34,15 @@
 
 <div class="tab-content">
   <div id="Product" class="tab-pane fade in active">
-  
 
-  <H2><%= @product.title %></H2>
-    <%= button_to 'Add to Cart', add_to_cart_path, method: :post %>
+  <H2><%= @product.title %></H2>  <% if @product.qty == 1 %>
+        <%= button_to  'Last one, add to Cart?', add_to_cart_path, method: :post %>
+
+  <% else %>
+
+    <%= button_to  'Add to Cart', add_to_cart_path, method: :post %>
+        <% end %>
+
  <div class="well well-sm"> 
  
  <% start_time =  @product.startdate %>

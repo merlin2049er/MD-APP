@@ -19,10 +19,15 @@
 
     <% @carts.each do |cart| %>
       <tr>
-        <td><%= cart.created_at.strftime("%m/%d/%Y")    %> |  <%=  cart.product_id  %>  </td>
+        <td><%= cart.created_at.strftime("%m/%d/%Y") %> |  <%=  cart.product_id  %></td>
         <td><%#= link_to 'Show', cart %></td>
         <td><%#= link_to 'Edit', edit_cart_path(cart) %></td>
-        <td><%= link_to 'Remove', cart, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+        <% if not cart.processing? %>
+        <td>| <%= link_to 'Remove', cart, method: :delete, data: { confirm: 'Are you sure?' } %>   </td>
+            <% else %>
+           <td> <%= '| Processing order...'  %> </td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

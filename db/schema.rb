@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170201233649) do
+ActiveRecord::Schema.define(version: 20170209160143) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "trackable_id"
@@ -32,9 +32,10 @@ ActiveRecord::Schema.define(version: 20170201233649) do
 
   create_table "carts", force: :cascade do |t|
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
     t.integer  "product_id"
+    t.boolean  "processing", default: false
   end
 
   create_table "categories", force: :cascade do |t|
