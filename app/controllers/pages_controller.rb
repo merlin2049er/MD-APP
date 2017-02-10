@@ -4,7 +4,10 @@ class PagesController < ApplicationController
 #  add_breadcrumb "contacts", :contact_path
 #  add_breadcrumb "about", :about_path
 #  add_breadcrumb "error", :error_path
-  
+
+  before_action :authenticate_user!
+
+
   def index
     add_breadcrumb "home", index_path
   end
@@ -63,6 +66,14 @@ class PagesController < ApplicationController
     @totalnotifications = Notification.count
     @totaltransactions = Transaction.count
 
+
+  end
+
+  def invoicing
+
+    @totalinvoices = Cart.where('processing' => true).count
+
+    @invoiceusers = Cart.includes(:user).where('processing' => true)
 
   end
 
