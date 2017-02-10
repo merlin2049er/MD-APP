@@ -75,6 +75,8 @@ class PagesController < ApplicationController
 
     @invoiceusers = Cart.includes(:user).where('processing' => true)
 
+
+
   end
 
 end
