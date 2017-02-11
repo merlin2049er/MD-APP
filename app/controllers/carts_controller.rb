@@ -14,7 +14,6 @@ class CartsController < ApplicationController
 
      @carts  = Cart.where('user_id =?', current_user.id)
 
-
   end
 
   # GET /articles/1
