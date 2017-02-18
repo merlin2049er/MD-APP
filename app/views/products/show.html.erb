@@ -36,11 +36,11 @@
   <div id="Product" class="tab-pane fade in active">
 
   <H2><%= @product.title %></H2>  <% if @product.qty == 1 %>
-        <%= button_to  'Last one, add to Cart?', {:controller => "products", :action => "add_to_cart" }, method: :post  %>
+        <%= button_to  'Last one, add to Cart?', {:controller => "carts", :action => "create" }, method: :post  %>
 
   <% else %>
 
-    <%= button_to  'Add to Cart', carts_path %>
+    <%= button_to  'Add to Cart', {:controller => "carts", :action => "create" }, method: :post %>
 
   <% end %>
 

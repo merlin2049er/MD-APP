@@ -84,6 +84,7 @@ gem 'auto-session-timeout'
 
 gem 'auto-session-timeout-warning'
 
+gem 'redis'
 
 
 
