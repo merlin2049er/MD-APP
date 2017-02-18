@@ -28,9 +28,6 @@ Rails.application.routes.draw do
   get 'dashboard', to: 'pages#dashboard'
   get 'invoicing', to: 'pages#invoicing'
 
-  
-  post 'add_to_cart', to: 'products#add_to_cart'
-
   match 'active'  => 'sessions#active',  via: :get
   match 'timeout' => 'sessions#timeout', via: :get
   

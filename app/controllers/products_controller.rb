@@ -117,6 +117,8 @@ class ProductsController < ApplicationController
 
 
 
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
@@ -130,6 +132,13 @@ class ProductsController < ApplicationController
         params.require(:product).permit(:title, :picurl, :template, :price, :msrp, :Startdate, :enddate, :draft, :active, :funded, :category_id, :qty  )
         
     end
+
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def cart_params
+    # params.fetch(:cart, {})
+    params.require(:cart).permit(:user_id, :product_id )
+  end
 
 
 end
