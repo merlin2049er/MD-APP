@@ -31,15 +31,6 @@ Rails.application.routes.draw do
   match 'active'  => 'sessions#active',  via: :get
   match 'timeout' => 'sessions#timeout', via: :get
   
-  # resources :products do
-  #   post '/add_to_cart' => 'products#add_to_cart', as: add_to_cart
-  # end
-  
-  
-  #get 'activities', to: 'pages#activity'
-  #get 'categories', to: 'categories#categories'
-  
-  
   
   get "*path", to: redirect("/error") 
   

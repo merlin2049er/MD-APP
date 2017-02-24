@@ -114,6 +114,21 @@ class ProductsController < ApplicationController
   end
 
 
+  def add_to_cart
+
+    @cart = Cart.new(params[:cart_params])
+
+    respond_to do |format|
+      if @cart.save
+        format.html { redirect_to :back, notice: 'Product was successfully added to cart.' }
+        format.json { render :show, status: :created, location: @cart }
+      else
+        format.html { render :new }
+        format.json { render json: @cart.errors, status: :unprocessable_entity }
+      end
+    end
+
+  end
 
 
 

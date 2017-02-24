@@ -5,7 +5,7 @@ class PagesController < ApplicationController
 #  add_breadcrumb "about", :about_path
 #  add_breadcrumb "error", :error_path
 
-  before_action :authenticate_user!
+#  before_action :authenticate_user!
 
 
   def index
