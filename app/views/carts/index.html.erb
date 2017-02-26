@@ -1,5 +1,5 @@
 <% if user_signed_in? %>
-<!--  <p id="notice"><%= notice %></p>  -->
+<!--  <p id="notice"><%#= notice %></p>  -->
 
 <!-- <h1>Carts</h1>  -->
 
@@ -19,9 +19,11 @@
 
     <% @carts.each do |cart| %>
       <tr>
-        <td><%= cart.created_at.strftime("%m/%d/%Y") %> |  <%=  cart.product_id  %>  </td>
-        <td><%#= link_to 'Show', cart %></td>
+        <td><%= cart.created_at.strftime("%m/%d/%Y") %> |</td>
+        <td> <%=  cart.product_id  %>  </td>
+       <!--  <td><%#= link_to 'Show', cart %></td>
         <td><%#= link_to 'Edit', edit_cart_path(cart) %></td>
+        -->
 
         <% if not cart.processing? %>
         <td>| <%= link_to 'Remove', cart, method: :delete, data: { confirm: 'Are you sure?' } %>   </td>

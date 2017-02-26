@@ -74,7 +74,7 @@ class PagesController < ApplicationController
     @totalinvoices = Cart.where('processing' => true).count
 
     @invoiceusers = Cart.includes(:user).where('processing' => true)
-
+    
 
 
   end
