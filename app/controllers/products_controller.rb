@@ -116,7 +116,7 @@ class ProductsController < ApplicationController
 
   def add_to_cart
 
-    @cart = Cart.new(params[:cart_params])
+        @cart = Cart.new(params[:cart_params])
 
     respond_to do |format|
       if @cart.save
@@ -127,6 +127,7 @@ class ProductsController < ApplicationController
         format.json { render json: @cart.errors, status: :unprocessable_entity }
       end
     end
+
 
   end
 

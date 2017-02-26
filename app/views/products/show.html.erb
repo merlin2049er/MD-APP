@@ -25,7 +25,7 @@
 
 <% if user_signed_in? %>
 
-<p id="notice"><%= notice %></p>
+<!-- <p id="notice"><%= notice %></p> -->
 
 <ul class="nav nav-tabs">
   <li class="active"><a data-toggle="tab" href="#Product">Product</a></li>
@@ -40,8 +40,8 @@
 
   <% else %>
 
-    <%#= button_to  'Add to Cart', {:controller => "products", :action => "add_to_cart" }, method: :post %>
-        <%#= button_to  'Add to Cart', {:controller => "products", :action => "add_to_cart" }, method: :post  %>
+        <%#= button_to "Add to Cart", :action => "add_to_cart" %>
+        <%= button_to "Add to Cart", { :controller => "products", :action => "add_to_cart"} %>
 
 
   <% end %>

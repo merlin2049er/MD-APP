@@ -16,7 +16,11 @@ Rails.application.routes.draw do
   resources :contacts
   resources :activities
   resources :photos
- 
+  resources :products
+
+  post "products/add_to_cart" => "products#add_to_cart"
+
+
   get 'pages/contact'
   
   root to: 'pages#index'
