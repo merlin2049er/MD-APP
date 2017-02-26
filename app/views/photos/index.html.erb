@@ -12,22 +12,28 @@
 <!--
   <%#= @products.product.size %> records<br/>
   -->
-    <%=   @photos.count %> Photos<br/><br/>
+    <!--
+    <%#=   @photos.count %> Photos<br/><br/>
+    -->
 
     <div class="panel panel-default">
       <!-- Default panel contents -->
-      <div class="panel-heading">Photo listing</div>
+      <div class="panel-heading">Photos listing: <%=   @photos.count %></div>
       <div class="panel-body">
 
 <table class="table">
+
   <thead>
-    <tr>
-      <th colspan="4"></th>
+  <tr>
+  <th>Id </th>
+  <th> Product Id </th>
+  <th>Uri</th>
+  <th>Action</th>
+
     </tr>
   </thead>
 
   <tbody>
-  <th>Id </th><th> Product Id </th><th>Uri</th><th>Action</th>
     <% @photos.each do |photo| %>
       <tr>
 

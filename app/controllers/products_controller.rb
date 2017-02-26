@@ -2,7 +2,6 @@ class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
 
-
   add_breadcrumb "MASSDUMP", :root_path
   
   # GET /products
@@ -116,7 +115,8 @@ class ProductsController < ApplicationController
 
   def add_to_cart
 
-        @cart = Cart.new(params[:cart_params])
+    #@cart = Cart.new(params[:cart_params])
+    @cart = Cart.new(user_id: current_user, product_id: 2)
 
     respond_to do |format|
       if @cart.save
@@ -130,10 +130,6 @@ class ProductsController < ApplicationController
 
 
   end
-
-
-
-
 
   private
     # Use callbacks to share common setup or constraints between actions.
