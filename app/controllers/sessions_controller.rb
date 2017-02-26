@@ -5,7 +5,6 @@ class SessionsController < Devise::SessionsController
 
   auto_session_timeout_actions
 
-
   def active
     render_session_status
   end
