@@ -3,11 +3,22 @@
 
 <!-- <h1>Carts</h1>  -->
 
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Shopping cart: </div>
+      <div class="panel-body">
 
-<table>
+
+      <table class="table">
   <thead>
     <tr>
-      <th colspan="3"></th>
+      <!-- <th colspan="3"></th> -->
+      <th>Added</th>
+      <th>Item</th>
+      <th>End date</th>
+      <th>Funded</th>
+      <th>Action</th>
+
     </tr>
   </thead>
 
@@ -19,7 +30,7 @@
 
     <% @carts.each do |cart| %>
       <tr>
-        <td><%= cart.created_at.strftime("%m/%d/%Y") %> |</td>
+        <td><%= cart.created_at.strftime("%m/%d/%Y") %> </td>
         <% product = Product.where(id: cart.product_id).first %>
         <td> <%=  product.title  %>  </td>
         <td> <%=  product.enddate  %>  </td>
@@ -30,14 +41,18 @@
         -->
 
         <% if not cart.processing? %>
-        <td>| <%= link_to 'Remove', cart, method: :delete, data: { confirm: 'Are you sure?' } %>   </td>
+        <td> <%= link_to 'Remove', cart, method: :delete, data: { confirm: 'Are you sure?' } %>   </td>
             <% else %>
-           <td> <%= '| Processing order...'  %> </td>
+           <td> <%= '...Processing order...'  %> </td>
         <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
+
+
+    </div>
+    </div>
 
 <br>
 
