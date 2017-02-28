@@ -20,8 +20,12 @@
     <% @carts.each do |cart| %>
       <tr>
         <td><%= cart.created_at.strftime("%m/%d/%Y") %> |</td>
-        <td> <%=  cart.product_id  %>  </td>
-       <!--  <td><%#= link_to 'Show', cart %></td>
+        <% product = Product.where(id: cart.product_id).first %>
+        <td> <%=  product.title  %>  </td>
+        <td> <%=  product.enddate  %>  </td>
+        <td> <%=  product.funded  %>  </td>
+
+        <!--  <td><%#= link_to 'Show', cart %></td>
         <td><%#= link_to 'Edit', edit_cart_path(cart) %></td>
         -->
 

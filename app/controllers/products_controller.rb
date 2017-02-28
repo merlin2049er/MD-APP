@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!
-
+  
   add_breadcrumb "MASSDUMP", :root_path
   
   # GET /products
@@ -114,9 +114,9 @@ class ProductsController < ApplicationController
 
 
   def add_to_cart
-
+    #binding.pry
     #@cart = Cart.new(params[:cart_params])
-    @cart = Cart.new(user_id: current_user, product_id: 2)
+    @cart = Cart.new(user_id: current_user.id, product_id: params[:product_id] )
 
     respond_to do |format|
       if @cart.save
@@ -141,7 +141,7 @@ class ProductsController < ApplicationController
     def product_params
       # params.fetch(:product, {})
       # added qty 
-        params.require(:product).permit(:title, :picurl, :template, :price, :msrp, :Startdate, :enddate, :draft, :active, :funded, :category_id, :qty  )
+        params.require(:product).permit( :title, :picurl, :template, :price, :msrp, :Startdate, :enddate, :draft, :active, :funded, :category_id, :qty  )
         
     end
 
