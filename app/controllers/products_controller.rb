@@ -114,9 +114,6 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       if @cart.save
-        @product.funded = true
-        @product.update(product_params)
-
         format.html { redirect_to :back, notice: 'Product was successfully added to cart.' }
         format.json { render :show, status: :created, location: @cart }
       else
