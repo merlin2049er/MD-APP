@@ -114,6 +114,7 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       if @cart.save
+
         format.html { redirect_to :back, notice: 'Product was successfully added to cart.' }
         format.json { render :show, status: :created, location: @cart }
       else
@@ -121,6 +122,8 @@ class ProductsController < ApplicationController
         format.json { render json: @cart.errors, status: :unprocessable_entity }
       end
     end
+
+
 
   end
 
