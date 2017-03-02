@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7331a777-2244-45ce-afdd-3c1ae6d6fb83" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/categories/show.html.erb" afterPath="$PROJECT_DIR$/app/views/categories/show.html.erb" />
     </list>
     <ignored path="MD-APP-master.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -699,14 +698,7 @@
       <workItem from="1488244382327" duration="1036000" />
       <workItem from="1488250207188" duration="833000" />
       <workItem from="1488340009036" duration="179000" />
-      <workItem from="1488410434753" duration="2186000" />
-    </task>
-    <task id="LOCAL-00038" summary="photos">
-      <created>1485920471055</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1485920471055</updated>
+      <workItem from="1488410434753" duration="2304000" />
     </task>
     <task id="LOCAL-00039" summary="changed Startdate column name to startdate in product table">
       <created>1485992865954</created>
@@ -1044,11 +1036,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488410561229</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="fixed category gallery css">
+      <created>1488417189525</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1488417189525</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="228943000" />
+    <option name="totallyTimeSpent" value="229061000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="709" extended-state="0" />
@@ -1110,7 +1109,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="gallery view in category show page - fixed" />
     <MESSAGE value="cleaned up photo listing index and show page, nicely formatted now" />
     <MESSAGE value="cleaned up unversioned files..." />
     <MESSAGE value="fixed notifications, transactions, now sorting descending.&#10;fixed product form {startdate}&#10;no luck formatting searchbox yet" />
@@ -1135,7 +1133,8 @@
     <MESSAGE value="fixed add to cart and cart index" />
     <MESSAGE value="fixed index view, put it into a nice table" />
     <MESSAGE value="changed dates in populate rake" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed dates in populate rake" />
+    <MESSAGE value="fixed category gallery css" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed category gallery css" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
