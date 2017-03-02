@@ -37,8 +37,6 @@ class ProductsController < ApplicationController
 
     #@records = Product.where('draft' => false, 'active' => true)
 
-    
-    
   end
 
   # GET /products/1
@@ -55,10 +53,6 @@ class ProductsController < ApplicationController
 
     @remaining = @product.qty - @taken
 
-      # time = Time.new
-   # values = time.to_a
-   # @current_time = Time.utc(*values)
-    
   end
 
   # GET /products/new
@@ -127,7 +121,6 @@ class ProductsController < ApplicationController
         format.json { render json: @cart.errors, status: :unprocessable_entity }
       end
     end
-
 
   end
 
