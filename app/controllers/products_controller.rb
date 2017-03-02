@@ -114,6 +114,8 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       if @cart.save
+        @product.funded = true
+        @product.update(product_params)
 
         format.html { redirect_to :back, notice: 'Product was successfully added to cart.' }
         format.json { render :show, status: :created, location: @cart }
@@ -137,7 +139,7 @@ class ProductsController < ApplicationController
     def product_params
       # params.fetch(:product, {})
       # added qty 
-        params.require(:product).permit( :title, :picurl, :template, :price, :msrp, :Startdate, :enddate, :draft, :active, :funded, :category_id, :qty  )
+        params.require(:product).permit( :title, :picurl, :template, :price, :msrp, :startdate, :enddate, :draft, :active, :funded, :category_id, :qty  )
         
     end
 
