@@ -1,9 +1,10 @@
+
 <div class="row">
   <div class="col-lg-12">
     <h1 class="page-header">Invoicing<br/>
-      <small>After all, tomorrow is another day!
-      </small>
+      <small>After all, tomorrow is another day!</small>
     </h1>
+
 
 
     <div class="panel panel-default">
@@ -15,19 +16,17 @@
     <table class="table">
       <thead>
       <tr>
-        <!-- <th colspan="1"></th> -->
+        <!--<th colspan="10"></th>-->
         <th>Created at</th>
         <th>Cart id</th>
-        <th>First name</th>
-        <th>Last name</th>
-        <th>Address 1</th>
-        <th>Address 2</th>
+        <th>Name</th>
+        <th></th>
+        <th>Address</th>
+        <th></th>
         <th>City</th>
         <th>State</th>
         <th>Postal</th>
         <th>Email</th>
-
-
       </tr>
       </thead>
 
@@ -38,7 +37,7 @@
           <tr>
             <td><%= iu.user.created_at.strftime("%m/%d/%Y") %> </td>
             <td>  <%= iu.id  %> </td>
-            <td>  <%= iu.user.firstname  %> </td>
+            <td>  <%= iu.user.firstname %> </td>
             <td>  <%= iu.user.lastname %>  </td>
             <td>  <%= iu.user.address1 %>  </td>
             <td>  <%= iu.user.address2 %>  </td>
@@ -49,29 +48,14 @@
 
           </tr>
 
-          <tr>
-            <td></td>
-            <td>  <%= iu.id  %> </td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
 
-
-          </tr>
 
       <% end %>
       </tbody>
     </table>
 
-
-
 </div>
     </div>
 
-  </div>
+ </div>
 </div>

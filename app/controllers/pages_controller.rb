@@ -71,6 +71,9 @@ class PagesController < ApplicationController
 
   def invoicing
 
+    add_breadcrumb "invoicing", invoicing_path
+
+
     @totalinvoices = Cart.where('processing' => true).count
 
     @invoiceusers = Cart.includes(:user).where('processing' => true)
