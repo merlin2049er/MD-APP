@@ -23,10 +23,10 @@ class Product < ActiveRecord::Base
     validates_presence_of :qty
     validates_presence_of :price
     validates_presence_of :msrp
-    validates_presence_of :Startdate
+    validates_presence_of :startdate
     validates_presence_of :enddate
     
-    validates_date :Startdate, :before => :enddate, 
+    validates_date :startdate, :before => :enddate,
                                :before_message => "must be at before the end date."
 
     # hopefully this works
