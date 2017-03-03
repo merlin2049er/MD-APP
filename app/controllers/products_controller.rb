@@ -53,6 +53,8 @@ class ProductsController < ApplicationController
 
     @remaining = @product.qty - @taken
 
+    $remaining = @remaining
+
 
   end
 
@@ -117,11 +119,14 @@ class ProductsController < ApplicationController
       if @cart.save
 
 
+          if $remaining == 1
 
-        # put some conditions around this @remaining == 0?
+            # put some conditions around this @remaining == 0?
           Product.update(params[:product_id], :funded => true)
           Cart.where(:product_id => params[:product_id]).update_all(:processing => true)
           #
+          end
+
 
         format.html { redirect_to :back, notice: 'Product was successfully added to cart.' }
         format.json { render :show, status: :created, location: @cart }
