@@ -55,7 +55,6 @@ class ProductsController < ApplicationController
 
     $remaining = @remaining
 
-
   end
 
   # GET /products/new
@@ -112,13 +111,15 @@ class ProductsController < ApplicationController
 
   def add_to_cart
     #binding.pry
-    #@cart = Cart.new(params[:cart_params])
+
+
+
     @cart = Cart.new(user_id: current_user.id, product_id: params[:product_id] )
 
     respond_to do |format|
       if @cart.save
 
-
+          #fix this global variable...
           if $remaining == 1
 
             # put some conditions around this @remaining == 0?
