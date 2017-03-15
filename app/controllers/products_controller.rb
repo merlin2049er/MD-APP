@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-  before_filter :authenticate_user!
+  before_filter  :authenticate_user!
   
   add_breadcrumb "MASSDUMP", :root_path
   
@@ -48,12 +48,13 @@ class ProductsController < ApplicationController
     impressionist(@product)
 
     @photo = Photo.where('enabled' => true ).where('product_id' => @product)
-
     @taken = Cart.where('product_id' => @product).count
-
     @remaining = @product.qty - @taken
 
-    $remaining = @remaining
+    #fix this global variable no good.
+    #$remaining = @remaining
+    session[:remaining] = @remaining
+
 
   end
 
@@ -110,22 +111,19 @@ class ProductsController < ApplicationController
 
 
   def add_to_cart
-    #binding.pry
-
-
 
     @cart = Cart.new(user_id: current_user.id, product_id: params[:product_id] )
+
 
     respond_to do |format|
       if @cart.save
 
-          #fix this global variable...
-          if $remaining == 1
 
-            # put some conditions around this @remaining == 0?
+          #fix this global variable...
+          if session[:remaining] == 1
+
           Product.update(params[:product_id], :funded => true)
           Cart.where(:product_id => params[:product_id]).update_all(:processing => true)
-          #
           end
 
 
@@ -137,12 +135,19 @@ class ProductsController < ApplicationController
       end
     end
 
-
-
   end
 
+=begin
+  def calc_remaining
+    @taken = Cart.where('product_id' => @product).count
+    @remaining = @product.qty - @taken
+  end
+=end
+
+
   private
-    # Use callbacks to share common setup or constraints between actions.
+
+  # Use callbacks to share common setup or constraints between actions.
     def set_product
       @product = Product.find(params[:id])
     end
