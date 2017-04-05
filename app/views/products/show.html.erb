@@ -63,7 +63,7 @@
  
  
  <%  if @product.active == true && time_now <= end_time %>
-     Active campaign.<br/> Start date: <%= @product.startdate %>;  End date: <%= @product.enddate %><br/>
+     Active campaign.<br/> Start date: <%= @product.startdate %>.</br>End date: <%= @product.enddate %><br/>
       Duration, <%=   distance_of_time_in_words(start_time, end_time)  %>.<br/>
       
       <% if time_now >=	start_time  %>
@@ -164,9 +164,9 @@
    
 
   <div class="well well-sm">    <%= @product.template %><br/>   </div>
-   
-   
-   <%= @product.impressionist_count(:filter => :ip_address) %> Views <br/> 
+
+    <div class="well well-sm">
+    <%= @product.impressionist_count(:filter => :ip_address) %> Views <br/>
    <% if @product.msrp != 0 && @product.price != 0 then %>
    <%= @product.price %> MSDP<br/>
    <%= @product.msrp %> MSRP<br/>
@@ -174,6 +174,7 @@
    <%= Discount.calculate_percentage_discount(@product.msrp, @product.price) %> Discount %<br/> 
     <% end %>
 
+    </div>
 <!-- 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 -->
