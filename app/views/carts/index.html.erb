@@ -5,7 +5,14 @@
 
     <div class="panel panel-default">
       <!-- Default panel contents -->
-      <div class="panel-heading">Shopping cart: </div>
+      <div class="panel-heading">Shopping cart:  <% if @carts.empty?  %>
+            Nothing here...
+            <% else %>
+          <%= @carts.count %> items...
+        <% end %>
+
+
+      </div>
       <div class="panel-body">
 
 
@@ -24,9 +31,9 @@
 
   <tbody>
 
-    <% if @carts.empty?  %>
-      <h4>Nothing here...</h4>
-        <% end %>
+    <!--<% if @carts.empty?  %>-->
+      <!--<h4>Nothing here...</h4>-->
+        <!--<% end %>-->
 
     <% @carts.each do |cart| %>
       <tr>
