@@ -36,6 +36,7 @@
       <% @invoiceusers.each do |iu| %>
           <tr>
             <td><%= iu.user.created_at.strftime("%m/%d/%Y") %> </td>
+
             <td>  <%= iu.id  %> </td>
             <td>  <%= iu.user.firstname %> </td>
             <td>  <%= iu.user.lastname %>  </td>

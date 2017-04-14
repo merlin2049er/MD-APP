@@ -6,6 +6,7 @@
 <h1>Notifications</h1>
 -->
 
+
 <table>
   <thead>
     <tr>
@@ -16,8 +17,9 @@
   <tbody>
 
   <% if @notifications.empty?  %>
-      <h4>Vacuous...</h4>
+      <h4>Nothing here...</h4>
   <% end %>
+
 
     <% @notifications.each do |notification| %>
       <tr>
