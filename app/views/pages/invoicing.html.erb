@@ -18,7 +18,7 @@
       <tr>
         <!--<th colspan="10"></th>-->
         <th>Created at</th>
-        <th>Product id</th>
+        <th>Item</th>
         <th>Name</th>
         <th></th>
         <th>Address</th>
@@ -37,7 +37,7 @@
           <tr>
             <td><%= iu.user.created_at.strftime("%m/%d/%Y") %> </td>
 
-            <td>  <%= iu.product_id  %>  <%= Product.where( ['id =?', iu.product_id ]).pluck("title") %></td>
+            <td>  <%#= iu.product_id  %>  <%= Product.find(iu.product_id).title %></td>
             <td>  <%= iu.user.firstname %> </td>
             <td>  <%= iu.user.lastname %>  </td>
             <td>  <%= iu.user.address1 %>  </td>
