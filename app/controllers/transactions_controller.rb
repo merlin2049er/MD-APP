@@ -80,7 +80,7 @@ class TransactionsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def transaction_params
       #params.fetch(:transaction, {})
-      params.require(:transaction).permit(:transaction_msg , :user_id  )
+      params.require(:transaction).permit(:transaction_msg , :user_id , :invoice_number, :tracking_number, :shipped, :postal_carrier )
 
     end
 end

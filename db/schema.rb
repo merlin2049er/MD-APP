@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170209160143) do
+ActiveRecord::Schema.define(version: 20170427213352) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "trackable_id"
@@ -159,9 +159,13 @@ ActiveRecord::Schema.define(version: 20170209160143) do
 
   create_table "transactions", force: :cascade do |t|
     t.string   "transaction_msg"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.integer  "user_id"
+    t.boolean  "shipped"
+    t.string   "invoice_number"
+    t.string   "tracking_number"
+    t.string   "postal_carrier",  limit: 3
   end
 
   create_table "users", force: :cascade do |t|
