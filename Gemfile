@@ -78,7 +78,7 @@ gem 'cloudinary'
 
 gem 'owlcarousel-rails'
 
-# gem 'jquery-ui-rails', '~> 4.2.1'
+gem 'jquery-ui-rails', '~> 4.2.1'  #not sure it this works (with the timeout)
 
 gem 'auto-session-timeout'
 
