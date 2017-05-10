@@ -41,7 +41,9 @@
 
 
     <% @transactions.each do |transaction| %>
-      <tr>
+       <tr class="<%= cycle("even", "odd") %>">
+
+     <!-- <tr> -->
         <td><%= transaction.created_at.strftime("%m/%d/%Y")  %> </td>
         <td> <%=  transaction.invoice_number  %>  </td>
         <td> <%=  transaction.shipped  %>  </td>

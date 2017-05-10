@@ -12,7 +12,8 @@
 <!--
   <%#= @products.product.size %> records<br/>
   -->
-    <%=   @products.count %> products<br/><br/>
+
+     <%=   @products.count %> products<br/><br/>
 
 <table>
   <thead>
@@ -23,6 +24,7 @@
 
   <tbody>
     <% @products.each do |product| %>
+     <!-- <tr class="<%#= cycle("even", "odd") %>"> -->
       <tr>
          <td><%= link_to product.title , product  %></td>
         <!-- 
@@ -38,7 +40,8 @@
   </tbody>
 </table>
 
-<br>
+
+<!-- <br> -->
 
 <%= will_paginate @product, renderer: BootstrapPagination::Rails %><br/>
 
