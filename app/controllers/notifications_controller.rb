@@ -11,6 +11,8 @@ class NotificationsController < ApplicationController
     add_breadcrumb 'notifications', notifications_path
 
     @notifications = Notification.where('user_id =?', current_user.id).order('created_at DESC').paginate(page: params[:page] , per_page: 10)
+    @notifications = @notifications.paginate(page: params[:page] , per_page: 10)
+
 
   end
 

@@ -13,6 +13,7 @@ class CartsController < ApplicationController
      add_breadcrumb "shopping cart", carts_path 
 
      @carts  = Cart.where('user_id =?', current_user.id)
+     @carts = @carts.paginate(page: params[:page] , per_page: 10)
 
   end
 

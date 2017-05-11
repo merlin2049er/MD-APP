@@ -70,6 +70,9 @@
 <%#= link_to 'New Transaction', new_transaction_path %>
     -->
 
+    <%= will_paginate @transaction, renderer: BootstrapPagination::Rails %><br/>
+
+
 <% else %>
 
     <div class="alert alert-warning" role="alert">You must be signed in to see the notifications.</div>

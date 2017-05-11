@@ -10,6 +10,7 @@ class TransactionsController < ApplicationController
     add_breadcrumb 'transactions', transactions_path
     # @transactions = Transaction.all
     @transactions = Transaction.where('user_id =?', current_user.id).order('created_at DESC').paginate(page: params[:page] , per_page: 10)
+    @transactions = @transactions.paginate(page: params[:page] , per_page: 10)
 
 
   end
