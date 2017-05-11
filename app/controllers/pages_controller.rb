@@ -77,7 +77,9 @@ class PagesController < ApplicationController
     @totalinvoices = Cart.where('processing' => true).count
 
     @invoiceusers = Cart.includes(:user).where('processing' => true)
-    
+    @invoiceusers = @invoiceusers.paginate(page: params[:page] , per_page: 10)
+
+
 
 
   end
