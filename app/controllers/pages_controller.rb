@@ -33,6 +33,10 @@ class PagesController < ApplicationController
      add_breadcrumb "terms", terms_path
   end
 
+  def faq
+    add_breadcrumb "faq", terms_path
+  end
+
   def dashboard
     add_breadcrumb "dashboard", dashboard_path
 

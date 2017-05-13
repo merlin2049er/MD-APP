@@ -29,6 +29,7 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   get 'error', to: 'pages#error'
   get 'terms', to: 'pages#terms'
+  get 'faq',   to: 'pages#faq'
   get 'dashboard', to: 'pages#dashboard'
   get 'invoicing', to: 'pages#invoicing'
 
