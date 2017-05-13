@@ -1,3 +1,26 @@
 // Place all the styles related to the Categories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+div.img {
+  margin: 5px;
+  border: 0px solid #ccc;
+  float: left;
+  width: 180px;
+  height: 400px;
+  overflow: hidden;
+}
+
+div.img:hover {
+  border: 0px solid #777;
+}
+
+div.img img {
+  width: 100%;
+  height: auto;
+
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
