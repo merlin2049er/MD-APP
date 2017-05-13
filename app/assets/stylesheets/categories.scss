@@ -10,6 +10,15 @@ div.img {
   overflow: hidden;
 }
 
+div.img2 {
+  margin: 5px;
+  border: 0px solid #ccc;
+  float: left;
+  width: 255px;
+  height: 285px;
+  overflow: hidden;
+}
+
 div.img:hover {
   border: 0px solid #777;
 }

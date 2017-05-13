@@ -10,11 +10,11 @@
 
 
     <% @categories.each do |category| %>
-        <div class="img">
+        <div class="img2">
 
         <%= link_to category.name , category  %>
 
-        <%= image_tag(category.picurl, height: '75', width: '75' ) %>
+        <%= link_to image_tag(category.picurl ), category %>
 
         </div>
 
