@@ -22,7 +22,8 @@ Rails.application.routes.draw do
 
 
   get 'pages/contact'
-  
+
+
   root to: 'pages#index'
   get 'index', to: 'pages#index'
   get 'contact', to: 'pages#contact'
@@ -30,7 +31,6 @@ Rails.application.routes.draw do
   get 'error', to: 'pages#error'
   get 'terms', to: 'pages#terms'
   get 'faq',   to: 'pages#faq'
-  get 'friends',   to: 'pages#friends'
 
   get 'dashboard', to: 'pages#dashboard'
   get 'invoicing', to: 'pages#invoicing'

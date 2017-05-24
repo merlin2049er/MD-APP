@@ -37,9 +37,6 @@ class PagesController < ApplicationController
     add_breadcrumb "faq", terms_path
   end
 
-  def friends
-    add_breadcrumb "friends", terms_path
-  end
 
 
   def dashboard
