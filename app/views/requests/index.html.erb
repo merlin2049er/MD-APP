@@ -1,0 +1,52 @@
+<% if user_signed_in? %> 
+
+
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Requests: <%=   @requests.count %></div>
+      <div class="panel-body">
+
+<table class="table">
+
+  <thead>
+  <tr>
+
+  <th>Product</th>
+  <th>Manufacturer</th>
+  <th>Action</th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @requests.each do |request| %>
+      <tr>
+
+         <td><%= link_to request.product , request  %></td>
+        <td><%=  request.manufacturer  %></td>
+
+
+
+
+        <td><%= render 'requests'   %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+      </div>
+    </div>
+<!-- <br> -->
+
+<%= will_paginate @request, renderer: BootstrapPagination::Rails %>
+    <br/>
+
+
+
+<% else %>
+
+
+<div class="alert alert-warning" role="alert"> You must be signed in to see the requests.</div>
+  
+<% end %> 
+

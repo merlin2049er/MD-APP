@@ -38,7 +38,6 @@ class PagesController < ApplicationController
   end
 
 
-
   def dashboard
     add_breadcrumb "dashboard", dashboard_path
 

@@ -1,12 +1,15 @@
-<%= simple_form_for(@photo) do |f| %>
+
+
+<%= simple_form_for(@request) do |f| %>
     <%= f.error_notification %>
 
 
     <div class="form-inputs">
 
-      <%= f.input :enabled %>
-      <%= f.input :uri %>
-      <%= f.input :product_id %>
+
+
+      <%= f.input :product %>
+      <%= f.input :manufacturer %>
 
     </div>
 
@@ -14,4 +17,3 @@
       <%= f.button :submit %>
     </div>
 <% end %>
-

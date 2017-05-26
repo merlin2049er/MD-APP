@@ -16,6 +16,14 @@ Rails.application.routes.draw do
   resources :contacts
   resources :activities
   resources :photos
+
+  resources :requests do
+    member do
+      put "like", to: "requests#upvote"
+      put "dislike", to: "requests#downvote"
+    end
+  end
+
   resources :products
 
   post "products/add_to_cart" => "products#add_to_cart"
@@ -28,6 +36,7 @@ Rails.application.routes.draw do
   get 'index', to: 'pages#index'
   get 'contact', to: 'pages#contact'
   get 'about', to: 'pages#about'
+
   get 'error', to: 'pages#error'
   get 'terms', to: 'pages#terms'
   get 'faq',   to: 'pages#faq'

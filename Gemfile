@@ -86,6 +86,8 @@ gem 'auto-session-timeout-warning'
 
 gem 'redis'
 
+gem 'acts_as_votable', '~> 0.10.0'
+
 
 
 group :development, :test do
