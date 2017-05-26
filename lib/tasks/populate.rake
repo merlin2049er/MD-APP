@@ -3,7 +3,7 @@ namespace :db do
     task :populate => :environment do
         require 'populator'
         
-        [Category, Product].each(&:delete_all)
+        [Cart, Category, Product, Photo, Notification, Transaction, Request].each(&:delete_all)
         
          Category.populate 15 do |category|
          category.name = Populator.words(1..2).titleize
@@ -18,8 +18,8 @@ namespace :db do
          product.funded = [true, false]
          product.category_id = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
          product.qty = [5,10,15]
-         product.startdate = ['2017-5-9' ]
-         product.enddate = ['2017-6-10']
+         product.startdate = ['2017-5-26' ]
+         product.enddate = ['2017-6-26']
          product.picurl = ['photo_not_available.png']
     
       end  
