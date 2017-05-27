@@ -7,7 +7,9 @@ namespace :db do
         
          Category.populate 15 do |category|
          category.name = Populator.words(1..2).titleize
-         
+         category.picurl = ['photo_not_available.png']
+
+
          Product.populate 1..15 do |product|
          product.title =  Populator.words(1..5).titleize
          product.template = Populator.sentences(2..10)

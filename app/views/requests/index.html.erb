@@ -28,7 +28,19 @@
 
 
 
-        <td><%= render 'requests'   %></td>
+        <td>
+
+          <%= request.get_upvotes.size %>
+          <%= link_to like_request_path(request), method: :put do%>Upvote<% end %>
+
+          <%= request.get_downvotes.size %>
+          <%= link_to dislike_request_path(request), method: :put do%>Downvote<% end %>
+
+          <br/>
+          Submitted <%= time_ago_in_words(request.created_at) %>
+
+
+        </td>
 
       </tr>
     <% end %>
