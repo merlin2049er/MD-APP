@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170526193831) do
+ActiveRecord::Schema.define(version: 20170530213049) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "trackable_id"
@@ -154,6 +154,12 @@ ActiveRecord::Schema.define(version: 20170526193831) do
     t.date     "startdate"
     t.string   "picurl"
     t.integer  "qty"
+    t.integer  "length"
+    t.integer  "width"
+    t.integer  "height"
+    t.integer  "weight"
+    t.string   "courier"
+    t.string   "courierurl"
   end
 
   add_index "products", ["category_id"], name: "index_products_on_category_id"

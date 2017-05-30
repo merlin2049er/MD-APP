@@ -166,6 +166,17 @@
   <div class="well well-sm">    <%= @product.template %><br/>   </div>
 
     <div class="well well-sm">
+        Length: <%= @product.length %><br/>
+        Width:  <%= @product.width %><br/>
+        Height: <%= @product.height %><br/>
+        Weight: <%= @product.weight %>
+      <hr/>
+      <%= link_to @product.courier,  @product.courierurl %>
+
+    </div>
+
+
+    <div class="well well-sm">
     <%= @product.impressionist_count(:filter => :ip_address) %> Views <br/>
    <% if @product.msrp != 0 && @product.price != 0 then %>
    <%= @product.price %> MSDP<br/>

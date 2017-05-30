@@ -25,7 +25,16 @@ class Product < ActiveRecord::Base
     validates_presence_of :msrp
     validates_presence_of :startdate
     validates_presence_of :enddate
-    
+    validates_presence_of :length
+    validates_presence_of :width
+    validates_presence_of :height
+    validates_presence_of :weight
+    validates_presence_of :courier
+    validates_presence_of :courierurl
+
+
+
+
     validates_date :startdate, :before => :enddate,
                                :before_message => "must be at before the end date."
 
@@ -51,6 +60,10 @@ def set_defaults
     self.price ||= 0.0
     self.picurl ||= 'photo_not_available.png'
     self.qty ||= 1
+
+    self.courier ||= 'Canada Post'
+    self.courierurl ||= 'https://www.canadapost.ca'
+
 end
 
 end

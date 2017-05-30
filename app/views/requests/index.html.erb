@@ -3,7 +3,13 @@
 
     <div class="panel panel-default">
       <!-- Default panel contents -->
-      <div class="panel-heading">Requests: <%=   @requests.count %></div>
+      <div class="panel-heading">Requests:  <% if @requests.empty?  %>
+            Nothing here...
+        <% else %>
+            <%= @requests.count %>
+            <% end %>
+
+      </div>
       <div class="panel-body">
 
 <table class="table">
