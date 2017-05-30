@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7331a777-2244-45ce-afdd-3c1ae6d6fb83" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/products_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/products_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/product.rb" afterPath="$PROJECT_DIR$/app/models/product.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/products/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/products/_form.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/products/show.html.erb" afterPath="$PROJECT_DIR$/app/views/products/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/requests/index.html.erb" afterPath="$PROJECT_DIR$/app/views/requests/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
     </list>
     <ignored path="MD-APP-master.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,7 +51,18 @@
     <favorites_list name="MD-APP-master" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/products/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="109">
+              <caret line="173" column="74" lean-forward="false" selection-start-line="173" selection-start-column="74" selection-end-line="173" selection-end-column="74" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -139,9 +145,9 @@
         <option value="$PROJECT_DIR$/db/migrate/20170530213049_add_dimensions_to_products.rb" />
         <option value="$PROJECT_DIR$/app/views/products/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/products_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/products/show.html.erb" />
         <option value="$PROJECT_DIR$/app/models/product.rb" />
         <option value="$PROJECT_DIR$/app/views/requests/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/products/show.html.erb" />
       </list>
     </option>
   </component>
@@ -640,21 +646,7 @@
       <workItem from="1495897300141" duration="3245000" />
       <workItem from="1495905571225" duration="928000" />
       <workItem from="1495941892469" duration="300000" />
-      <workItem from="1496179650649" duration="2185000" />
-    </task>
-    <task id="LOCAL-00082" summary="removed notice from pages...">
-      <created>1488137143045</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1488137143045</updated>
-    </task>
-    <task id="LOCAL-00083" summary="fixed associations between cart and products">
-      <created>1488142447333</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1488142447334</updated>
+      <workItem from="1496179650649" duration="2769000" />
     </task>
     <task id="LOCAL-00084" summary="fixed add to cart and cart index">
       <created>1488245092250</created>
@@ -985,11 +977,25 @@
       <option name="project" value="LOCAL" />
       <updated>1495942051210</updated>
     </task>
-    <option name="localTasksCounter" value="131" />
+    <task id="LOCAL-00131" summary="added length, width, height, courier &amp; courier url to model, view, controller, _form partial&#10;&#10;added conditional to index request page">
+      <created>1496182111611</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1496182111612</updated>
+    </task>
+    <task id="LOCAL-00132" summary="package dimensions added to table -migration">
+      <created>1496182508462</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1496182508462</updated>
+    </task>
+    <option name="localTasksCounter" value="133" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="312462000" />
+    <option name="totallyTimeSpent" value="313046000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1085,8 +1091,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed cart index view" />
-    <MESSAGE value="fixed product show page" />
     <MESSAGE value="nothing here..." />
     <MESSAGE value="looked up product on invoice..." />
     <MESSAGE value="added columns to transaction record, fixed _form and index&#10;added validation to model" />
@@ -1110,7 +1114,9 @@
     <MESSAGE value="migrations for requests" />
     <MESSAGE value="erase and populate" />
     <MESSAGE value="fixed request voteable" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed request voteable" />
+    <MESSAGE value="added length, width, height, courier &amp; courier url to model, view, controller, _form partial&#10;&#10;added conditional to index request page" />
+    <MESSAGE value="package dimensions added to table -migration" />
+    <option name="LAST_COMMIT_MESSAGE" value="package dimensions added to table -migration" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1423,14 +1429,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/products/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="169" column="8" lean-forward="false" selection-start-line="169" selection-start-column="8" selection-end-line="169" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/transactions/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1459,6 +1457,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="18" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="11" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/products/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="173" column="74" lean-forward="false" selection-start-line="173" selection-start-column="74" selection-end-line="173" selection-end-column="74" />
           <folding />
         </state>
       </provider>
