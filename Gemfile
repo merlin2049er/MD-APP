@@ -88,6 +88,9 @@ gem 'redis'
 
 gem 'acts_as_votable', '~> 0.10.0'
 
+gem 'shareable'
+
+
 
 
 group :development, :test do

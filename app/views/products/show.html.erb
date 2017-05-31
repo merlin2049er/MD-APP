@@ -26,8 +26,13 @@
 <% if user_signed_in? %>
 
 <!-- <p id="notice"><%#= notice %></p> -->
+    <div class="well well-sm">
 
-<ul class="nav nav-tabs">
+      <%= render_shareable  %>
+</div>
+
+
+    <ul class="nav nav-tabs">
   <li class="active"><a data-toggle="tab" href="#Product">Product</a></li>
   <li><a data-toggle="tab" href="#Discussion">Discussion</a></li>
 </ul>

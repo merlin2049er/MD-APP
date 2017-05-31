@@ -323,6 +323,7 @@
     <orderEntry type="library" scope="PROVIDED" name="sass (v3.4.24, rbenv: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass-rails (v5.0.6, rbenv: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sdoc (v0.4.2, rbenv: 2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="shareable (v1.1.4, rbenv: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="simple_form (v3.5.0, rbenv: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="slop (v3.6.0, rbenv: 2.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="spring (v2.0.2, rbenv: 2.3.1) [gem]" level="application" />
