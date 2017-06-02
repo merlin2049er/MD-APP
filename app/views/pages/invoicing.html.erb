@@ -1,5 +1,8 @@
+<% if user_signed_in? %>
 
-<div class="row">
+
+
+    <div class="row">
   <div class="col-lg-12">
     <h1 class="page-header">Invoicing<br/>
       <small>After all, tomorrow is another day!</small>
@@ -63,3 +66,10 @@
 
  </div>
 </div>
+
+
+<% else %>
+
+<div class="alert alert-warning" role="alert">You must be signed in to see the dashboard.</div>
+
+<% end %>

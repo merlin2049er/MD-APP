@@ -12,9 +12,9 @@ class PagesController < ApplicationController
     add_breadcrumb "home", index_path
   end
 
-  def contacts
-     add_breadcrumb "contact", contact_path
-  end
+  # def contacts
+  #   add_breadcrumb "contact", contact_path
+  # end
   
   def contact
      add_breadcrumb "contact", pages_contact_path
@@ -37,8 +37,23 @@ class PagesController < ApplicationController
     add_breadcrumb "faq", terms_path
   end
 
+  def chartsgraphs
+
+  add_breadcrumb "Charts and Graphs", chartsgraphs_path
+
+  Chartkick.options = {
+      height: "400px",
+      colors: ["pink", "#999"]
+  }
+
+
+  end
+
 
   def dashboard
+
+
+
     add_breadcrumb "dashboard", dashboard_path
 
     # user model queries

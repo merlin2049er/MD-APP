@@ -90,6 +90,13 @@ gem 'acts_as_votable', '~> 0.10.0'
 
 gem 'shareable'
 
+gem 'canadapost', '~> 0.0.4'
+
+#for charts / graphs
+gem 'groupdate'
+
+gem "chartkick"
+
 
 
 

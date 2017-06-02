@@ -42,6 +42,8 @@ Rails.application.routes.draw do
   get 'faq',   to: 'pages#faq'
 
   get 'dashboard', to: 'pages#dashboard'
+  get 'chartsgraphs', to: 'pages#chartsgraphs'
+
   get 'invoicing', to: 'pages#invoicing'
 
   match 'active'  => 'sessions#active',  via: :get

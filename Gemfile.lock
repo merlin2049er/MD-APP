@@ -78,7 +78,10 @@ GEM
     builder (3.2.3)
     byebug (9.0.6)
     callsite (0.0.11)
+    canadapost (0.0.4)
+      httparty
     cancan (1.6.10)
+    chartkick (2.2.4)
     cloudinary (1.8.1)
       aws_cf_signer
       rest-client
@@ -115,8 +118,12 @@ GEM
     git-version-bump (0.15.1)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
+    groupdate (3.2.0)
+      activesupport (>= 3)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
+    httparty (0.15.5)
+      multi_xml (>= 0.5.2)
     i18n (0.8.1)
     impressionist (1.6.0)
       nokogiri (~> 1)
@@ -145,6 +152,7 @@ GEM
     mini_portile2 (2.1.0)
     minitest (5.10.2)
     multi_json (1.12.1)
+    multi_xml (0.6.0)
     netrc (0.11.0)
     nokogiri (1.7.2)
       mini_portile2 (~> 2.1.0)
@@ -296,13 +304,16 @@ DEPENDENCIES
   bootstrap-sass-extras (~> 0.0.7)
   breadcrumbs_on_rails
   byebug
+  canadapost (~> 0.0.4)
   cancan
+  chartkick
   cloudinary
   coffee-rails (~> 4.1.0)
   commontator
   devise (~> 3.5, >= 3.5.6)
   faker
   font-awesome-sass (~> 4.6.2)
+  groupdate
   impressionist
   jbuilder (~> 2.0)
   jquery-rails
