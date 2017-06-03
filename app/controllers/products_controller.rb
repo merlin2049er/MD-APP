@@ -55,7 +55,6 @@ class ProductsController < ApplicationController
     #$remaining = @remaining
     session[:remaining] = @remaining
 
-
   end
 
   # GET /products/new
@@ -136,14 +135,6 @@ class ProductsController < ApplicationController
     end
 
   end
-
-=begin
-  def calc_remaining
-    @taken = Cart.where('product_id' => @product).count
-    @remaining = @product.qty - @taken
-  end
-=end
-
 
   private
 
