@@ -55,6 +55,8 @@ GEM
       tzinfo (~> 1.1)
     acts_as_votable (0.10.0)
     arel (6.0.4)
+    arel-helpers (2.3.0)
+      activerecord (>= 3.1.0, < 6)
     auto-session-timeout (0.9.4)
     auto-session-timeout-warning (1.1.0)
     autoprefixer-rails (7.1.1)
@@ -113,6 +115,15 @@ GEM
     ffi (1.9.18-x86-mingw32)
     font-awesome-sass (4.6.2)
       sass (>= 3.2)
+    forest_liana (1.5.8)
+      arel-helpers
+      bcrypt
+      groupdate
+      jsonapi-serializers (>= 0.14.0)
+      jwt
+      rack-cors
+      rails (>= 3.0)
+      useragent
     git-version-bump (0.15.1)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
@@ -133,6 +144,9 @@ GEM
     jquery-ui-rails (4.2.1)
       railties (>= 3.2.16)
     json (1.8.6)
+    jsonapi-serializers (0.16.1)
+      activesupport
+    jwt (1.5.6)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.5)
@@ -174,6 +188,7 @@ GEM
     rack-contrib (1.4.0)
       git-version-bump (~> 0.15)
       rack (~> 1.4)
+    rack-cors (0.4.1)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.5)
@@ -272,6 +287,7 @@ GEM
     unf_ext (0.0.7.4)
     unf_ext (0.0.7.4-x64-mingw32)
     unf_ext (0.0.7.4-x86-mingw32)
+    useragent (0.16.8)
     validates_timeliness (4.0.2)
       timeliness (~> 0.3.7)
     warden (1.2.7)
@@ -307,6 +323,7 @@ DEPENDENCIES
   devise (~> 3.5, >= 3.5.6)
   faker
   font-awesome-sass (~> 4.6.2)
+  forest_liana
   groupdate
   impressionist
   jbuilder (~> 2.0)
@@ -336,4 +353,4 @@ DEPENDENCIES
   will_paginate-bootstrap
 
 BUNDLED WITH
-   1.13.6
+   1.15.1

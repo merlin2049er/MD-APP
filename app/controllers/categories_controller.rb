@@ -14,6 +14,7 @@ class CategoriesController < ApplicationController
     @categories = Category.all
     @categories = Category.order(:name)
 
+
   end
 
   # GET /categories/1
