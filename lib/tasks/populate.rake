@@ -20,8 +20,8 @@ namespace :db do
          product.funded = [ false]
          product.category_id = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
          product.qty = [5,10,15]
-         product.startdate = ['2017-6-3' ]
-         product.enddate = ['2017-7-3']
+         product.startdate = ['2017-8-23' ]
+         product.enddate = ['2017-9-23']
          product.picurl = ['photo_not_available.png']
     
       end  
