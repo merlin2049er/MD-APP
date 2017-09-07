@@ -85,8 +85,8 @@
       <file leaf-file-name="_socialbuttons.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/_socialbuttons.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state relative-caret-position="104">
+              <caret line="7" column="20" lean-forward="true" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -770,14 +770,7 @@
       <workItem from="1503534498162" duration="353000" />
       <workItem from="1504698437289" duration="740000" />
       <workItem from="1504744732511" duration="607000" />
-      <workItem from="1504745648073" duration="1992000" />
-    </task>
-    <task id="LOCAL-00095" summary="working on qty remaining">
-      <created>1488559901367</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1488559901368</updated>
+      <workItem from="1504745648073" duration="2383000" />
     </task>
     <task id="LOCAL-00096" summary="working on qty remaining, think i need a session variable for @remaining">
       <created>1488564599905</created>
@@ -1115,11 +1108,18 @@
       <option name="project" value="LOCAL" />
       <updated>1504747853785</updated>
     </task>
-    <option name="localTasksCounter" value="144" />
+    <task id="LOCAL-00144" summary="social buttons">
+      <created>1504748195982</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1504748195982</updated>
+    </task>
+    <option name="localTasksCounter" value="145" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="338116000" />
+    <option name="totallyTimeSpent" value="338507000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1587,8 +1587,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/_socialbuttons.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        <state relative-caret-position="104">
+          <caret line="7" column="20" lean-forward="true" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
           <folding />
         </state>
       </provider>
