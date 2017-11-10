@@ -1,5 +1,5 @@
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories<span class="caret"></span></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown"  data-hover="dropdown" data-delay="1000" role="button" aria-haspopup="true" aria-expanded="false">Categories<span class="caret"></span></a>
       <ul class="dropdown-menu">
          <% all_categories.each do |category| %>
             <li><%= link_to category.name, category_path(category) %></li>

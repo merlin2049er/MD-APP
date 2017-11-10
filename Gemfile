@@ -47,8 +47,8 @@ gem 'devise', '~> 3.5', '>= 3.5.6'
 
 #sassy
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
-gem 'font-awesome-sass', '~> 4.6.2'
 gem 'bootstrap-sass-extras', '~> 0.0.7'
+gem 'font-awesome-sass', '~> 4.6.2'
 
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
 
