@@ -24,6 +24,8 @@ class CategoriesController < ApplicationController
 
     @category = Category.find(params[:id])
 
+
+
     require 'time'
 
     todaydate = Time.new
