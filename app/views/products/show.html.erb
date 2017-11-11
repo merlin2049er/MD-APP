@@ -47,11 +47,19 @@
     <% if @remaining == 0 %> All gone!</br>
 
     <% elsif @remaining == 1 %>
-        <%= button_to  'Last one, add to Cart?', { :controller => "products", :action => "add_to_cart", product_id: @product } %>
+        <form>
+          Quantity:<br>
+          <input type="number" name="quantity" value="1"><br>
+        </form>
+
+      <%= button_to  'Last one, add to Cart?', { :controller => "products", :action => "add_to_cart", product_id: @product } %>
 
   <% else %>
-
-        <%= button_to "Add to Cart", { :controller => "products", :action => "add_to_cart", product_id: @product } %>
+        <form>
+          Quantity:<br>
+          <input type="number" name="quantity" value="1"><br>
+        </form>
+         <%= button_to "Add to Cart", { :controller => "products", :action => "add_to_cart", product_id: @product } %>
 
 
   <% end %>

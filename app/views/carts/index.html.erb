@@ -22,8 +22,10 @@
       <!-- <th colspan="3"></th> -->
       <th>Added</th>
       <th>Item</th>
+      <th>Qty</th>
       <th>End date</th>
       <th>Funded</th>
+      <th>Revise</th>
       <th>Action</th>
 
     </tr>
@@ -43,9 +45,10 @@
         <td><%= cart.created_at.strftime("%m/%d/%Y") %> </td>
         <% product = Product.where(id: cart.product_id).first %>
         <td> <%=  product.title  %>  </td>
+        <td> ..qty here..</td>
         <td> <%=  product.enddate  %>  </td>
         <td> <%=  product.funded  %>  </td>
-
+        <td> ..update qty.. </td>
         <!--  <td><%#= link_to 'Show', cart %></td>
         <td><%#= link_to 'Edit', edit_cart_path(cart) %></td>
         -->
