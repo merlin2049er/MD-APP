@@ -111,7 +111,7 @@ class ProductsController < ApplicationController
 
   def add_to_cart
 
-    @cart = Cart.new(user_id: current_user.id, product_id: params[:product_id] )
+    @cart = Cart.new(user_id: current_user.id, product_id: params[:product_id], qty: params[:qty] )
 
 
     respond_to do |format|
