@@ -49,10 +49,9 @@
     <% elsif @remaining == 1 %>
         <form>
           Quantity:
-          <input type="number" name="qty" value="1" min="1" max=  <%= @remaining %>  ><br>
+          <input type="number" name="qty" value="1" min="1" max=  <%= @remaining %>  >
+          <%= button_to  'Last one, add to Cart?', { :controller => "products", :action => "add_to_cart", product_id: @product} %> <br>
         </form>
-
-      <%= button_to  'Last one, add to Cart?', { :controller => "products", :action => "add_to_cart", product_id: @product } %>
 
   <% else %>
         <form>
