@@ -161,5 +161,5 @@ class ProductsController < ApplicationController
     params.require(:cart).permit(:user_id, :product_id, :qty)
   end
 
- require 'pry'
+ # require 'pry'
 end
