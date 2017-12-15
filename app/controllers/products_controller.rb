@@ -55,6 +55,7 @@ class ProductsController < ApplicationController
     #$remaining = @remaining
     session[:remaining] = @remaining
 
+
   end
 
   # GET /products/new
@@ -113,6 +114,8 @@ class ProductsController < ApplicationController
 
     @cart = Cart.new(user_id: current_user.id, product_id: params[:product_id], qty: params[:qty] )
 
+   # binding.pry
+
 
     respond_to do |format|
       if @cart.save
@@ -158,5 +161,5 @@ class ProductsController < ApplicationController
     params.require(:cart).permit(:user_id, :product_id, :qty)
   end
 
-
+ require 'pry'
 end
