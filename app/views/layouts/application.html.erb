@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!--
-  <#% if Rails.env.production? %>
+  
+  <% if Rails.env.production? %>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-  <!--   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-40488478-2"></script>
+     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-40488478-2"></script>
      <script>
          window.dataLayer = window.dataLayer || [];
          function gtag(){dataLayer.push(arguments);}
@@ -16,8 +16,8 @@
          gtag('config', 'UA-40488478-2');
      </script>
 
- <#% end %>
-   -->
+ <% end %>
+
 
   <title>MASSDUMP</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
