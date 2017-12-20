@@ -12,7 +12,7 @@
 
                 <%= p.title %> </br>
 
-                <%= link_to image_tag(p.picurl ) %>
+                <%= link_to image_tag(p.picurl ) , product_path(p) %>
                 </div>
 
               <% end %>
@@ -33,7 +33,7 @@
       <div class="img2">
                 <%= p.title %>
 
-      <%= link_to image_tag(p.picurl ) %>
+      <%= link_to image_tag(p.picurl ), product_path(p)  %>
       </div>
 
 
