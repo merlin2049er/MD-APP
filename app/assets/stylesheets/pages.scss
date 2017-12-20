@@ -1,3 +1,83 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/* Container holding the image and the text */
+.imageholder {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+div.img {
+  margin: 5px;
+  border: 0px solid #ccc;
+  float: left;
+  width: 180px;
+  height: 400px;
+  overflow: hidden;
+}
+
+div.img2 {
+  margin: 5px;
+  border: 0px solid #ccc;
+  float: left;
+  width: 255px;
+  height: 285px;
+  overflow: hidden;
+}
+
+div.img:hover {
+  border: 0px solid #777;
+}
+
+div.img img {
+  width: 100%;
+  height: auto;
+
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}

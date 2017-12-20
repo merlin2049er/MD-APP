@@ -10,6 +10,11 @@ class PagesController < ApplicationController
 
   def index
     add_breadcrumb "home", index_path
+
+    @recent_products = Product.most_recent(8)
+
+    @last_chance = Product.ending_soonest(8)
+
   end
 
   # def contacts
