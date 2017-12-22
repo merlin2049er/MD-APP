@@ -66,8 +66,8 @@ def set_defaults
 
 end
 
+    default_scope { where(draft: false, active: true, funded: false)}
     scope :most_recent, ->(limit) { order("created_at desc").limit(limit) }
     scope :ending_soonest, ->(limit) { order("enddate desc").limit(limit) }
-
 
 end
