@@ -31,16 +31,14 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
     add_breadcrumb "product", products_path
-     commontator_thread_show(@product)
-
+    commontator_thread_show(@product)
     impressionist(@product)
 
     @photo = Photo.where('enabled' => true ).where('product_id' => @product)
     @taken = Cart.where('product_id' => @product).count
     @remaining = @product.qty - @taken
+    @backing = @product.backings.build
 
-    #fix this global variable no good.
-    #$remaining = @remaining
     session[:remaining] = @remaining
   end
 

@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   mount Commontator::Engine => '/commontator'
   
   resources :users
+  resources :backings
   resources :categories
   resources :notifications
   resources :contacts
