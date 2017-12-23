@@ -6,6 +6,9 @@ class User < ActiveRecord::Base
 
   has_many :notifications
   has_many :transactions
+  has_one :cart
+  has_many :backings
+  has_many :products, through: :backings
   # add cart here
   # has_and_belongs_to_many :product  
   acts_as_commontator
