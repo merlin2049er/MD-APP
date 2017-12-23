@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  
- # mount ForestLiana::Engine => '/forest'
+  mount Ckeditor::Engine => '/ckeditor'
+  # mount ForestLiana::Engine => '/forest'
   mount ForestLiana::Engine => '/forest'
   resources :transactions
   resources :carts
