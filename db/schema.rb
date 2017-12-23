@@ -152,7 +152,7 @@ ActiveRecord::Schema.define(version: 20171111155558) do
     t.integer  "category_id"
     t.boolean  "active"
     t.boolean  "funded"
-    t.date     "startdate"
+    t.datetime "startdate"
     t.string   "picurl"
     t.integer  "qty"
     t.integer  "length"
