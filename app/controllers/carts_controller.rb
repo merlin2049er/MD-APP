@@ -1,20 +1,16 @@
 class CartsController < ApplicationController
-    
   before_action :set_carts, only: [:create, :show, :edit, :update, :destroy]
   before_action :authenticate_user!
-  
-  add_breadcrumb "MASSDUMP", :root_path
 
+  add_breadcrumb "MASSDUMP", :root_path
 
   # GET /articles
   # GET /articles.json
   def index
-      
-     add_breadcrumb "shopping cart", carts_path 
+    add_breadcrumb "shopping cart", carts_path 
 
-     @carts  = Cart.where('user_id =?', current_user.id)
-     @carts = @carts.paginate(page: params[:page] , per_page: 10)
-
+    @carts  = Cart.where('user_id =?', current_user.id)
+    @carts = @carts.paginate(page: params[:page] , per_page: 10)
   end
 
   # GET /articles/1
@@ -40,10 +36,8 @@ class CartsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_carts
-      @cart = Cart.find(params[:id])
-    end
-
-
+  # Use callbacks to share common setup or constraints between actions.
+  def set_carts
+    @cart = Cart.find(params[:id])
+  end
 end

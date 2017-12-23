@@ -2,7 +2,6 @@ class TransactionsController < ApplicationController
   before_action :set_transaction, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
 
-
   add_breadcrumb 'MASSDUMP', :root_path
   # GET /transactions
   # GET /transactions.json
@@ -11,8 +10,6 @@ class TransactionsController < ApplicationController
     # @transactions = Transaction.all
     @transactions = Transaction.where('user_id =?', current_user.id).order('created_at DESC').paginate(page: params[:page] , per_page: 10)
     @transactions = @transactions.paginate(page: params[:page] , per_page: 10)
-
-
   end
 
   # GET /transactions/1
@@ -24,7 +21,6 @@ class TransactionsController < ApplicationController
   # GET /transactions/new
   def new
     add_breadcrumb 'transaction', transactions_path
-
     @transaction = Transaction.new
   end
 
@@ -73,15 +69,16 @@ class TransactionsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_transaction
-      @transaction = Transaction.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def transaction_params
-      #params.fetch(:transaction, {})
-      params.require(:transaction).permit(:transaction_msg , :user_id , :invoice_number, :tracking_number, :shipped, :postal_carrier )
+  # Use callbacks to share common setup or constraints between actions.
+  def set_transaction
+    @transaction = Transaction.find(params[:id])
+  end
 
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def transaction_params
+    #params.fetch(:transaction, {})
+    params.require(:transaction).permit(:transaction_msg , :user_id , 
+      :invoice_number, :tracking_number, :shipped, :postal_carrier )
+  end
 end

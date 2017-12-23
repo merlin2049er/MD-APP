@@ -7,36 +7,24 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-
     # @search = Product.search(params[:search])
-   
     add_breadcrumb "products", products_path
-
     require 'time'
-
     todaydate = Time.new
 #    set 'todaydate' equal to the current date/time.
-
     todaydate = todaydate.year.to_s + "-" + todaydate.month.to_s + "-" + todaydate.day.to_s
-
-
-
-#ransack
     @search = Product.where( 'draft' => false,  'active' => true, 'funded' => false).where( 'enddate > ?', todaydate ).search(params[:q])
     @products = @search.result.paginate(page: params[:page] , per_page: 10)
 
-
-      
     # @products = Product.all
-    
+
     # @products = @search.all
-    
-    #paginate
-    #@product = Product.paginate(:page => params[:page], per_page: 10)
-    #Product.paginate(:page => params[:page], per_page: 10)
 
-    #@records = Product.where('draft' => false, 'active' => true)
+    # paginate
+    # @product = Product.paginate(:page => params[:page], per_page: 10)
+    # Product.paginate(:page => params[:page], per_page: 10)
 
+    # @records = Product.where('draft' => false, 'active' => true)
   end
 
   # GET /products/1
@@ -54,8 +42,6 @@ class ProductsController < ApplicationController
     #fix this global variable no good.
     #$remaining = @remaining
     session[:remaining] = @remaining
-
-
   end
 
   # GET /products/new
@@ -111,24 +97,16 @@ class ProductsController < ApplicationController
 
 
   def add_to_cart
-
     @cart = Cart.new(user_id: current_user.id, product_id: params[:product_id], qty: params[:qty] )
-
    # binding.pry
-
 
     respond_to do |format|
       if @cart.save
-
-
-          #fix this global variable...
-          if session[:remaining] == 1
-
+        #fix this global variable...
+        if session[:remaining] == 1
           Product.update(params[:product_id], :funded => true)
           Cart.where(:product_id => params[:product_id]).update_all(:processing => true)
-          end
-
-
+        end
         format.html { redirect_to :back, notice: 'Product was successfully added to cart.' }
         format.json { render :show, status: :created, location: @cart }
       else
@@ -136,7 +114,6 @@ class ProductsController < ApplicationController
         format.json { render json: @cart.errors, status: :unprocessable_entity }
       end
     end
-
   end
 
   private
@@ -150,8 +127,9 @@ class ProductsController < ApplicationController
     def product_params
       # params.fetch(:product, {})
       # added qty 
-        params.require(:product).permit( :title, :picurl, :template, :price, :msrp, :startdate, :enddate, :draft, :active,  :category_id, :qty, :length, :width, :height, :weight, :courier, :courierurl  )
-        
+        params.require(:product).permit( :title, :picurl, :template, :price,
+          :msrp, :startdate, :enddate, :draft, :active,  :category_id, :qty,
+          :length, :width, :height, :weight, :courier, :courierurl)
     end
 
 
@@ -160,6 +138,4 @@ class ProductsController < ApplicationController
     # params.fetch(:cart, {})
     params.require(:cart).permit(:user_id, :product_id, :qty)
   end
-
- # require 'pry'
 end

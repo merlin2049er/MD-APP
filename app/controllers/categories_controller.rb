@@ -2,45 +2,33 @@ class CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
 
-
   add_breadcrumb "MASSDUMP", :root_path
 
   # GET /categories
   # GET /categories.json
   def index
-    
     add_breadcrumb "categories", categories_path 
-      
+
     @categories = Category.all
     @categories = Category.order(:name)
-
-
   end
 
   # GET /categories/1
   # GET /categories/1.json
   def show
     # added 9/24
-
     @category = Category.find(params[:id])
-
-
-
     require 'time'
-
     todaydate = Time.new
-#    set 'todaydate' equal to the current date/time.
-
+    # set 'todaydate' equal to the current date/time.
     todaydate = todaydate.year.to_s + "-" + todaydate.month.to_s + "-" + todaydate.day.to_s
-
 
     @title = @category.name
     @products = @category.products.where( 'draft' => false, 'active' => true, 'funded' => false).where( 'enddate > ?', todaydate )
 
     #@products = @category.products.where( 'enddate > ?', todaydate )
 
-    add_breadcrumb "category / " << @title, categories_path 
-    
+    add_breadcrumb "category / " << @title, categories_path
   end
 
   # GET /categories/new
@@ -52,13 +40,11 @@ class CategoriesController < ApplicationController
   # GET /categories/1/edit
   def edit
     add_breadcrumb "category", categories_path 
-    
   end
 
   # POST /categories
   # POST /categories.json
   def create
-    
     @category = Category.new(category_params)
 
     respond_to do |format|
@@ -97,17 +83,13 @@ class CategoriesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_category
-      @category = Category.find(params[:id])
-    end
-    
- 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def category_params
-      params.require(:category).permit(:name, :picurl)
-    end
-    
-   
-    
+  # Use callbacks to share common setup or constraints between actions.
+  def set_category
+    @category = Category.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def category_params
+    params.require(:category).permit(:name, :picurl)
+  end
 end
