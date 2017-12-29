@@ -47,23 +47,35 @@
     <% if @remaining == 0 %> All gone!</br>
 
     <% elsif @remaining == 1 %>
+      <!--
         <form>
           Quantity:
-          <input type="number" name= "qty" value="1" min="1" max=  <%= @remaining %>  >
+          <input type="number" name= "qty" value="1" min="1" max=  <%#= @remaining %>  >
 
         </form>
-      <%= button_to  'Last one, add to Cart?', { :controller => "products", :action => "add_to_cart", product_id: @product, qty: @qty } %>
+      <%#= button_to  'Last one, add to Cart?', { :controller => "products", :action => "add_to_cart", product_id: @product, qty: @qty } %>
+-->
+      <%= form_for :cart do |f| %>
+        Quantity: <%= f.number_field :qty %><br />
+
+        <%= f.submit %>
+      <% end %>
 
 
   <% else %>
-
+<!--
         <form>
           Quantity:
-          <input type="number" name= "qty" value="1" min="1" max=  <%= @remaining %> >
+          <input type="number" name= "qty" value="1" min="1" max=  <%#= @remaining %> >
 
         </form>
-        <%= button_to "Add to Cart", { :controller => "products", :action => "add_to_cart", product_id: @product, qty: @qty } %>
+        <%#= button_to "Add to Cart", { :controller => "products", :action => "add_to_cart", product_id: @product, qty: @qty } %>
+-->
+      <%= form_for :cart do |f| %>
+        Quantity: <%= f.number_field :qty %><br />
 
+        <%= f.submit  %>
+      <% end %>
 
 
 <% end %>

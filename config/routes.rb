@@ -28,7 +28,7 @@ Rails.application.routes.draw do
 
   resources :products
 
-  post "products/add_to_cart" => "products#add_to_cart"
+  # post "products/add_to_cart" => "products#add_to_cart"
 
 
   get 'pages/contact'

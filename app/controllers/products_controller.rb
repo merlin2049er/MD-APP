@@ -116,6 +116,8 @@ class ProductsController < ApplicationController
 
    # binding.pry
 
+    raise
+
 
     respond_to do |format|
       if @cart.save
