@@ -10,9 +10,12 @@
               <% @recent_products.each do |p| %>
                 <div class="img2">
 
-                <%= p.title %> </br>
+              <!--  <#%= p.title %> </br> -->
 
-                <%= link_to image_tag(p.picurl) , product_path(p) %>
+                  <%= link_to p.title  , product_path(p)  %>
+
+
+                  <%= link_to image_tag(p.picurl) , product_path(p) %>
                 </div>
 
               <% end %>
@@ -22,7 +25,7 @@
 
 <div class="row">
   <div class="col-lg-12">
-     <h1 class="page-header">Welcome to MASSDUMP!<br/>
+     <h1 class="page-header">
       <small>Ending soon...</small>
    </h1>
 
@@ -31,7 +34,9 @@
               <% @last_chance.each do |p| %>
 
       <div class="img2">
-                <%= p.title %> </br>
+        <%= link_to p.title  , product_path(p)  %>
+
+      <!--  <%#= p.title %> </br>  -->
 
       <%= link_to image_tag(p.picurl ), product_path(p) %>
       </div>

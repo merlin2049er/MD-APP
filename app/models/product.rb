@@ -32,7 +32,7 @@ class Product < ActiveRecord::Base
     validates_presence_of :courier
     validates_presence_of :courierurl
 
-
+    validates_length_of :title, maximum: 35
 
 
     validates_date :startdate, :before => :enddate,

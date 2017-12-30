@@ -15,6 +15,9 @@ class PagesController < ApplicationController
 
     @last_chance = Product.ending_soonest(8)
 
+  #  @mostviews = Product.impressions(8)
+
+
   end
 
   # def contacts

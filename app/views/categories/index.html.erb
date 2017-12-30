@@ -9,18 +9,21 @@
 
 
     <% @categories.each do |category| %>
-        <div class="imageholder" >
 
-          <div class="top-right">Top Right</div>
+    <div class="img2">
+
+        <!--  <div class="top-right">Top Right</div>
           <div class="bottom-right">Bottom Right</div>
+                    <div class="imageholder" >
 
-         <div class="img2">
+          </div>
+
+-->
 
             <%= link_to category.name , category  %>
 
             <%= link_to image_tag(category.picurl ), category %>
 
-          </div>
         </div>
 
     <% end %>

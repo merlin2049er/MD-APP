@@ -3,7 +3,28 @@
 
 <!-- <h1>Carts</h1>  -->
 
-    <div class="panel panel-default">
+  <%= stylesheet_link_tag "modal.css" %>
+  <%= javascript_include_tag "modal_wherecheckout.js" %>
+
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>If the campaign is successfully funded, the order will be processed and you will be emailed an invoice.</p>
+
+
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="panel panel-default">
       <!-- Default panel contents -->
       <div class="panel-heading">Shopping cart:  <% if @carts.empty?  %>
             Nothing here...
@@ -11,6 +32,8 @@
           <%= @carts.count %> items...
         <% end %>
 
+        <div class="pull-right"><button id="myBtn">Where's the checkout?</button>
+        </div>
 
       </div>
       <div class="panel-body">
@@ -78,6 +101,5 @@
 
   <div class="alert alert-warning" role="alert">You must be signed in to see the shopping cart.</div>
   
-<% end %> 
-
+<% end %>
 
