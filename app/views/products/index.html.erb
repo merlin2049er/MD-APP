@@ -1,54 +1,27 @@
 <% if user_signed_in? %>
 
-    <!--<p id="notice"><%#= notice %></p> -->
 
-<!--
-<h1>Products</h1>
--->
-<!--
-  <%#= render 'layouts/ransack' %>
--->
-
-<!--
-  <%#= @products.product.size %> records<br/>
-  -->
   <%= link_to 'Back', categories_path %><br/>
 
      <%=   @products.count %> products<br/><br/>
 
 
-  <table>
-  <thead>
-    <tr>
-      <th colspan="1"></th>
-    </tr>
-  </thead>
-
-  <tbody>
     <% @products.each do |product| %>
-     <!-- <tr class="<%#= cycle("even", "odd") %>"> -->
-      <tr>
-         <td><%= link_to product.title , product  %></td>
-        <!-- 
-        <td><%= product.title %></td>
-      
-        
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      -->
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+
+    <div class="img3">
+
+    <%= link_to product.title , product  %>
+    <%= link_to image_tag(product.picurl ), product %>
+    </div>
 
 
-<!-- <br> -->
+  <% end %>
+
+  </br>
 
 <%= will_paginate @product, renderer: BootstrapPagination::Rails %><br/>
 
 <!-- 
-<%= link_to 'New Product', new_product_path %>
 -->
 
 <% else %>
