@@ -15,20 +15,25 @@
 -->
 <%= link_to 'Back', categories_path %><br/>
 
-<%= @products.count %> items in this category.<br/>
-
+<%= @products.count %> products in this category.<br/>
+</br>
 
 <% @products.each do |product| %>
         <div class="img">
 
   <!-- <p > <%#= image_tag(product.picurl, height: '75', width: '75' )  %> -->
-         <%= image_tag(product.picurl, height: '75', width: '75' ) %>
-          <h4><i> <%= link_to product.title, product %> </i></h4>
-    <div class="desc" > <%= product.template.truncate_words(15, omission: '... (continued)') %>  </div>
+         <%= image_tag(product.picurl, height: '150', width: '150' ) %>
+           <%= link_to product.title, product %>
+    <!--<div class="desc" > <%#= product.template.truncate_words(15, omission: '... (continued)') %>  </div> -->
         </div>
   <% end %>
-  
-  <% else %>
+
+  </br>
+
+  <%= will_paginate @products, renderer: BootstrapPagination::Rails %><br/>
+
+
+<% else %>
 
   <div class="alert alert-warning" role="alert">You must be signed in to see the category.</div>
   

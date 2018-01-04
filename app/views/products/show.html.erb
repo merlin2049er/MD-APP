@@ -26,13 +26,13 @@
 <% if user_signed_in? %>
 
 <!-- <p id="notice"><%#= notice %></p> -->
-    <div class="well well-sm"  >
+  <!--  <div class="well well-sm"  >
 
       <%#= render_shareable :buttons=> ['facebook','twitter', 'pinterest', 'tumblr'] %>
-      <%= render 'layouts/socialbuttons' %>
+      <%#= render 'layouts/socialbuttons' %>  nice to have?
 
 
-</div>
+</div>  -->
 
 
     <ul class="nav nav-tabs">
@@ -56,12 +56,12 @@
       <%#= button_to  'Last one, add to Cart?', { :controller => "products", :action => "add_to_cart", product_id: @product, qty: @qty } %>
 -->
       <%= form_for :cart do |f| %>
-        Quantity: <%= f.number_field :qty %><br />
+        Quantity: <%= f.number_field :qty %></br>
 
-        <%= f.submit %>
+        <%= f.submit "Add to cart" %>
       <% end %>
 
-
+      </br>
   <% else %>
 <!--
         <form>
@@ -72,11 +72,11 @@
         <%#= button_to "Add to Cart", { :controller => "products", :action => "add_to_cart", product_id: @product, qty: @qty } %>
 -->
       <%= form_for :cart do |f| %>
-        Quantity: <%= f.number_field :qty %><br />
+        Quantity: <%= f.number_field :qty  %></br>
 
-        <%= f.submit  %>
+        <%= f.submit "Add to cart" %>
       <% end %>
-
+      </br>
 
 <% end %>
 

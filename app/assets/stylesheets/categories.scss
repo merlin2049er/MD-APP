@@ -47,7 +47,6 @@
 
 
 
-
 div.img {
 
   margin: 5px;
@@ -79,6 +78,17 @@ div.img img {
 }
 
 div.desc {
-  padding: 15px;
-  text-align: center;
+  padding: 0px;
+  text-align: left;
+  font-size: 1em;
+}
+
+div.img {
+
+  margin: 5px;
+  border: 0px solid #ccc;
+  float: left;
+  width: 200px;
+  height: 280px;
+  overflow: hidden;
 }

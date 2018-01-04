@@ -12,7 +12,8 @@ class CategoriesController < ApplicationController
     add_breadcrumb "categories", categories_path 
       
     @categories = Category.all
-    @categories = Category.order(:name)
+    @categories = Category.order(:name).paginate(page: params[:page] , per_page: 10)
+
 
 
   end
@@ -25,7 +26,6 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id])
 
 
-
     require 'time'
 
     todaydate = Time.new
@@ -35,9 +35,12 @@ class CategoriesController < ApplicationController
 
 
     @title = @category.name
-    @products = @category.products.where( 'draft' => false, 'active' => true, 'funded' => false).where( 'enddate > ?', todaydate )
+    @products = @category.products.where( 'draft' => false, 'active' => true, 'funded' => false).where( 'enddate > ?', todaydate ).paginate(page: params[:page] , per_page: 10)
 
-    #@products = @category.products.where( 'enddate > ?', todaydate )
+
+
+
+#@products = @category.products.where( 'enddate > ?', todaydate )
 
     add_breadcrumb "category / " << @title, categories_path 
     

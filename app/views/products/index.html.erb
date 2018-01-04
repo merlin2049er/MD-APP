@@ -8,10 +8,12 @@
 
     <% @products.each do |product| %>
 
-    <div class="img3">
+    <div class="img">
 
-    <%= link_to product.title , product  %>
-    <%= link_to image_tag(product.picurl ), product %>
+      <%= image_tag(product.picurl, height: '75', width: '75' )  %>
+
+      <%= link_to product.title , product  %>
+
     </div>
 
 

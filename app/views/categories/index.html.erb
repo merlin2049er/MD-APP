@@ -10,7 +10,7 @@
 
     <% @categories.each do |category| %>
 
-    <div class="img2">
+    <div class="img">
 
         <!--  <div class="top-right">Top Right</div>
           <div class="bottom-right">Bottom Right</div>
@@ -28,10 +28,16 @@
 
     <% end %>
 
+  </br>
+
+  <%= will_paginate @categories, renderer: BootstrapPagination::Rails %><br/>
+
   <!--
 <%= link_to 'New Category', new_category_path %>
 -->
 <% else %>
+
+
 
   <div class="alert alert-warning" role="alert">You must be signed in to see the categories.</div>
   
