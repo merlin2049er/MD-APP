@@ -1,4 +1,4 @@
-
+<!--
 <script type="text/javascript">
     $(document).ready(function() {
 
@@ -20,6 +20,8 @@
 
     });
 </script>
+
+-->
 
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59307581674b8668"></script>
@@ -57,7 +59,7 @@
       <%#= button_to  'Last one, add to Cart?', { :controller => "products", :action => "add_to_cart", product_id: @product, qty: @qty } %>
 -->
       <%= form_for :cart do |f| %>
-        Quantity: <%= f.number_field :qty %></br>
+        Quantity: <%= f.number_field :qty, :value =>1, :min => 1, :max => @remaining %></br>
 
         <%= f.submit "Add to cart" %>
       <% end %>
@@ -73,7 +75,7 @@
         <%#= button_to "Add to Cart", { :controller => "products", :action => "add_to_cart", product_id: @product, qty: @qty } %>
 -->
       <%= form_for :cart do |f| %>
-        Quantity: <%= f.number_field :qty  %></br>
+        Quantity: <%= f.number_field :qty, :value =>1, :min => 1, :max => @remaining  %></br>
 
         <%= f.submit "Add to cart" %>
       <% end %>
@@ -167,12 +169,7 @@
 
   <div class="well well-sm">      
 
-    <!--
-     <img src= <%#= @product.picurl %>  >
-      -->
 
-  <!--
-    <div class="col-md-6"> -->
       <div id="owl-carousel">
 
         <%= cl_image_tag(@product.picurl)  %>
@@ -184,17 +181,12 @@
         <% end %>
 
 
-
       </div>
-<!--
-    </div> -->
 
 
   </div>
 
- 
- 
-   
+
 
   <div class="well well-sm">    <%= @product.template %><br/>   </div>
 
@@ -219,6 +211,8 @@
     <% end %>
 
     </div>
+
+
 <!-- 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 -->
