@@ -167,24 +167,27 @@
 
  
 
-  <div class="well well-sm">      
+   <div class="well well-sm">
 
 
-      <div id="owl-carousel">
+     <%=  cl_image_tag(@product.picurl)  %>
 
-        <%= cl_image_tag(@product.picurl)  %>
+
+   </div >
+
+    <div class="well well-sm">
 
         <% @photo.each do | p| %>
 
-            <div>  <%= cl_image_tag(p.uri) %></div>
+             <div  class="img"><%=  cl_image_tag(p.uri) %></div>
 
         <% end %>
 
 
-      </div>
+    </div>
 
+  </div></div>
 
-  </div>
 
 
 
