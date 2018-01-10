@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7331a777-2244-45ce-afdd-3c1ae6d6fb83" name="Default" comment="addthis social buttons on product page.">
+    <list default="true" id="7331a777-2244-45ce-afdd-3c1ae6d6fb83" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/views/products/show.html.erb" afterPath="$PROJECT_DIR$/app/views/products/show.html.erb" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/forest_liana.rb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
     </list>
     <ignored path="MD-APP-master.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,7 +29,7 @@
     <SUITE FILE_PATH="coverage/MD-APP-master@db_migrate__MD_APP_master.coverage" NAME="db:migrate: MD-APP-master Coverage Results" MODIFIED="1479871931026" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
     <SUITE FILE_PATH="coverage/MD-APP@populate.coverage" NAME="populate Coverage Results" MODIFIED="1483580750466" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lib/tasks" MODULE_NAME="MD-APP-master" />
     <SUITE FILE_PATH="coverage/MD-APP@db_migrate_status__MD_APP_master.coverage" NAME="db:migrate:status: MD-APP-master Coverage Results" MODIFIED="1486656634580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
-    <SUITE FILE_PATH="coverage/MD_APP@Development__MD_APP_master.coverage" NAME="Development: MD-APP-master Coverage Results" MODIFIED="1515464552441" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
+    <SUITE FILE_PATH="coverage/MD_APP@Development__MD_APP_master.coverage" NAME="Development: MD-APP-master Coverage Results" MODIFIED="1515544745231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
     <SUITE FILE_PATH="coverage/MD-APP-master@cart.coverage" NAME="cart Coverage Results" MODIFIED="1480039354888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/models" MODULE_NAME="MD-APP-master" />
     <SUITE FILE_PATH="coverage/MD_APP@db_populate__MD_APP_master.coverage" NAME="db:populate: MD-APP-master Coverage Results" MODIFIED="1514656818357" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
     <SUITE FILE_PATH="coverage/MD_APP@Start_Zeus_Server__MD_APP_master.coverage" NAME="Start Zeus Server: MD-APP-master Coverage Results" MODIFIED="1512774560383" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
@@ -65,14 +67,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/products/show.html.erb">
+      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="47">
-              <caret line="61" column="49" lean-forward="false" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
-              <folding>
-                <marker date="1515464549129" expanded="false" signature="35:453" ph="..." />
-              </folding>
+            <state relative-caret-position="-287">
+              <caret line="92" column="0" lean-forward="true" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="780">
+              <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -135,7 +145,6 @@
         <option value="$PROJECT_DIR$/app/views/layouts/_nav.html.erb" />
         <option value="$PROJECT_DIR$/app/views/notifications/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/products/_form.html.erb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/models/cart.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/pages.scss" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.js" />
@@ -152,7 +161,6 @@
         <option value="$PROJECT_DIR$/app/views/transactions/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/notifications/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/views/layouts/_requests_menu.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/products_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/footer.css.scss" />
@@ -168,6 +176,8 @@
         <option value="$PROJECT_DIR$/app/views/categories/show.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/views/products/show.html.erb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
   </component>
@@ -206,6 +216,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -222,7 +235,24 @@
               <item name="MD-APP" type="b2602c69:ProjectViewProjectNode" />
               <item name="MD-APP" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MD-APP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MD-APP" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MD-APP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MD-APP" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MD-APP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MD-APP" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="initializers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MD-APP" type="b2602c69:ProjectViewProjectNode" />
@@ -233,9 +263,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="RailsProjectView" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -844,14 +871,9 @@
       <workItem from="1515031776591" duration="1535000" />
       <workItem from="1515194412064" duration="3710000" />
       <workItem from="1515250511351" duration="14000" />
-      <workItem from="1515463965855" duration="743000" />
-    </task>
-    <task id="LOCAL-00123" summary="added tell friends... need to configure a mailer...">
-      <created>1494713844064</created>
-      <option name="number" value="00123" />
-      <option name="presentableId" value="LOCAL-00123" />
-      <option name="project" value="LOCAL" />
-      <updated>1494713844064</updated>
+      <workItem from="1515463965855" duration="1633000" />
+      <workItem from="1515466796604" duration="72000" />
+      <workItem from="1515544158744" duration="650000" />
     </task>
     <task id="LOCAL-00124" summary="added tell friends... removed for now... need to rethink this">
       <created>1495662948675</created>
@@ -1189,11 +1211,18 @@
       <option name="project" value="LOCAL" />
       <updated>1515194877632</updated>
     </task>
-    <option name="localTasksCounter" value="172" />
+    <task id="LOCAL-00172" summary="fixed value, min and max on number field on product show page&#10;removed owl carousel (temp)">
+      <created>1515464901462</created>
+      <option name="number" value="00172" />
+      <option name="presentableId" value="LOCAL-00172" />
+      <option name="project" value="LOCAL" />
+      <updated>1515464901463</updated>
+    </task>
+    <option name="localTasksCounter" value="173" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="441631000" />
+    <option name="totallyTimeSpent" value="443243000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1207,12 +1236,12 @@
   <component name="ToolWindowManager">
     <frame x="164" y="23" width="1116" height="716" extended-state="0" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34450653" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43947858" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.49353796" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34280938" sideWeight="0.4981378" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34280938" sideWeight="0.41713223" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34280938" sideWeight="0.50186217" order="2" side_tool="false" content_ui="tabs" x="0" y="189" width="1234" height="376" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34280938" sideWeight="0.5828678" order="2" side_tool="false" content_ui="tabs" x="0" y="189" width="1234" height="376" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.48707592" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38255033" sideWeight="0.68497574" order="7" side_tool="false" content_ui="tabs" />
@@ -1290,7 +1319,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="link to opens up on new tab" />
     <MESSAGE value="added shareable to product show page.  need to fix alignment on links." />
     <MESSAGE value="added chartkick and graphs, need to plot some charts&#10;fixed some minor issues" />
     <MESSAGE value="minor fixes" />
@@ -1315,7 +1343,8 @@
     <MESSAGE value="try to add ckeditor to new products form (template)" />
     <MESSAGE value="fixed pagination in categories show page" />
     <MESSAGE value="addthis social buttons on product page." />
-    <option name="LAST_COMMIT_MESSAGE" value="addthis social buttons on product page." />
+    <MESSAGE value="fixed value, min and max on number field on product show page&#10;removed owl carousel (temp)" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed value, min and max on number field on product show page&#10;removed owl carousel (temp)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1331,56 +1360,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/notifications.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/journal.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/photos.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/modal/_large_model.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/modal/_small_modal.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="1" lean-forward="false" selection-start-line="1" selection-start-column="1" selection-end-line="17" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/modal.css.scss" />
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/photos/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/photos/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1471,14 +1450,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="104" column="0" lean-forward="true" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1650,10 +1621,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/products/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        <state relative-caret-position="47">
+          <caret line="61" column="49" lean-forward="false" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -1661,17 +1632,82 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="18" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/jquery-3.2.1.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/bootstrap-hover-dropdown.min.js.org.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/jquery-ui.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3464">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_mainmenu.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/bootstrap-hover-dropdown.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1712">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/owl.carousel.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1488357792000" expanded="true" signature="27944:27981" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/products/show.html.erb">
+    <entry file="file://$PROJECT_DIR$/config/initializers/forest_liana.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="61" column="49" lean-forward="false" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
-          <folding>
-            <marker date="1515464549129" expanded="false" signature="35:453" ph="..." />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-287">
+          <caret line="92" column="0" lean-forward="true" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

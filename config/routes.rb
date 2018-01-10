@@ -1,17 +1,15 @@
 Rails.application.routes.draw do
 
-  mount Ckeditor::Engine => '/ckeditor'
   # mount ForestLiana::Engine => '/forest'
-  mount ForestLiana::Engine => '/forest'
+
+  mount Ckeditor::Engine => '/ckeditor'
+  mount Commontator::Engine => '/commontator'
+
+  devise_for :users, :controllers => { registrations: 'registrations', confirmations: 'confirmations', passwords: 'passwords', sessions: 'sessions' }
+
   resources :transactions
   resources :carts
   resources :products
-  # mount ForestLiana::Engine => '/forest'
-  # devise_for :users
-  devise_for :users, :controllers => { registrations: 'registrations', confirmations: 'confirmations', passwords: 'passwords', sessions: 'sessions' }
-  
-  mount Commontator::Engine => '/commontator'
-  
   resources :users
   resources :categories
   resources :notifications
@@ -26,9 +24,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :products
 
-  # post "products/add_to_cart" => "products#add_to_cart"
 
 
   get 'pages/contact'
@@ -54,7 +50,6 @@ Rails.application.routes.draw do
   
   get "*path", to: redirect("/error") 
   
-  #ActiveAdmin.routes(self)
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
