@@ -133,6 +133,7 @@
       </div >
 
       <!--  troubleshoot this well and photo css -->
+        <% if @photo.size > 0 %>
             <div class="well well-sm">
 
         <% @photo.each do | p| %>
@@ -140,6 +141,8 @@
         <% end %>
 
       </div>
+
+          <% end %>
 <!-- -->
 
 
