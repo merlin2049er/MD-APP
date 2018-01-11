@@ -11,6 +11,7 @@
   background: #bfbfbf;
 }
 
+
 div.img {
 
   margin: 5px;
@@ -18,5 +19,18 @@ div.img {
   float: left;
   width: 200px;
   height: 280px;
- // overflow: hidden;
+  overflow: hidden;
 }
+
+div.imgproducts {
+
+  margin: 5px;
+  border: 0px solid #ccc;
+  float: left;
+  width: 200px;
+  height: 100px;
+  overflow: hidden;
+
+
+}
+
