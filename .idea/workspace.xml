@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7331a777-2244-45ce-afdd-3c1ae6d6fb83" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/products/show_bad.html.erb" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/bootstrap-hover-dropdown.min.js.org.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/owl.carousel.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/products.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/products.scss" />
       <change beforePath="$PROJECT_DIR$/app/views/products/show.html.erb" afterPath="$PROJECT_DIR$/app/views/products/show.html.erb" />
     </list>
     <ignored path="MD-APP-master.iws" />
@@ -72,15 +65,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/products/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="107" column="17" lean-forward="false" selection-start-line="107" selection-start-column="17" selection-end-line="107" selection-end-column="17" />
+            <state relative-caret-position="432">
+              <caret line="141" column="12" lean-forward="true" selection-start-line="135" selection-start-column="10" selection-end-line="141" selection-end-column="12" />
               <folding>
                 <element signature="e#2509#2545#0#HTML" expanded="true" />
                 <element signature="e#3153#3193#0#HTML" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="products.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/products.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="452">
+              <caret line="36" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -225,6 +228,19 @@
               <item name="MD-APP" type="b2602c69:ProjectViewProjectNode" />
               <item name="MD-APP" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MD-APP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MD-APP" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MD-APP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MD-APP" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MD-APP" type="b2602c69:ProjectViewProjectNode" />
@@ -863,14 +879,7 @@
       <workItem from="1515466796604" duration="72000" />
       <workItem from="1515544158744" duration="5786000" />
       <workItem from="1515553247135" duration="25000" />
-      <workItem from="1515627490415" duration="4431000" />
-    </task>
-    <task id="LOCAL-00126" summary="Added requests controller views model, with act as a votable gem, sweet...">
-      <created>1495832003913</created>
-      <option name="number" value="00126" />
-      <option name="presentableId" value="LOCAL-00126" />
-      <option name="project" value="LOCAL" />
-      <updated>1495832003914</updated>
+      <workItem from="1515627490415" duration="5388000" />
     </task>
     <task id="LOCAL-00127" summary="migrations for requests">
       <created>1495832387070</created>
@@ -1208,11 +1217,18 @@
       <option name="project" value="LOCAL" />
       <updated>1515547411584</updated>
     </task>
-    <option name="localTasksCounter" value="175" />
+    <task id="LOCAL-00175" summary="fixed product show page - need to fix photos in wells they aren't fitting">
+      <created>1515633603436</created>
+      <option name="number" value="00175" />
+      <option name="presentableId" value="LOCAL-00175" />
+      <option name="project" value="LOCAL" />
+      <updated>1515633603437</updated>
+    </task>
+    <option name="localTasksCounter" value="176" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="452835000" />
+    <option name="totallyTimeSpent" value="453792000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1309,7 +1325,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="minor fixes" />
     <MESSAGE value="removed shipping rates for now" />
     <MESSAGE value="?" />
     <MESSAGE value="removed links top and back" />
@@ -1334,7 +1349,8 @@
     <MESSAGE value="fixed value, min and max on number field on product show page&#10;removed owl carousel (temp)" />
     <MESSAGE value="removed forest liana from gemfile , routes and initalizer ( i developed my own backend)" />
     <MESSAGE value="removed owl carousel, need to fit img &lt;div&gt; into a well?" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed owl carousel, need to fit img &lt;div&gt; into a well?" />
+    <MESSAGE value="fixed product show page - need to fix photos in wells they aren't fitting" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed product show page - need to fix photos in wells they aren't fitting" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1666,22 +1682,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/products.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/products/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="107" column="17" lean-forward="false" selection-start-line="107" selection-start-column="17" selection-end-line="107" selection-end-column="17" />
+        <state relative-caret-position="432">
+          <caret line="141" column="12" lean-forward="true" selection-start-line="135" selection-start-column="10" selection-end-line="141" selection-end-column="12" />
           <folding>
             <element signature="e#2509#2545#0#HTML" expanded="true" />
             <element signature="e#3153#3193#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/products.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="36" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

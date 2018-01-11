@@ -132,15 +132,15 @@
         <%=  cl_image_tag(@product.picurl)  %>
       </div >
 
-      <!--  troubleshoot this well and photo css
+      <!--  troubleshoot this well and photo css -->
             <div class="well well-sm">
 
-        <#% @photo.each do | p| %>
-            <div  class="imgproducts"><%#=  cl_image_tag(p.uri) %></div>
-        <#% end %>
+        <% @photo.each do | p| %>
+            <div  class="imgproducts"><%=  cl_image_tag(p.uri) %></div>
+        <% end %>
 
       </div>
--->
+<!-- -->
 
 
       <div class="well well-sm">    <%= @product.template %><br/>   </div>
