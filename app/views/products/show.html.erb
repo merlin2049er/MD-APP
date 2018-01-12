@@ -148,13 +148,13 @@
           <% end %>
 <!-- -->
 
-<!--  old - it doesn't work in a well?
-      <div class="well well-sm">    <%= @product.template %><br/>   </div>
--->
+  
+      <div class="well well-sm">    <%= raw @product.template %> <br>  </div>
 
+<!--
 <hr>
-<p><%= raw @product.template %></p>.html_safe
-
+<p><%= raw @product.template %></p>
+-->
 
       <div class="well well-sm">
         Length: <%= @product.length %><br/>
