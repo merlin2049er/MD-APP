@@ -22,7 +22,8 @@ div.img {
   overflow: hidden;
 }
 
-div.imgproducts {
+
+img.imgproducts {
 
   margin: 5px;
   border: 0px solid #ccc;
@@ -30,7 +31,9 @@ div.imgproducts {
   width: 200px;
   height: 100px;
   overflow: hidden;
-  display: inline-block
+  display: inline-block;
+  max-width: 100%;
+  max-height: 100%;
 
 }
 

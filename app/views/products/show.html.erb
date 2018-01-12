@@ -128,19 +128,22 @@
         Funded.
       </div>
 
+
       <div class="well well-sm">
         <%=  cl_image_tag(@product.picurl)  %>
       </div >
 
       <!--  troubleshoot this well and photo css -->
         <% if @photo.size > 0 %>
-            <div class="well well-sm">
+             <div class="well well-sm">
 
         <% @photo.each do | p| %>
-            <div  class="imgproducts"><%=  cl_image_tag(p.uri) %></div>
+
+            <%=  cl_image_tag((p.uri), :class => "imgproducts" )  %>
+
         <% end %>
 
-      </div>
+       </div>
 
           <% end %>
 <!-- -->
