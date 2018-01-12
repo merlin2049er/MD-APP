@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
   <% if Rails.env.production? %>
     <!-- Global site tag (gtag.js) - Google Analytics -->
      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-40488478-2"></script>
@@ -15,30 +14,16 @@
 
          gtag('config', 'UA-40488478-2');
      </script>
-
  <% end %>
-
-<!-- Go to www.addthis.com/dashboard to customize your tools -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59307581674b8668"></script>
-
-<script type="text/javascript">
-//always refresh on URL change
-window.addEventListener("hashchange", function () {
-  addthis.layers.refresh();
-});
-</script>
-
 
   <title>MASSDUMP</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
-
 </head>
 
 <body>
-
 
 <!-- 
 <% if current_user %>
