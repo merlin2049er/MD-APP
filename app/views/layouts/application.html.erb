@@ -18,6 +18,16 @@
 
  <% end %>
 
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59307581674b8668"></script>
+
+<script type="text/javascript">
+//always refresh on URL change
+window.addEventListener("hashchange", function () {
+  addthis.layers.refresh();
+});
+</script>
+
 
   <title>MASSDUMP</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
