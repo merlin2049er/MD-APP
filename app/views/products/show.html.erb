@@ -1,3 +1,7 @@
+
+
+<% if user_signed_in? %>
+
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59307581674b8668"></script>
 
@@ -7,9 +11,6 @@ window.addEventListener("hashchange", function () {
   addthis.layers.refresh();
 });
 </script>
-
-<% if user_signed_in? %>
-
 
   <div class="well well-sm"  >
     <div class="addthis_inline_share_toolbox"></div>
