@@ -130,7 +130,14 @@
 
 
       <div class="well well-sm">
-        <%=  cl_image_tag(@product.picurl)  %>
+        <!--
+        <a href id = @product.picurl data-lightbox="gallery" >
+
+        <%#=  cl_image_tag(@product.picurl)  %>
+        </a>
+-->
+        <a href="<%= @product.picurl %>", data-lightbox="Gallery" %> <img src="<%= @product.picurl %>"  > </a>
+
       </div >
 
       <!--  troubleshoot this well and photo css -->
@@ -138,9 +145,7 @@
              <div class="well well-sm">
 
         <% @photo.each do | p| %>
-
-            <%=  cl_image_tag((p.uri), :class => "imgproducts" )  %>
-
+                 <a href="<%= p.uri %>", data-lightbox="Gallery" %> <img src="<%= p.uri %>" , class = "imgproducts" > </a>
         <% end %>
 
        </div>

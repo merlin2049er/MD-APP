@@ -48,7 +48,7 @@
           <td><%= cart.created_at.strftime("%m/%d/%Y") %> </td>
           <% product = Product.where(id: cart.product_id).first %>
           <td> <%=  product.title  %>  </td>
-          <td> <input type="number" name="qty" value= <%= cart.qty %> min="1" max=   <%= @remaining %>  > </td>
+          <td> <input type="number" name="qty" value= <%= cart.qty %> min="1" max= <%= @remaining %>  > </td>
           <td> <%=  product.enddate  %>  </td>
           <td> <%=  product.funded  %>  </td>
           <td> ..update qty.. </td>

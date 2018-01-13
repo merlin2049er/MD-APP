@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  *= require commontator/application
+ *= require lightbox
  */
 
 @import "bootstrap-sprockets";
@@ -22,6 +23,8 @@
 @import "font-awesome";
 /* @import "cosmos"; */
 @import "yeti";
+
+@import "lightbox";
 
 // Import cerulean variables
 // @import "bootswatch/slate/variables";
