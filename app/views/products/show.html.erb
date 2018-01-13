@@ -1,13 +1,10 @@
-<!-- Go to www.addthis.com/dashboard to customize your tools -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59307581674b8668"></script>
+
 
 
 <% if user_signed_in? %>
 
-
-  <div class="well well-sm"  >
-    <div class="addthis_inline_share_toolbox"></div>
-  </div>
+  <%= render 'layouts/addthis' %>
+  
 
   <ul class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#Product">Product</a></li>
@@ -153,9 +150,13 @@
           <% end %>
 <!-- -->
 
+  
+      <div class="well well-sm">    <%= raw @product.template %> <br>  </div>
 
-      <div class="well well-sm">    <%= @product.template %><br/>   </div>
-
+<!--
+<hr>
+<p><%= raw @product.template %></p>
+-->
 
       <div class="well well-sm">
         Length: <%= @product.length %><br/>
