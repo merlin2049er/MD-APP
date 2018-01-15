@@ -130,7 +130,10 @@
 
         <a href="<%= @product.picurl %>", data-lightbox="Gallery" %> <img src="<%= @product.picurl %>"  > </a>
 
-      </div >
+       </div >
+
+
+
 
         <% if @photo.size > 0 %>
              <div class="well well-sm">
@@ -139,13 +142,14 @@
                  <a href="<%= p.uri %>", data-lightbox="Gallery" %> <img src="<%= p.uri %>" , class = "imgproducts" > </a>
         <% end %>
 
-       </div>
+        </div>
 
           <% end %>
 
+
   
       <div class="well well-sm">    <%= raw @product.template %> <br>  </div>
-        
+
 
       <div class="well well-sm">
         Length: <%= @product.length %><br/>
