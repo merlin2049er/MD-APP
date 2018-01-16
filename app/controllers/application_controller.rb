@@ -11,8 +11,9 @@ class ApplicationController < ActionController::Base
 
   before_filter :set_search
 
-  auto_session_timeout 10.minutes  # 10 minutes to test, 30 minutes for production
-  before_timedout_action
+ # not being used... 
+ # auto_session_timeout 10.minutes  # 10 minutes to test, 30 minutes for production
+ # before_timedout_action
 
 
   def set_search
@@ -49,8 +50,9 @@ class ApplicationController < ActionController::Base
 
   protected
   #override before_timedout
-  def before_timedout
+  # not being used >>
+  # def before_timedout
     #your custom code here
-  end
+  # end
 
 end
