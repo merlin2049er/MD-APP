@@ -1,8 +1,8 @@
 <% if user_signed_in? %>
 
-  <!--
+
   <%#= render 'layouts/addthis' %>
-  -->
+
 
   <ul class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#Product">Product</a></li>
@@ -126,9 +126,9 @@
 
         <% @photo.each do | p| %>
           <a href="<%= p.uri %>", data-lightbox="Gallery" %> <img src="<%= p.uri %>" , class = "imgproducts" > </a>
-          </div>
-        <% end %>
 
+        <% end %>
+      </div>
 
 
     <% end %>
