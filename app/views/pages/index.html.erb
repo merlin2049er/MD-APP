@@ -12,10 +12,10 @@
 
               <!--  <#%= p.title %> </br> -->
 
-                  <%= link_to p.title  , product_path(p)  %>
 
 
                   <%= link_to image_tag(p.picurl) , product_path(p) %>
+                  <%= link_to p.title, product_path(p) %>
                 </div>
 
               <% end %>
@@ -34,11 +34,11 @@
               <% @last_chance.each do |p| %>
 
       <div class="img2">
-        <%= link_to p.title  , product_path(p)  %>
 
       <!--  <%#= p.title %> </br>  -->
 
       <%= link_to image_tag(p.picurl ), product_path(p) %>
+        <%= link_to p.title, product_path(p) %>
       </div>
 
 
