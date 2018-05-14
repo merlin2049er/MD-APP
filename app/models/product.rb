@@ -6,8 +6,6 @@ class Product < ActiveRecord::Base
     is_impressionable
     acts_as_commontable
     
-    
-    
     after_initialize :set_defaults
     
     # has_and_belongs_to_many :users
@@ -16,7 +14,6 @@ class Product < ActiveRecord::Base
     belongs_to :category
     has_many :photos
 
-    
     validates_presence_of :title
     validates_presence_of :picurl
     validates_presence_of :template
@@ -41,19 +38,6 @@ class Product < ActiveRecord::Base
     # hopefully this works
     validates_numericality_of :qty, less_than_or_equal_to: 10, greater_than: 0
                                
-
-    
-def edit
-    
-end
-
-def index
-    
-end
-    
-def show
-   
-end
 
 def set_defaults
     self.msrp  ||= 0.0
