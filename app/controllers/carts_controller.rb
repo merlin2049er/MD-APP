@@ -31,6 +31,12 @@ class CartsController < ApplicationController
   def edit
   end
 
+  def update
+    cart = Cart.find(params[:id])
+    cart.update!(qty: params[:qty])
+    redirect_to carts_path
+  end
+
   def destroy
     @cart.destroy
     respond_to do |format|

@@ -1,22 +1,14 @@
 class Category < ActiveRecord::Base
     
-    has_many :products
+  has_many :products
     
-   validates_presence_of :name
+  validates_presence_of :name
 
-def edit
-end
+  before_create :set_defaults
 
-def index
-end
-
-    
-def show
-end
-
-    def set_defaults
-      self.picurl ||= 'photo_not_available.png'
-    end
+  def set_defaults
+    self.picurl ||= 'photo_not_available.png'
+  end
 
 
 end

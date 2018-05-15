@@ -112,16 +112,10 @@ class ProductsController < ApplicationController
 
   def add_to_cart
 
-    @cart = Cart.new(user_id: current_user.id, product_id: params[:product_id], qty: params[:qty] )
-
-   # binding.pry
-
-    raise
-
+    @cart = Cart.new(user_id: current_user.id, product_id: params[:id], qty: params[:qty] )
 
     respond_to do |format|
       if @cart.save
-
 
           #fix this global variable...
           if session[:remaining] == 1
