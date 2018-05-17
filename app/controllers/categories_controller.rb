@@ -1,4 +1,6 @@
 class CategoriesController < ApplicationController
+  include Pagy::Backend
+
   before_action :set_category, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
 
@@ -12,7 +14,8 @@ class CategoriesController < ApplicationController
     add_breadcrumb "categories", categories_path 
       
     @categories = Category.all
-    @categories = Category.order(:name).paginate(page: params[:page] , per_page: 10)
+   # @pagy, @categories = Category.order(:name).pagy(page: params[:page] , per_page: 10)
+     @pagy, @categories = pagy(Category.order(:name))
 
 
 
@@ -35,7 +38,7 @@ class CategoriesController < ApplicationController
 
 
     @title = @category.name
-    @products = @category.products.where( 'draft' => false, 'active' => true, 'funded' => false).where( 'enddate > ?', todaydate ).paginate(page: params[:page] , per_page: 10)
+    @pagy, @products = pagy(@category.products.where( 'draft' => false, 'active' => true, 'funded' => false).where( 'enddate > ?', todaydate ))
 
 
 

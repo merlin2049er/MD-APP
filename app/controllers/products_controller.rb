@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+  include Pagy::Backend
+
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   before_filter  :authenticate_user!
   
@@ -23,8 +25,7 @@ class ProductsController < ApplicationController
 
 #ransack
     @search = Product.where( 'draft' => false,  'active' => true, 'funded' => false).where( 'enddate > ?', todaydate ).search(params[:q])
-    @products = @search.result.paginate(page: params[:page] , per_page: 10)
-
+    @pagy, @products = pagy( @search.result)
 
       
     # @products = Product.all

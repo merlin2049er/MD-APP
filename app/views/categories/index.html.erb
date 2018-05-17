@@ -30,7 +30,9 @@
 
   </br>
 
-  <%= will_paginate @categories, renderer: BootstrapPagination::Rails %><br/>
+  <%== pagy_nav(@pagy) %> <br/>
+
+  <%#= will_paginate @categories, renderer: BootstrapPagination::Rails %>
 
   <!--
 <%= link_to 'New Category', new_category_path %>

@@ -59,8 +59,12 @@ gem 'simple_form', '~> 3.2', '>= 3.2.1'
 gem 'ransack', github: 'activerecord-hackery/ransack'
 
 #pagination
-gem 'will_paginate', github: 'jonatack/will_paginate'
-gem 'will_paginate-bootstrap'
+#gem 'will_paginate', github: 'jonatack/will_paginate'
+#gem 'will_paginate-bootstrap'
+
+gem 'pagy'
+gem 'pagy-extras'
+
 
 gem 'populator', '~> 1.0'
 gem 'faker'
