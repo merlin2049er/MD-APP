@@ -1,4 +1,6 @@
 class RequestsController < ApplicationController
+  include Pagy::Backend
+
   before_action :set_requests, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
 
@@ -9,7 +11,7 @@ class RequestsController < ApplicationController
     add_breadcrumb "Requests", requests_path
 
 
-    @requests =Request.where(:enabled => true).all.paginate(page: params[:page] , per_page: 10)
+    @pagy, @requests = pagy(Request.where(:enabled => true).all)
 
 
   end

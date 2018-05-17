@@ -62,7 +62,9 @@
 
       </div>
     </div>
-    <%= will_paginate @invoiceusers, renderer: BootstrapPagination::Rails %><br/>
+
+    <%== pagy_nav(@pagy) %> <br/>
+    <%#= will_paginate @invoiceusers, renderer: BootstrapPagination::Rails %>
 
  </div>
 </div>

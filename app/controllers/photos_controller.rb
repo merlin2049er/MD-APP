@@ -1,4 +1,6 @@
 class PhotosController < ApplicationController
+  include Pagy::Backend
+
   before_action :set_photos, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
 
@@ -9,7 +11,7 @@ class PhotosController < ApplicationController
     add_breadcrumb "Photos", photos_path
 
 
-    @photos =Photo.all.paginate(page: params[:page] , per_page: 10)
+    @pagy, @photos = pagy(Photo.all)
 
 
   end

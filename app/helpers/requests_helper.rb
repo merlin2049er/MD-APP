@@ -1,4 +1,3 @@
-module NotificationsHelper
+module RequestsHelper
   include Pagy::Frontend
-
 end

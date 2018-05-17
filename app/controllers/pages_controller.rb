@@ -1,5 +1,7 @@
 class PagesController < ApplicationController
-  
+  include Pagy::Backend
+
+
   add_breadcrumb "MASSDUMP", :root_path
 #  add_breadcrumb "contacts", :contact_path
 #  add_breadcrumb "about", :about_path
@@ -105,10 +107,7 @@ class PagesController < ApplicationController
     @totalinvoices = Cart.where('processing' => true).count
 
     @invoiceusers = Cart.includes(:user).where('processing' => true)
-    @invoiceusers = @invoiceusers.paginate(page: params[:page] , per_page: 10)
-
-
-
+    @pagy, @invoiceusers = pagy(@invoiceusers)
 
   end
 

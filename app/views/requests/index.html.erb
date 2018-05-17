@@ -56,8 +56,8 @@
     </div>
 <!-- <br> -->
 
-<%= will_paginate @request, renderer: BootstrapPagination::Rails %>
-    <br/>
+  <%== pagy_nav(@pagy) %> <br/>
+<%#= will_paginate @request, renderer: BootstrapPagination::Rails %>
 
 
 

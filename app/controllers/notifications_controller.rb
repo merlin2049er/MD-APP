@@ -1,4 +1,6 @@
 class NotificationsController < ApplicationController
+  include Pagy::Backend
+
   before_action :set_notification, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
 
@@ -10,8 +12,8 @@ class NotificationsController < ApplicationController
   def index
     add_breadcrumb 'notifications', notifications_path
 
-    @notifications = Notification.where('user_id =?', current_user.id).order('created_at DESC').paginate(page: params[:page] , per_page: 10)
-    @notifications = @notifications.paginate(page: params[:page] , per_page: 10)
+    @notifications = Notification.where('user_id =?', current_user.id).order('created_at DESC')
+    @pagy, @notifications = pagy(@notifications)
 
 
   end

@@ -56,7 +56,8 @@
     </div>
 <!-- <br> -->
 
-<%= will_paginate @photo, renderer: BootstrapPagination::Rails %><br/>
+  <%== pagy_nav(@pagy) %> <br/>
+<%#= will_paginate @photo, renderer: BootstrapPagination::Rails %>
 
 <!-- 
 <%= link_to 'New Photo', new_photo_path %>

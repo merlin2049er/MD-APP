@@ -59,7 +59,8 @@
 <%= link_to 'New Notification', new_notification_path %>
 -->
 
-    <%= will_paginate @notification, renderer: BootstrapPagination::Rails %><br/>
+  <%== pagy_nav(@pagy) %> <br/>
+    <%#= will_paginate @notification, renderer: BootstrapPagination::Rails %>
 
 
 <% else %>
