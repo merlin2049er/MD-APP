@@ -56,7 +56,9 @@
     </div>
 <!-- <br> -->
 
-  <%== pagy_nav(@pagy) %> <br/>
+  <%#== pagy_nav(@pagy) %>
+  <%== pagy_nav_bootstrap(@pagy) %> <br/>
+
 <%#= will_paginate @photo, renderer: BootstrapPagination::Rails %>
 
 <!-- 

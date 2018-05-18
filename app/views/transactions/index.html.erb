@@ -73,7 +73,9 @@
 
     <%#= will_paginate @transaction, renderer: BootstrapPagination::Rails %>
 
-  <%== pagy_nav(@pagy) %> <br/>
+  <%#== pagy_nav(@pagy) %>
+
+  <%== pagy_nav_bootstrap(@pagy) %> <br/>
 <% else %>
 
     <div class="alert alert-warning" role="alert">You must be signed in to see the notifications.</div>
