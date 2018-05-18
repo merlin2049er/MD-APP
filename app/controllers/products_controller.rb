@@ -14,6 +14,8 @@ class ProductsController < ApplicationController
    
     add_breadcrumb "products", products_path
 
+    @total_products = Product.count
+
     require 'time'
 
     todaydate = Time.new

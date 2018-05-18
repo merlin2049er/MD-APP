@@ -1,5 +1,8 @@
 class CartsController < ApplicationController
-    
+
+  include Pagy::Backend
+
+
   before_action :set_carts, only: [:create, :show, :edit, :update, :destroy]
   before_action :authenticate_user!
   
@@ -13,7 +16,7 @@ class CartsController < ApplicationController
      add_breadcrumb "shopping cart", carts_path 
 
      @carts  = Cart.where('user_id =?', current_user.id)
-     @carts = @carts.paginate(page: params[:page] , per_page: 10)
+     @pagy, @carts = pagy(@carts)
 
   end
 

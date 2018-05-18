@@ -9,11 +9,14 @@ class ApplicationController < ActionController::Base
   helper_method :all_products
   helper_method :all_notifications
 
+  before_filter :store_history
   before_filter :set_search
 
  # not being used... 
  # auto_session_timeout 10.minutes  # 10 minutes to test, 30 minutes for production
  # before_timedout_action
+
+
 
 
   def set_search
@@ -47,6 +50,13 @@ class ApplicationController < ActionController::Base
     @notifications = Notifications.find(params[:id])
 
   end
+
+  def store_history
+    session[:history] ||= []
+    session[:history].delete_at(0) if session[:history].size >= 5
+    session[:history] << request.url
+  end
+
 
   protected
   #override before_timedout

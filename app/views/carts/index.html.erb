@@ -80,8 +80,8 @@
 
 <!-- <#%= link_to 'New Cart', new_cart_path %> booyah-->
 
-<%= will_paginate @carts, renderer: BootstrapPagination::Rails %><br/>
-
+<%#= will_paginate @carts, renderer: BootstrapPagination::Rails %>
+  <%== pagy_nav(@pagy) %> <br/>
 
 <% else %>
 
