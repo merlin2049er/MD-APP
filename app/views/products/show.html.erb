@@ -27,10 +27,10 @@
     </br>
   <% else %>
 
-    <%= form_for :cart do |f| %>
-      Quantity: <%= f.number_field :qty, :value => 1, :min => 1, :max => @remaining %>
+   <%= form_tag add_to_cart_product_path(@product.id), method: :post do %>
+      Quantity: <%= number_field_tag :qty, 1, :min => 1, :max => @remaining %>
 
-      <%= f.submit "Add to cart" %>
+      <%= submit_tag "Add to cart" %>
     <% end %>
     </br>
 
