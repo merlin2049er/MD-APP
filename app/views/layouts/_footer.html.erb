@@ -15,7 +15,13 @@
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
-
+            last visited:
+            </br>
+            <% if session[:history] %>
+                <% session[:history].each do |key, value| %>
+                    <%= link_to value, product_path(key) %> </br>
+                <% end %>
+            <%end%>
 
         </div>
     </div>

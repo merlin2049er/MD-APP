@@ -45,6 +45,12 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+
+    session[:history] ||= {}
+    #session[:history].delete_at(0) if session[:history].size >= 5
+    
+    session[:history].merge!(@product.id.to_i => @product.title) unless session[:history][@product.id.to_i]
+    
     add_breadcrumb "product", products_path
      commontator_thread_show(@product)
 

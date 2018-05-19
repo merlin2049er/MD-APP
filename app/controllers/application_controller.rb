@@ -9,7 +9,6 @@ class ApplicationController < ActionController::Base
   helper_method :all_products
   helper_method :all_notifications
 
-  before_filter :store_history
   before_filter :set_search
 
  # not being used... 
@@ -51,11 +50,6 @@ class ApplicationController < ActionController::Base
 
   end
 
-  def store_history
-    session[:history] ||= []
-    session[:history].delete_at(0) if session[:history].size >= 5
-    session[:history] << request.url
-  end
 
 
   protected
