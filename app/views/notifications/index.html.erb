@@ -1,72 +1,73 @@
 <% if user_signed_in? %>
 
-    <!-- <p id="notice"><%#= notice %></p>  -->
+  <!-- <p id="notice"><%#= notice %></p>  -->
 
-<!-- 
-<h1>Notifications</h1>
--->
+  <!--
+  <h1>Notifications</h1>
+  -->
 
-    <div class="panel panel-default">
-      <!-- Default panel contents -->
-      <div class="panel-heading">Notifications:  <% if @notifications.empty?  %>
-            Nothing here...
-        <% else %>
-            <%= @notifications.count %> items...
-        <% end %>
-        <div class="pull-right"><font size="1">Personalized notification messages from us.</font> </div>
-
-
-      </div>
-      <div class="panel-body">
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">Notifications:  <% if @notifications.empty?  %>
+        Nothing here...
+      <% else %>
+        <%= @notifications.count %> items...
+      <% end %>
+      <div class="pull-right"><font size="1">Personalized notification messages from us.</font> </div>
 
 
-<table class="table"  >
-  <thead>
-  <tr>
-    <!-- <th colspan="3"></th> -->
-    <th>Added</th>
-    <th>Notification</th>
+    </div>
+    <div class="panel-body">
 
 
-  </tr>
-  </thead>
+      <table class="table"  >
+        <thead>
+        <tr>
+          <!-- <th colspan="3"></th> -->
+          <th>Added</th>
+          <th>Notification</th>
 
-  <tbody>
 
-  <!-- <#% if @notifications.empty?  %>
-      <h4>Nothing here...</h4>
-  <#% end %>
--->
+        </tr>
+        </thead>
 
-    <% @notifications.each do |notification| %>
-      <tr class="<%= cycle("even", "odd") %>">
-        <td><%= notification.created_at.strftime("%m/%d/%Y")   %> </td>
-          <td> <%= link_to notification.notify_msg , notification  %></td>
-        <!--
+        <tbody>
+
+        <!-- <#% if @notifications.empty?  %>
+            <h4>Nothing here...</h4>
+        <#% end %>
+      -->
+
+        <% @notifications.each do |notification| %>
+          <tr class="<%= cycle("even", "odd") %>">
+            <td><%= notification.created_at.strftime("%m/%d/%Y")   %> </td>
+            <td> <%= link_to notification.notify_msg , notification  %></td>
+            <!--
         <td><%= notification.notify_msg %></td>
         <td><%= link_to 'Show', notification %></td>
         <td><%= link_to 'Edit', edit_notification_path(notification) %></td>
         <td><%= link_to 'Destroy', notification, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         -->
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
 
-<!-- <br> -->
-      </div></div>
-<!--
-<%= link_to 'New Notification', new_notification_path %>
--->
+      <!-- <br> -->
+    </div></div>
+  <!--
+  <%= link_to 'New Notification', new_notification_path %>
+  -->
 
   <%#== pagy_nav(@pagy) %>
+  <div class="pagenav">
   <%== pagy_nav_bootstrap(@pagy) %> <br/>
-
-    <%#= will_paginate @notification, renderer: BootstrapPagination::Rails %>
+</div>
+  <%#= will_paginate @notification, renderer: BootstrapPagination::Rails %>
 
 
 <% else %>
 
-<div class="alert alert-warning" role="alert">You must be signed in to see the notifications.</div>
-  
-<% end %> 
+  <div class="alert alert-warning" role="alert">You must be signed in to see the notifications.</div>
+
+<% end %>

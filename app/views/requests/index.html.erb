@@ -1,71 +1,72 @@
-<% if user_signed_in? %> 
+<% if user_signed_in? %>
 
 
-    <div class="panel panel-default">
-      <!-- Default panel contents -->
-      <div class="panel-heading">Requests:  <% if @requests.empty?  %>
-            Nothing here...
-        <% else %>
-            <%= @requests.count %>
-            <% end %>
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">Requests:
+      <% if @requests.empty? %>
+        Nothing here...
+      <% else %>
+        <%= @requests.count %>
+      <% end %>
 
-      </div>
-      <div class="panel-body">
-
-<table class="table">
-
-  <thead>
-  <tr>
-
-  <th>Product</th>
-  <th>Manufacturer</th>
-  <th>Action</th>
-
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @requests.each do |request| %>
-      <tr>
-
-         <td><%= link_to request.product , request  %></td>
-        <td><%=  request.manufacturer  %></td>
-
-
-
-
-        <td>
-
-          <%= request.get_upvotes.size %>
-          <%= link_to like_request_path(request), method: :put do%>Upvote<% end %>
-
-          <%= request.get_downvotes.size %>
-          <%= link_to dislike_request_path(request), method: :put do%>Downvote<% end %>
-
-          <br/>
-          Submitted <%= time_ago_in_words(request.created_at) %>
-
-
-        </td>
-
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-      </div>
     </div>
-<!-- <br> -->
+    <div class="panel-body">
 
+      <table class="table">
+
+        <thead>
+        <tr>
+
+          <th>Product</th>
+          <th>Manufacturer</th>
+          <th>Action</th>
+
+        </tr>
+        </thead>
+
+        <tbody>
+        <% @requests.each do |request| %>
+          <tr>
+
+            <td><%= link_to request.product, request %></td>
+            <td><%= request.manufacturer %></td>
+
+
+            <td>
+
+              <%= request.get_upvotes.size %>
+              <%= link_to like_request_path(request), method: :put do %>Upvote
+              <% end %>
+
+              <%= request.get_downvotes.size %>
+              <%= link_to dislike_request_path(request), method: :put do %>Downvote
+              <% end %>
+
+              <br/>
+              Submitted <%= time_ago_in_words(request.created_at) %>
+
+
+            </td>
+
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- <br> -->
+
+  <div class="pagenav">
   <%#== pagy_nav(@pagy) %>
   <%== pagy_nav_bootstrap(@pagy) %> <br/>
 <%#= will_paginate @request, renderer: BootstrapPagination::Rails %>
-
+  </div>
 
 
 <% else %>
 
 
-<div class="alert alert-warning" role="alert"> You must be signed in to see the requests.</div>
-  
-<% end %> 
+  <div class="alert alert-warning" role="alert"> You must be signed in to see the requests.</div>
 
+<% end %>
