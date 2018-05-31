@@ -63,7 +63,7 @@ gem 'ransack', github: 'activerecord-hackery/ransack'
 #gem 'will_paginate-bootstrap'
 
 gem 'pagy'
-gem 'pagy-extras'
+# gem 'pagy-extras' no logner needed
 
 
 gem 'populator', '~> 1.0'
@@ -101,7 +101,6 @@ gem 'ckeditor', github: 'galetahub/ckeditor'
 
 gem 'carrierwave'
 gem 'mini_magick'
-
 
 
 

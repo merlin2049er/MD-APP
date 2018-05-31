@@ -3,16 +3,17 @@
 
   <%= link_to 'Back', categories_path %><br/>
 
-     <%=   @total_products %> products<br/><br/>
 
 
-    <% @products.each do |product| %>
+  <% @products.each do |product| %>
 
     <div class="img">
 
       <%= image_tag(product.picurl, height: '75', width: '75' )  %>
 
-      <%= link_to product.title , product  %>
+
+      <%= link_to  product.title, product  %>
+
 
     </div>
 
