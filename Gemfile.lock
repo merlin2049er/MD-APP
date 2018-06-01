@@ -347,5 +347,8 @@ DEPENDENCIES
   validates_timeliness (~> 4.0)
   web-console (~> 2.0)
 
+RUBY VERSION
+   ruby 2.4.1p111
+
 BUNDLED WITH
    1.16.1
