@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7331a777-2244-45ce-afdd-3c1ae6d6fb83" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/config/initializers/pagy.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/MD-APP-master.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MD-APP-master.iml" afterDir="false" />
+    <list default="true" id="7331a777-2244-45ce-afdd-3c1ae6d6fb83" name="Default" comment="removed pagy-extra's gem, and added initalizer for pagy">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/products.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/products.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/products/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/products/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/transactions/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/transactions/index.html.erb" afterDir="false" />
     </list>
     <ignored path="MD-APP-master.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,7 +25,7 @@
     <SUITE FILE_PATH="coverage/MD-APP@routes__MD_APP_master.coverage" NAME="routes: MD-APP-master Coverage Results" MODIFIED="1484857910427" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
     <SUITE FILE_PATH="coverage/MD_APP@db_migrate.coverage" NAME="db:migrate Coverage Results" MODIFIED="1500423204845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
     <SUITE FILE_PATH="coverage/MD_APP@Start_Zeus_Server__MD_APP_master.coverage" NAME="Start Zeus Server: MD-APP-master Coverage Results" MODIFIED="1512774560383" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
-    <SUITE FILE_PATH="coverage/MD_APP@Development__MD_APP_master.rcov" NAME="Development: MD-APP-master Coverage Results" MODIFIED="1527735465089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
+    <SUITE FILE_PATH="coverage/MD_APP@Development__MD_APP_master.rcov" NAME="Development: MD-APP-master Coverage Results" MODIFIED="1527813573243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
     <SUITE FILE_PATH="coverage/MD-APP@db_populate__MD_APP_master.coverage" NAME="db:populate: MD-APP-master Coverage Results" MODIFIED="1488728881612" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
     <SUITE FILE_PATH="coverage/MD-APP@Rails_console__MD_APP_master.coverage" NAME="Rails console: MD-APP-master Coverage Results" MODIFIED="1483585183287" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
     <SUITE FILE_PATH="coverage/MD-APP-master@cart.coverage" NAME="cart Coverage Results" MODIFIED="1480039354888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/models" MODULE_NAME="MD-APP-master" />
@@ -72,11 +67,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pagy.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pagy.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/initializers/pagy.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
+            <state relative-caret-position="-29">
               <caret line="13" selection-start-line="13" selection-end-line="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/transactions/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="78" column="5" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -166,13 +170,13 @@
         <option value="$PROJECT_DIR$/app/views/notifications/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/photos/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/requests/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/transactions/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/categories/show.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/products.scss" />
         <option value="$PROJECT_DIR$/app/views/products/index.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/initializers/pagy.rb" />
+        <option value="$PROJECT_DIR$/app/views/transactions/index.html.erb" />
       </list>
     </option>
   </component>
@@ -203,6 +207,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="RailsProjectView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -224,26 +230,6 @@
             <path>
               <item name="MD-APP" type="b2602c69:ProjectViewProjectNode" />
               <item name="MD-APP" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MD-APP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MD-APP" type="462c0819:PsiDirectoryNode" />
-              <item name="log" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MD-APP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MD-APP" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MD-APP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MD-APP" type="462c0819:PsiDirectoryNode" />
-              <item name="tmp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MD-APP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MD-APP" type="462c0819:PsiDirectoryNode" />
               <item name="vendor" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -256,8 +242,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="RailsProjectView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -759,14 +743,8 @@
       <workItem from="1527454089425" duration="325000" />
       <workItem from="1527454447486" duration="33000" />
       <workItem from="1527454674172" duration="510000" />
-      <workItem from="1527734477047" duration="1149000" />
-    </task>
-    <task id="LOCAL-00149" summary="- trying to get bottom right and top right css overlay on category image">
-      <created>1510430425867</created>
-      <option name="number" value="00149" />
-      <option name="presentableId" value="LOCAL-00149" />
-      <option name="project" value="LOCAL" />
-      <updated>1510430425870</updated>
+      <workItem from="1527734477047" duration="1564000" />
+      <workItem from="1527813525224" duration="1085000" />
     </task>
     <task id="LOCAL-00150" summary="-deleted migration file causing problems">
       <created>1510432774709</created>
@@ -1104,11 +1082,18 @@
       <option name="project" value="LOCAL" />
       <updated>1527114413474</updated>
     </task>
-    <option name="localTasksCounter" value="198" />
+    <task id="LOCAL-00198" summary="removed pagy-extra's gem, and added initalizer for pagy">
+      <created>1527735680914</created>
+      <option name="number" value="00198" />
+      <option name="presentableId" value="LOCAL-00198" />
+      <option name="project" value="LOCAL" />
+      <updated>1527735680915</updated>
+    </task>
+    <option name="localTasksCounter" value="199" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="512898000" />
+    <option name="totallyTimeSpent" value="514398000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1121,44 +1106,45 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="726" extended-state="0" />
+    <editor active="true" />
     <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31260097" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4927302" weight="0.32838285" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.450727" weight="0.31518152" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5177706" side_tool="true" visible="true" weight="0.5561056" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.51857835" side_tool="true" visible="true" weight="0.5561056" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32956383" />
       <window_info anchor="bottom" id="Database Changes" order="8" sideWeight="0.49919224" weight="0.32838285" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4749596" weight="0.3778878" />
-      <window_info active="true" anchor="bottom" x="0" y="189" width="1234" height="376" id="Run" order="2" sideWeight="0.4822294" visible="true" weight="0.5561056" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.79159933" weight="0.46369636" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30775446" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" weight="0.32956383" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.465625" weight="0.32735425" />
+      <window_info anchor="bottom" x="0" y="189" width="1234" height="376" id="Run" order="2" sideWeight="0.48142165" visible="true" weight="0.5561056" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24959612" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.79159933" weight="0.46369636" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.32956383" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49375" weight="0.35285285" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Inspection Results" order="8" visible="true" weight="0.32882884" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Inspection Results" order="8" visible="true" weight="0.32882884" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.465625" weight="0.32735425" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.450727" weight="0.31518152" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.4090623" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32911393" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32911393" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.32911393" />
@@ -1206,7 +1192,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added google tracking code" />
     <MESSAGE value="added link back to categories (from search results)" />
     <MESSAGE value="removed pry from product controller" />
     <MESSAGE value="worked on homepage and scopes for product model.&#10;need to adjust scopes - not draft, active, etc..." />
@@ -1231,7 +1216,8 @@
     <MESSAGE value="https on addthis" />
     <MESSAGE value="pagy bootstrap styling" />
     <MESSAGE value="cleared the float from the pagynav bar" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleared the float from the pagynav bar" />
+    <MESSAGE value="removed pagy-extra's gem, and added initalizer for pagy" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed pagy-extra's gem, and added initalizer for pagy" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1535,13 +1521,6 @@
     <entry file="file://$PROJECT_DIR$/app/views/transactions/show.html.erb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/transactions/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="78" column="6" selection-start-line="78" selection-start-column="6" selection-end-line="78" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/_overline-from-left.scss" />
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
       <provider selected="true" editor-type-id="text-editor">
@@ -1576,8 +1555,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/initializers/pagy.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
+        <state relative-caret-position="-29">
           <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/transactions/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="78" column="5" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
         </state>
       </provider>
     </entry>
