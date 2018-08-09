@@ -1,0 +1,14 @@
+ <!-- <#% if user_signed_in? %>   <!--fix this change to admin user -->
+
+     <% if can? :manage, @notification %>
+
+<h1>New Notification</h1>
+
+<%= render 'form' %>
+
+
+<% else %>
+
+<div class="alert alert-warning" role="alert">You must be signed in as administrator to add notifications.</div>
+  
+<% end %> 

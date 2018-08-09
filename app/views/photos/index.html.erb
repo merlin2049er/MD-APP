@@ -1,0 +1,62 @@
+<% if user_signed_in? %> 
+
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Photos listing: <%=   @total %></div>
+      <div class="panel-body">
+
+<table class="table">
+
+  <thead>
+  <tr>
+  <th>Id </th>
+  <th> Product Id </th>
+  <th>Uri</th>
+  <th>Action</th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @photos.each do |photo| %>
+      <tr>
+
+         <td><%= link_to photo.id , photo  %></td>
+        <td><%=  photo.product_id  %></td>
+        <td><%=  photo.uri  %></td>
+        <!-- 
+        <td><%#= photo.id %></td>
+      
+        
+        <td><%= link_to 'Show', photo %></td>
+        <td><%#= link_to 'Edit', edit_photo_path(photo) %></td> -->
+        <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+      </div>
+    </div>
+<!-- <br> -->
+
+  <%#== pagy_nav(@pagy) %>
+  <div class ='pagenav'>
+  <%== pagy_nav_bootstrap(@pagy) %> <br/>
+  </div>
+
+<%#= will_paginate @photo, renderer: BootstrapPagination::Rails %>
+
+<!-- 
+<%= link_to 'New Photo', new_photo_path %>
+-->
+
+<% else %>
+
+
+<!-- <h1>You must be signed in to see the products.</h1> -->
+
+<div class="alert alert-warning" role="alert"> You must be signed in to see the photos.</div>
+  
+<% end %> 
+

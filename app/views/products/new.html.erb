@@ -1,0 +1,15 @@
+<!-- fix this change to admin user <#% if user_signed_in? %>  -->
+
+    <% if can? :manage, @product %>
+
+<h1>New Product</h1>
+
+<%= render 'form' %>
+
+<% else %>
+
+<!-- <h1>Please sign in as administrator to add products.</h1> -->
+
+<div class="alert alert-warning" role="alert">Please sign in as administrator to add products.</div>
+
+<% end %>

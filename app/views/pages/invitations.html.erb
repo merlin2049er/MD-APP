@@ -1,0 +1,91 @@
+<% if user_signed_in? %>
+
+
+
+    <div class="row">
+  <div class="col-lg-12">
+    <h1 class="page-header">Invitations<br/>
+      <small>I'm going to make him an offer he can't refuse.</small>
+    </h1>
+
+
+
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading"><%= @totalinvites %> Invitations...  </div>
+
+      <div class="panel-body">
+
+
+    <table class="table">
+      <thead>
+      <tr>
+        <!--<th colspan="10"></th>-->
+        <th>Created at</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Message</th>
+        <th>Registered?</th>
+
+      </tr>
+      </thead>
+
+
+
+      <tbody>
+      <!-- <th>Invites for users</th> -->
+
+      <% @inivitesusers.each do |iu| %>
+          <tr>
+            <td><%= iu.created_at.strftime("%m/%d/%Y") %> </td>
+
+            <td>  <%= iu.name %> </td>
+            <td>  <%= iu.email %>  </td>
+            <td>  <%= iu.message %>  </td>
+            <td> <%= @reg = User.find_by_email(iu.email)
+
+              if @reg.blank?
+                "False"
+              else
+
+                @totalregistered = @totalregistered + 1
+                "True"
+              end %>
+
+            </td>
+
+
+          </tr>
+
+
+
+      <% end %>
+      </tbody>
+
+    </table>
+
+        <div class="panel-header"><%= @totalregistered %> Total registered users...
+
+          <% if @totalregistered > 0  %>
+           <%   @ratio =  ( @totalregistered.to_f / @totalinvites.to_f )*100 %>
+              <%= "#{@ratio.round(2)}% percent registered" %>
+           <% end %>
+
+        </div>
+
+
+      </div>
+    </div>
+
+    <%#== pagy_nav(@pagy) %>
+    <%== pagy_nav_bootstrap(@pagy) %> <br/>
+    <%#= will_paginate @invoiceusers, renderer: BootstrapPagination::Rails %>
+
+ </div>
+</div>
+
+<% else %>
+
+<div class="alert alert-warning" role="alert">You must be signed in to see the invitations.</div>
+
+<% end %>

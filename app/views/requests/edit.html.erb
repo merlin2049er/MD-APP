@@ -1,0 +1,15 @@
+<% if user_signed_in? %>  <!-- fix this change to admin user -->
+
+<h1>Editing Photo</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @photo %> |
+<%= link_to 'Back', photo_path %>
+
+<% else %>
+
+
+    <div class="alert alert-warning" role="alert">You must be signed in as administrator to edit the photos.</div>
+  
+<% end %> 

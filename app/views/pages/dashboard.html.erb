@@ -1,0 +1,297 @@
+<% if user_signed_in? %>
+
+
+    <div class="row">
+  <div class="col-lg-12">
+    <h1 class="page-header">Dashboard<br/>
+      <small>I'm as mad as hell, and I'm not going to take this anymore!</small>
+    </h1>
+
+    <!--
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, explicabo dolores ipsam aliquam inventore corrupti eveniet quisquam quod totam laudantium repudiandae obcaecati ea consectetur debitis velit facere nisi expedita vel?</p>
+    -->
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Super Users</div>
+      <div class="panel-body">
+
+
+    <table class="table">
+      <thead>
+      <tr>
+        <!-- <th colspan="1"></th> -->
+        <th>Created at</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>User name</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <!-- <th>Super users</th> -->
+
+      <% @superuser.each do |su| %>
+          <tr>
+            <td><%= su.created_at.strftime("%m/%d/%Y") %> </td>
+            <td>  <%=  su.firstname  %> </td>
+            <td>  <%= su.lastname %>  </td>
+            <td>  <%= su.username %>  </td>
+
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Top ten returning users</div>
+      <div class="panel-body">
+
+
+      <table class="table">
+      <thead>
+      <tr>
+        <!-- <th colspan="1"></th> -->
+        <th>Created at</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Sign in count</th>
+
+      </tr>
+      </thead>
+
+      <tbody>
+     <!-- <th>Top ten returning users</th> -->
+
+      <% @toptenlogin.each do |topten| %>
+          <tr>
+            <td> <%= topten.created_at.strftime("%m/%d/%Y") %> </td>
+            <td> <%= topten.firstname %> </td>
+            <td> <%= topten.lastname %> </td>
+            <td> <%= topten.sign_in_count %> </td>
+          </tr>
+
+      <% end %>
+      </tbody>
+    </table>
+      </div>
+    </div>
+
+
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Last ten vistors</div>
+      <div class="panel-body">
+
+
+        <table class="table">
+      <thead>
+      <tr>
+        <!-- <th colspan="1"></th> -->
+        <th>Created at</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Last signed in at</th>
+      </tr>
+      </thead>
+
+      <tbody>
+     <!-- <th>Last ten visting users</th> -->
+
+      <% @lasttenlogin.each do |lastten| %>
+          <tr>
+            <td><%= lastten.created_at.strftime("%m/%d/%Y") %> </td>
+            <td><%= lastten.firstname %></td>
+            <td><%= lastten.lastname %></td>
+            <td><%= lastten.last_sign_in_at %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Top ten products campaigns ending</div>
+      <div class="panel-body">
+
+     <table class="table">
+
+      <thead>
+      <tr>
+        <!-- <th colspan="1"></th> -->
+        <th>Created at</th>
+        <th>Title</th>
+        <th>Start date</th>
+        <th>End date</th>
+        <th>Price</th>
+
+      </tr>
+      </thead>
+
+      <tbody>
+      <!-- <th>Top ten products campaigns ending</th> -->
+
+      <% @toptenending.each do |tenending| %>
+          <tr>
+            <td><%= tenending.created_at.strftime("%m/%d/%Y") %> </td>
+            <td><%=  tenending.title  %>  </td>
+            <td><%= tenending.startdate %> </td>
+            <td><%= tenending.enddate %>  </td>
+            <td><%= tenending.price %>  </td>
+
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+      </div>
+    </div>
+
+
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Top ten products campaigns started</div>
+      <div class="panel-body">
+
+    <table class="table">
+      <thead>
+      <tr>
+        <!-- <th colspan="1"></th> -->
+        <th>Created at</th>
+        <th>Title</th>
+        <th>Start date</th>
+        <th>End date</th>
+        <th>Price</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <!-- <th>Top ten products campaigns started</th> -->
+
+      <% @toptenproductsstarted.each do |tenstarted| %>
+          <tr>
+            <td><%= tenstarted.created_at.strftime("%m/%d/%Y") %></td>
+            <td> <%=  tenstarted.title  %></td>
+            <td> <%= tenstarted.startdate %></td>
+            <td> <%= tenstarted.enddate %></td>
+            <td> <%= tenstarted.price %></td>
+
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+      </div>
+    </div>
+
+
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Top ten expensive products</div>
+      <div class="panel-body">
+
+        <table class="table">
+      <thead>
+      <tr>
+        <!-- <th colspan="1"></th> -->
+        <th>Created at</th>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Draft mode</th>
+        <th>Active</th>
+        <th>Funded</th>
+
+      </tr>
+      </thead>
+
+      <tbody>
+      <!-- <th>Top ten expensive products </th> -->
+
+      <% @toptenpricy.each do |tenpricy| %>
+          <tr>
+            <td><%= tenpricy.created_at.strftime("%m/%d/%Y") %> </td>
+            <td> <%=  tenpricy.title  %></td>
+            <td> <%= tenpricy.price %></td>
+            <td> <%= tenpricy.draft  %></td>
+            <td> <%= tenpricy.active  %></td>
+            <td><%= tenpricy.funded  %> </td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Top least expensive products</div>
+      <div class="panel-body">
+
+    <table class="table">
+
+
+      <thead>
+
+      <tr>
+        <!-- <th colspan="6"></th> -->
+        <th>Created at</th>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Draft mode</th>
+        <th>Active</th>
+        <th>Funded</th>
+
+      </tr>
+
+      </thead>
+
+
+      <tbody>
+
+      <% @toptencheap.each do |tencheap| %>
+          <tr>
+            <td> <%= tencheap.created_at.strftime("%m/%d/%Y") %> </td>
+            <td> <%= tencheap.title %> </td>
+            <td> <%= tencheap.price %> </td>
+            <td> <%= tencheap.draft %> </td>
+            <td> <%= tencheap.active %> </td>
+            <td> <%= tencheap.funded %> </td>
+
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+      </div>
+    </div>
+
+
+
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Miscellaneous database stats...</div>
+      <div class="panel-body">
+        <p>Total unconfirmed users: <%= @unconfirmeduser %> </p>
+        <p>Total registered users: <%= @registeredusers %> </p>
+        <p>Total items in shopping cart: <%= @cartcount %> </p>
+        <p>Total products in draft: <%= @draftcount %> </p>
+        <p>Total products in campaign ended successfully: <%= @successfully %> </p>
+        <p>Total products in campaign ended unsuccessfully: <%= @unsuccessfully %> </p>
+        <p>Total notification messages: <%= @totalnotifications %> </p>
+        <p>Total transaction messages: <%= @totaltransactions %> </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<% else %>
+
+    <div class="alert alert-warning" role="alert">You must be signed in to see the dashboard.</div>
+
+<% end %>

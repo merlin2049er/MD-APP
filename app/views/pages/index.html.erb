@@ -1,0 +1,69 @@
+
+
+<div class="container">
+
+  <h1 class="page-header">Welcome to MASSDUMP!<br/>
+      <small>Newly added...</small>
+  </h1>
+
+
+	<div class="cards">
+
+    <% @recent_products.each do |p| %>
+
+      <a class="card" >
+
+
+
+			<span class="card-header" style="background-image: url( <%=  p.picurl %> );">
+
+				<span class="card-title">
+					<h3> <%= p.title %> </h3>
+				</span>
+			</span>
+			<span class="card-summary">
+        <%= truncate(p.template, length: 50 , separator: ' ')  %>
+
+			</span>
+			<span class="card-meta">
+				Active: <%= p.startdate %>  - <%= p.enddate %>
+			</span>
+		</a>
+
+
+<% end %>
+</div>
+</div>
+
+
+<div class="container">
+
+  <h1 class="page-header">
+   <small>Ending soon...</small>
+</h1>
+
+	<div class="cards">
+
+    <% @last_chance.each do |p| %>
+
+      <a class="card" >
+
+			<span class="card-header" style="background-image: url( <%=  p.picurl %> );">
+
+				<span class="card-title">
+					<h3> <%= p.title %> </h3>
+				</span>
+			</span>
+			<span class="card-summary">
+        <%= truncate(p.template, length: 50 , separator: ' ')  %>
+
+			</span>
+			<span class="card-meta">
+				Active: <%= p.startdate %>  - <%= p.enddate %>
+			</span>
+		</a>
+
+
+<% end %>
+</div>
+</div>

@@ -1,0 +1,17 @@
+ <!-- fix this change to admin user   <#% if user_signed_in? %>  -->
+
+
+
+     <% if can? :manage, @category %>
+
+<h1>New Category</h1>
+
+<%= render 'form' %>
+
+
+<% else %>
+
+
+    <div class="alert alert-warning" role="alert">Please sign in as administrator to add categories.</div>
+
+<% end %>

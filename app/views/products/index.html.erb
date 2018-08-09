@@ -1,0 +1,50 @@
+<% if user_signed_in? %>
+
+
+  <%= link_to 'Back', categories_path %></br>
+
+  <div>
+
+  <% if @total_products == 0  %>
+    Nothing here...
+  <% else %>
+    <%= @total_products.to_s %> products...
+  <% end %>
+  </div>
+
+  <% @products.each do |product| %>
+
+    <div class="img">
+
+      <%= image_tag(product.picurl, height: '75', width: '75' )  %>
+
+
+      <%= link_to  product.title, product  %>
+
+
+    </div>
+
+
+  <% end %>
+
+  </br>
+
+  <div class="pagenav">
+  <%#== pagy_nav(@pagy) %>
+  <%== pagy_nav_bootstrap(@pagy) %> <br/>
+
+  </div>
+<%#= will_paginate @product, renderer: BootstrapPagination::Rails %>
+
+<!-- 
+-->
+
+<% else %>
+
+
+<!-- <h1>You must be signed in to see the products.</h1> -->
+
+<div class="alert alert-warning" role="alert"> You must be signed in to see the products.</div>
+  
+<% end %> 
+

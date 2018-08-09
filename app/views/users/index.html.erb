@@ -1,0 +1,69 @@
+
+<% if user_signed_in? %>
+
+
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">Users listing: <%= @total %></div>
+    <div class="panel-body">
+
+      <table class="table">
+
+        <thead>
+        <tr>
+          <th>Id </th>
+          <th>Username </th>
+          <th>First name</th>
+          <th>Last name</th>
+          <th>Email</th>
+
+
+        </tr>
+        </thead>
+
+        <tbody>
+        <% @users.each do |user| %>
+          <tr>
+
+            <td><%= user.id  %></td>
+            <td><%=  user.username %></td>
+            <td><%=  user.firstname  %></td>
+            <td><%=  user.lastname  %></td>
+            <td><%=  user.email  %></td>
+
+            <!--
+        <td><%#= photo.id %></td>
+
+
+        <td><%#= link_to 'Show', photo %></td>
+        <td><%#= link_to 'Edit', edit_photo_path(photo) %></td>
+            <td><%#= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+-->
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- <br> -->
+
+  <%#== pagy_nav(@pagy) %>
+  <div class ='pagenav'>
+    <%== pagy_nav_bootstrap(@pagy) %> <br/>
+  </div>
+
+<%#= will_paginate @photo, renderer: BootstrapPagination::Rails %>
+
+  <!--
+  <%#= link_to 'New Photo', new_photo_path %>
+  -->
+
+<% else %>
+
+
+  <!-- <h1>You must be signed in to see the users.</h1> -->
+
+  <div class="alert alert-warning" role="alert"> You must be signed in to see the users.</div>
+
+<% end %>
+

@@ -1,0 +1,92 @@
+<% if user_signed_in? %>
+  <!--  <p id="notice"><%#= notice %></p>  -->
+
+  <!-- <h1>Carts</h1>  -->
+
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Shopping cart:  <% if @carts.empty?  %>
+      Nothing here...
+    <% else %>
+      <%= @carts.count %> items...
+    <% end %>
+
+    <div class="pull-right"><font size="1">If a campaign is successful, you will be emailed an invoice.</font>
+
+    </div>
+
+  </div>
+  <div class="panel-body">
+
+
+    <table class="table">
+      <thead>
+      <tr>
+        <!-- <th colspan="3"></th> -->
+        <th>Added</th>
+        <th>Item</th>
+        <th>Qty</th>
+        <th>End date</th>
+        <th>Funded</th>
+        <th>Action</th>
+
+      </tr>
+      </thead>
+
+      <tbody>
+
+      <!--<#% if @carts.empty?  %>-->
+      <!--<h4>Nothing here...</h4>-->
+      <!--<#% end %>-->
+
+      <% @carts.each do |cart| %>
+
+        <tr class="<%= cycle("even", "odd") %>">
+
+          <!-- <tr> -->
+          <td><%= cart.created_at.strftime("%m/%d/%Y") %> </td>
+          <% product = Product.where(id: cart.product_id).first %>
+          <td> <%=  product.title  %>  </td>
+          <!--<td> <input type="number" name="qty" value= <%= cart.qty %> min="1" max= <%= @remaining %>  > </td> %>-->
+          <td>
+          <%= form_tag cart_path(cart.id), method: :put do %>
+            <%= number_field_tag :qty, :value => cart.qty, :min => 1, :max => 4 %>
+            <%= submit_tag "revise" %>
+          <% end %>
+          </td>
+          <td> <%=  product.enddate  %>  </td>
+          <td> <%=  product.funded  %>  </td>
+          
+          <!--  <td><%#= link_to 'Show', cart %></td>
+        <td><%#= link_to 'Edit', edit_cart_path(cart) %></td>
+        -->
+
+          <% if not cart.processing? %>
+            <td> <%= link_to 'Remove', cart, method: :delete, data: { confirm: 'Are you sure?' } %>   </td>
+          <% else %>
+            <td> <%= '...Processing order...'  %> </td>
+          <% end %>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+
+  </div>
+</div>
+
+<br>
+
+<!-- <#%= link_to 'New Cart', new_cart_path %> booyah-->
+
+<%#= will_paginate @carts, renderer: BootstrapPagination::Rails %>
+  <%#== pagy_nav(@pagy) %>
+  <div class="pagenav">
+
+  <%== pagy_nav_bootstrap(@pagy) %> <br/>
+  </div>
+<% else %>
+
+<div class="alert alert-warning" role="alert">You must be signed in to see the shopping cart.</div>
+
+<% end %>

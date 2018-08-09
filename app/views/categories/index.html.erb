@@ -1,0 +1,60 @@
+<% if user_signed_in? %>
+
+<!-- <p id="notice"><%#= notice %></p> -->
+
+<!--
+<h1>Categories</h1>
+-->
+  <div>
+
+  <% if @categories.empty?  %>
+    Nothing here...
+  <% else %>
+
+    <%=   @categories.count %> categories <br/><br/>
+
+  <% end %>
+  </div>
+
+    <% @categories.each do |category| %>
+
+    <div class="img">
+
+        <!--  <div class="top-right">Top Right</div>
+          <div class="bottom-right">Bottom Right</div>
+                    <div class="imageholder" >
+
+          </div>
+
+-->
+
+            <%= link_to category.name , category  %>
+
+            <%= link_to image_tag(category.picurl ), category %>
+
+        </div>
+
+    <% end %>
+
+
+
+  </br>
+
+  <%#== pagy_nav(@pagy) %>
+  <div class="pagenav">
+  <%== pagy_nav_bootstrap(@pagy) %> <br/>
+</div>
+
+  <%#= will_paginate @categories, renderer: BootstrapPagination::Rails %>
+
+  <!--
+<%= link_to 'New Category', new_category_path %>
+-->
+<% else %>
+
+
+
+  <div class="alert alert-warning" role="alert">You must be signed in to see the categories.</div>
+  
+<% end %> 
+

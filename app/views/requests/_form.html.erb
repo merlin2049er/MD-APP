@@ -1,0 +1,21 @@
+
+
+<%= simple_form_for(@request) do |f| %>
+    <%= f.error_notification %>
+
+
+    <div class="form-inputs">
+
+
+
+      <%= f.input :product %>
+      <%= f.input :producturl, :label => "Product Image url"%>
+      <%= f.input :manufacturer %>
+      <%= f.input :manufacturerurl, :label => "Manufacturer Website url" %>
+
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit %>
+    </div>
+<% end %>

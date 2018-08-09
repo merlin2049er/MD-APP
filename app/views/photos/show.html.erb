@@ -1,0 +1,26 @@
+<% if user_signed_in? %>
+
+    <!-- <p id="notice"><%#= notice %></p> -->
+
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading"><strong>Photo:</strong> <%= @photo.uri %></div>
+      <div class="panel-body">
+
+      <%= cl_image_tag(@photo.uri ) %>
+
+      </div>
+    </div>
+
+    <!--
+    <%#= link_to 'Edit', edit_photos_path(@photos) %> |
+-->
+    <%= link_to 'Back', photos_path %>
+
+<% else %>
+
+
+    <div class="alert alert-warning" role="alert">You must be signed in to see the photos.</div>
+
+
+<% end %>

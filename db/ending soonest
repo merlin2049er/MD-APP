@@ -1,0 +1,14 @@
+SELECT id,
+       title,
+       template,
+       enddate,
+       draft,
+       category_id,
+       active,
+       funded,
+       picurl,
+       qty
+  FROM products
+  WHERE active='t' and qty > 0 and draft = 'f' and funded ='f'
+  ORDER BY enddate DESC
+  LIMIT 12;

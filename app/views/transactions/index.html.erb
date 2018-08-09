@@ -1,0 +1,85 @@
+<% if user_signed_in? %>
+
+    <!-- <p id="notice"><%#= notice %></p> -->
+    <!--
+    <h1>Listing Transactions</h1>
+-->
+
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Transactions:  <% if @transactions.empty?  %>
+            Nothing here...
+        <% else %>
+            <%= @transactions.count %> items...
+        <% end %>
+        <div class="pull-right"><font size="1">Transactions are displayed for the last 60 days.</font> </div>
+
+
+      </div>
+      <div class="panel-body">
+
+
+        <table class="table">
+  <thead>
+  <tr>
+    <!-- <th colspan="3"></th> -->
+    <th>Added</th>
+    <th>Invoice #</th>
+    <th>Shipped?</th>
+    <th>Courier</th>
+    <th>Tracking #</th>
+    <th>Comment</th>
+
+
+  </tr>
+  </thead>
+
+  <tbody>
+
+  <% if @transactions.empty?  %>
+     <!--  <h4>Empty...</h4>  -->
+  <% end %>
+
+
+    <% @transactions.each do |transaction| %>
+       <tr class="<%= cycle("even", "odd") %>">
+
+     <!-- <tr> -->
+        <td><%= transaction.created_at.strftime("%m/%d/%Y")  %> </td>
+        <td> <%=  transaction.invoice_number  %>  </td>
+        <td> <%=  transaction.shipped  %>  </td>
+        <td> <%=  transaction.postal_carrier  %>  </td>
+
+        <td> <%=  transaction.tracking_number  %>  </td>
+         <td> <%= link_to transaction.transaction_msg , transaction  %></td>
+        <!--
+        <td><%= link_to 'Show', transaction %></td>
+        <td><%= link_to 'Edit', edit_transaction_path(transaction) %></td>
+        <td><%= link_to 'Destroy', transaction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        -->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+      </div>
+    </div>
+
+
+    <br>
+<!--
+<%#= link_to 'New Transaction', new_transaction_path %>
+    -->
+
+    <%#= will_paginate @transaction, renderer: BootstrapPagination::Rails %>
+
+<div class="pagenav">
+  <%#== pagy_nav(@pagy) %>
+
+  <%== pagy_nav_bootstrap(@pagy) %> <br/>
+</div>
+<% else %>
+
+    <div class="alert alert-warning" role="alert">You must be signed in to see the notifications.</div>
+
+<% end %>

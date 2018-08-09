@@ -1,0 +1,21 @@
+<% if user_signed_in? %>
+
+<!-- <p id="notice"><%#= notice %></p>  -->
+
+<p>
+  <strong>Notification:</strong>
+  <%= @notification.notify_msg %>
+</p>
+
+<!--
+<%= link_to 'Edit', edit_notification_path(@notification) %> |
+-->
+<%= link_to 'Back', notifications_path %>
+
+<% else %>
+
+
+  <div class="alert alert-warning" role="alert">You must be signed in to see the notification.</div>
+  
+  
+<% end %> 

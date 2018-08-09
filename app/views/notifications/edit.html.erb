@@ -1,0 +1,15 @@
+<% if user_signed_in? %>
+
+<h1>Editing Notification</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @notification %> |
+<%= link_to 'Back', :back %>
+
+
+<% else %>
+
+<div class="alert alert-warning" role="alert">You must be signed in as administrator to edit the notifications.</div>
+  
+<% end %> 

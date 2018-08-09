@@ -1,0 +1,77 @@
+<% if user_signed_in? %>
+
+
+
+    <div class="row">
+  <div class="col-lg-12">
+    <h1 class="page-header">Invoicing<br/>
+      <small>After all, tomorrow is another day!</small>
+    </h1>
+
+
+
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Outstanding Invoices: <%= @totalinvoices %></div>
+      <div class="panel-body">
+
+
+    <table class="table">
+      <thead>
+      <tr>
+        <!--<th colspan="10"></th>-->
+        <th>Created at</th>
+        <th>Item</th>
+        <th>Name</th>
+        <th></th>
+        <th>Address</th>
+        <th></th>
+        <th>City</th>
+        <th>State</th>
+        <th>Postal</th>
+        <th>Email</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <!-- <th>Invoices for users</th> -->
+
+      <% @invoiceusers.each do |iu| %>
+          <tr>
+            <td><%= iu.user.created_at.strftime("%m/%d/%Y") %> </td>
+
+            <td>  <%#= iu.product_id  %>  <%= Product.find(iu.product_id).title %></td>
+            <td>  <%= iu.user.firstname %> </td>
+            <td>  <%= iu.user.lastname %>  </td>
+            <td>  <%= iu.user.address1 %>  </td>
+            <td>  <%= iu.user.address2 %>  </td>
+            <td>  <%= iu.user.city %>  </td>
+            <td>  <%= iu.user.state %>  </td>
+            <td>  <%= iu.user.postal %>  </td>
+            <td>  <%= iu.user.email %>  </td>
+
+          </tr>
+
+
+
+      <% end %>
+      </tbody>
+    </table>
+
+
+
+      </div>
+    </div>
+
+    <%#== pagy_nav(@pagy) %>
+    <%== pagy_nav_bootstrap(@pagy) %> <br/>
+    <%#= will_paginate @invoiceusers, renderer: BootstrapPagination::Rails %>
+
+ </div>
+</div>
+
+<% else %>
+
+<div class="alert alert-warning" role="alert">You must be signed in to see the invoicing.</div>
+
+<% end %>

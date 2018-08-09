@@ -1,0 +1,14 @@
+SELECT id,
+       title,
+       template,
+       created_at,
+       draft,
+       category_id,
+       active,
+       funded,
+       picurl,
+       qty
+  FROM products
+  WHERE active='t' and qty > 0 and draft = 'f' and funded ='f'
+  ORDER BY created_at ASC
+  LIMIT 12;
