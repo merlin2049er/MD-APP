@@ -3,15 +3,15 @@ class ProductsController < ApplicationController
 
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   before_filter  :authenticate_user!
-  
+
   add_breadcrumb "MASSDUMP", :root_path
-  
+
   # GET /products
   # GET /products.json
   def index
 
     # @search = Product.search(params[:search])
-   
+
     add_breadcrumb "products", products_path
 
     @total_products = Product.count
@@ -27,13 +27,14 @@ class ProductsController < ApplicationController
 
 #ransack
     @search = Product.where( 'draft' => false,  'active' => true, 'funded' => false).where( 'enddate > ?', todaydate ).search(params[:q])
+    @searchtotal = @search.result.count
     @pagy, @products = pagy( @search.result)
 
-      
+
     # @products = Product.all
-    
+
     # @products = @search.all
-    
+
     #paginate
     #@product = Product.paginate(:page => params[:page], per_page: 10)
     #Product.paginate(:page => params[:page], per_page: 10)
@@ -148,9 +149,9 @@ class ProductsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
       # params.fetch(:product, {})
-      # added qty 
+      # added qty
         params.require(:product).permit( :title, :picurl, :template, :price, :msrp, :startdate, :enddate, :draft, :active,  :category_id, :qty, :length, :width, :height, :weight, :courier, :courierurl  )
-        
+
     end
 
 

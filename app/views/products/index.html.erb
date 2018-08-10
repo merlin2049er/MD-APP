@@ -8,6 +8,9 @@
   <% if @total_products == 0  %>
     Nothing here...
   <% else %>
+    <% if @searchtotal > 0 %>
+      <%= @searchtotal.to_s %> products found...
+    <% end %>
     <%= @total_products.to_s %> products...
   <% end %>
   </div>
