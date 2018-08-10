@@ -140,3 +140,17 @@ body {
   @include transition-duration(0.2s);
   @include transition-timing-function(linear);
 }
+
+img.imgproducts {
+
+  margin: 5px;
+  border: 0px solid #ccc;
+  // float: left;
+  width: 200px;
+  height: 100px;
+  overflow: hidden;
+  display: inline-block;
+  max-width: 100%;
+  max-height: 100%;
+
+}
