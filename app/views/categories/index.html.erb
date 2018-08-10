@@ -16,26 +16,41 @@
   <% end %>
   </div>
 
+  <!-- insert new stuff here... -->
+
+  <div class="container">
+
+  	<div class="cards">
+
     <% @categories.each do |category| %>
 
-    <div class="img">
+    <a class="card" href=  "<%=  category_path(category) %>" >
 
-        <!--  <div class="top-right">Top Right</div>
-          <div class="bottom-right">Bottom Right</div>
-                    <div class="imageholder" >
+   <!--   <div class="img"> -->
 
-          </div>
 
--->
+      <span class="card-header" style="background-image: url( <%=  category.picurl %> );">
 
-            <%= link_to category.name , category  %>
+        <span class="card-title">
+          <h3> <%= category.name %> </h3>
+        </span>
+      </span>
 
-            <%= link_to image_tag(category.picurl ), category %>
 
-        </div>
+      <span class="card-summary">
+        <%= truncate(category.name )  %>
+
+      </span>
+
+    <!--   <span class="card-meta">
+        <%= category.name %>
+      </span>
+  -->
+      </a>
 
     <% end %>
-
+  </div>
+  </div>
 
 
   </br>
@@ -55,6 +70,5 @@
 
 
   <div class="alert alert-warning" role="alert">You must be signed in to see the categories.</div>
-  
-<% end %> 
 
+<% end %>

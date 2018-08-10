@@ -10,7 +10,7 @@
 </p>
 -->
 
-<!-- 
+<!--
 <%= link_to 'Edit', edit_category_path(@category) %> |
 -->
 <%= link_to 'Back', categories_path %><br/>
@@ -18,15 +18,36 @@
 <%= @products.count %> products in this category.<br/>
 </br>
 
-<% @products.each do |product| %>
-        <div class="img">
+<!-- insert new stuff here -->
 
-  <!-- <p > <%#= image_tag(product.picurl, height: '75', width: '75' )  %> -->
-         <%= image_tag(product.picurl, height: '150', width: '150' ) %>
-           <%= link_to product.title, product %>
-    <!--<div class="desc" > <%#= product.template.truncate_words(15, omission: '... (continued)') %>  </div> -->
-        </div>
-  <% end %>
+
+<div class="container">
+
+	<div class="cards">
+
+<% @products.each do |product| %>
+
+<!--        <div class="img"> -->
+<a class="card" href=  "<%=  product_path(product) %>" >
+  <span class="card-header" style="background-image: url( <%=  product.picurl %> );">
+
+    <span class="card-title">
+      <h3> <%= product.title %> </h3>
+    </span>
+  </span>
+  <span class="card-summary">
+    <%= truncate(product.template, length: 50 , separator: ' ')  %>
+
+  </span>
+  <span class="card-meta">
+    Active: <%= product.startdate %>  - <%= product.enddate %>
+  </span>
+</a>
+
+
+<% end %>
+</div>
+</div>
 
   </br>
 <div class="pagenav">
@@ -39,5 +60,5 @@
 <% else %>
 
   <div class="alert alert-warning" role="alert">You must be signed in to see the category.</div>
-  
+
 <% end %>

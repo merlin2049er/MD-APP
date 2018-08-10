@@ -11,7 +11,7 @@
 
     <% @recent_products.each do |p| %>
 
-      <a class="card" >
+      <a class="card" href=  "<%=  product_path(p) %>" >
 
 
 
@@ -42,11 +42,11 @@
    <small>Ending soon...</small>
 </h1>
 
-	<div class="cards">
+	<div class="cards" >
 
     <% @last_chance.each do |p| %>
 
-      <a class="card" >
+      <a class="card"  href=  "<%=  product_path(p) %>" >
 
 			<span class="card-header" style="background-image: url( <%=  p.picurl %> );">
 
