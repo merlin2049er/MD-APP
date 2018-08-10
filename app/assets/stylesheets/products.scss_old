@@ -1,0 +1,44 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.even
+{
+  background: #efefef;
+}
+
+.odd
+{
+  background: #bfbfbf;
+}
+
+
+div.img {
+
+  margin: 5px;
+  border: 0px solid #ccc;
+  float: left;
+  width: 200px;
+  height: 280px;
+  overflow: hidden;
+}
+
+
+div.img_bck:hover {
+  border: 1px solid #777;
+}
+
+img.imgproducts {
+
+  margin: 5px;
+  border: 0px solid #ccc;
+  // float: left;
+  width: 200px;
+  height: 100px;
+  overflow: hidden;
+  display: inline-block;
+  max-width: 100%;
+  max-height: 100%;
+
+}
+
+

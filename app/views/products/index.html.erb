@@ -12,20 +12,38 @@
   <% end %>
   </div>
 
+  <!-- insert new stuff here -->
+
+  <div class="container">
+
+  	<div class="cards">
+
   <% @products.each do |product| %>
 
-    <div class="img">
+    <!-- <div class="img"> -->
 
-      <%= image_tag(product.picurl, height: '75', width: '75' )  %>
+      <a class="card" href=  "<%=  product_path(product) %>" >
+
+        <span class="card-header" style="background-image: url( <%=  product.picurl %> );">
+
+          <span class="card-title">
+            <h3> <%= product.title %> </h3>
+          </span>
+        </span>
+        <span class="card-summary">
+          <%= truncate(product.template, length: 50 , separator: ' ')  %>
+
+        </span>
+        <span class="card-meta">
+          Active: <%= product.startdate %>  - <%= product.enddate %>
+        </span>
+      </a>
 
 
-      <%= link_to  product.title, product  %>
+      <% end %>
+      </div>
+      </div>
 
-
-    </div>
-
-
-  <% end %>
 
   </br>
 
@@ -34,17 +52,12 @@
   <%== pagy_nav_bootstrap(@pagy) %> <br/>
 
   </div>
-<%#= will_paginate @product, renderer: BootstrapPagination::Rails %>
 
-<!-- 
--->
 
 <% else %>
 
 
-<!-- <h1>You must be signed in to see the products.</h1> -->
 
 <div class="alert alert-warning" role="alert"> You must be signed in to see the products.</div>
-  
-<% end %> 
 
+<% end %>
