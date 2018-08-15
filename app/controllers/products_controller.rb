@@ -141,6 +141,9 @@ class ProductsController < ApplicationController
     end
 
 else
+
+   # fix this it should find the qty in the cart, add to it and update it back...
+
   respond_to do |format|
     format.html { redirect_to :back, notice: 'Product was successfully updated in cart.' }
     format.json { render json: @cart.errors, status: :unprocessable_entity }

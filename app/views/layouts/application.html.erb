@@ -40,8 +40,8 @@
 </head>
 
 <body>
+    <div class="content">
 
-  
 <%= render 'layouts/nav' %>
 <%= bootstrap_flash %>
 
@@ -49,6 +49,8 @@
 
         <%= render_breadcrumbs :tag => :li, :separator => "" %>
         <%= yield %>
+</div>
+
 </div>
 
    <%= render 'layouts/footer' %>
