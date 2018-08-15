@@ -47,16 +47,19 @@
           <td><%= cart.created_at.strftime("%m/%d/%Y") %> </td>
           <% product = Product.where(id: cart.product_id).first %>
           <td> <%=  product.title  %>  </td>
-          <!--<td> <input type="number" name="qty" value= <%= cart.qty %> min="1" max= <%= @remaining %>  > </td> %>-->
-          <td>
-          <%= form_tag cart_path(cart.id), method: :put do %>
-            <%= number_field_tag :qty, :value => cart.qty, :min => 1, :max => 4 %>
-            <%= submit_tag "revise" %>
-          <% end %>
-          </td>
+          <td> <%=  cart.qty  %>  </td>
+        <!--   <td> <input type="number" name="qty" value= <%= cart.qty %> min="1" max= <%= @remaining %>  > </td> %> -->
+
+          <!-- <td>
+          <%#= form_tag cart_path(cart.id), method: :put do %>
+            <%#= number_field_tag :qty, :value => cart.qty, :min => 1, :max => 4 %>
+            <%#= submit_tag "revise" %>
+          <%# end %>
+        </td> -->
+
           <td> <%=  product.enddate  %>  </td>
           <td> <%=  product.funded  %>  </td>
-          
+
           <!--  <td><%#= link_to 'Show', cart %></td>
         <td><%#= link_to 'Edit', edit_cart_path(cart) %></td>
         -->

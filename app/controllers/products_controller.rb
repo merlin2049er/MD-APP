@@ -14,11 +14,6 @@ class ProductsController < ApplicationController
 
     add_breadcrumb "products", products_path
 
-    # ADD SORTING HERE? 
-    # add_breadcrumb "SORT BY NAME" ,products_path
-    #add_breadcrumb "...NEWEST"
-    #add_breadcrumb "...ENDING"
-
     @total_products = Product.count
 
     require 'time'
