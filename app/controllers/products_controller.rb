@@ -116,6 +116,9 @@ class ProductsController < ApplicationController
 
   def add_to_cart
 
+
+   if Cart.where( user_id: current_user.id, product_id: params[:id]).blank?
+
     @cart = Cart.new(user_id: current_user.id, product_id: params[:id], qty: params[:qty] )
 
     respond_to do |format|
@@ -136,6 +139,14 @@ class ProductsController < ApplicationController
         format.json { render json: @cart.errors, status: :unprocessable_entity }
       end
     end
+
+else
+  respond_to do |format|
+    format.html { redirect_to :back, notice: 'Product was successfully updated in cart.' }
+    format.json { render json: @cart.errors, status: :unprocessable_entity }
+  end
+end
+
 
   end
 
