@@ -3,7 +3,8 @@ class CartsController < ApplicationController
   include Pagy::Backend
 
 
-  before_action :set_carts, only: [:create, :show, :edit, :update, :destroy]
+  #before_action :set_cart, only: [:create, :show, :edit, :update, :destroy]
+  before_action :set_cart, only: [:create, :destroy]
   before_action :authenticate_user!
 
   add_breadcrumb "MASSDUMP", :root_path
@@ -66,7 +67,7 @@ class CartsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_carts
+    def set_cart
       @cart = Cart.find(params[:id])
     end
 
