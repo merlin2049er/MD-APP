@@ -121,8 +121,12 @@ class ProductsController < ApplicationController
 
     @cart = Cart.new(user_id: current_user.id, product_id: params[:id], qty: params[:qty] )
 
+
+
     respond_to do |format|
       if @cart.save
+
+
 
           #fix this global variable...
           if session[:remaining] == 1
@@ -143,6 +147,14 @@ class ProductsController < ApplicationController
 else
 
    # fix this it should find the qty in the cart, add to it and update it back...
+   cart =  Cart.find_by( user_id: current_user.id, product_id: params[:id])
+
+   temp = cart.qty
+   cart.qty = params[:qty].to_i + temp #  plus cart.qty
+   cart.save
+
+    # start a REPL session
+    #binding.pry
 
   respond_to do |format|
     format.html { redirect_to :back, notice: 'Product was successfully updated in cart.' }
