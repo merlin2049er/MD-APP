@@ -52,6 +52,7 @@ class ProductsController < ApplicationController
     impressionist(@product)
 
     @photo = Photo.where('enabled' => true ).where('product_id' => @product)
+
     @taken = Cart.where('product_id' => @product).count
     @remaining = @product.qty - @taken
 
@@ -153,6 +154,7 @@ else
    cart.qty = params[:qty].to_i + temp #  plus cart.qty
    cart.save
 
+    # update_remaining
     # start a REPL session
     #binding.pry
 
@@ -187,5 +189,4 @@ end
     params.require(:cart).permit(:user_id, :product_id, :qty)
   end
 
- # require 'pry'
 end
