@@ -53,13 +53,16 @@ class ProductsController < ApplicationController
 
     @photo = Photo.where('enabled' => true ).where('product_id' => @product)
 
-    @taken = Cart.where('product_id' => @product).count
+    # @taken = Cart.where('product_id' => @product).count
+    @taken = Cart.where('product_id' => @product).sum(:qty)
     @remaining = @product.qty - @taken
 
     #fix this global variable no good.
     #$remaining = @remaining
-    session[:remaining] = @remaining
+    # session[:remaining] = @remaining  #do i need this?
 
+    # start a REPL session
+    #binding.pry
 
   end
 
