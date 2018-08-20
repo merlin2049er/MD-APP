@@ -18,10 +18,15 @@
 
   <% elsif @remaining == 1 %>
 
+   <!-- notify of last item in stock to complete group buy -->
+   <%#= flash.now[:warning]= 'This is the last remaining product required to complete the group order.  By adding it to your cart, it will complete the order for the campaign.' %>
+
+
     <%= form_tag add_to_cart_product_path(@product.id), method: :post do %>
        Quantity: <%= number_field_tag :qty, 1, :min => 1, :max => @remaining %>
 
       <%= submit_tag "Add to cart" %>
+
     <% end %>
 
     </br>
@@ -46,13 +51,8 @@
     <% end_time = @product.enddate %>
 
 
-
-
     System time: <%= time_now = Time.now %> <br/>
     <!-- End Date: <%= @product.enddate %> <br/> -->
-
-
-
 
     <% if @product.active == true && time_now <= end_time %>
       Active campaign,

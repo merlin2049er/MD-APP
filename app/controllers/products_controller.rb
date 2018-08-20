@@ -57,12 +57,10 @@ class ProductsController < ApplicationController
     @taken = Cart.where('product_id' => @product).sum(:qty)
     @remaining = @product.qty - @taken
 
-    #fix this global variable no good.
-    #$remaining = @remaining
-    # session[:remaining] = @remaining  #do i need this?
+    if @remaining == 1
+      flash.now[:warning]= 'This is the last remaining product required to complete the group order.  By adding it to your cart, it will complete the order for the campaign.'
 
-    # start a REPL session
-    #binding.pry
+    end
 
   end
 
@@ -130,14 +128,15 @@ class ProductsController < ApplicationController
     respond_to do |format|
       if @cart.save
 
+        # start a REPL session
+        #binding.pry
+
+        #  if @remaining == 0  # not seeing this variable
 
 
-          #fix this global variable...
-          if session[:remaining] == 1
-
-          Product.update(params[:product_id], :funded => true)
-          Cart.where(:product_id => params[:product_id]).update_all(:processing => true)
-          end
+        # Product.update(params[:product_id], :funded => true)
+        #  Cart.where(:product_id => params[:product_id]).update_all(:processing => true)
+        #  end
 
 
         format.html { redirect_to :back, notice: 'Product was successfully added to cart.' }
