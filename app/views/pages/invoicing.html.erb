@@ -1,6 +1,7 @@
 
 <% @user = current_user %>
-<% if @user.admin %>
+<% if user_signed_in? && @user.admin %>
+
 
 
     <div class="row">

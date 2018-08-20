@@ -1,4 +1,6 @@
-<% if user_signed_in? %>
+<% @user = current_user %>
+<% if user_signed_in? && @user.admin %>
+
 
     <!-- <p id="notice"><%#= notice %></p> -->
 
@@ -20,7 +22,7 @@
 <% else %>
 
 
-    <div class="alert alert-warning" role="alert">You must be signed in to see the photos.</div>
+    <div class="alert alert-warning" role="alert">You must be the administrator to see the photos.</div>
 
 
 <% end %>

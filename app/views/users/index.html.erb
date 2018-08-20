@@ -1,5 +1,5 @@
-
-<% if user_signed_in? %>
+<% @user = current_user %>
+<% if user_signed_in? && @user.admin %>
 
 
   <div class="panel panel-default">
@@ -63,7 +63,6 @@
 
   <!-- <h1>You must be signed in to see the users.</h1> -->
 
-  <div class="alert alert-warning" role="alert"> You must be signed in to see the users.</div>
+  <div class="alert alert-warning" role="alert">You must be the administrator to see the users.</div>
 
 <% end %>
-

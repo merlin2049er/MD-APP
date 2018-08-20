@@ -1,4 +1,5 @@
-<% if user_signed_in? %> 
+<% @user = current_user %>
+<% if user_signed_in? && @user.admin %>
 
     <div class="panel panel-default">
       <!-- Default panel contents -->
@@ -24,10 +25,10 @@
          <td><%= link_to photo.id , photo  %></td>
         <td><%=  photo.product_id  %></td>
         <td><%=  photo.uri  %></td>
-        <!-- 
+        <!--
         <td><%#= photo.id %></td>
-      
-        
+
+
         <td><%= link_to 'Show', photo %></td>
         <td><%#= link_to 'Edit', edit_photo_path(photo) %></td> -->
         <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -47,7 +48,7 @@
 
 <%#= will_paginate @photo, renderer: BootstrapPagination::Rails %>
 
-<!-- 
+<!--
 <%= link_to 'New Photo', new_photo_path %>
 -->
 
@@ -56,7 +57,6 @@
 
 <!-- <h1>You must be signed in to see the products.</h1> -->
 
-<div class="alert alert-warning" role="alert"> You must be signed in to see the photos.</div>
-  
-<% end %> 
+<div class="alert alert-warning" role="alert">You must be the administrator to see the photos.</div>
 
+<% end %>
