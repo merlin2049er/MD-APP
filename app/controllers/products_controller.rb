@@ -59,8 +59,14 @@ class ProductsController < ApplicationController
 
     if @remaining == 1
       flash.now[:warning]= 'This is the last remaining product required to complete the group order.  By adding it to your cart, it will complete the order for the campaign.'
-
     end
+
+    # if @remaining == 0 and @product.funded == 'false'
+
+    #   Product.update(params[:product_id], :funded => true)
+    #   Cart.where(:product_id => params[:product_id]).update_all(:processing => true)
+
+    # end
 
   end
 
@@ -128,9 +134,6 @@ class ProductsController < ApplicationController
     respond_to do |format|
       if @cart.save
 
-        # start a REPL session
-        #binding.pry
-
         #  if @remaining == 0  # not seeing this variable
 
 
@@ -149,16 +152,11 @@ class ProductsController < ApplicationController
 
 else
 
-   # fix this it should find the qty in the cart, add to it and update it back...
    cart =  Cart.find_by( user_id: current_user.id, product_id: params[:id])
 
    temp = cart.qty
    cart.qty = params[:qty].to_i + temp #  plus cart.qty
    cart.save
-
-    # update_remaining
-    # start a REPL session
-    #binding.pry
 
   respond_to do |format|
     format.html { redirect_to :back, notice: 'Product was successfully updated in cart.' }
