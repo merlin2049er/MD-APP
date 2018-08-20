@@ -30,17 +30,6 @@ class ProductsController < ApplicationController
     @searchtotal = @search.result.count
     @pagy, @products = pagy( @search.result)
 
-
-    # @products = Product.all
-
-    # @products = @search.all
-
-    #paginate
-    #@product = Product.paginate(:page => params[:page], per_page: 10)
-    #Product.paginate(:page => params[:page], per_page: 10)
-
-    #@records = Product.where('draft' => false, 'active' => true)
-
   end
 
   # GET /products/1
@@ -59,6 +48,7 @@ class ProductsController < ApplicationController
 
     if @remaining == 1
       flash.now[:warning]= 'This is the last remaining product required to complete the group order.  By adding it to your cart, it will complete the order for the campaign.'
+
     end
 
     # if @remaining == 0 and @product.funded == 'false'
