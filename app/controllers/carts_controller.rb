@@ -10,6 +10,8 @@ class CartsController < ApplicationController
   add_breadcrumb "MASSDUMP", :root_path
 
 
+  # Product.unscoped.where(:funded => 'true')
+
   # GET /articles
   # GET /articles.json
   def index

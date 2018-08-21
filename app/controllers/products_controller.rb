@@ -51,12 +51,25 @@ class ProductsController < ApplicationController
 
     end
 
-    # if @remaining == 0 and @product.funded == 'false'
+    # start a REPL session
+    #binding.pry
 
-    #   Product.update(params[:product_id], :funded => true)
-    #   Cart.where(:product_id => params[:product_id]).update_all(:processing => true)
+     #if @remaining == 0 and @product.funded == 'false'
 
-    # end
+       #product =  Product.find_by( id: params[:id])
+
+    #    @product.funded = 'true'  # - this works...
+    #   @product.valid? # returns false
+    #   @product.errors.messages # returns something like {email: "Cant be blank"}
+    #   @product.save   # - this works...
+
+       # Product.update(params[:product_id], :funded => true)
+       #   cart = Cart.where(:product_id => params[:product_id]).update_all(:processing => true)
+       # cart.valid? # returns false
+       # cart.errors.messages
+       # cart.save
+
+     # end
 
   end
 

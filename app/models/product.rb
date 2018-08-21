@@ -1,13 +1,13 @@
 class Product < ActiveRecord::Base
-    
+
      #include PublicActivity::Model
      #tracked owner: Proc.new{ |controller, model| controller.current_user }
-    
+
     is_impressionable
     acts_as_commontable
-    
+
     after_initialize :set_defaults
-    
+
     # has_and_belongs_to_many :users
     # add cart here...
     belongs_to :cart
@@ -22,12 +22,12 @@ class Product < ActiveRecord::Base
     validates_presence_of :msrp
     validates_presence_of :startdate
     validates_presence_of :enddate
-    validates_presence_of :length
-    validates_presence_of :width
-    validates_presence_of :height
-    validates_presence_of :weight
-    validates_presence_of :courier
-    validates_presence_of :courierurl
+    # validates_presence_of :length
+    # validates_presence_of :width
+    # validates_presence_of :height
+    # validates_presence_of :weight
+    # validates_presence_of :courier
+    # validates_presence_of :courierurl
 
     validates_length_of :title, maximum: 35
 
@@ -37,7 +37,7 @@ class Product < ActiveRecord::Base
 
     # hopefully this works
     validates_numericality_of :qty, less_than_or_equal_to: 10, greater_than: 0
-                               
+
 
 def set_defaults
     self.msrp  ||= 0.0
@@ -51,7 +51,8 @@ def set_defaults
 end
 
 
-    default_scope { where(draft: false, active: true, funded: false ) }
+    #default_scope { where(draft: false, active: true, funded: false ) }
+    default_scope { where(draft: false, active: true ) }
     default_scope { where( 'enddate > ?', DateTime.now ) }
 
 
