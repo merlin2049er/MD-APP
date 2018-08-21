@@ -26,7 +26,8 @@ class ProductsController < ApplicationController
 
 
 #ransack
-    @search = Product.where( 'draft' => false,  'active' => true, 'funded' => false).where( 'enddate > ?', todaydate ).search(params[:q])
+    #@search = Product.where( 'draft' => false,  'active' => true, 'funded' => false).where( 'enddate > ?', todaydate ).search(params[:q])
+    @search = Product.search(params[:q])
     @searchtotal = @search.result.count
     @pagy, @products = pagy( @search.result)
 
