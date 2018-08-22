@@ -55,11 +55,11 @@ class ProductsController < ApplicationController
     # start a REPL session
     #binding.pry
 
-     #if @remaining == 0 and @product.funded == 'false'
+     if @remaining == 0 #and @product.funded == 'false'
 
        #product =  Product.find_by( id: params[:id])
 
-    #    @product.funded = 'true'  # - this works...
+       @product.funded = 'true'  # - this works...
     #   @product.valid? # returns false
     #   @product.errors.messages # returns something like {email: "Cant be blank"}
     #   @product.save   # - this works...
@@ -70,7 +70,19 @@ class ProductsController < ApplicationController
        # cart.errors.messages
        # cart.save
 
-     # end
+       # start a REPL session
+       # binding.pry
+
+       respond_to do |format|
+         if @product.save
+           format.html { redirect_to root_path, notice: 'Product was successfully funded.' }
+           format.json { render :show, status: :created, location: @product }
+         else
+           format.html { render :new }
+           format.json { render json: @product.errors, status: :unprocessable_entity }
+         end
+       end
+     end
 
   end
 
