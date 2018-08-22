@@ -14,7 +14,7 @@
 
     <div class="panel panel-default">
       <!-- Default panel contents -->
-      <div class="panel-heading">Outstanding Invoices: <% if @totalinvoices.empty?  %>
+      <div class="panel-heading">Outstanding Invoices: <% if @totalinvoices.count == 0  %>
          Nothing here...
          <% else %>
         <%= @totalinvoices.count %></div>
