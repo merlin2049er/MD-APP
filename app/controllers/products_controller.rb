@@ -158,8 +158,9 @@ else
 
    cart =  Cart.find_by( user_id: current_user.id, product_id: params[:id])
 
-   temp = cart.qty
-   cart.qty = params[:qty].to_i + temp #  plus cart.qty
+   #temp = cart.qty
+   #cart.qty = params[:qty].to_i + temp #  plus cart.qty
+   cart.qty += params[:qty].to_i #  plus cart.qty
    cart.save
 
   respond_to do |format|
