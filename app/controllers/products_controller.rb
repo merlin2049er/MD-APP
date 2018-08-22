@@ -72,12 +72,13 @@ class ProductsController < ApplicationController
 
        # start a REPL session
        # binding.pry
+       
 
        respond_to do |format|
          if @product.save
            # update the cart for invoiceing...
            cart = Cart.where(:product_id => @product.id).update_all(:processing => true)
-           
+
            format.html { redirect_to root_path, notice: 'Product was successfully funded.' }
            format.json { render :show, status: :created, location: @product }
          else
