@@ -26,6 +26,8 @@
         <th>Added</th>
         <th>Item</th>
         <th>Qty</th>
+        <th>Price</th>
+        <th>Total</th>
         <th>End date</th>
         <th>Funded</th>
         <th>Action</th>
@@ -57,7 +59,8 @@
             <%#= submit_tag "revise" %>
           <%# end %>
         </td> -->
-
+          <td> <%=  number_to_currency(product.price ) %>  </td>
+          <td> <%=  number_to_currency(total = product.price * cart.qty)  %>  </td>
           <td> <%=  product.enddate  %>  </td>
           <td> <%=  product.funded  %>  </td>
 
