@@ -109,9 +109,9 @@ class PagesController < ApplicationController
     add_breadcrumb "invoicing", invoicing_path
 
 
-    @totalinvoices = Cart.where('processing' => true).count
+    @totalinvoices = Cart.where('processing' => true ).count
 
-    @invoiceusers = Cart.includes(:user).where('processing' => true)
+    @invoiceusers = Cart.includes(:user).where('processing' => true )
     @pagy, @invoiceusers = pagy(@invoiceusers)
 
   end
