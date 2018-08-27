@@ -82,7 +82,8 @@ class ProductsController < ApplicationController
            format.html { redirect_to root_path, notice: 'Product was successfully funded.' }
            format.json { render :show, status: :created, location: @product }
          else
-           format.html { render :new }
+           format.html { render root_path, notice: 'Not sure what happened... please contact tech support.'}
+
            format.json { render json: @product.errors, status: :unprocessable_entity }
          end
        end
