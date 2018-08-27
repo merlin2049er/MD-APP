@@ -27,7 +27,7 @@ class ProductsController < ApplicationController
 
 #ransack
     #@search = Product.where( 'draft' => false,  'active' => true, 'funded' => false).where( 'enddate > ?', todaydate ).search(params[:q])
-    @search = Product.search(params[:q])
+    @search = Product.published.search(params[:q])
     @searchtotal = @search.result.count
     @pagy, @products = pagy( @search.result)
 
@@ -72,7 +72,7 @@ class ProductsController < ApplicationController
 
        # start a REPL session
        # binding.pry
-       
+
 
        respond_to do |format|
          if @product.save

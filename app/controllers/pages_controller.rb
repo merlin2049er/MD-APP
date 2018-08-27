@@ -13,9 +13,9 @@ class PagesController < ApplicationController
   def index
     add_breadcrumb "home", index_path
 
-    @recent_products = Product.most_recent(9)
+    @recent_products = Product.published.most_recent(9)
 
-    @last_chance = Product.ending_soonest(9)
+    @last_chance = Product.published.ending_soonest(9)
 
   ###  @mostviews = Product.impressions(8)
 

@@ -21,7 +21,7 @@ class ApplicationController < ActionController::Base
 
   def set_search
 
-    @search=Product.search(params[:q])
+    @search=Product.published.search(params[:q])
   end
 
   def all_categories

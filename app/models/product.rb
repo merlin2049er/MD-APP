@@ -51,11 +51,18 @@ def set_defaults
 end
 
 
-    #default_scope { where(draft: false, active: true, funded: false ) }
-    default_scope { where(draft: false, active: true  ) }
-    default_scope { where( 'enddate > ?', DateTime.now ) }
+    # default_scope { where(draft: false, active: true, funded: false ) }
+    # default_scope { where(draft: false, active: true  ) }
+    # default_scope { where( 'enddate > ?', DateTime.now ) }
 
-    #scope :published , -> { where(draft: false, active: true ,  funded: false, 'enddate > ?', DateTime.now ) }
+    scope :published, -> {
+      where(draft: false)
+      .where( active: true)
+      .where( funded: false)
+      .where( 'enddate > ?', DateTime.now.to_s )
+    }
+
+
     #scope :incart , -> { where(draft: false, active: true ) }
 
     scope :most_recent, ->(limit) { order("created_at desc").limit(limit) }
