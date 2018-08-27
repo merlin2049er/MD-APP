@@ -5,8 +5,9 @@
 
   <div>
 
-  <% if @total_products == 0  %>
-    Nothing here...
+  <%# if @total_products == 0  %>
+  <% if @searchtotal == 0  %>
+  returned nothing... try again...
   <% else %>
     <% if @searchtotal > 0 %>
       <%= @searchtotal.to_s %> products found...
