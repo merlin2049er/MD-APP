@@ -3,7 +3,19 @@ namespace :db do
     task :populate => :environment do
         require 'populator'
 
-        [Category, Product].each(&:delete_all)
+        [Category, Product, Cart, User].each(&:delete_all)
+        [Photo].each(&:delete_all)
+        [Activity].each(&:delete_all)
+        [Commontator_comment].each(&:delete_all)
+        [Commontator_subscription].each(&:delete_all)
+        [Commontator_thread].each(&:delete_all)
+        [Contact].each(&:delete_all)
+        [Impression].each(&:delete_all)
+        [Invite].each(&:delete_all)
+        [Notification].each(&:delete_all)
+        [Request].each(&:delete_all)
+        [Transaction].each(&:delete_all)
+        [Vote].each(&:delete_all)
 
          Category.populate 15 do |category|
          category.name = Populator.words(1..2).titleize
