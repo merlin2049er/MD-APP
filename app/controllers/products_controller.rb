@@ -14,7 +14,7 @@ class ProductsController < ApplicationController
 
     add_breadcrumb "products", products_path
 
-    @total_products = Product.count
+    @total_products = Product.published.count
 
     require 'time'
 
