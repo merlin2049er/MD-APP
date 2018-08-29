@@ -30,6 +30,11 @@
         <!--<th colspan="10"></th>-->
         <th>Created at</th>
         <th>Item</th>
+        <th>Qty</th>
+        <th>Price</th>
+        <th>Subtotal</th>
+        <th>HST</th>
+        <th>Total</th>
         <th>Name</th>
         <th></th>
         <th>Address</th>
@@ -49,6 +54,11 @@
             <td><%= iu.user.created_at.strftime("%m/%d/%Y") %> </td>
 
             <td>  <%#= iu.product_id  %>  <%= Product.find(iu.product_id).title %></td>
+            <td>  <%= qty = iu.qty  %></td>
+            <td>  <%= price  = Product.find(iu.product_id).price %></td>
+            <td>  <%= number_to_currency(subtotal = qty * price.to_f) %>
+            <td>  <%= number_to_currency(hst = subtotal.to_f * 0.13) %>
+            <td>  <%= number_to_currency(total = subtotal.to_f + hst.to_f) %>
             <td>  <%= iu.user.firstname %> </td>
             <td>  <%= iu.user.lastname %>  </td>
             <td>  <%= iu.user.address1 %>  </td>

@@ -6,8 +6,8 @@
   <%= f.error_notification %>
 
    <div class="form-inputs">
-    
-    
+
+
     <div class="panel panel-default">
        <div class="panel-heading">Shipping Address
          <div class="pull-right"><font size="1">Make sure your info is correct here.</font> </div>
@@ -15,26 +15,26 @@
        </div>
 
       <div class="panel-body">
-    
-   
+
+
     <%= f.input :firstname, required: true %>
     <%= f.input :lastname, required: true %>
 
-    
-    
+
+
     <%= f.input :address1, required: true %>
     <%= f.input :address2, required: false %>
     <%= f.input :city, required: true %>
     <%= f.input :state, required: true %>
     <%= f.input :postal, required: true %>
-    
+
       </div>
-</div> 
-    
+</div>
+
   <div class="panel panel-default">
    <div class="panel-heading">Username, email and password </div>
-  <div class="panel-body">  
-    
+  <div class="panel-body">
+
     <%= f.input :username, required: true, autofocus: true %>
     <%= f.input :email, required: true %>
 
@@ -43,20 +43,20 @@
     <% end %>
 
 
-   
+
     <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
     <%= f.input :password_confirmation, required: false %>
     </div>
-</div>  
-    
+</div>
+
     <div class="panel panel-default">
    <div class="panel-heading">Confirm changes? </div>
-  <div class="panel-body"> 
-    
+  <div class="panel-body">
+
     <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>
   </div>
-  
-    
+
+
   </div>
 </div>
 
@@ -71,9 +71,3 @@
 
 
 <!--  <%= render 'layouts/googlemap' %> -->
-
-
-
- 
- 
- 
