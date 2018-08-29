@@ -45,7 +45,7 @@ def set_defaults
     self.picurl ||= '/photo_not_available.png'
     self.qty ||= 1
 
-    self.funded = 'false'
+    self.funded ||= 'false'
     self.courier ||= 'Canada Post'
     self.courierurl ||= 'https://www.canadapost.ca'
 
