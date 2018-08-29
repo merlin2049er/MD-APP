@@ -55,7 +55,7 @@
 
             <td>  <%#= iu.product_id  %>  <%= Product.find(iu.product_id).title %></td>
             <td>  <%= qty = iu.qty  %></td>
-            <td>  <%= price  = Product.find(iu.product_id).price %></td>
+            <td>  <%= number_to_currency(price  = Product.find(iu.product_id).price) %></td>
             <td>  <%= number_to_currency(subtotal = qty * price.to_f) %>
             <td>  <%= number_to_currency(hst = subtotal.to_f * 0.13) %>
             <td>  <%= number_to_currency(total = subtotal.to_f + hst.to_f) %>
