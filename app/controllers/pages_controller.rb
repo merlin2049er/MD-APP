@@ -17,8 +17,11 @@ class PagesController < ApplicationController
 
     @last_chance = Product.published.ending_soonest(6)
 
-    # sql = "SELECT products.*, sum(carts.qty) AS total_quantity FROM products JOIN carts ON products.id = carts.product_id WHERE carts.processing = 'f' ORDER BY total_quantity DESC LIMIT 6"
-    # @almost_there = ActiveRecord::Base.connection.execute(sql)
+     #sql = "SELECT products.*, sum(carts.qty) AS total_quantity FROM products JOIN carts ON products.id = carts.product_id WHERE carts.processing = 'f' ORDER BY total_quantity DESC LIMIT 6"
+    # @almost_there = Cart.active
+
+     # start a REPL session
+     #binding.pry
 
   end
 
