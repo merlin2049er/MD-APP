@@ -13,11 +13,12 @@ class PagesController < ApplicationController
   def index
     add_breadcrumb "home", index_path
 
-    @recent_products = Product.published.most_recent(9)
+    @recent_products = Product.published.most_recent(6)
 
-    @last_chance = Product.published.ending_soonest(9)
+    @last_chance = Product.published.ending_soonest(6)
 
-    # @most_views = Product.impressions(6)
+    # sql = "SELECT products.*, sum(carts.qty) AS total_quantity FROM products JOIN carts ON products.id = carts.product_id WHERE carts.processing = 'f' ORDER BY total_quantity DESC LIMIT 6"
+    # @almost_there = ActiveRecord::Base.connection.execute(sql)
 
   end
 
