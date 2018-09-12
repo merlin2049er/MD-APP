@@ -17,7 +17,7 @@ class PagesController < ApplicationController
 
     @last_chance = Product.published.ending_soonest(9)
 
-  ###  @mostviews = Product.impressions(8)
+    # @most_views = Product.impressions(6)
 
   end
 
