@@ -58,6 +58,11 @@ class PagesController < ApplicationController
      add_breadcrumb "privacy", privacy_path
   end
 
+  def cookie
+     add_breadcrumb "cookie", cookie_path
+  end
+
+
   def faq
     add_breadcrumb "faq", terms_path
   end
