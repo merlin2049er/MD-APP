@@ -260,5 +260,5 @@ Devise.setup do |config|
   #facebook credentials...
 
   # config.omniauth :facebook, "APP-ID", "APP_SECRET"
-  config.omniauth :facebook, "facebook_api_key:", "facebook_secret_key:"
+  config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_SECRET'], scope: 'email'
 end
