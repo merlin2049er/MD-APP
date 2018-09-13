@@ -54,6 +54,10 @@ class PagesController < ApplicationController
      add_breadcrumb "terms", terms_path
   end
 
+  def privacy
+     add_breadcrumb "privacy", privacy_path
+  end
+
   def faq
     add_breadcrumb "faq", terms_path
   end
