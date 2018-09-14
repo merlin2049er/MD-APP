@@ -53,7 +53,6 @@ class ApplicationController < ActionController::Base
     session[:history] << request.url
   end
 
-
   protected
   #override before_timedout
   # not being used >>
