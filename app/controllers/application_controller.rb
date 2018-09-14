@@ -16,11 +16,7 @@ class ApplicationController < ActionController::Base
  #  auto_session_timeout 10.minutes  # 10 minutes to test, 30 minutes for production
  # before_timedout_action
 
-
-
-
   def set_search
-
     @search=Product.published.search(params[:q])
   end
 
