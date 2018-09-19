@@ -114,6 +114,8 @@ gem 'email_validator'
 # compass for sytlesheets
 gem 'compass-rails'
 
+# omniauth
+gem 'omniauth'
 # for facebook authentication
 gem 'omniauth-facebook'
 

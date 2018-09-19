@@ -342,6 +342,7 @@ DEPENDENCIES
   jquery-ui-rails (~> 4.2.1)
   meta_request
   mini_magick
+  omniauth
   omniauth-facebook
   pagy
   pg (~> 0.18.4)
