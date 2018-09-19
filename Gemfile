@@ -122,6 +122,9 @@ gem 'omniauth-facebook'
 #for keeping secret api keys
 gem "figaro"
 
+# adsense ads on site
+#gem 'ads-rails'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
