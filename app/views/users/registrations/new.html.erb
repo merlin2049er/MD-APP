@@ -1,7 +1,5 @@
 <h2>Sign up</h2>
 
-<%= current_user.inspect %>  <!-- for facebook troubleshooting -->
-
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
