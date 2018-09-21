@@ -24,6 +24,7 @@
       <tr>
         <!-- <th colspan="3"></th> -->
         <th>Added</th>
+      <th> Campaign </th>
         <th>Item</th>
         <th>Qty</th>
         <th>Price</th>
@@ -48,6 +49,9 @@
           <!-- <tr> -->
           <td><%= cart.created_at.strftime("%m/%d/%Y") %> </td>
           <% product = Product.where(id: cart.product_id).first %>
+          <td> <%= link_to raw(" #{cart.product_id}"), controller: "products", action: "show", id: cart.product_id %> </td>
+
+
           <td> <%=  product.title  %>  </td>
           <td> <%=  cart.qty  %>  </td>
 

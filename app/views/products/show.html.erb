@@ -51,11 +51,11 @@
     <% end_time = @product.enddate %>
 
 
-    System time: <%= time_now = Time.now %> <br/>
+    System time: <%= time_now = Time.now %>.<br/>
     <!-- End Date: <%= @product.enddate %> <br/> -->
 
     <% if @product.active == true && time_now <= end_time %>
-      Active campaign,
+      Active campaign [# <%= @product.id %>]
       <% if @product.funded == true %>
         successfully
       <% else %>
@@ -63,7 +63,7 @@
       <% end %>
       funded.
       <br/>
-      Start date: <%= @product.startdate %>.</br>End date: <%= @product.enddate %><br/>
+      Start date: <%= @product.startdate %>.</br>End date: <%= @product.enddate %>.<br/>
       Duration, <%= distance_of_time_in_words(start_time, end_time) %>.<br/>
 
       </div>
