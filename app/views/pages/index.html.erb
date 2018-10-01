@@ -2,6 +2,7 @@
 
 <div class="container">
 
+  <%= request.env["omniauth.auth"].info %>
   <%= current_user.inspect %>  <!-- for facebook troubleshooting -->
 
   <h1 class="page-header">Welcome to MASSDUMP!<br/>
