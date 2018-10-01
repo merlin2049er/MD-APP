@@ -263,5 +263,5 @@ Devise.setup do |config|
   # config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_SECRET'], scope: 'email'
   # config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_SECRET'], token_params: { parse: :json }, callback_url: "https://cryptic-inlet-13518.herokuapp.com/users/auth/facebook"
     config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_SECRET'], callback_url: "https://cryptic-inlet-13518.herokuapp.com/users/auth/facebook/callback"
-    
+
 end
