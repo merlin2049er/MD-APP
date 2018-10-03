@@ -42,7 +42,8 @@
     <%= f.input :state, required: true, label: 'Prov / State' %>
     <%= f.input :postal, required: true %>
 
-    <%= f.country_select :country, only: ["CA", "US"], label: 'Country', required: true  %>
+    <%#= f.country_select :country, only: ["CA", "US"], label: 'Country', required: true  %>
+    <%= f.input :country, :collection => %w[Canada USA], required: true %>
 
 
       </div>
