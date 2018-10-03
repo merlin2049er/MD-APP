@@ -1,10 +1,10 @@
 class RegistrationsController < Devise::RegistrationsController
- 
+
   add_breadcrumb "MASSDUMP", :root_path
   #add_breadcrumb  "sign up", :new_user_registration
   add_breadcrumb "sign up", nil
-  
- 
+
+
   def edit
    add_breadcrumb "profile"
   end
@@ -23,8 +23,9 @@ class RegistrationsController < Devise::RegistrationsController
  :address2,
  :city,
  :state,
- :postal
- 
+ :postal,
+ :country
+
  )
  end
  def account_update_params
@@ -40,7 +41,8 @@ class RegistrationsController < Devise::RegistrationsController
  :address2,
  :city,
  :state,
- :postal
+ :postal,
+ :country
  )
  end
 end

@@ -122,6 +122,7 @@ gem 'omniauth-facebook'
 #for keeping secret api keys
 gem "figaro"
 
+
 # adsense ads on site
 #gem 'ads-rails'
 
