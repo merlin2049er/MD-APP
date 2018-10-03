@@ -117,6 +117,14 @@ GEM
       sass-rails (< 5.1)
       sprockets (< 4.0)
     concurrent-ruby (1.0.5)
+    countries (2.1.4)
+      i18n_data (~> 0.8.0)
+      money (~> 6.9)
+      sixarm_ruby_unaccent (~> 1.1)
+      unicode_utils (~> 1.4)
+    country_select (3.1.1)
+      countries (~> 2.0)
+      sort_alphabetical (~> 1.0)
     crass (1.0.4)
     debug_inspector (0.0.3)
     devise (4.4.3)
@@ -150,6 +158,7 @@ GEM
       domain_name (~> 0.5)
     i18n (1.1.0)
       concurrent-ruby (~> 1.0)
+    i18n_data (0.8.0)
     impressionist (1.6.1)
       nokogiri (~> 1)
     jbuilder (2.7.0)
@@ -180,6 +189,8 @@ GEM
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
     minitest (5.11.3)
+    money (6.13.0)
+      i18n (>= 0.6.4, <= 2)
     multi_json (1.13.1)
     multi_xml (0.6.0)
     multipart-post (2.0.0)
@@ -269,6 +280,9 @@ GEM
     simple_form (4.0.1)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
+    sixarm_ruby_unaccent (1.2.0)
+    sort_alphabetical (1.1.0)
+      unicode_utils (>= 1.2.2)
     spring (2.0.2)
       activesupport (>= 4.2)
     sprockets (3.7.2)
@@ -297,6 +311,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.5)
+    unicode_utils (1.4.0)
     validates_timeliness (4.0.2)
       timeliness (~> 0.3.7)
     warden (1.2.7)
@@ -330,6 +345,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   commontator
   compass-rails
+  country_select
   devise
   email_validator
   faker

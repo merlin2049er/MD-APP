@@ -40,8 +40,8 @@
     <%= f.input :state, required: true, label: 'Prov / State' %>
     <%= f.input :postal, required: true %>
 
-    <%= f.input :country, required: true %>
-
+    <%#= f.country_select :country, ["Canada", "United States"], {}, { :class => "form-control" },  only: ["CA", "US"]) %>
+    <%= f.country_select :country, only: ["CA", "US"], label: 'Country', required: true  %>
 
 
       </div>
