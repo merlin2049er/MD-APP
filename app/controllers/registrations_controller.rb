@@ -33,7 +33,7 @@ class RegistrationsController < Devise::RegistrationsController
  :email,
  :password,
  :password_confirmation,
- :current_password,
+ #:current_password,
  :username,
  :firstname,
  :lastname,
@@ -51,5 +51,5 @@ class RegistrationsController < Devise::RegistrationsController
  def update_resource(resource, params)
    resource.update_without_password(params)
  end
- 
+
 end
