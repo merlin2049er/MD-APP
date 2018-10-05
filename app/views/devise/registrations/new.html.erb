@@ -1,6 +1,40 @@
+
+<style>
+
+.or {
+    display: inline-block;
+    position: relative;
+    padding: 10px;
+    background-color: #fdfafa;
+}
+
+.or-container {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 10px;
+    clear: both;
+    color: #6a737c;
+    font-variant: small-caps;
+  }
+
+  .or-hr {
+    margin-bottom: 0;
+    position: relative;
+    top: 19px;
+    height: 0;
+    border: 0;
+    border-top: 1px solid #e4e6e8;
+}
+</style>
+
 <h2>Sign up</h2>
 
-<%= link_to "Sign up with Facebook", user_facebook_omniauth_authorize_path %></br></br>
+<%= link_to "Sign up with Facebook", user_facebook_omniauth_authorize_path %></br>
+
+<div class="or-container">
+<hr class="or-hr">
+<div class="or">or</div>
+</div>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
