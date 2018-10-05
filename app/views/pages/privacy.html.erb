@@ -1,9 +1,1562 @@
+
 <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">Privacy Policy<br/>
                     <small>Please read</small>
                 </h1>
          <!-- Frequently asked questions go here... -->
-No Privacy Policy yet. Please use the contact form to ask a question.  
+No Privacy Policy yet. Please use the contact form to ask a question<a href="" data-toggle="modal" data-target="#exampleModal">.</a>
+
+
             </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">JG Word Clock : Congrats you found an Easter Egg.</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+
+        <style type="text/css" >
+
+        wc {
+            font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+            font-size: large;
+            margin: 20px;
+            text-align: center;
+            color: grey;
+        }
+
+        </style>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script>
+        function resetLabels() {
+
+            for (i = 1; i<23; i++){
+
+            $("#label"+i).css({fontSize: 10});
+
+          }
+
+
+            $("#label1").css({fontSize: 40});
+            $("#label22").css({fontSize: 40});
+        }
+
+
+
+        function ticTacTick(){
+               setInterval(function(){ tickInterval(); }, 1000);
+        }
+
+        function returnMins(){
+            var d = new Date();
+            var m = d.getMinutes();
+            return m;
+        }
+
+        function returnHours(){
+            var d = new Date();
+            var h = d.getHours();
+              return h;
+        }
+
+        function tickInterval(){
+          // alert("Hello");
+
+
+          hour = returnHours();
+          mins =  returnMins();
+
+         // alert(hour);
+        //  alert(mins);
+
+
+
+        //-----  1 o'clock -----------
+
+        // 1:00  - IT IS One O'clock
+        			if (((hour == 1 ) && (mins >= 0 && mins <= 5)) || ((hour == 13)  && (mins >= 0 && mins <= 5))) {
+        				resetLabels();
+        				$("#label10").css({fontSize: 40});
+        			}
+
+        // 1:05 - IT IS five minutes past OneO'clock
+        		if (((hour == 1 ) && (mins >= 5 && mins <= 10)) || ((hour == 13 ) && (mins >= 5 && mins <= 10))) {
+        				resetLabels();
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label10").css({fontSize: 40});
+
+        			}
+
+        // 1:10 - IT IS ten minutes past OneO'clock
+        		if (((hour == 1 ) && (mins >= 10 && mins <= 15)) || ((hour == 13 ) && (mins >= 10 && mins <= 15))) {
+        				resetLabels();
+        				$("#label3").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label10").css({fontSize: 40});
+        			}
+
+        // 1:15 - IT IS quarter  past OneO'clock
+        		if (((hour == 1 ) && (mins >= 15 && mins <= 20)) || ((hour == 13 ) && (mins >= 15 && mins <= 20))) {
+        				resetLabels();
+        				$("#label4").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label10").css({fontSize: 40});
+        			}
+
+        // 1:20 - IT IS twenty past OneO'clock
+        		if (((hour == 1 ) && (mins >= 20 && mins <= 25)) || ((hour == 13 ) && (mins >= 20 && mins <= 25))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label10").css({fontSize: 40});
+
+        			}
+
+        // 1:25 - IT IS twenty five minutes past OneO'clock
+        		if (((hour == 1 ) && (mins >= 25 && mins <= 30)) || ((hour == 13 ) && (mins >= 25 && mins <= 30))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label10").css({fontSize: 40});
+
+        			}
+
+
+        		// 1:30 - IT IS half past OneO'clock
+        		if (((hour == 1 ) && (mins >= 30 && mins <= 35)) || ((hour == 13 ) && (mins >= 30 && mins <= 35))) {
+        				resetLabels();
+        				$("#label2").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label10").css({fontSize: 40});
+
+        			}
+
+        		// 1:35 - IT IS qwenty five minutes to twoO'clock
+        		if (((hour == 1 ) && (mins >= 35 && mins <= 40)) || ((hour == 13 ) && (mins >= 35 && mins <= 40))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label12").css({fontSize: 40});
+
+        			}
+
+        		// 1:40 - IT IS qwenty minutes to twoO'clock
+        		if (((hour == 1 ) && (mins >= 40 && mins <= 45)) || ((hour == 13 ) && (mins >= 40 && mins <= 45))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label12").css({fontSize: 40});
+
+        			}
+
+
+        		// 1:45 - IT IS quarter to twoO'clock
+        		if (((hour == 1 ) && (mins >= 45 && mins <= 50)) || ((hour == 13 ) && (mins >= 45 && mins <= 40))) {
+        				resetLabels();
+        				$("#label4").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label12").css({fontSize: 40});
+        			}
+
+
+
+        			// 1:50 - IT IS ten minutes to twoO'clock
+
+        			if (((hour == 1 ) && (mins >= 50 && mins <= 55)) || ((hour == 13 ) && (mins >= 50 && mins <= 55))) {
+        				resetLabels();
+        				$("#label3").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label12").css({fontSize: 40});
+
+
+        			}
+
+        			// 1:55 - IT IS five minutes to twoO'clock
+
+        			if (((hour == 1 ) && (mins >= 55 && mins <= 60)) || ((hour == 13 ) && (mins >= 55 && mins <= 60))) {
+        				resetLabels();
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label12").css({fontSize: 40});
+
+        			}
+
+
+
+
+        	//----- 2 o//clock ----------
+
+        		// 2:00  - IT IS twoO'clock
+        			if (((hour == 2 ) && (mins >= 0 && mins <= 5)) || ((hour == 14 ) && (mins >= 0 && mins <= 5))) {
+        				resetLabels();
+        				$("#label12").css({fontSize: 40});
+        			}
+
+        		// 2:05 - IT IS five minutes past twoO'clock
+        		if (((hour == 2 ) && (mins >= 5 && mins <= 10)) || ((hour == 14 ) && (mins >= 5 && mins <= 10))) {
+        				resetLabels();
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label12").css({fontSize: 40});
+        			}
+
+        		// 2:10 - IT IS ten minutes past twoO'clock
+        		if (((hour == 2 ) && (mins >= 10 && mins <= 15)) || ((hour == 14 ) && (mins >= 10 && mins <= 15))) {
+        				resetLabels();
+        				$("#label3").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label12").css({fontSize: 40});
+        			}
+
+        		// 2:15 - IT IS quarter  past twoO'clock
+        		if (((hour == 2 ) && (mins >= 15 && mins <= 20)) || ((hour == 14 ) && (mins >= 15 && mins <= 20))) {
+        				resetLabels();
+        				$("#label4").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label12").css({fontSize: 40});
+        			}
+
+        		// 2:20 - IT IS twenty past twoO'clock
+        		if (((hour == 2 ) && (mins >= 20 && mins <= 25)) || ((hour == 14 ) && (mins >= 20 && mins <= 25))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label12").css({fontSize: 40});
+        			}
+
+        		// 2:25 - IT IS twenty five minutes past twoO'clock
+        		if (((hour == 2 ) && (mins >= 25 && mins <= 30)) || ((hour == 14 ) && (mins >= 25 && mins <= 30))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label12").css({fontSize: 40});
+        			}
+
+
+        		// 2:30 - IT IS half past twoO'clock
+        		if (((hour == 2 ) && (mins >= 30 && mins <= 35)) || ((hour == 14 ) && (mins >= 30 && mins <= 35))) {
+        				resetLabels();
+        				$("#label2").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label12").css({fontSize: 40});
+        			}
+
+        		// 2:35 - IT IS qwenty five minutes to threeO'clock
+        		if (((hour == 2 ) && (mins >= 35 && mins <= 40)) || ((hour == 14 ) && (mins >= 35 && mins <= 40))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label11").css({fontSize: 40});
+        			}
+
+        		// 2:40 - IT IS qwenty minutes to threeO'clock
+        		if (((hour == 2 ) && (mins >= 40 && mins <= 45)) || ((hour == 14 ) && (mins >= 40 && mins <= 45))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label11").css({fontSize: 40});
+        			}
+
+
+        		// 2:45 - IT IS quarter to threeO'clock
+        		if (((hour == 2 ) && (mins >= 45 && mins <= 50)) || ((hour == 14 ) && (mins >= 45 && mins <= 40))) {
+        				resetLabels();
+        				$("#label4").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label11").css({fontSize: 40});
+        			}
+
+
+
+        			// 2:50 - IT IS ten minutes to threeO'clock
+
+        			if (((hour == 2 ) && (mins >= 50 && mins <= 55)) || ((hour == 14 ) && (mins >= 50 && mins <= 55))) {
+        				resetLabels();
+        				$("#label3").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label11").css({fontSize: 40});
+        			}
+
+        			// 2:55 - IT IS five minutes to threeO'clock
+
+        			if (((hour == 2 ) && (mins >= 55 && mins <= 60)) || ((hour == 14 ) && (mins >= 55 && mins <= 60))) {
+        				resetLabels();
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label11").css({fontSize: 40});
+        			}
+
+
+        	//----- 3 o//clock ----------
+
+        	// 3:00  - IT IS ThreeO'clock
+        			if (((hour == 3 ) && (mins >= 0 && mins <= 5)) || ((hour == 15 ) && (mins >= 0 && mins <= 5))) {
+        				resetLabels();
+        				$("#label11").css({fontSize: 40});
+        			}
+
+        		// 3:05 - IT IS five minutes past threeO'clock
+        		if (((hour == 3 ) && (mins >= 5 && mins <= 10)) || ((hour == 15 ) && (mins >= 5 && mins <= 10))) {
+        				resetLabels();
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label11").css({fontSize: 40});
+        			}
+
+        		// 3:10 - IT IS ten minutes past threeO'clock
+        		if (((hour == 3 ) && (mins >= 10 && mins <= 15)) || ((hour == 15 ) && (mins >= 10 && mins <= 15))) {
+        				resetLabels();
+        				$("#label3").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label11").css({fontSize: 40});
+        			}
+
+        		// 3:15 - IT IS quarter  past threeO'clock
+        		if (((hour == 3 ) && (mins >= 15 && mins <= 20)) || ((hour == 15 ) && (mins >= 15 && mins <= 20))) {
+        				resetLabels();
+        				$("#label4").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label11").css({fontSize: 40});
+        			}
+
+        		// 3:20 - IT IS twenty past threeO'clock
+        		if (((hour == 3 ) && (mins >= 20 && mins <= 25)) || ((hour == 15 ) && (mins >= 20 && mins <= 25))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label11").css({fontSize: 40});
+        			}
+
+        		// 3:25 - IT IS twenty five minutes past threeO'clock
+        		if (((hour == 3 ) && (mins >= 25 && mins <= 30)) || ((hour == 15 ) && (mins >= 25 && mins <= 30))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label11").css({fontSize: 40});
+        			}
+
+
+        		// 3:30 - IT IS half past threeO'clock
+        		if (((hour == 3 ) && (mins >= 30 && mins <= 35)) || ((hour == 15 ) && (mins >= 30 && mins <= 35))) {
+        				resetLabels();
+        				$("#label2").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label11").css({fontSize: 40});
+        			}
+
+        		// 3:35 - IT IS qwenty five minutes to fourO'clock
+        		if (((hour == 3 ) && (mins >= 35 && mins <= 40)) || ((hour == 15 ) && (mins >= 35 && mins <= 40))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label13").css({fontSize: 40});
+        			}
+
+        		// 3:40 - IT IS qwenty minutes to fourO'clock
+        		if (((hour == 3 ) && (mins >= 40 && mins <= 45)) || ((hour == 15 ) && (mins >= 40 && mins <= 45))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label13").css({fontSize: 40});
+        			}
+
+
+        		// 3:45 - IT IS quarter to fourO'clock
+        		if (((hour == 3 ) && (mins >= 45 && mins <= 50)) || ((hour == 15 ) && (mins >= 45 && mins <= 40))) {
+        				resetLabels();
+        				$("#label4").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label13").css({fontSize: 40});
+        			}
+
+
+
+        			// 3:50 - IT IS ten minutes to fourO'clock
+
+        			if (((hour == 3 ) && (mins >= 50 && mins <= 55)) || ((hour == 15 ) && (mins >= 50 && mins <= 55))) {
+        				resetLabels();
+        				$("#label3").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label13").css({fontSize: 40});
+        			}
+
+        			// 3:55 - IT IS five minutes to fourO'clock
+
+        			if (((hour == 3 ) && (mins >= 55 && mins <= 60)) || ((hour == 15 ) && (mins >= 55 && mins <= 60))) {
+        				resetLabels();
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label13").css({fontSize: 40});
+        			}
+
+         	//-----  4//clock -----------
+
+        	// 4:00  - IT IS fourO'clock
+        			if (((hour == 4 ) && (mins >= 0 && mins <= 5)) || ((hour == 16 ) && (mins >= 0 && mins <= 5))) {
+        				resetLabels();
+        				$("#label13").css({fontSize: 40});
+        			}
+
+        		// 4:05 - IT IS five minutes past fourO'clock
+        		if (((hour == 4 ) && (mins >= 5 && mins <= 10)) || ((hour == 16 ) && (mins >= 5 && mins <= 10))) {
+        				resetLabels();
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label13").css({fontSize: 40});
+        			}
+
+        		// 4:10 - IT IS ten minutes past fourO'clock
+        		if (((hour == 4 ) && (mins >= 10 && mins <= 15)) || ((hour == 16 ) && (mins >= 10 && mins <= 15))) {
+        				resetLabels();
+        				$("#label3").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label13").css({fontSize: 40});
+        			}
+
+        		// 4:15 - IT IS quarter  past fourO'clock
+        		if (((hour == 4 ) && (mins >= 15 && mins <= 20)) || ((hour == 16 ) && (mins >= 15 && mins <= 20))) {
+        				resetLabels();
+        				$("#label4").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label13").css({fontSize: 40});
+        			}
+
+        		// 4:20 - IT IS twenty past fourO'clock
+        		if (((hour == 4 ) && (mins >= 20 && mins <= 25)) || ((hour == 16 ) && (mins >= 20 && mins <= 25))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label13").css({fontSize: 40});
+        			}
+
+        		// 4:25 - IT IS twenty five minutes past fourO'clock
+        		if (((hour == 4 ) && (mins >= 25 && mins <= 30)) || ((hour == 16 ) && (mins >= 25 && mins <= 30))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label13").css({fontSize: 40});
+        			}
+
+
+        		// 4:30 - IT IS half past fourO'clock
+        		if (((hour == 4 ) && (mins >= 30 && mins <= 35)) || ((hour == 16 ) && (mins >= 30 && mins <= 35))) {
+        				resetLabels();
+        				$("#label2").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label13").css({fontSize: 40});
+        			}
+
+        		// 4:35 - IT IS qwenty five minutes to fiveO'clock
+        		if (((hour == 4 ) && (mins >= 35 && mins <= 40)) || ((hour == 16 ) && (mins >= 35 && mins <= 40))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label14").css({fontSize: 40});
+        			}
+
+        		// 4:40 - IT IS qwenty minutes to fiveO'clock
+        		if (((hour == 4 ) && (mins >= 40 && mins <= 45)) || ((hour == 16 ) && (mins >= 40 && mins <= 45))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label14").css({fontSize: 40});
+        			}
+
+
+        		// 4:45 - IT IS quarter to fiveO'clock
+        		if (((hour == 4 ) && (mins >= 45 && mins <= 50)) || ((hour == 16 ) && (mins >= 45 && mins <= 40))) {
+        				resetLabels();
+        				$("#label4").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label14").css({fontSize: 40});
+        			}
+
+
+
+        			// 4:50 - IT IS ten minutes to fiveO'clock
+
+        			if (((hour == 4 ) && (mins >= 50 && mins <= 55)) || ((hour == 16 ) && (mins >= 50 && mins <= 55))) {
+        				resetLabels();
+        				$("#label3").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label14").css({fontSize: 40});
+        			}
+
+        			// 4:55 - IT IS five minutes to fiveO'clock
+
+        			if (((hour == 4 ) && (mins >= 55 && mins <= 60)) || ((hour == 16 ) && (mins >= 55 && mins <= 60))) {
+        				resetLabels();
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label14").css({fontSize: 40});
+        			}
+
+
+        	//----- 5 o//clock ----------
+
+        	// 5:00  - IT IS fiveO'clock
+        			if (((hour == 5 ) && (mins >= 0 && mins <= 5)) || ((hour == 17 ) && (mins >= 0 && mins <= 5))) {
+        				resetLabels();
+        				$("#label14").css({fontSize: 40});
+        			}
+
+        		// 5:05 - IT IS five minutes past fiveO'clock
+        		if (((hour == 5 ) && (mins >= 5 && mins <= 10)) || ((hour == 17 ) && (mins >= 5 && mins <= 10))) {
+        				resetLabels();
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label14").css({fontSize: 40});
+        			}
+
+        		// 5:10 - IT IS ten minutes past fiveO'clock
+        		if (((hour == 5 ) && (mins >= 10 && mins <= 15)) || ((hour == 17 ) && (mins >= 10 && mins <= 15))) {
+        				resetLabels();
+        				$("#label3").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label14").css({fontSize: 40});
+        			}
+
+        		// 5:15 - IT IS quarter  past fiveO'clock
+        		if (((hour == 5 ) && (mins >= 15 && mins <= 20)) || ((hour == 17 ) && (mins >= 15 && mins <= 20))) {
+        				resetLabels();
+        				$("#label4").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label14").css({fontSize: 40});
+        			}
+
+        		// 5:20 - IT IS twenty past fiveO'clock
+        		if (((hour == 5 ) && (mins >= 20 && mins <= 25)) || ((hour == 17 ) && (mins >= 20 && mins <= 25))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label14").css({fontSize: 40});
+        			}
+
+        		// 5:25 - IT IS twenty five minutes past fiveO'clock
+        		if (((hour == 5 ) && (mins >= 25 && mins <= 30)) || ((hour == 17 ) && (mins >= 25 && mins <= 30))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label14").css({fontSize: 40});
+        			}
+
+
+        		// 5:30 - IT IS half past fiveO'clock
+        		if (((hour == 5 ) && (mins >= 30 && mins <= 35)) || ((hour == 17 ) && (mins >= 30 && mins <= 35))) {
+        				resetLabels();
+        				$("#label2").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label14").css({fontSize: 40});
+        			}
+
+        		// 5:35 - IT IS qwenty five minutes to sixO'clock
+        		if (((hour == 5 ) && (mins >= 35 && mins <= 40)) || ((hour == 17 ) && (mins >= 35 && mins <= 40))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label15").css({fontSize: 40});
+        			}
+
+        		// 5:40 - IT IS qwenty minutes to sixO'clock
+        		if (((hour == 5 ) && (mins >= 40 && mins <= 45)) || ((hour == 17 ) && (mins >= 40 && mins <= 45))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label15").css({fontSize: 40});
+        			}
+
+
+        		// 5:45 - IT IS quarter to sixO'clock
+        		if (((hour == 5 ) && (mins >= 45 && mins <= 50)) || ((hour == 17 ) && (mins >= 45 && mins <= 40))) {
+        				resetLabels();
+        				$("#label4").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label15").css({fontSize: 40});
+        			}
+
+
+
+        			// 5:50 - IT IS ten minutes to sixO'clock
+
+        			if (((hour == 5 ) && (mins >= 50 && mins <= 55)) || ((hour == 17 ) && (mins >= 50 && mins <= 55))) {
+        				resetLabels();
+        				$("#label3").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label15").css({fontSize: 40});
+        			}
+
+        			// 5:55 - IT IS five minutes to sixO'clock
+
+        			if (((hour == 5 ) && (mins >= 55 && mins <= 60)) || ((hour == 17 ) && (mins >= 55 && mins <= 60))) {
+        				resetLabels();
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label15").css({fontSize: 40});
+        			}
+
+
+
+        	//----- 6 o//clock ----------
+
+        		// 6:00  - IT IS sixO'clock
+        			if (((hour == 6 ) && (mins >= 0 && mins <= 5)) || ((hour == 18 ) && (mins >= 0 && mins <= 5))) {
+        				resetLabels();
+        				$("#label15").css({fontSize: 40});
+        			}
+
+        		// 6:05 - IT IS five minutes past sixO'clock
+        		if (((hour == 6 ) && (mins >= 5 && mins <= 10)) || ((hour == 18 ) && (mins >= 5 && mins <= 10))) {
+        				resetLabels();
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label15").css({fontSize: 40});
+        			}
+
+        		// 6:10 - IT IS ten minutes past sixO'clock
+        		if (((hour == 6 ) && (mins >= 10 && mins <= 15)) || ((hour == 18 ) && (mins >= 10 && mins <= 15))) {
+        				resetLabels();
+        				$("#label3").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label15").css({fontSize: 40});
+        			}
+
+        		// 6:15 - IT IS quarter  past sixO'clock
+        		if (((hour == 6 ) && (mins >= 15 && mins <= 20)) || ((hour == 18 ) && (mins >= 15 && mins <= 20))) {
+        				resetLabels();
+        				$("#label4").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label15").css({fontSize: 40});
+        			}
+
+        		// 6:20 - IT IS twenty past sixO'clock
+        		if (((hour == 6 ) && (mins >= 20 && mins <= 25)) || ((hour == 18 ) && (mins >= 20 && mins <= 25))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label15").css({fontSize: 40});
+        			}
+
+        		// 6:25 - IT IS twenty five minutes past sixO'clock
+        		if (((hour == 6 ) && (mins >= 25 && mins <= 30)) || ((hour == 18 ) && (mins >= 25 && mins <= 30))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label15").css({fontSize: 40});
+        			}
+
+
+        		// 6:30 - IT IS half past sixO'clock
+        		if (((hour == 6 ) && (mins >= 30 && mins <= 35)) || ((hour == 18 ) && (mins >= 30 && mins <= 35))) {
+        				resetLabels();
+        				$("#label2").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label15").css({fontSize: 40});
+        			}
+
+        		// 6:35 - IT IS qwenty five minutes to sevenO'clock
+        		if (((hour == 6 ) && (mins >= 35 && mins <= 40)) || ((hour == 18 ) && (mins >= 35 && mins <= 40))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label16").css({fontSize: 40});
+        			}
+
+        		// 6:40 - IT IS qwenty minutes to sevenO'clock
+        		if (((hour == 6 ) && (mins >= 40 && mins <= 45)) || ((hour == 18 ) && (mins >= 40 && mins <= 45))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label16").css({fontSize: 40});
+        			}
+
+
+        		// 6:45 - IT IS quarter to sevenO'clock
+        		if (((hour == 6 ) && (mins >= 45 && mins <= 50)) || ((hour == 18 ) && (mins >= 45 && mins <= 40))) {
+        				resetLabels();
+        				$("#label4").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label16").css({fontSize: 40});
+        			}
+
+
+
+        			// 6:50 - IT IS ten minutes to sevenO'clock
+
+        			if (((hour == 6 ) && (mins >= 50 && mins <= 55)) || ((hour == 18 ) && (mins >= 50 && mins <= 55))) {
+        				resetLabels();
+        				$("#label3").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label16").css({fontSize: 40});
+        			}
+
+        			// 6:55 - IT IS six minutes to sevenO'clock
+
+        			if (((hour == 6 ) && (mins >= 55 && mins <= 60)) || ((hour == 18 ) && (mins >= 55 && mins <= 60))) {
+        				resetLabels();
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label16").css({fontSize: 40});
+        			}
+
+
+         	//----- 7 o//clock ----------
+
+
+        		// 7:00  - IT IS sevenO'clock
+        			if (((hour == 7 ) && (mins >= 0 && mins <= 5)) || ((hour == 19 ) && (mins >= 0 && mins <= 5))) {
+        				resetLabels();
+        				$("#label16").css({fontSize: 40});
+        			}
+
+        		// 7:05 - IT IS five minutes past sevenO'clock
+        		if (((hour == 7 ) && (mins >= 5 && mins <= 10)) || ((hour == 19 ) && (mins >= 5 && mins <= 10))) {
+        				resetLabels();
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label16").css({fontSize: 40});
+        			}
+
+        		// 7:10 - IT IS ten minutes past sevenO'clock
+        		if (((hour == 7 ) && (mins >= 10 && mins <= 15)) || ((hour == 19 ) && (mins >= 10 && mins <= 15))) {
+        				resetLabels();
+        				$("#label3").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label16").css({fontSize: 40});
+        			}
+
+        		// 7:15 - IT IS quarter  past sevenO'clock
+        		if (((hour == 7 ) && (mins >= 15 && mins <= 20)) || ((hour == 19 ) && (mins >= 15 && mins <= 20))) {
+        				resetLabels();
+        				$("#label4").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label16").css({fontSize: 40});
+        			}
+
+        		// 7:20 - IT IS twenty past sevenO'clock
+        		if (((hour == 7 ) && (mins >= 20 && mins <= 25)) || ((hour == 19 ) && (mins >= 20 && mins <= 25))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label16").css({fontSize: 40});
+        			}
+
+        		// 7:25 - IT IS twenty five minutes past sevenO'clock
+        		if (((hour == 7 ) && (mins >= 25 && mins <= 30)) || ((hour == 19 ) && (mins >= 25 && mins <= 30))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label16").css({fontSize: 40});
+        			}
+
+
+        		// 7:30 - IT IS half past sevenO'clock
+        		if (((hour == 7 ) && (mins >= 30 && mins <= 35)) || ((hour == 19 ) && (mins >= 30 && mins <= 35))) {
+        				resetLabels();
+        				$("#label2").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label16").css({fontSize: 40});
+        			}
+
+        		// 7:35 - IT IS qwenty five minutes to eightO'clock
+        		if (((hour == 7 ) && (mins >= 35 && mins <= 40)) || ((hour == 19 ) && (mins >= 35 && mins <= 40))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label17").css({fontSize: 40});
+        			}
+
+        		// 7:40 - IT IS qwenty minutes to eightO'clock
+        		if (((hour == 7 ) && (mins >= 40 && mins <= 45)) || ((hour == 19 ) && (mins >= 40 && mins <= 45))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label17").css({fontSize: 40});
+        			}
+
+
+        		// 7:45 - IT IS quarter to eightO'clock
+        		if (((hour == 7 ) && (mins >= 45 && mins <= 50)) || ((hour == 19 ) && (mins >= 45 && mins <= 40))) {
+        				resetLabels();
+        				$("#label4").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label17").css({fontSize: 40});
+        			}
+
+
+        			// 7:50 - IT IS ten minutes to eightO'clock
+        			if (((hour == 7 ) && (mins >= 50 && mins <= 55)) || ((hour == 19 ) && (mins >= 50 && mins <= 55))) {
+        				resetLabels();
+        				$("#label3").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label17").css({fontSize: 40});
+        			}
+
+        			// 7:55 - IT IS five minutes to eightO'clock
+
+        			if (((hour == 7 ) && (mins >= 55 && mins <= 60)) || ((hour == 19 ) && (mins >= 55 && mins <= 60))) {
+        				resetLabels();
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label17").css({fontSize: 40});
+        			}
+
+
+
+
+        	//----- 8 o//clock ----------
+
+
+        		// 8:00  - IT IS eightO'clock
+        			if (((hour == 8 ) && (mins >= 0 && mins <= 5)) || ((hour == 20 ) && (mins >= 0 && mins <= 5))) {
+        				resetLabels();
+        				$("#label17").css({fontSize: 40});
+        			}
+
+        		// 8:05 - IT IS five minutes past eightO'clock
+        		if (((hour == 8 ) && (mins >= 5 && mins <= 10)) || ((hour == 20 ) && (mins >= 5 && mins <= 10))) {
+        				resetLabels();
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label17").css({fontSize: 40});
+        			}
+
+        		// 8:10 - IT IS ten minutes past eightO'clock
+        		if (((hour == 8 ) && (mins >= 10 && mins <= 15)) || ((hour == 20 ) && (mins >= 10 && mins <= 15))) {
+        				resetLabels();
+        				$("#label3").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label17").css({fontSize: 40});
+        			}
+
+        		// 8:15 - IT IS quarter  past eightO'clock
+        		if (((hour == 8 ) && (mins >= 15 && mins <= 20)) || ((hour == 20 ) && (mins >= 15 && mins <= 20))) {
+        				resetLabels();
+        				$("#label4").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label17").css({fontSize: 40});
+        			}
+
+        		// 8:20 - IT IS twenty past eightO'clock
+        		if (((hour == 8 ) && (mins >= 20 && mins <= 25)) || ((hour == 20 ) && (mins >= 20 && mins <= 25))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label17").css({fontSize: 40});
+        			}
+
+        		// 8:25 - IT IS twenty five minutes past eightO'clock
+        		if (((hour == 8 ) && (mins >= 25 && mins <= 30)) || ((hour == 20 ) && (mins >= 25 && mins <= 30))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label17").css({fontSize: 40});
+        			}
+
+
+        		// 8:30 - IT IS half past eightO'clock
+        		if (((hour == 8 ) && (mins >= 30 && mins <= 35)) || ((hour == 20 ) && (mins >= 30 && mins <= 35))) {
+        				resetLabels();
+        				$("#label2").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label17").css({fontSize: 40});
+        			}
+
+        		// 8:35 - IT IS qwenty five minutes to nineO'clock
+        		if (((hour == 8 ) && (mins >= 35 && mins <= 40)) || ((hour == 20 ) && (mins >= 35 && mins <= 40))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label18").css({fontSize: 40});
+        			}
+
+        		// 8:40 - IT IS qwenty minutes to nineO'clock
+        		if (((hour == 8 ) && (mins >= 40 && mins <= 45)) || ((hour == 20 ) && (mins >= 40 && mins <= 45))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label18").css({fontSize: 40});
+        			}
+
+
+        		// 8:45 - IT IS quarter to nineO'clock
+        		if (((hour == 8 ) && (mins >= 45 && mins <= 50)) || ((hour == 20 ) && (mins >= 45 && mins <= 40))) {
+        				resetLabels();
+        				$("#label4").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label18").css({fontSize: 40});
+        			}
+
+
+        			// 8:50 - IT IS ten minutes to nineO'clock
+        			if (((hour == 8 ) && (mins >= 50 && mins <= 55)) || ((hour == 20 ) && (mins >= 50 && mins <= 55))) {
+        				resetLabels();
+        				$("#label3").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label18").css({fontSize: 40});
+        			}
+
+        			// 8:55 - IT IS five minutes to nineO'clock
+
+        			if (((hour == 8 ) && (mins >= 55 && mins <= 60)) || ((hour == 20 ) && (mins >= 55 && mins <= 60))) {
+        				resetLabels();
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label18").css({fontSize: 40});
+        			}
+
+        	//----- 9 o//clock ----------
+
+        		// 9:00  - IT IS NineO'clock
+        			if (((hour == 21 ) && (mins >= 0 && mins <= 5)) || ((hour == 9 ) && (mins >= 0 && mins <= 5))) {
+        				resetLabels();
+        				$("#label18").css({fontSize: 40});
+
+
+        			}
+
+        		// 9:05 - IT IS five minutes past NineO'clock
+        		if (((hour == 21 ) && (mins >= 5 && mins <= 10)) || ((hour == 9 ) && (mins >= 5 && mins <= 10))) {
+        				resetLabels();
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label18").css({fontSize: 40});
+
+
+        			}
+
+        				// 9:10 - IT IS ten minutes past NineO'clock
+        		if (((hour == 21 ) && (mins >= 10 && mins <= 15)) || ((hour == 9 ) && (mins >= 10 && mins <= 15))) {
+        				resetLabels();
+        				$("#label3").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label18").css({fontSize: 40});
+
+
+        			}
+
+        		// 9:15 - IT IS quarter  past NineO'clock
+        		if (((hour == 21 ) && (mins >= 15 && mins <= 20)) || ((hour == 9 ) && (mins >= 15 && mins <= 20))) {
+        				resetLabels();
+        				$("#label4").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label18").css({fontSize: 40});
+
+
+        			}
+
+        				// 9:20 - IT IS twenty past NineO'clock
+        		if (((hour == 21 ) && (mins >= 20 && mins <= 25)) || ((hour == 9 ) && (mins >= 20 && mins <= 25))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label18").css({fontSize: 40});
+
+
+        			}
+
+        		// 9:25 - IT IS twenty five minutes past NineO'clock
+        		if (((hour == 21 ) && (mins >= 25 && mins <= 30)) || ((hour == 9 ) && (mins >= 25 && mins <= 30))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label18").css({fontSize: 40});
+
+
+        			}
+
+
+        		// 9:30 - IT IS half past NineO'clock
+        		if (((hour == 21 ) && (mins >= 30 && mins <= 35)) || ((hour == 9 ) && (mins >= 30 && mins <= 35))) {
+        				resetLabels();
+        				$("#label2").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label18").css({fontSize: 40});
+
+
+        			}
+
+        		// 9:35 - IT IS qwenty five minutes to tenO'clock
+        		if (((hour == 21 ) && (mins >= 35 && mins <= 40)) || ((hour == 9 ) && (mins >= 35 && mins <= 40))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label19").css({fontSize: 40});
+
+
+        			}
+
+        		// 9:40 - IT IS qwenty minutes to tenO'clock
+        		if (((hour == 21 ) && (mins >= 40 && mins <= 45)) || ((hour == 9 ) && (mins >= 40 && mins <= 45))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label19").css({fontSize: 40});
+
+
+        			}
+
+
+        		// 9:45 - IT IS quarter to tenO'clock
+        		if (((hour == 21 ) && (mins >= 45 && mins <= 50)) || ((hour == 9 ) && (mins >= 45 && mins <= 40))) {
+        				resetLabels();
+        				$("#label4").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label19").css({fontSize: 40});
+
+
+        			}
+
+
+
+        			// 9:50 - IT IS ten minutes to tenO'clock
+
+        			if (((hour == 21 ) && (mins >= 50 && mins <= 55)) || ((hour == 9 ) && (mins >= 50 && mins <= 55))) {
+        				resetLabels();
+        				$("#label3").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label19").css({fontSize: 40});
+
+
+        			}
+
+        			// 9:55 - IT IS five minutes to tenO'clock
+
+        			if (((hour == 21 ) && (mins >= 55 && mins <= 60)) || ((hour == 9 ) && (mins >= 55 && mins <= 60))) {
+        				resetLabels();
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label19").css({fontSize: 40});
+
+
+        			}
+
+
+        //----- 10 o//clock ----------
+
+        			// 10:00  - IT IS tenO'clock
+        			if (((hour == 22 ) && (mins >= 0 && mins <= 5)) || ((hour == 10 ) && (mins >= 0 && mins <= 5))) {
+        				resetLabels();
+        				$("#label19").css({fontSize: 40});
+
+        			}
+
+         // 10:05 - IT IS five minutes past tenO'clock
+        		if (((hour == 22 ) && (mins >= 5 && mins <= 10)) || ((hour == 10 ) && (mins >= 5 && mins <= 10))) {
+        				resetLabels();
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label19").css({fontSize: 40});
+
+
+        			}
+
+        	// 10:10 - IT IS ten minutes past tenO'clock
+        		if (((hour == 22 ) && (mins >= 10 && mins <= 15)) || ((hour == 10 ) && (mins >= 10 && mins <= 15))) {
+        				resetLabels();
+        				$("#label3").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label19").css({fontSize: 40});
+
+
+        			}
+
+        			// 10:15 - IT IS quarter after tenO'clock
+        		if (((hour == 22 ) && (mins >= 15 && mins <= 20)) || ((hour == 10 ) && (mins >= 15 && mins <= 20))) {
+        				resetLabels();
+        				$("#label4").css({fontSize: 40});
+        				//$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label19").css({fontSize: 40});
+
+
+        			}
+
+        		// 10:20 - IT IS twenty past tenO'clock
+        		if (((hour == 22 ) && (mins >= 20 && mins <= 25)) || ((hour == 10 ) && (mins >= 20 && mins <= 25))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label19").css({fontSize: 40});
+
+
+        			}
+
+        		// 10:25 - IT IS twenty five minutes past tenO'clock
+        		if (((hour == 22 ) && (mins >= 25 && mins <= 30)) || ((hour == 10 ) && (mins >= 25 && mins <= 30))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label19").css({fontSize: 40});
+
+
+        			}
+
+        		// 10:30 - IT IS half past tenO'clock
+        		if (((hour == 22 ) && (mins >= 30 && mins <= 35)) || ((hour == 10 ) && (mins >= 30 && mins <= 35))) {
+        				resetLabels();
+        				$("#label2").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label19").css({fontSize: 40});
+
+
+        			}
+
+        		// 10:35 - IT IS qwenty five minutes to elevenO'clock
+        		if (((hour == 22 ) && (mins >= 35 && mins <= 40)) || ((hour == 10 ) && (mins >= 35 && mins <= 40))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label20").css({fontSize: 40});
+
+
+        			}
+
+
+        				// 10:40 - IT IS qwenty minutes to elevenO'clock
+        		if (((hour == 22 ) && (mins >= 40 && mins <= 45)) || ((hour == 10 ) && (mins >= 40 && mins <= 45))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label20").css({fontSize: 40});
+
+
+        			}
+
+
+        		// 10:45 - IT IS quarter to elevenO'clock
+        		if (((hour == 22 ) && (mins >= 45 && mins <= 50)) || ((hour == 10 ) && (mins >= 45 && mins <= 40))) {
+        				resetLabels();
+        				$("#label4").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label20").css({fontSize: 40});
+
+
+        			}
+
+        				// 10:50 - IT IS ten minutes to elevenO'clock
+        		if (((hour == 22 ) && (mins >= 50 && mins <= 55)) || ((hour == 10 ) && (mins >= 50 && mins <= 55))) {
+        				resetLabels();
+        				$("#label3").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label20").css({fontSize: 40});
+
+
+        			}
+
+        		// 10:55 - IT IS five minutes to elevenO'clock
+        		if (((hour == 22 ) && (mins >= 55 && mins <= 60)) || ((hour == 10 ) && (mins >= 55 && mins <= 60))) {
+        				resetLabels();
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label20").css({fontSize: 40});
+
+
+        			}
+
+        //----- 11 o//clock ----------
+
+        		// 11:00  - IT IS elevenO'clock
+        			if (((hour == 23 ) && (mins >= 0 && mins <= 5)) || ((hour == 11 ) && (mins >= 0 && mins <= 5))) {
+        				resetLabels();
+        				$("#label20").css({fontSize: 40});
+
+        			}
+
+
+        			// 11:05 - IT IS five minutes past elevenO'clock
+        		if (((hour == 23 ) && (mins >= 5 && mins <= 10)) || ((hour == 11 ) && (mins >= 5 && mins <= 10))) {
+        				resetLabels();
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label20").css({fontSize: 40});
+
+
+        			}
+
+        	// 11:10 - IT IS ten minutes past elevenO'clock
+        		if (((hour == 23 ) && (mins >= 10 && mins <= 15)) || ((hour == 11 ) && (mins >= 10 && mins <= 15))) {
+        				resetLabels();
+        				$("#label3").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label20").css({fontSize: 40});
+
+
+        			}
+
+        			// 11:15 - IT IS quarter after elevenO'clock
+        		if (((hour == 23 ) && (mins >= 15 && mins <= 20)) || ((hour == 11 ) && (mins >= 15 && mins <= 20))) {
+        				resetLabels();
+        				$("#label4").css({fontSize: 40});
+        				//$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label20").css({fontSize: 40});
+
+
+        			}
+
+        		// 11:20 - IT IS twenty past elevenO'clock
+        		if (((hour == 23 ) && (mins >= 20 && mins <= 25)) || ((hour == 11 ) && (mins >= 20 && mins <= 25))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label20").css({fontSize: 40});
+
+
+        			}
+
+        		// 11:25 - IT IS twenty five minutes past elevenO'clock
+        		if (((hour == 23 ) && (mins >= 25 && mins <= 30)) || ((hour == 11 ) && (mins >= 25 && mins <= 30))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label20").css({fontSize: 40});
+
+
+        			}
+
+        		// 11:30 - IT IS half past elevenO'clock
+        		if (((hour == 23 ) && (mins >= 30 && mins <= 35)) || ((hour == 11 ) && (mins >= 30 && mins <= 35))) {
+        				resetLabels();
+        				$("#label2").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label20").css({fontSize: 40});
+
+
+        			}
+
+        		// 11:35 - IT IS qwenty five minutes to tweleveO'clock
+        		if (((hour == 23 ) && (mins >= 35 && mins <= 40)) || ((hour == 11 ) && (mins >= 35 && mins <= 40))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label21").css({fontSize: 40});
+
+
+        			}
+
+
+        				// 11:40 - IT IS qwenty minutes to tweleveO'clock
+        		if (((hour == 23 ) && (mins >= 40 && mins <= 45)) || ((hour == 11 ) && (mins >= 40 && mins <= 45))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label21").css({fontSize: 40});
+
+
+        			}
+
+
+        		// 11:45 - IT IS quarter to tweleveO'clock
+        		if (((hour == 23 ) && (mins >= 45 && mins <= 50)) || ((hour == 11 ) && (mins >= 45 && mins <= 40))) {
+        				resetLabels();
+        				$("#label4").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label21").css({fontSize: 40});
+
+
+        			}
+
+        				// 11:50 - IT IS ten minutes to tweleveO'clock
+        		if (((hour == 23 ) && (mins >= 50 && mins <= 55)) || ((hour == 11 ) && (mins >= 50 && mins <= 55))) {
+        				resetLabels();
+        				$("#label3").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label21").css({fontSize: 40});
+
+        			}
+
+        		// 11:55 - IT IS five minutes to tweleveO'clock
+        		if (((hour == 23 ) && (mins >= 55 && mins <= 60)) || ((hour == 11 ) && (mins >= 55 && mins <= 60))) {
+        				resetLabels();
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label21").css({fontSize: 40});
+
+
+        			}
+
+        //----- 12 o//clock ----------
+
+        		// 12:00  - IT IS twelveO'clock
+        			if (((hour == 0 ) && (mins >= 0 && mins <= 5)) || ((hour == 12 ) && (mins >= 0 && mins <= 5))) {
+        				resetLabels();
+        				$("#label21").css({fontSize: 40});
+
+        			}
+
+        			// 12:05 - IT IS five minutes past twelveO'clock
+        		if (((hour == 0 ) && (mins >= 5 && mins <= 10)) || ((hour == 12 ) && (mins >= 5 && mins <= 10))) {
+        				resetLabels();
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label21").css({fontSize: 40});
+
+
+        			}
+
+        	// 12:10 - IT IS ten minutes past twelveO'clock
+        		if (((hour == 0 ) && (mins >= 10 && mins <= 15)) || ((hour == 12 ) && (mins >= 10 && mins <= 15))) {
+        				resetLabels();
+        				$("#label3").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label21").css({fontSize: 40});
+
+
+        			}
+
+        			// 12:15 - IT IS quarter after twelveO'clock
+        		if (((hour == 0 ) && (mins >= 15 && mins <= 20)) || ((hour == 12 ) && (mins >= 15 && mins <= 20))) {
+        				resetLabels();
+        				$("#label4").css({fontSize: 40});
+        				//$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label21").css({fontSize: 40});
+
+
+        			}
+
+        		// 12:20 - IT IS twenty past twelveO'clock
+        		if (((hour == 0 ) && (mins >= 20 && mins <= 25)) || ((hour == 12 ) && (mins >= 20 && mins <= 25))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label21").css({fontSize: 40});
+
+
+        			}
+
+        		// 12:25 - IT IS twenty five minutes past twelveO'clock
+        		if (((hour == 0 ) && (mins >= 25 && mins <= 30)) || ((hour == 12 ) && (mins >= 25 && mins <= 30))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label21").css({fontSize: 40});
+
+
+        			}
+
+        		// 12:30 - IT IS half past twelveO'clock
+        		if (((hour == 0 ) && (mins >= 30 && mins <= 35)) || ((hour == 12 ) && (mins >= 30 && mins <= 35))) {
+        				resetLabels();
+        				$("#label2").css({fontSize: 40});
+        				$("#label9").css({fontSize: 40});
+        				$("#label21").css({fontSize: 40});
+
+
+        			}
+
+        		// 12:35 - IT IS qwenty five minutes to oneO'clock
+        		if (((hour == 0 ) && (mins >= 35 && mins <= 40)) || ((hour == 12 ) && (mins >= 35 && mins <= 40))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label10").css({fontSize: 40});
+
+
+        			}
+
+
+        				// 12:40 - IT IS qwenty minutes to oneO'clock
+        		if (((hour == 0 ) && (mins >= 40 && mins <= 45)) || ((hour == 12 ) && (mins >= 40 && mins <= 45))) {
+        				resetLabels();
+        				$("#label5").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label10").css({fontSize: 40});
+
+        			}
+
+
+        		// 12:45 - IT IS quarter to oneO'clock
+        		if (((hour == 0 ) && (mins >= 45 && mins <= 50)) || ((hour == 12 ) && (mins >= 45 && mins <= 40))) {
+        				resetLabels();
+        				$("#label4").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label10").css({fontSize: 40});
+
+        			}
+
+        				// 12:50 - IT IS ten minutes to oneO'clock
+        		if (((hour == 0 ) && (mins >= 50 && mins <= 55)) || ((hour == 12 ) && (mins >= 50 && mins <= 55))) {
+        				resetLabels();
+        				$("#label3").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label10").css({fontSize: 40});
+
+        			}
+
+        		// 12:55 - IT IS five minutes to oneO'clock
+        		if (((hour == 0 ) && (mins >= 55 && mins <= 60)) || ((hour == 12 ) && (mins >= 55 && mins <= 60))) {
+        				resetLabels();
+        				$("#label6").css({fontSize: 40});
+        				$("#label7").css({fontSize: 40});
+        				$("#label8").css({fontSize: 40});
+        				$("#label10").css({fontSize: 40});
+
+        			}
+
+         }
+        </script>
+
+
+        <body onload="ticTacTick();">
+
+        <!-- page content goes here -->
+          <span id="label1">IT&nbsp;IS</span><span id="label2"> HALF </span><span id="label3"> TEN</span></br>
+          <span id="label4">QUARTER</span> <span id="label5"> TWENTY</span></br>
+        <SpAN id="label6">FIVE</SpAN> <SPAN id="label7"> MINUTES </SPAN> <SPAN id="label8">TO</SPAN></BR>
+        <SPAN id="label9">PAST</SPAN> <SPAN id="label10"> TWO </SPAN> <SPAN id="label11"> THREE</SPAN> </BR>
+        <SPAN id="label12">ONE</SPAN> <SPAN id="label13"> FOUR </SPAN> <SPAN id="label14"> FIVE</SPAN>
+        <SPAN id="label15">SIX</SPAN> <SPAN id="label16"> SEVEN </SPAN> <SPAN id="label17"> EIGHT</SPAN>
+        <SPAN id="label18">NINE</SPAN> <SPAN id="label19"> TEN </SPAN> <SPAN id="label20"> ELEVEN</SPAN> </BR>
+        <SPAN id="label21">TWELVE</SPAN> <SPAN id="label22"> O&#39;CLOCK</SPAN>
+
+        <script>
+            resetLabels();
+
+        </script>
+
+      </body>
+
+
+
+</wc>
+
+</html>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>
