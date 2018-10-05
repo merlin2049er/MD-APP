@@ -72,12 +72,7 @@
 </div>
 
   <div class="panel panel-default">
-   <div class="panel-heading">Username
-     <% if (@user.provider.blank? ) then %>
-, email and password </div>
-<% else %>
- and email.
-<% end %>
+   <div class="panel-heading">Username <% if (@user.provider.blank? ) then %> , email and password </div> <% else %>  and email. </div><% end %>
   <div class="panel-body">
 
     <%= f.input :username, required: true, autofocus: true %>
