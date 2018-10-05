@@ -16,6 +16,13 @@ class ApplicationController < ActionController::Base
  #  auto_session_timeout 10.minutes  # 10 minutes to test, 30 minutes for production
  # before_timedout_action
 
+ rescue_from ActionController::InvalidAuthenticityToken, :with =>
+ :handle_token_issues
+
+ def handle_token_issues
+ redirect_to(root_path) #redirect to page for handling this issue
+ end
+
   def set_search
     @search=Product.published.search(params[:q])
   end
