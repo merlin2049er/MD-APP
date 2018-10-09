@@ -6,6 +6,34 @@
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
 
+  <div class="panel panel-default">
+     <div class="panel-heading">Login Status       </div>
+     <% if (@user.provider.present? ) then %>
+   </br>
+    &nbsp;&nbsp;&nbsp;You have login with a facebook account. You can't change your password here.</br>    <br>
+      <% else %>
+    </br>
+      &nbsp;&nbsp;&nbsp;You have login with a local account.  You can change your password here.
+      <br> </br>
+
+      <!-- <img src="#{@user.image}" alt="photo"  width="100" height="100" />  -->
+      <% end %>
+   </div>
+
+
+   <div class="panel panel-default">
+      <div class="panel-heading">Avatar    </div>
+      <% if (@user.image.present? ) then %>
+       <%= image_tag(@user.image, alt: "photo", size: "100x100", style: "padding: 20px 0px 20px 20px") %>
+
+       <% else %>
+       <img src="/photo_not_available.png" alt="photo"  width="100" height="100" />
+
+       <!-- <img src="#{@user.image}" alt="photo"  width="100" height="100" />  -->
+       <% end %>
+    </div>
+
+
 
     <div class="form-inputs">
 
