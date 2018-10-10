@@ -259,8 +259,6 @@ GEM
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
     rdoc (4.3.0)
-    recaptcha (4.12.0)
-      json
     redis (4.0.1)
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
@@ -369,7 +367,6 @@ DEPENDENCIES
   rails (= 5.0.7)
   rails_12factor (~> 0.0.3)
   ransack!
-  recaptcha
   redis
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
