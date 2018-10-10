@@ -1,4 +1,6 @@
 class RegistrationsController < Devise::RegistrationsController
+  prepend_before_action :check_captcha, only: [:create] # Change this to be any actions you want to protect.
+
 
   add_breadcrumb "MASSDUMP", :root_path
   #add_breadcrumb  "sign up", :new_user_registration
@@ -46,6 +48,17 @@ class RegistrationsController < Devise::RegistrationsController
  )
  end
 
+
+   def check_captcha
+     unless verify_recaptcha
+       self.resource = resource_class.new sign_up_params
+       resource.validate # Look for any other validation errors besides Recaptcha
+       set_minimum_password_length
+       respond_with resource
+     end
+   end
+
+ 
  protected
 
  def update_resource(resource, params)

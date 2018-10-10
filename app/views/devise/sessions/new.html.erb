@@ -27,6 +27,7 @@
 }
 </style>
 
+<%= flash[:recaptcha_error] %>
 
 <h2>Log in</h2>
 
@@ -43,6 +44,9 @@
     <%= f.input :password, required: false %>
     <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
   </div>
+
+<%= recaptcha_tags %>
+
 
   <div class="form-actions">
     <%= f.button :submit, "Log in" %>

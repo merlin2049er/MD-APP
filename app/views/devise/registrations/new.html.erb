@@ -27,6 +27,9 @@
 }
 </style>
 
+<%= flash[:recaptcha_error] %>
+
+
 <h2>Sign up</h2>
 
 <%= link_to "Sign up with Facebook", user_facebook_omniauth_authorize_path %></br>
@@ -46,6 +49,9 @@
     <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @validatable) %>
     <%= f.input :password_confirmation, required: true %>
     </div>
+
+    <%= recaptcha_tags %>
+
 
   <div class="form-actions">
     <%= f.button :submit, "Sign up" %>
