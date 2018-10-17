@@ -8,8 +8,8 @@
       <small>Newly added...</small>
   </h1>
 
-   <% if @recent_products == 0  %>
-   <h2>Will be updating website with some new products shortly.</h2>
+   <% if @recent_products.blank?  %>
+   <p>Sorry, we will be updating website with some new products shortly.</p>
    <% else %>
 
 	<div class="cards">
@@ -47,8 +47,8 @@
   <h1 class="page-header">
    <small>Ending soon...</small>
 </h1>
-<% if @last_chance == 0  %>
-<h2>Will be updating website with some new products shortly.</h2>
+<% if @last_chance.blank? %>
+<p>Sorry, we will be updating website with some new products shortly.</p>
 <% else %>
 
 	<div class="cards" >
