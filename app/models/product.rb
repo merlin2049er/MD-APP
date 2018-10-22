@@ -51,7 +51,6 @@ def set_defaults
 
 end
 
-
     # default_scope { where(draft: false, active: true, funded: false ) }
     # default_scope { where(draft: false, active: true  ) }
     # default_scope { where( 'enddate > ?', DateTime.now ) }
