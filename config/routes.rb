@@ -69,6 +69,9 @@ Rails.application.routes.draw do
   match 'timeout' => 'sessions#timeout', via: :get
 
 
+
+
+
   get "*path", to: redirect("/error")
 
 
