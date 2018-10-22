@@ -1,8 +1,6 @@
 <% if user_signed_in? %>
 
-
   <%= render 'layouts/addthis' %>
-
 
   <ul class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#Product">Product</a></li>
@@ -21,12 +19,10 @@
    <!-- notify of last item in stock to complete group buy -->
    <%#= flash.now[:warning]= 'This is the last remaining product required to complete the group order.  By adding it to your cart, it will complete the order for the campaign.' %>
 
-
     <%= form_tag add_to_cart_product_path(@product.id), method: :post do %>
        Quantity: <%= number_field_tag :qty, 1, :min => 1, :max => @remaining %>
 
       <%= submit_tag "Add to cart" %>
-
 
     <% end %>
 
@@ -36,7 +32,6 @@
   <%= form_tag add_to_cart_product_path(@product.id), method: :post do %>
      Quantity: <%= number_field_tag :qty, 1, :min => 1, :max => @remaining %>
   <%= submit_tag "Add to cart" %>
-  
 
     <%#= form_for :cart do |f| %>
     <!--  Quantity: <%#= f.number_field :qty, :value => 1, :min => 1, :max => @remaining %> -->
@@ -70,27 +65,21 @@
 
       </div>
 
-
       <div class="well well-sm">
-
 
         <% if time_now >= start_time %>
           Time remaining, <%= distance_of_time_in_words(time_now, end_time) %>.
-
 
         <% end %>
 
         <!--  <%= (@product.enddate.to_date - time_now.to_date).to_i %>  -->
         <!-- <%= (@product.enddate.to_date - @product.startdate.to_date).to_i %> -->
 
-
-
         <% if time_now <= start_time %>
           Campaign has not started yet.
         <% else %>
 
           <div class="progress">
-
 
             <% @progressdate = (((@product.enddate.to_date - time_now.to_date).to_f) / ((@product.enddate.to_date - @product.startdate.to_date).to_f) * 100).to_i %>
 
@@ -101,14 +90,11 @@
 
         <% end %>
 
-
     <% else %>
       Campaign ended.
     <% end %>
 
     </div>
-
-
 
     <div class="well well-sm">
       Quantity: <%= @product.qty %>;   Remaining: <%= @remaining %> <% @percentremaining = (((  @remaining ).to_f) / (( @product.qty).to_f) *100).to_i %>
@@ -119,12 +105,9 @@
       </div>
     </div>
 
-
-
     <div class="well well-sm">
       <a href="<%= @product.picurl %>", data-lightbox="Gallery" %> <img src="<%= @product.picurl %>"  > </a>
     </div >
-
 
     <% if @photo.size > 0 %>
 
@@ -139,9 +122,7 @@
 
     <% end %>
 
-
     <div class="well well-sm">    <%= raw @product.template %> <br></div>
-
 
     <div class="well well-sm">
       Length: <%= @product.length %><br/>
@@ -150,9 +131,7 @@
       Weight: <%= @product.weight %>
       <hr/>
       <%= link_to @product.courier, @product.courierurl, target: :_blank %><br/>
-
     </div>
-
 
     <div class="well well-sm">
       <%= @product.impressionist_count(:filter => :ip_address) %> Views <br/>
@@ -165,19 +144,16 @@
 
     </div>
 
-
-
     </div>
 
     <div id="Discussion" class="tab-pane fade">
 
       <H2><%= @product.title %></H2>
 
-
       <div class="well well-sm">
         <%= commontator_thread(@product) %>
       </div>
-
+      
     </div>
     </div>
   </div>
