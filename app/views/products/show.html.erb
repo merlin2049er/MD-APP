@@ -22,10 +22,10 @@
     <%= form_tag add_to_cart_product_path(@product.id), method: :post do %>
        Quantity: <%= number_field_tag :qty, 1, :min => 1, :max => @remaining %>
 
-      <%= submit_tag "Add to cart" %>
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#AddtoCartModalCenter">
+      <%= submit_tag "Add to cart",  data: { confirm: "Are you sure you want to add #{@product.title} to your cart?" } %>
+    <!--  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#AddtoCartModalCenter">
         Add to Cart
-      </button>
+      </button> -->
 
 
     <% end %>
@@ -35,10 +35,10 @@
 
   <%= form_tag add_to_cart_product_path(@product.id), method: :post do %>
      Quantity: <%= number_field_tag :qty, 1, :min => 1, :max => @remaining %>
-  <%= submit_tag "Add to cart" %>
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#AddtoCartModalCenter">
+  <%= submit_tag "Add to cart",  data: { confirm: "Are you sure you want to add #{@product.title} to your cart?" } %>
+ <!--  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#AddtoCartModalCenter">
     Add to Cart
-  </button>
+  </button> -->
 
 
     <%#= form_for :cart do |f| %>
@@ -175,7 +175,7 @@
 
 <!-- Button trigger modal -->
 
-<!-- Modal -->
+<!-- Modal
 <div class="modal fade" id="AddtoCartModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
@@ -195,3 +195,4 @@
     </div>
   </div>
 </div>
+-->
