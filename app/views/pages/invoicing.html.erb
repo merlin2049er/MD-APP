@@ -28,6 +28,7 @@
       <thead>
       <tr>
         <!--<th colspan="10"></th>-->
+        <th>Id</th>
         <th>Created at</th>
         <th>Item</th>
         <th>Qty</th>
@@ -53,6 +54,7 @@
 
       <% @invoiceusers.each do |iu| %>
           <tr>
+            <td> <%= iu.id %> </td>
             <td><%= iu.user.created_at.strftime("%m/%d/%Y") %> </td>
 
             <td>  <%#= iu.product_id  %>  <%= Product.find(iu.product_id).title %></td>
@@ -71,10 +73,11 @@
             <td>  <%= iu.user.country %> </td>
             <td>  <%= iu.user.email %>  </td>
             <td>
-              <form action="" >
-                  <input type="text" name="invoicelink" ><input type="submit" value="Save">
+                <%= form_for :cart do |f| %>
+                <%= f.text_field :invoice %>
+                  <%= f.submit "Save" %>
+                <% end %>
 
-                </form>
             </td>
           </tr>
 
