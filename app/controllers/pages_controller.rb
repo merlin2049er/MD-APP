@@ -15,7 +15,7 @@ class PagesController < ApplicationController
 
     @recent_products = Product.published.most_recent(6)
     @last_chance = Product.published.ending_soonest(6)
-  
+
     #sql = "SELECT products.*, sum(carts.qty) AS total_quantity FROM products JOIN carts ON products.id = carts.product_id WHERE carts.processing = 'f' GROUP BY product_id ORDER BY total_quantity DESC LIMIT 6"
 
     #@almost_there =   ActiveRecord::Base.connection.execute(sql)
@@ -126,6 +126,12 @@ class PagesController < ApplicationController
     @invoiceusers = Cart.includes(:user).where('processing' => true )
 
     @pagy, @invoiceusers = pagy(@invoiceusers)
+
+    def update_invoice_link  #create a route for this?
+      cart = Cart.find(params[:id])
+      cart.update!(invoice: params[:invoice])
+      redirect_to invoicing_path
+    end
 
   end
 
