@@ -1,7 +1,5 @@
 <% if user_signed_in? %>
-  <!--  <p id="notice"><%#= notice %></p>  -->
 
-  <!-- <h1>Carts</h1>  -->
 
 <div class="panel panel-default">
   <!-- Default panel contents -->
@@ -13,7 +11,6 @@
     <% end %>
 
     <div class="pull-right"><font size="1">If a campaign is successful, you will be emailed an invoice.</font>
-
     </div>
 
   </div>
@@ -87,28 +84,17 @@
             <% end %>
         <% end %>
 
-<!--
-          <%# if not cart.processing? %>
-            <td> <%#= link_to 'Remove', cart, method: :delete, data: { confirm: 'Are you sure?' } %>   </td>
-          <%# else %>
-            <td> <%#= '...Processing order...'  %> </td>
-          <%# end %>
-    -->
         </tr>
       <% end %>
       </tbody>
     </table>
-
-
   </div>
+
 </div>
 
 <br>
 
-<!-- <#%= link_to 'New Cart', new_cart_path %> booyah-->
 
-<%#= will_paginate @carts, renderer: BootstrapPagination::Rails %>
-  <%#== pagy_nav(@pagy) %>
   <div class="pagenav">
 
   <%== pagy_nav_bootstrap(@pagy) %> <br/>
