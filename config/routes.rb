@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   resources :invites
   resources :activities
   resources :photos
+  #resources :invoicing, only: [:index, :update]
 
   resources :requests do
     member do
@@ -67,9 +68,6 @@ Rails.application.routes.draw do
 
   match 'active'  => 'sessions#active',  via: :get
   match 'timeout' => 'sessions#timeout', via: :get
-
-  # post 'pages/invoicing', to: 'pages#update_invoice_link'
-  # post 'pages/invoicing', as: 'invoicing'
 
   get "*path", to: redirect("/error")
 
