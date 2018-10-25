@@ -9,13 +9,12 @@ class InvoicingController < ApplicationController
     @invoiceusers = Cart.includes(:user).where('processing' => true )
 
     @pagy, @invoiceusers = pagy(@invoiceusers)
+  end
 
-    def update_invoice_link  #create a route for this?
+    def update #create a route for this?
       cart = Cart.find(params[:id])
       cart.update!(invoice: params[:invoice])
       redirect_to invoicing_path
     end
-
-  end
 
 end
