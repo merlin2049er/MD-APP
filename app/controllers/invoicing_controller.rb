@@ -1,4 +1,5 @@
 class InvoicingController < ApplicationController
+  include Pagy::Backend
 
   def index
 

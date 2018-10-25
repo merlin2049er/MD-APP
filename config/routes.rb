@@ -58,7 +58,7 @@ Rails.application.routes.draw do
   get 'dashboard', to: 'pages#dashboard'
   get 'chartsgraphs', to: 'pages#chartsgraphs'
 
-  #get 'invoicing', to: 'pages#invoicing'
+  get 'invoicing',   to: 'invoicing#index'
   get 'invitations', to: 'pages#invitations'
 
   match '/users',   to: 'users#index',   via: 'get'
