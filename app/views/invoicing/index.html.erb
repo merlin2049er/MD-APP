@@ -73,15 +73,13 @@
             <td>  <%= iu.user.country %> </td>
             <td>  <%= iu.user.email %>  </td>
             <td>
-                <%= form_for :cart do |f| %>
+                <%= form_for (@cart) do |f| %>
                 <%= f.text_field :invoice %>
                   <%= f.submit "Save" %>
                 <% end %>
 
             </td>
           </tr>
-
-
 
       <% end %>
       </tbody>

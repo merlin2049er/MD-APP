@@ -58,7 +58,7 @@ Rails.application.routes.draw do
   get 'dashboard', to: 'pages#dashboard'
   get 'chartsgraphs', to: 'pages#chartsgraphs'
 
-  get 'invoicing', to: 'pages#invoicing'
+  #get 'invoicing', to: 'pages#invoicing'
   get 'invitations', to: 'pages#invitations'
 
   match '/users',   to: 'users#index',   via: 'get'
@@ -67,6 +67,9 @@ Rails.application.routes.draw do
 
   match 'active'  => 'sessions#active',  via: :get
   match 'timeout' => 'sessions#timeout', via: :get
+
+  # post 'pages/invoicing', to: 'pages#update_invoice_link'
+  # post 'pages/invoicing', as: 'invoicing'
 
   get "*path", to: redirect("/error")
 
