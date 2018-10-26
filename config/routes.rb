@@ -26,7 +26,7 @@ Rails.application.routes.draw do
   resources :invites
   resources :activities
   resources :photos
-  #resources :invoicing, only: [:index, :update]
+  resources :invoicing, only: [:index, :update]
 
   resources :requests do
     member do
@@ -59,7 +59,7 @@ Rails.application.routes.draw do
   get 'dashboard', to: 'pages#dashboard'
   get 'chartsgraphs', to: 'pages#chartsgraphs'
 
-  get 'invoicing',   to: 'invoicing#index'
+  #get 'invoicing',   to: 'invoicing#index'
   get 'invitations', to: 'pages#invitations'
 
   match '/users',   to: 'users#index',   via: 'get'
