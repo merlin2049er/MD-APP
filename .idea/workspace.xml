@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7331a777-2244-45ce-afdd-3c1ae6d6fb83" name="Default" comment="added hotjar to production &lt;head&gt; application.html.erb">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/invoicing/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/invoicing/index.html.erb" afterDir="false" />
     </list>
     <ignored path="MD-APP-master.iws" />
@@ -94,7 +95,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="erb" value="317" />
+          <entry key="erb" value="404" />
           <entry key="rake" value="11" />
           <entry key="rb" value="39" />
           <entry key="txt" value="60" />
@@ -103,7 +104,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="60" />
-          <entry key="RHTML" value="317" />
+          <entry key="RHTML" value="404" />
           <entry key="Ruby" value="50" />
         </counts>
       </usages-collector>
@@ -120,8 +121,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/invoicing/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="76" column="43" selection-start-line="76" selection-start-column="43" selection-end-line="76" selection-end-column="43" />
+            <state relative-caret-position="214">
+              <caret line="77" selection-start-line="77" selection-end-line="77" />
             </state>
           </provider>
         </entry>
@@ -129,7 +130,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/invoicing_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
+            <state relative-caret-position="-90">
               <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
             </state>
           </provider>
@@ -883,7 +884,7 @@
       <workItem from="1533251034744" duration="1142000" />
       <workItem from="1533316461574" duration="447000" />
       <workItem from="1533318590588" duration="2863000" />
-      <workItem from="1540606022689" duration="1604000" />
+      <workItem from="1540606022689" duration="3414000" />
     </task>
     <task id="LOCAL-00170" summary="fixed pagination in categories show page">
       <created>1515033074210</created>
@@ -1232,7 +1233,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="550860000" />
+    <option name="totallyTimeSpent" value="552670000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1669,15 +1670,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/invoicing_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
+        <state relative-caret-position="-90">
           <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/invoicing/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="76" column="43" selection-start-line="76" selection-start-column="43" selection-end-line="76" selection-end-column="43" />
+        <state relative-caret-position="214">
+          <caret line="77" selection-start-line="77" selection-end-line="77" />
         </state>
       </provider>
     </entry>

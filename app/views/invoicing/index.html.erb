@@ -33,8 +33,8 @@
         <th>Item</th>
         <th>Qty</th>
         <th>Price</th>
-        <th>Subtotal</th>
-        <th>HST</th>
+      <!--  <th>Subtotal</th>
+        <th>HST</th>  -->
         <th>Total</th>
         <th>Name</th>
 
@@ -60,9 +60,9 @@
             <td>  <%#= iu.product_id  %>  <%= Product.find(iu.product_id).title %></td>
             <td>  <%= qty = iu.qty  %></td>
             <td>  <%= number_to_currency(price  = Product.find(iu.product_id).price) %></td>
-            <td>  <%= number_to_currency(subtotal = qty * price.to_f) %>
-            <td>  <%= number_to_currency(hst = subtotal.to_f * 0.13) %>
-            <td>  <%= number_to_currency(total = subtotal.to_f + hst.to_f) %>
+           <!-- <td>  <%#= number_to_currency(subtotal = qty * price.to_f) %>  -->
+           <!-- <td>  <%#= number_to_currency(hst = subtotal.to_f * 0.13) %> -->
+            <td>  <%= number_to_currency(total = qty * price.to_f) %>
             <td>  <%= iu.user.firstname %> </br> <%= iu.user.lastname %> </td>
 
             <td>  <%= iu.user.address1 %> </br> <%= iu.user.address2 %>  </td>
@@ -74,7 +74,7 @@
             <td>  <%= iu.user.email %>  </td>
             <td>
 
-              <%= form_tag invoicing_index_path do %>
+              <%= form_tag invoicing_path do %>
                 <%= text_field_tag :invoice %>
                 <%= submit_tag "Save" %>
               <% end %>
