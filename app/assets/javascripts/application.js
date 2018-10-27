@@ -16,4 +16,6 @@
 //= require bootstrap-sprockets
 //= require ckeditor/init
 //= require lightbox
+//= require rails.validations
+//= require rails.validations.simple_form
 //= require_tree .

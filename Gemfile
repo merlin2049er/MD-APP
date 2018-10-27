@@ -125,6 +125,10 @@ gem "figaro"
 #country country_select
 gem 'country_select'
 
+#validations
+gem 'client_side_validations'
+gem 'client_side_validations-simple_form', '~> 6.7'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
