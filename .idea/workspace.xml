@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7331a777-2244-45ce-afdd-3c1ae6d6fb83" name="Default" comment="added hotjar to production &lt;head&gt; application.html.erb">
-      <change afterPath="$PROJECT_DIR$/app/views/layouts/_analyticsmenu.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.generators" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.generators" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/MD-APP-master.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MD-APP-master.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/_adminmenu.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_adminmenu.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/_nav.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_nav.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/tasks/populate.rake" beforeDir="false" afterPath="$PROJECT_DIR$/lib/tasks/populate.rake" afterDir="false" />
     </list>
     <ignored path="MD-APP-master.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,13 +23,14 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/MD-APP-master@Production__MD_APP_master.coverage" NAME="Production: MD-APP-master Coverage Results" MODIFIED="1479493378173" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
-    <SUITE FILE_PATH="coverage/MD_APP@Development__MD_APP_master.rcov" NAME="Development: MD-APP-master Coverage Results" MODIFIED="1533321099495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
+    <SUITE FILE_PATH="coverage/MD_APP@Development__MD_APP_master.rcov" NAME="Development: MD-APP-master Coverage Results" MODIFIED="1540606427241" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
     <SUITE FILE_PATH="coverage/MD-APP-master@routes__MD_APP_master.coverage" NAME="routes: MD-APP-master Coverage Results" MODIFIED="1480727953605" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
     <SUITE FILE_PATH="coverage/MD-APP@db_migrate_status__MD_APP_master.coverage" NAME="db:migrate:status: MD-APP-master Coverage Results" MODIFIED="1486656634580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
-    <SUITE FILE_PATH="coverage/MD_APP@db_migrate__MD_APP_master.rcov" NAME="db:migrate: MD-APP-master Coverage Results" MODIFIED="1528854502323" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
+    <SUITE FILE_PATH="coverage/MD_APP@db_migrate__MD_APP_master.rcov" NAME="db:migrate: MD-APP-master Coverage Results" MODIFIED="1540606348897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
     <SUITE FILE_PATH="coverage/MD-APP@db_populate__MD_APP_master.coverage" NAME="db:populate: MD-APP-master Coverage Results" MODIFIED="1488728881612" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
     <SUITE FILE_PATH="coverage/MD-APP-master@IRB_console__MD_APP_master.coverage" NAME="IRB console: MD-APP-master Coverage Results" MODIFIED="1479491840644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
     <SUITE FILE_PATH="coverage/MD_APP@Development__MD_APP_master.coverage" NAME="Development: MD-APP-master Coverage Results" MODIFIED="1520652066374" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
+    <SUITE FILE_PATH="coverage/MD_APP@Production__MD_APP_master.rcov" NAME="Production: MD-APP-master Coverage Results" MODIFIED="1540606382575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
     <SUITE FILE_PATH="coverage/MD-APP@routes__MD_APP_master.coverage" NAME="routes: MD-APP-master Coverage Results" MODIFIED="1484857910427" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
     <SUITE FILE_PATH="coverage/MD-APP@db_migrate__MD_APP_master.coverage" NAME="db:migrate: MD-APP-master Coverage Results" MODIFIED="1488728838075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
     <SUITE FILE_PATH="coverage/MD-APP-master@db_migrate_status__MD_APP_master.coverage" NAME="db:migrate:status: MD-APP-master Coverage Results" MODIFIED="1479873142081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
@@ -48,7 +46,7 @@
     <SUITE FILE_PATH="coverage/MD_APP@db_migrate.coverage" NAME="db:migrate Coverage Results" MODIFIED="1500423204845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
     <SUITE FILE_PATH="coverage/MD_APP@db_populate__MD_APP_master.coverage" NAME="db:populate: MD-APP-master Coverage Results" MODIFIED="1520652029597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
     <SUITE FILE_PATH="coverage/MD_APP@IRB_console__MD_APP_master.coverage" NAME="IRB console: MD-APP-master Coverage Results" MODIFIED="1495829878531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
-    <SUITE FILE_PATH="coverage/MD_APP@db_populate__MD_APP_master.rcov" NAME="db:populate: MD-APP-master Coverage Results" MODIFIED="1533251463534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
+    <SUITE FILE_PATH="coverage/MD_APP@db_populate__MD_APP_master.rcov" NAME="db:populate: MD-APP-master Coverage Results" MODIFIED="1540606366526" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
     <SUITE FILE_PATH="coverage/MD-APP-master@Development__MD_APP_master.coverage" NAME="Development: MD-APP-master Coverage Results" MODIFIED="1480730253191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
     <SUITE FILE_PATH="coverage/MD-APP@populate.coverage" NAME="populate Coverage Results" MODIFIED="1483580750466" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lib/tasks" MODULE_NAME="MD-APP-master" />
     <SUITE FILE_PATH="coverage/MD_APP@db_migrate__MD_APP_master.coverage" NAME="db:migrate: MD-APP-master Coverage Results" MODIFIED="1510416183247" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
@@ -76,7 +74,8 @@
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.26" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -84,7 +83,7 @@
           <entry key="Gemfile" value="1" />
           <entry key="erb" value="9" />
           <entry key="lock" value="2" />
-          <entry key="rake" value="1" />
+          <entry key="rake" value="2" />
           <entry key="rb" value="8" />
         </counts>
       </usages-collector>
@@ -92,13 +91,13 @@
         <counts>
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="RHTML" value="9" />
-          <entry key="Ruby" value="10" />
+          <entry key="Ruby" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="erb" value="240" />
-          <entry key="rake" value="4" />
+          <entry key="rake" value="11" />
           <entry key="rb" value="33" />
           <entry key="txt" value="60" />
         </counts>
@@ -107,7 +106,7 @@
         <counts>
           <entry key="PLAIN_TEXT" value="60" />
           <entry key="RHTML" value="240" />
-          <entry key="Ruby" value="37" />
+          <entry key="Ruby" value="44" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -119,83 +118,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/pages_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="124" column="20" selection-start-line="124" selection-start-column="4" selection-end-line="124" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/photos_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="7" column="19" selection-start-line="7" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/_adminmenu.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/_analyticsmenu.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="5" column="160" selection-start-line="5" selection-start-column="160" selection-end-line="5" selection-end-column="160" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/_nav.html.erb">
+        <entry file="file://$PROJECT_DIR$/lib/tasks/populate.rake">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="35">
-              <caret line="72" column="42" selection-start-line="72" selection-start-column="42" selection-end-line="72" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/routes.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+            <state relative-caret-position="148">
+              <caret line="35" column="39" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -282,7 +209,6 @@
         <option value="$PROJECT_DIR$/app/controllers/invites_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/pages_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/pages/invitations.html.erb" />
-        <option value="$PROJECT_DIR$/lib/tasks/populate.rake" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/users/show.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
@@ -292,6 +218,7 @@
         <option value="$PROJECT_DIR$/app/views/layouts/_adminmenu.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_analyticsmenu.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_nav.html.erb" />
+        <option value="$PROJECT_DIR$/lib/tasks/populate.rake" />
       </list>
     </option>
   </component>
@@ -341,33 +268,7 @@
               <item name="MD-APP" type="b2602c69:ProjectViewProjectNode" />
               <item name="MD-APP" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MD-APP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MD-APP" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="helpers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MD-APP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MD-APP" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MD-APP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MD-APP" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MD-APP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MD-APP" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="photos" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MD-APP" type="b2602c69:ProjectViewProjectNode" />
@@ -926,6 +827,7 @@
       <workItem from="1533251034744" duration="1142000" />
       <workItem from="1533316461574" duration="447000" />
       <workItem from="1533318590588" duration="2863000" />
+      <workItem from="1540606022689" duration="470000" />
     </task>
     <task id="LOCAL-00170" summary="fixed pagination in categories show page">
       <created>1515033074210</created>
@@ -1274,7 +1176,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="549256000" />
+    <option name="totallyTimeSpent" value="549726000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1289,12 +1191,12 @@
     <frame x="0" y="23" width="1280" height="728" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.4361874" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.4434572" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24959612" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.32956383" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.465625" weight="0.32735425" />
-      <window_info anchor="bottom" x="0" y="189" width="1234" height="376" id="Run" order="2" sideWeight="0.4628433" weight="0.40849674" />
+      <window_info anchor="bottom" x="0" y="189" width="1234" height="376" id="Run" order="2" sideWeight="0.46203554" visible="true" weight="0.40849674" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49375" weight="0.35285285" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1302,7 +1204,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.779483" weight="0.46078432" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.47334412" weight="0.37745097" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5371567" side_tool="true" visible="true" weight="0.40849674" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.53796446" side_tool="true" visible="true" weight="0.40849674" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.450727" weight="0.31518152" />
       <window_info anchor="bottom" id="Database Changes" order="12" sideWeight="0.49676898" weight="0.32730263" />
       <window_info active="true" anchor="bottom" id="Inspection Results" order="13" visible="true" weight="0.32882884" />
@@ -1618,20 +1520,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/tasks/populate.rake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/users_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1660,48 +1548,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/pages_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="124" column="20" selection-start-line="124" selection-start-column="4" selection-end-line="124" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/photos_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="7" column="19" selection-start-line="7" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_adminmenu.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/_mainmenu.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -1709,9 +1555,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/pages_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1695">
+          <caret line="113" selection-start-line="113" selection-end-line="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/photos_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="19" selection-start-line="7" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_adminmenu.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/_analyticsmenu.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
+        <state relative-caret-position="75">
           <caret line="5" column="160" selection-start-line="5" selection-start-column="160" selection-end-line="5" selection-end-column="160" />
         </state>
       </provider>
@@ -1720,6 +1601,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="35">
           <caret line="72" column="42" selection-start-line="72" selection-start-column="42" selection-end-line="72" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tasks/populate.rake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="35" column="39" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
         </state>
       </provider>
     </entry>
