@@ -74,12 +74,10 @@
             <td>  <%= iu.user.email %>  </td>
             <td>
 
-                <%= form_for @cart do |f| %>
-                <%= f.text_field :id =%>
-                <%= f.text_field :invoice =%>
-                  <%= f.submit "Save" %>
-                <% end %>
-
+              <%= form_tag invoicing_path do %>
+                <%= text_field_tag :invoice %>
+                <%= submit_tag "Save" %>
+              <% end %>
 
             </td>
           </tr>

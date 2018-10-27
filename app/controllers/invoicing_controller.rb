@@ -2,7 +2,7 @@ class InvoicingController < ApplicationController
   include Pagy::Backend
 
   def index
-    add_breadcrumb "invoicing", invoicing_path
+    add_breadcrumb "invoicing", invoicing_index_path
 
 
     @totalinvoices = Cart.where('processing' => true ).count
