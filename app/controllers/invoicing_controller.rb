@@ -1,4 +1,8 @@
 class InvoicingController < ApplicationController
+  before_action  only: [ :create]
+  before_action :authenticate_user!
+
+
   include Pagy::Backend
 
   def index
@@ -11,18 +15,32 @@ class InvoicingController < ApplicationController
     @pagy, @invoiceusers = pagy(@invoiceusers)
   end
 
-    def update #create a route for this?
-      cart = Cart.find(params[:id])
+
+
+
+  def create
+
+      @cart = Cart.find(params[:id])
 
       respond_to do |format|
-        if @cart.update_attributes(params[:cart])
-           format.html { redirect_to invoicing_path, notice: 'Invoice was successfully updated.' }
+        if @cart.update_attributes(cart_params)
+           format.html { redirect_to request.referrer , notice: 'Invoice was successfully updated.' }
            format.json { head :no_content }
              else
           format.json { render json: @cart.errors, status: :unprocessable_entity }
         end
       end
 
-    end
+  end
+
+  private
+  # Use callbacks to share common setup or constraints between actions.
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def cart_params
+    #params.fetch(:transaction, {})
+    params.permit(:invoice )
+
+  end
 
 end

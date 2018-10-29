@@ -320,7 +320,7 @@
     <orderEntry type="library" scope="PROVIDED" name="mini_mime (v1.0.1, rbenv: 2.4.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mini_portile2 (v2.3.0, rbenv: 2.4.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="minitest (v5.11.3, rbenv: 2.4.1) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="money (v6.13.0, rbenv: 2.4.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="money (v6.13.1, rbenv: 2.4.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.13.1, rbenv: 2.4.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="multi_xml (v0.6.0, rbenv: 2.4.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="multipart-post (v2.0.0, rbenv: 2.4.1) [gem]" level="application" />
@@ -375,7 +375,7 @@
     <orderEntry type="library" scope="PROVIDED" name="turbolinks (v5.2.0, rbenv: 2.4.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="turbolinks-source (v5.2.0, rbenv: 2.4.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v1.2.5, rbenv: 2.4.1) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="tzinfo-data (v1.2018.6, rbenv: 2.4.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="tzinfo-data (v1.2018.7, rbenv: 2.4.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="uglifier (v4.1.19, rbenv: 2.4.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="unf (v0.1.4, rbenv: 2.4.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="unf_ext (v0.0.7.5, rbenv: 2.4.1) [gem]" level="application" />

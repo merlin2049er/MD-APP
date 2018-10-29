@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7331a777-2244-45ce-afdd-3c1ae6d6fb83" name="Default" comment="cleaned up file">
+      <change beforePath="$PROJECT_DIR$/.idea/MD-APP-master.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MD-APP-master.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/invoicing_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/invoicing_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/invoicing/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/invoicing/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
     </list>
     <ignored path="MD-APP-master.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -21,14 +24,14 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/MD-APP-master@Production__MD_APP_master.coverage" NAME="Production: MD-APP-master Coverage Results" MODIFIED="1479493378173" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
-    <SUITE FILE_PATH="coverage/MD_APP@Development__MD_APP_master.rcov" NAME="Development: MD-APP-master Coverage Results" MODIFIED="1540754500026" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
+    <SUITE FILE_PATH="coverage/MD_APP@Development__MD_APP_master.rcov" NAME="Development: MD-APP-master Coverage Results" MODIFIED="1540773454074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
     <SUITE FILE_PATH="coverage/MD-APP-master@routes__MD_APP_master.coverage" NAME="routes: MD-APP-master Coverage Results" MODIFIED="1480727953605" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
     <SUITE FILE_PATH="coverage/MD-APP@db_migrate_status__MD_APP_master.coverage" NAME="db:migrate:status: MD-APP-master Coverage Results" MODIFIED="1486656634580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
     <SUITE FILE_PATH="coverage/MD_APP@db_migrate__MD_APP_master.rcov" NAME="db:migrate: MD-APP-master Coverage Results" MODIFIED="1540606348897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
     <SUITE FILE_PATH="coverage/MD-APP@db_populate__MD_APP_master.coverage" NAME="db:populate: MD-APP-master Coverage Results" MODIFIED="1488728881612" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
     <SUITE FILE_PATH="coverage/MD-APP-master@IRB_console__MD_APP_master.coverage" NAME="IRB console: MD-APP-master Coverage Results" MODIFIED="1479491840644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
     <SUITE FILE_PATH="coverage/MD_APP@Development__MD_APP_master.coverage" NAME="Development: MD-APP-master Coverage Results" MODIFIED="1520652066374" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
-    <SUITE FILE_PATH="coverage/MD_APP@Production__MD_APP_master.rcov" NAME="Production: MD-APP-master Coverage Results" MODIFIED="1540606382575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
+    <SUITE FILE_PATH="coverage/MD_APP@Production__MD_APP_master.rcov" NAME="Production: MD-APP-master Coverage Results" MODIFIED="1540759435227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
     <SUITE FILE_PATH="coverage/MD-APP@routes__MD_APP_master.coverage" NAME="routes: MD-APP-master Coverage Results" MODIFIED="1484857910427" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
     <SUITE FILE_PATH="coverage/MD-APP@db_migrate__MD_APP_master.coverage" NAME="db:migrate: MD-APP-master Coverage Results" MODIFIED="1488728838075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
     <SUITE FILE_PATH="coverage/MD-APP-master@db_migrate_status__MD_APP_master.coverage" NAME="db:migrate:status: MD-APP-master Coverage Results" MODIFIED="1479873142081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MD-APP-master" />
@@ -69,42 +72,45 @@
     <session id="-634659336">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="12" />
           <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.12" value="2" />
           <entry key="project.open.time.15" value="1" />
-          <entry key="project.open.time.16" value="1" />
+          <entry key="project.open.time.16" value="2" />
           <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.open.time.8" value="2" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Gemfile" value="4" />
-          <entry key="erb" value="45" />
+          <entry key="erb" value="47" />
           <entry key="js" value="1" />
           <entry key="lock" value="2" />
           <entry key="rake" value="2" />
-          <entry key="rb" value="10" />
+          <entry key="rb" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JavaScript" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="RHTML" value="45" />
-          <entry key="Ruby" value="16" />
+          <entry key="RHTML" value="47" />
+          <entry key="Ruby" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Gemfile" value="103" />
-          <entry key="erb" value="575" />
+          <entry key="erb" value="722" />
           <entry key="js" value="2" />
           <entry key="rake" value="11" />
-          <entry key="rb" value="117" />
+          <entry key="rb" value="321" />
           <entry key="txt" value="75" />
         </counts>
       </usages-collector>
@@ -112,8 +118,8 @@
         <counts>
           <entry key="JavaScript" value="2" />
           <entry key="PLAIN_TEXT" value="75" />
-          <entry key="RHTML" value="575" />
-          <entry key="Ruby" value="231" />
+          <entry key="RHTML" value="722" />
+          <entry key="Ruby" value="435" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -127,10 +133,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Gemfile">
+        <entry file="file://$PROJECT_DIR$/app/controllers/invoicing_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+            <state relative-caret-position="114">
+              <caret line="26" column="54" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/invoicing/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="78" column="36" lean-forward="true" selection-start-line="78" selection-start-column="36" selection-end-line="78" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="29" column="2" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -198,7 +222,6 @@
         <option value="$PROJECT_DIR$/app/controllers/pages_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/pages/invitations.html.erb" />
         <option value="$PROJECT_DIR$/app/views/users/show.html.erb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/helpers/users_helper.rb" />
         <option value="$PROJECT_DIR$/app/views/users/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
@@ -206,8 +229,6 @@
         <option value="$PROJECT_DIR$/app/views/layouts/_nav.html.erb" />
         <option value="$PROJECT_DIR$/lib/tasks/populate.rake" />
         <option value="$PROJECT_DIR$/app/views/layouts/_adminmenu.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/invoicing_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/invoicing/index.html.erb" />
         <option value="$PROJECT_DIR$/config/initializers/client_side_validations.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
@@ -227,6 +248,9 @@
         <option value="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" />
         <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/invoicing_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/invoicing/index.html.erb" />
       </list>
     </option>
   </component>
@@ -254,6 +278,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -270,6 +295,12 @@
               <item name="MD-APP" type="b2602c69:ProjectViewProjectNode" />
               <item name="MD-APP" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MD-APP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MD-APP" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -277,52 +308,17 @@
               <item name="MD-APP" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="categories" type="462c0819:PsiDirectoryNode" />
+              <item name="invoicing" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MD-APP" type="b2602c69:ProjectViewProjectNode" />
               <item name="MD-APP" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="devise" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MD-APP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MD-APP" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="devise" type="462c0819:PsiDirectoryNode" />
-              <item name="confirmations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MD-APP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MD-APP" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="devise" type="462c0819:PsiDirectoryNode" />
-              <item name="mailer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MD-APP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MD-APP" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="devise" type="462c0819:PsiDirectoryNode" />
-              <item name="passwords" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MD-APP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MD-APP" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="devise" type="462c0819:PsiDirectoryNode" />
-              <item name="registrations" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="RailsProjectView" />
     </panes>
   </component>
@@ -874,7 +870,13 @@
       <workItem from="1540606022689" duration="3998000" />
       <workItem from="1540669080472" duration="3790000" />
       <workItem from="1540753947982" duration="1380000" />
-      <workItem from="1540758726322" duration="333000" />
+      <workItem from="1540758726322" duration="440000" />
+      <workItem from="1540759381458" duration="489000" />
+      <workItem from="1540766177195" duration="438000" />
+      <workItem from="1540767494018" duration="28000" />
+      <workItem from="1540767775745" duration="1684000" />
+      <workItem from="1540770443998" duration="390000" />
+      <workItem from="1540771127215" duration="2310000" />
     </task>
     <task id="LOCAL-00171" summary="addthis social buttons on product page.">
       <created>1515194877630</created>
@@ -1223,7 +1225,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="558757000" />
+    <option name="totallyTimeSpent" value="564203000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1238,20 +1240,20 @@
     <frame x="0" y="23" width="1280" height="728" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18901454" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20759289" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24959612" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.32956383" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.465625" weight="0.32735425" />
-      <window_info anchor="bottom" x="0" y="189" width="1234" height="376" id="Run" order="2" sideWeight="0.45718902" weight="0.40849674" />
+      <window_info active="true" anchor="bottom" x="0" y="189" width="1234" height="376" id="Run" order="2" sideWeight="0.44991922" visible="true" weight="0.40849674" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49375" weight="0.35285285" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4927302" weight="0.32838285" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.76898223" visible="true" weight="0.46078432" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.76090467" weight="0.5604575" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.4717286" weight="0.37745097" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.23101777" side_tool="true" visible="true" weight="0.46078432" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5500808" side_tool="true" visible="true" weight="0.40849674" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.450727" weight="0.31518152" />
       <window_info anchor="bottom" id="Database Changes" order="12" sideWeight="0.49676898" weight="0.32730263" />
       <window_info active="true" anchor="bottom" id="Inspection Results" order="13" visible="true" weight="0.32882884" />
@@ -1369,20 +1371,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/invite.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="55" column="65" selection-start-line="55" selection-start-column="65" selection-end-line="55" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/products.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="329">
@@ -1444,20 +1432,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/pages_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1695">
-          <caret line="113" selection-start-line="113" selection-end-line="113" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/photos_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="19" selection-start-line="7" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/_analyticsmenu.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1479,31 +1453,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/tasks/populate.rake">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
           <caret line="35" column="39" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/invoicing/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/invoicing_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90">
-          <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -1675,10 +1628,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/pages_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1695">
+          <caret line="113" selection-start-line="113" selection-end-line="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/products_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="218" lean-forward="true" selection-start-line="206" selection-start-column="2" selection-end-line="218" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/photos_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-621">
+          <caret line="7" column="19" selection-start-line="7" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/transactions_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53">
+          <caret line="44" column="33" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="29" column="2" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/invoicing/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="78" column="36" lean-forward="true" selection-start-line="78" selection-start-column="36" selection-end-line="78" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/invoicing_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="26" column="54" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="54" />
         </state>
       </provider>
     </entry>

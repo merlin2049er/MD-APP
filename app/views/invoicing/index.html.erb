@@ -74,7 +74,8 @@
             <td>  <%= iu.user.email %>  </td>
             <td>
 
-              <%= form_tag invoicing_path do %>
+              <%= form_tag  do %>
+                <%= hidden_field_tag :id, iu.id %>
                 <%= text_field_tag :invoice %>
                 <%= submit_tag "Save" %>
               <% end %>

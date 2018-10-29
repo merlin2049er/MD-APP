@@ -26,7 +26,8 @@ Rails.application.routes.draw do
   resources :invites
   resources :activities
   resources :photos
-  resources :invoicing, only: [:index, :update]
+  #resources :invoicing, only: [:index, :update]
+  resources :invoicing
 
   resources :requests do
     member do
