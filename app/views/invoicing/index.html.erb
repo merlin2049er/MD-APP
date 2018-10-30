@@ -76,7 +76,7 @@
 
               <%= form_tag  do %>
                 <%= hidden_field_tag :id, iu.id %>
-                <%= text_field_tag :invoice %>
+                <%= text_field_tag :invoice, iu.invoice %>
                 <%= submit_tag "Save" %>
               <% end %>
 
