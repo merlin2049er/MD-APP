@@ -6,12 +6,15 @@ class InvoicingController < ApplicationController
   include Pagy::Backend
 
   def index
+
     add_breadcrumb "invoicing", invoicing_index_path
 
     @totalinvoices = Cart.where('processing' => true ).count
-    @invoiceusers = Cart.includes(:user).where('processing' => true )
 
+
+    @invoiceusers = Cart.includes(:user).where('processing' => true)
     @pagy, @invoiceusers = pagy(@invoiceusers)
+
   end
 
   def create
