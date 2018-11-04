@@ -1,7 +1,7 @@
 
- <%= simple_form_for @invite do |f| %>
- <%= f.input :name %>
- <%= f.input :email %>
+ <%= simple_form_for @invite ,:validate => true do |f| %>
+ <%= f.input :name , :validate => true%>
+ <%= f.input :email ,:validate => true %>
  <%= f.input :message , input_html: { :value =>  @message }  %>
  <%= f.submit "Send", class: "btn btn-info" %>
  <% end %>
