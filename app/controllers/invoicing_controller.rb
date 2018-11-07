@@ -11,8 +11,7 @@ class InvoicingController < ApplicationController
 
     @totalinvoices = Cart.where('processing' => true ).count
 
-
-    @invoiceusers = Cart.includes(:user).where('processing' => true)
+    @invoiceusers = Cart.includes(:user).where('processing' => true, 'invoice'.empty?)
     @pagy, @invoiceusers = pagy(@invoiceusers)
 
   end
