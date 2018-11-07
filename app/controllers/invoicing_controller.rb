@@ -2,7 +2,6 @@ class InvoicingController < ApplicationController
   before_action  only: [ :create]
   before_action :authenticate_user!
 
-
   include Pagy::Backend
 
   def index
@@ -10,7 +9,6 @@ class InvoicingController < ApplicationController
     add_breadcrumb "invoicing", invoicing_index_path
 
     @totalinvoices = Cart.where('processing' => true ).count
-
 
     @invoiceusers = Cart.includes(:user).where('processing' => true)
     @pagy, @invoiceusers = pagy(@invoiceusers)

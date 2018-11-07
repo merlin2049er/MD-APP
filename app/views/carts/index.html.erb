@@ -45,8 +45,12 @@
 
           <td><%= cart.created_at.strftime("%m/%d/%Y") %> </td>
           <% product = Product.where(id: cart.product_id).first %>
-          <td> <%= link_to raw(" #{cart.product_id}"), controller: "products", action: "show", id: cart.product_id %> </td>
 
+          <% if not product.funded? %>
+                <td> <%= link_to raw(" #{cart.product_id}"), controller: "products", action: "show", id: cart.product_id %> </td>
+            <% else %>
+                <td> <%= cart.product_id %> </td>
+           <% end %>
 
           <td> <%=  product.title  %>  </td>
           <td> <%=  cart.qty  %>  </td>
