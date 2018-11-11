@@ -98,7 +98,7 @@ gem 'auto-session-timeout'
 
 gem 'redis'
 
-gem 'acts_as_votable', '~> 0.10.0'
+gem 'acts_as_votable', '~> 0.12.0'
 
 gem 'groupdate'
 

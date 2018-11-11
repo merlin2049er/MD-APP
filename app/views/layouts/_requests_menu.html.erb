@@ -1,13 +1,13 @@
 <% @user = current_user %>
-<% if @user.admin %>
+<!-- <#% if @user.admin %> -->
 <li class="dropdown">
      <a href="#" class="dropdown-toggle" data-toggle="dropdown"  data-hover="dropdown" data-delay="1000"  role="button" aria-haspopup="true" aria-expanded="false">Requests<span class="caret"></span></a>
      <ul class="dropdown-menu">
-          
+
 
     <li><%= link_to "New", new_request_path %></li>
     <li><%= link_to "Vote", requests_path %></li>
 
      </ul>
 </li>
-<%end %>
+<!--  <%#end %>  -->
