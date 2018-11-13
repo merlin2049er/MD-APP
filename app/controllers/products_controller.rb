@@ -55,53 +55,42 @@ class ProductsController < ApplicationController
     # start a REPL session
     #binding.pry
 
-     if @remaining == 0 #and @product.funded == 'false'
+    # if @remaining == 0 #and @product.funded == 'false'
 
-       #product =  Product.find_by( id: params[:id])
-
-       @product.funded = 'true'  # - this works...
-    #   @product.valid? # returns false
-    #   @product.errors.messages # returns something like {email: "Cant be blank"}
-    #   @product.save   # - this works...
-
-       # Product.update(params[:product_id], :funded => true)
-       #   cart = Cart.where(:product_id => params[:product_id]).update_all(:processing => true)
-       # cart.valid? # returns false
-       # cart.errors.messages
-       # cart.save
-
-       # start a REPL session
-       # binding.pry
+#       @product.funded = 'true'  # - this works...
 
 
-       respond_to do |format|
-         if @product.save
+#       respond_to do |format|
+#         if @product.save
            # update the cart for invoiceing...
-           cart = Cart.where(:product_id => @product.id).update_all(:processing => true)
+#           cart = Cart.where(:product_id => @product.id).update_all(:processing => true)
 
-           format.html { redirect_to root_path, notice: 'Product was successfully funded.' }
-           format.json { render :show, status: :created, location: @product }
-         else
+#           format.html { redirect_to root_path, notice: 'Product was successfully funded.' }
+#           format.json { render :show, status: :created, location: @product }
+#         else
 
-           format.html { redirect_to root_path, notice: 'Not sure what happened... please contact tech support.'}
+#           format.html { redirect_to root_path, notice: 'Not sure what happened... please contact tech support.'}
 
-           format.json { render json: @product.errors, status: :unprocessable_entity }
-         end
-       end
+#           format.json { render json: @product.errors, status: :unprocessable_entity }
+#         end
+#       end
 
+#     end
 
+if @remaining == 0
 
-       # start a REPL session
-      #  binding.pry
-      # respond_to do |format|
-      #   if cart.save
+   @product.funded = 'true'
+   @product.save!
 
-      #   end
-      #  end
-
-     end
-
+   cart = Cart.where(:product_id => @product.id).update_all(:processing => true)
+  respond_to do |format|
+    format.html { redirect_to root_path, notice: 'Product was successfully funded.' }
+    format.json { render :show, status: :created, location: @product }
   end
+end
+
+
+end
 
   # GET /products/new
   def new
@@ -159,21 +148,10 @@ class ProductsController < ApplicationController
 
 
    if Cart.where( user_id: current_user.id, product_id: params[:id]).blank?
-
     @cart = Cart.new(user_id: current_user.id, product_id: params[:id], qty: params[:qty] )
-
-
 
     respond_to do |format|
       if @cart.save
-
-        #  if @remaining == 0  # not seeing this variable
-
-
-        # Product.update(params[:product_id], :funded => true)
-        #  Cart.where(:product_id => params[:product_id]).update_all(:processing => true)
-        #  end
-
 
         format.html { redirect_to :back, notice: 'Product was successfully added to cart.' }
         format.json { render :show, status: :created, location: @cart }
@@ -187,9 +165,7 @@ else
 
    cart =  Cart.find_by( user_id: current_user.id, product_id: params[:id])
 
-   #temp = cart.qty
-   #cart.qty = params[:qty].to_i + temp #  plus cart.qty
-   cart.qty += params[:qty].to_i #  plus cart.qty
+   cart.qty += params[:qty].to_i
    cart.save
 
   respond_to do |format|
