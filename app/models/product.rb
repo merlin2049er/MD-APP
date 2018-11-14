@@ -36,7 +36,7 @@ class Product < ActiveRecord::Base
                                :before_message => "must be at before the end date."
 
     # hopefully this works
-    validates_numericality_of :qty, less_than_or_equal_to: 10, greater_than: 0
+   #  validates_numericality_of :qty, less_than_or_equal_to: 10, greater_than: 0
 
 
 def set_defaults
