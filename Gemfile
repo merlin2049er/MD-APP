@@ -129,6 +129,9 @@ gem 'country_select'
 gem 'client_side_validations'
 gem 'client_side_validations-simple_form', '~> 6.7'
 
+gem 'masonry-rails', '~> 0.2.4'
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

@@ -18,4 +18,5 @@
 //= require lightbox
 //= require rails.validations
 //= require rails.validations.simple_form
+//= require masonry/jquery.masonry
 //= require_tree .
