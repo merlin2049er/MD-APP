@@ -11,12 +11,11 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
 //= require turbolinks
+//= require jquery_ujs
 //= require bootstrap-sprockets
 //= require ckeditor/init
 //= require lightbox
 //= require rails.validations
 //= require rails.validations.simple_form
-//= require masonry/jquery.masonry
 //= require_tree .
