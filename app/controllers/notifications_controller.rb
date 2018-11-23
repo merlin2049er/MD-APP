@@ -1,9 +1,10 @@
+# frozen_string_literal: true
+
 class NotificationsController < ApplicationController
   include Pagy::Backend
 
-  before_action :set_notification, only: [:show, :edit, :update, :destroy]
+  before_action :set_notification, only: %i[show edit update destroy]
   before_action :authenticate_user!
-
 
   add_breadcrumb 'MASSDUMP', :root_path
 
@@ -14,15 +15,12 @@ class NotificationsController < ApplicationController
 
     @notifications = Notification.where('user_id =?', current_user.id).order('created_at DESC')
     @pagy, @notifications = pagy(@notifications)
-
-
   end
 
   # GET /notifications/1
   # GET /notifications/1.json
   def show
     add_breadcrumb 'notification', notifications_path
-
   end
 
   # GET /notifications/new
@@ -77,14 +75,15 @@ class NotificationsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_notification
-      @notification = Notification.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def notification_params
-     # params.fetch(:notification, {})
-       params.require(:notification).permit(:notify_msg, :user_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_notification
+    @notification = Notification.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def notification_params
+    # params.fetch(:notification, {})
+    params.require(:notification).permit(:notify_msg, :user_id)
+  end
 end

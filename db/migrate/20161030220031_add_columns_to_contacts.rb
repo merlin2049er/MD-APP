@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AddColumnsToContacts < ActiveRecord::Migration
   def change
     add_column :contacts, :registered_user, :boolean

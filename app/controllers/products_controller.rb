@@ -1,106 +1,101 @@
+# frozen_string_literal: true
+
 class ProductsController < ApplicationController
   include Pagy::Backend
 
-  before_action :set_product, only: [:show, :edit, :update, :destroy]
+  before_action :set_product, only: %i[show edit update destroy]
   before_filter  :authenticate_user!
 
-  add_breadcrumb "MASSDUMP", :root_path
+  add_breadcrumb 'MASSDUMP', :root_path
 
   # GET /products
   # GET /products.json
   def index
-
     # @search = Product.search(params[:search])
 
-    add_breadcrumb "products", products_path
+    add_breadcrumb 'products', products_path
 
     @total_products = Product.published.count
 
     require 'time'
 
     todaydate = Time.new
-#    set 'todaydate' equal to the current date/time.
+    #    set 'todaydate' equal to the current date/time.
 
-    todaydate = todaydate.year.to_s + "-" + todaydate.month.to_s + "-" + todaydate.day.to_s
+    todaydate = todaydate.year.to_s + '-' + todaydate.month.to_s + '-' + todaydate.day.to_s
 
-
-
-#ransack
-    #@search = Product.where( 'draft' => false,  'active' => true, 'funded' => false).where( 'enddate > ?', todaydate ).search(params[:q])
+    # ransack
+    # @search = Product.where( 'draft' => false,  'active' => true, 'funded' => false).where( 'enddate > ?', todaydate ).search(params[:q])
     @search = Product.published.search(params[:q])
     @searchtotal = @search.result.count
-    @pagy, @products = pagy( @search.result)
-
+    @pagy, @products = pagy(@search.result)
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
-    add_breadcrumb "product", products_path
-     commontator_thread_show(@product)
+    add_breadcrumb 'product', products_path
+    commontator_thread_show(@product)
 
     impressionist(@product)
 
-    @photo = Photo.where('enabled' => true ).where('product_id' => @product)
+    @photo = Photo.where('enabled' => true).where('product_id' => @product)
 
     # @taken = Cart.where('product_id' => @product).count
     @taken = Cart.where('product_id' => @product).sum(:qty)
     @remaining = @product.qty - @taken
 
     if @remaining == 1
-      flash.now[:warning]= 'This is the last remaining product required to complete the group order.  By adding it to your cart, it will complete the order for the campaign.'
+      flash.now[:warning] = 'This is the last remaining product required to complete the group order.  By adding it to your cart, it will complete the order for the campaign.'
 
     end
 
     # start a REPL session
-    #binding.pry
+    # binding.pry
 
     # if @remaining == 0 #and @product.funded == 'false'
 
-#       @product.funded = 'true'  # - this works...
+    #       @product.funded = 'true'  # - this works...
 
+    #       respond_to do |format|
+    #         if @product.save
+    # update the cart for invoiceing...
+    #           cart = Cart.where(:product_id => @product.id).update_all(:processing => true)
 
-#       respond_to do |format|
-#         if @product.save
-           # update the cart for invoiceing...
-#           cart = Cart.where(:product_id => @product.id).update_all(:processing => true)
+    #           format.html { redirect_to root_path, notice: 'Product was successfully funded.' }
+    #           format.json { render :show, status: :created, location: @product }
+    #         else
 
-#           format.html { redirect_to root_path, notice: 'Product was successfully funded.' }
-#           format.json { render :show, status: :created, location: @product }
-#         else
+    #           format.html { redirect_to root_path, notice: 'Not sure what happened... please contact tech support.'}
 
-#           format.html { redirect_to root_path, notice: 'Not sure what happened... please contact tech support.'}
+    #           format.json { render json: @product.errors, status: :unprocessable_entity }
+    #         end
+    #       end
 
-#           format.json { render json: @product.errors, status: :unprocessable_entity }
-#         end
-#       end
+    #     end
 
-#     end
+    if @remaining == 0
 
-if @remaining == 0
+      @product.funded = 'true'
+      @product.save!
 
-   @product.funded = 'true'
-   @product.save!
-
-   cart = Cart.where(:product_id => @product.id).update_all(:processing => true)
-  respond_to do |format|
-    format.html { redirect_to root_path, notice: 'Product was successfully funded.' }
-    format.json { render :show, status: :created, location: @product }
-  end
-end
-
-
+      cart = Cart.where(product_id: @product.id).update_all(processing: true)
+      respond_to do |format|
+        format.html { redirect_to root_path, notice: 'Product was successfully funded.' }
+        format.json { render :show, status: :created, location: @product }
+      end
+    end
 end
 
   # GET /products/new
   def new
-    add_breadcrumb "product", products_path
+    add_breadcrumb 'product', products_path
     @product = Product.new
   end
 
   # GET /products/1/edit
   def edit
-    add_breadcrumb "product", products_path
+    add_breadcrumb 'product', products_path
   end
 
   # POST /products
@@ -143,60 +138,52 @@ end
     end
   end
 
-
   def add_to_cart
+    if Cart.where(user_id: current_user.id, product_id: params[:id]).blank?
+      @cart = Cart.new(user_id: current_user.id, product_id: params[:id], qty: params[:qty])
 
+      respond_to do |format|
+        if @cart.save
 
-   if Cart.where( user_id: current_user.id, product_id: params[:id]).blank?
-    @cart = Cart.new(user_id: current_user.id, product_id: params[:id], qty: params[:qty] )
+          format.html { redirect_to :back, notice: 'Product was successfully added to cart.' }
+          format.json { render :show, status: :created, location: @cart }
+        else
+          format.html { render :new }
+          format.json { render json: @cart.errors, status: :unprocessable_entity }
+        end
+      end
 
-    respond_to do |format|
-      if @cart.save
+    else
 
-        format.html { redirect_to :back, notice: 'Product was successfully added to cart.' }
-        format.json { render :show, status: :created, location: @cart }
-      else
-        format.html { render :new }
+      cart = Cart.find_by(user_id: current_user.id, product_id: params[:id])
+
+      cart.qty += params[:qty].to_i
+      cart.save
+
+      respond_to do |format|
+        format.html { redirect_to :back, notice: 'Product was successfully updated in cart.' }
         format.json { render json: @cart.errors, status: :unprocessable_entity }
       end
-    end
-
-else
-
-   cart =  Cart.find_by( user_id: current_user.id, product_id: params[:id])
-
-   cart.qty += params[:qty].to_i
-   cart.save
-
-  respond_to do |format|
-    format.html { redirect_to :back, notice: 'Product was successfully updated in cart.' }
-    format.json { render json: @cart.errors, status: :unprocessable_entity }
-  end
-end
-
-
+ end
   end
 
   private
 
   # Use callbacks to share common setup or constraints between actions.
-    def set_product
-      @product = Product.find(params[:id])
-    end
+  def set_product
+    @product = Product.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def product_params
-      # params.fetch(:product, {})
-      # added qty
-        params.require(:product).permit( :title, :picurl, :template, :price, :msrp, :startdate, :enddate, :draft, :active,  :category_id, :qty, :length, :width, :height, :weight, :courier, :courierurl  )
-
-    end
-
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def product_params
+    # params.fetch(:product, {})
+    # added qty
+    params.require(:product).permit(:title, :picurl, :template, :price, :msrp, :startdate, :enddate, :draft, :active, :category_id, :qty, :length, :width, :height, :weight, :courier, :courierurl)
+  end
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def cart_params
     # params.fetch(:cart, {})
     params.require(:cart).permit(:user_id, :product_id, :qty)
   end
-
 end

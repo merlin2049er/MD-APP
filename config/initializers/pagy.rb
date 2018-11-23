@@ -1,6 +1,7 @@
+# frozen_string_literal: true
+
 # Example of initializer file
 # Customize only what you really need but notice that Pagy works also without any of the following lines.
-
 
 # Extras
 # See https://ddnexus.github.io/pagy/extras
@@ -11,7 +12,7 @@
 
 # Bootstrap: Nav helper and templates for Bootstrap pagination
 # See https://ddnexus.github.io/pagy/extras/bootstrap
- require 'pagy/extras/bootstrap'
+require 'pagy/extras/bootstrap'
 
 # Compact: An alternative UI that combines the pagination with the nav info in one compact element
 # See https://ddnexus.github.io/pagy/extras/compact
@@ -24,7 +25,6 @@
 # Responsive: On resize, the number of page links will adapt in real-time to the available window or container width
 # See https://ddnexus.github.io/pagy/extras/responsive
 # require 'pagy/extras/responsive'
-
 
 # Pagy Variables
 # All the Pagy::VARS here are set for all the pagy instances but can be
@@ -43,12 +43,10 @@
 # See https://ddnexus.github.io/pagy/extras/responsive#breakpoints
 # Pagy::VARS[:breakpoints] = { 0 => [1,2,2,1], 350 => [2,3,3,2], 550 => [3,4,4,3] }    # example of width/size pairs
 
-
 # I18n Variables
 # See https://ddnexus.github.io/pagy/api/frontend#pagy_tpath-vars
 # Pagy::I18N[:file]    = Pagy.root.join('locales', 'pagy.yml').to_s      # default
 # Pagy::I18N[:plurals] = -> (c) {([:zero, :one][c] || :other).to_s       # default
-
 
 # Rails: extras assets path required by compact or responsive extras
 # See https://ddnexus.github.io/pagy/extras/compact and https://ddnexus.github.io/pagy/extras/responsive
