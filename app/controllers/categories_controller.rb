@@ -37,7 +37,8 @@ class CategoriesController < ApplicationController
 
     # @products = @category.products.where( 'enddate > ?', todaydate )
 
-    add_breadcrumb 'category / ' << @title, categories_path
+    # add_breadcrumb 'category / ' << @title, categories_path  # frozen string - had to remove it?
+    
   end
 
   # GET /categories/new
