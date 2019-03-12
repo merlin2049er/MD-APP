@@ -57,6 +57,10 @@ class PagesController < ApplicationController
      add_breadcrumb "cookie", cookie_path
   end
 
+  def jobs
+     add_breadcrumb "jobs", jobs_path
+  end
+
 
   def faq
     add_breadcrumb "faq", terms_path

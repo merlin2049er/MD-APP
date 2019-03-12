@@ -52,6 +52,8 @@ Rails.application.routes.draw do
   get 'error', to: 'pages#error'
   get 'terms', to: 'pages#terms'
   get 'cookie', to: 'pages#cookie'
+  get 'jobs', to: 'pages#jobs'
+
 
   get 'faq',   to: 'pages#faq'
   get 'privacy',   to: 'pages#privacy'
