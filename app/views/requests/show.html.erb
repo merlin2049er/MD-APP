@@ -5,10 +5,13 @@
     <div class="panel panel-default">
       <!-- Default panel contents -->
       <div class="panel-heading"><strong>Requested:</strong> <%= @request.product %> by <%= @request.manufacturer %> </div>
-      <!-- <div class="panel-body">
+      <div class="panel-body">
 
+      <% if @request.producturl.present? %>
+     <%= image_tag (@request.producturl )   %>
+     <% end %>
 
-      </div> -->
+      </div>
     </div>
 
     <!--

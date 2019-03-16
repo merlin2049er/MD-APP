@@ -1,5 +1,6 @@
-Rails.application.routes.draw do
+# frozen_string_literal: true
 
+Rails.application.routes.draw do
   get 'users/index'
 
   # mount ForestLiana::Engine => '/forest'
@@ -7,10 +8,10 @@ Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
   mount Commontator::Engine => '/commontator'
 
-  devise_for :users, :controllers => { registrations: 'registrations', confirmations: 'confirmations', passwords: 'passwords', sessions: 'sessions',  :omniauth_callbacks => 'users/omniauth_callbacks' }
+  devise_for :users, controllers: { registrations: 'registrations', confirmations: 'confirmations', passwords: 'passwords', sessions: 'sessions', omniauth_callbacks: 'users/omniauth_callbacks' }
 
-  #devise_for :users, :path_prefix => 'd'
-  #resources :users, :only =>[:show]
+  # devise_for :users, :path_prefix => 'd'
+  # resources :users, :only =>[:show]
 
   resources :transactions
   resources :carts
@@ -26,20 +27,18 @@ Rails.application.routes.draw do
   resources :invites
   resources :activities
   resources :photos
+  # resources :invoicing, only: [:index, :update]
+  resources :invoicing
 
   resources :requests do
     member do
-      put "like", to: "requests#upvote"
-      put "dislike", to: "requests#downvote"
+      put 'like', to: 'requests#upvote'
+      put 'dislike', to: 'requests#downvote'
     end
   end
 
-
-
-
   get 'pages/contact'
   get 'pages/invite'
-
 
   root to: 'pages#index'
   get 'index', to: 'pages#index'
@@ -51,26 +50,22 @@ Rails.application.routes.draw do
   get 'terms', to: 'pages#terms'
   get 'cookie', to: 'pages#cookie'
 
-  get 'faq',   to: 'pages#faq'
+  get 'faq', to: 'pages#faq'
   get 'privacy',   to: 'pages#privacy'
-
 
   get 'dashboard', to: 'pages#dashboard'
   get 'chartsgraphs', to: 'pages#chartsgraphs'
 
-  get 'invoicing', to: 'pages#invoicing'
+  # get 'invoicing',   to: 'invoicing#index'
   get 'invitations', to: 'pages#invitations'
 
-  match '/users',   to: 'users#index',   via: 'get'
-  match '/users/:id',     to: 'users#show',       via: 'get'
-
+  match '/users', to: 'users#index', via: 'get'
+  match '/users/:id', to: 'users#show', via: 'get'
 
   match 'active'  => 'sessions#active',  via: :get
   match 'timeout' => 'sessions#timeout', via: :get
 
-
-  get "*path", to: redirect("/error")
-
+  get '*path', to: redirect('/error')
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

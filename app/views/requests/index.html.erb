@@ -17,7 +17,6 @@
 
         <thead>
         <tr>
-
           <th>Product</th>
           <th>Manufacturer</th>
           <th>Action</th>
@@ -29,7 +28,12 @@
         <% @requests.each do |request| %>
           <tr>
 
-            <td><%= link_to request.product, request %></td>
+            <td>  <%= link_to request.product, request %>
+              <% if request.producturl.present? %>
+              </br>
+             <%= image_tag (request.producturl ),width: '100', height: '100'   %>
+             <% end %>
+           </td>
             <td><%= request.manufacturer %></td>
 
 

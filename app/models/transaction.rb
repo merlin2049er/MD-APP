@@ -1,5 +1,6 @@
-class Transaction < ActiveRecord::Base
+# frozen_string_literal: true
 
+class Transaction < ActiveRecord::Base
   belongs_to :user
 
   validates_presence_of :user_id
@@ -7,7 +8,5 @@ class Transaction < ActiveRecord::Base
   validates_presence_of :tracking_number
   validates_presence_of :postal_carrier
 
-    # validates_presence_of :transaction_msg
-
-
+  # validates_presence_of :transaction_msg
 end

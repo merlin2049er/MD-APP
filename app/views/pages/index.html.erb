@@ -8,8 +8,11 @@
       <small>Newly added...</small>
   </h1>
 
+   <% if @recent_products.blank?  %>
+   <p>Sorry, we will be updating website with some new products shortly.</p>
+   <% else %>
 
-	<div class="cards">
+	<div class="cards " >
 
     <% @recent_products.each do |p| %>
 
@@ -35,6 +38,7 @@
 
 <% end %>
 </div>
+<% end %>
 </div>
 
 
@@ -43,6 +47,9 @@
   <h1 class="page-header">
    <small>Ending soon...</small>
 </h1>
+<% if @last_chance.blank? %>
+<p>Sorry, we will be updating website with some new products shortly.</p>
+<% else %>
 
 	<div class="cards" >
 
@@ -68,4 +75,5 @@
 
 <% end %>
 </div>
+<% end %>
 </div>

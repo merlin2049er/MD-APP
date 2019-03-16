@@ -1,10 +1,9 @@
 <% if user_signed_in? %>
-  <!--  <p id="notice"><%#= notice %></p>  -->
 
-  <!-- <h1>Carts</h1>  -->
 
 <div class="panel panel-default">
   <!-- Default panel contents -->
+
   <div class="panel-heading">Shopping cart:  <% if @carts.empty?  %>
       Nothing here...
     <% else %>
@@ -12,7 +11,6 @@
     <% end %>
 
     <div class="pull-right"><font size="1">If a campaign is successful, you will be emailed an invoice.</font>
-
     </div>
 
   </div>
@@ -33,72 +31,57 @@
         <th>Funded</th>
         <th>Action</th>
 
+        <th>Invoice</th>
+
       </tr>
       </thead>
 
       <tbody>
 
-      <!--<#% if @carts.empty?  %>-->
-      <!--<h4>Nothing here...</h4>-->
-      <!--<#% end %>-->
-
       <% @carts.each do |cart| %>
 
         <tr class="<%= cycle("even", "odd") %>">
 
-          <!-- <tr> -->
+
           <td><%= cart.created_at.strftime("%m/%d/%Y") %> </td>
           <% product = Product.where(id: cart.product_id).first %>
-          <td> <%= link_to raw(" #{cart.product_id}"), controller: "products", action: "show", id: cart.product_id %> </td>
 
+          <% if not product.funded? %>
+                <td> <%= link_to raw(" #{cart.product_id}"), controller: "products", action: "show", id: cart.product_id %> </td>
+            <% else %>
+                <td> <%= cart.product_id %> </td>
+           <% end %>
 
           <td> <%=  product.title  %>  </td>
           <td> <%=  cart.qty  %>  </td>
-
-        <!--   <td> <input type="number" name="qty" value= <%= cart.qty %> min="1" max= <%= @remaining %>  > </td> %> -->
-
-          <!-- <td>
-          <%#= form_tag cart_path(cart.id), method: :put do %>
-            <%#= number_field_tag :qty, :value => cart.qty, :min => 1, :max => 4 %>
-            <%#= submit_tag "revise" %>
-          <%# end %>
-        </td> -->
           <td> <%=  number_to_currency(product.price ) %>  </td>
           <td> <%=  number_to_currency(total = product.price * cart.qty)  %>  </td>
           <td> <%=  product.enddate  %>  </td>
           <td> <%=  product.funded  %>  </td>
 
-          <!--  <td><%#= link_to 'Show', cart %></td>
-        <td><%#= link_to 'Edit', edit_cart_path(cart) %></td>
-        -->
+
           <% if not product.funded? %>
           <td> <%= link_to 'Remove', cart, method: :delete, data: { confirm: 'Are you sure?' } %>   </td>
         <% else %>
+            <%  if not cart.invoice.blank? %>
+            <td> <%= '...please pay...'  %> </td>
+          <% else %>
           <td> <%= '...Processing order...'  %> </td>
-        <% end %>
+            <% end %>
 
-<!--
-          <%# if not cart.processing? %>
-            <td> <%#= link_to 'Remove', cart, method: :delete, data: { confirm: 'Are you sure?' } %>   </td>
-          <%# else %>
-            <td> <%#= '...Processing order...'  %> </td>
-          <%# end %>
-    -->
+        <% end %>
+            <td> <%= cart.invoice %> </td>
         </tr>
       <% end %>
       </tbody>
     </table>
-
-
   </div>
+
 </div>
 
 <br>
 
-<!-- <#%= link_to 'New Cart', new_cart_path %> booyah-->
 
-<%#= will_paginate @carts, renderer: BootstrapPagination::Rails %>
-  <%#== pagy_nav(@pagy) %>
   <div class="pagenav">
 
   <%== pagy_nav_bootstrap(@pagy) %> <br/>

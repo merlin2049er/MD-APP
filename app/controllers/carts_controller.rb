@@ -1,32 +1,28 @@
-class CartsController < ApplicationController
+# frozen_string_literal: true
 
+class CartsController < ApplicationController
   include Pagy::Backend
 
-
-  #before_action :set_cart, only: [:create, :show, :edit, :update, :destroy]
-  before_action :set_cart, only: [:create, :destroy]
+  # before_action :set_cart, only: [:create, :show, :edit, :update, :destroy]
+  before_action :set_cart, only: %i[create destroy]
   before_action :authenticate_user!
 
-  add_breadcrumb "MASSDUMP", :root_path
-
+  add_breadcrumb 'MASSDUMP', :root_path
 
   # Product.unscoped.where(:funded => 'true')
 
   # GET /articles
   # GET /articles.json
   def index
+    add_breadcrumb 'shopping cart', carts_path
 
-     add_breadcrumb "shopping cart", carts_path
-
-     @carts  = Cart.where('user_id =?', current_user.id)
-     @pagy, @carts = pagy(@carts)
-
+    @carts = Cart.where('user_id =?', current_user.id)
+    @pagy, @carts = pagy(@carts)
   end
 
   # GET /articles/1
   # GET /articles/1.json
-  def show
-  end
+  def show; end
 
   # GET /articles/new
   def new
@@ -34,11 +30,9 @@ class CartsController < ApplicationController
   end
 
   # GET /articles/1/edit
-  def edit
-  end
+  def edit; end
 
   def create
-
     @cart = Cart.new
 
     respond_to do |format|
@@ -50,7 +44,6 @@ class CartsController < ApplicationController
         format.json { render json: @carts.errors, status: :unprocessable_entity }
       end
     end
-
   end
 
   def update
@@ -68,16 +61,15 @@ class CartsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_cart
-      @cart = Cart.find(params[:id])
-    end
 
-    def carts_params
-      # params.fetch(:product, {})
-      # added qty
-      params.require(:cart).permit(:qty  )
+  # Use callbacks to share common setup or constraints between actions.
+  def set_cart
+    @cart = Cart.find(params[:id])
+  end
 
-    end
-
+  def carts_params
+    # params.fetch(:product, {})
+    # added qty
+    params.require(:cart).permit(:qty)
+  end
 end

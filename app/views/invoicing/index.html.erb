@@ -10,7 +10,9 @@
       <small>After all, tomorrow is another day!</small>
     </h1>
 
-
+<!--
+ put a dropdown here with all, pending and invoiced as opotions
+-->
 
     <div class="panel panel-default">
       <!-- Default panel contents -->
@@ -28,12 +30,13 @@
       <thead>
       <tr>
         <!--<th colspan="10"></th>-->
+        <th>Id</th>
         <th>Created at</th>
         <th>Item</th>
         <th>Qty</th>
         <th>Price</th>
-        <th>Subtotal</th>
-        <th>HST</th>
+      <!--  <th>Subtotal</th>
+        <th>HST</th>  -->
         <th>Total</th>
         <th>Name</th>
 
@@ -44,6 +47,7 @@
         <th>Postal</th>
         <th>Country</th>
         <th>Email</th>
+        <th>Invoice Link</th>
       </tr>
       </thead>
 
@@ -52,14 +56,15 @@
 
       <% @invoiceusers.each do |iu| %>
           <tr>
+            <td> <%= iu.id %> </td>
             <td><%= iu.user.created_at.strftime("%m/%d/%Y") %> </td>
 
             <td>  <%#= iu.product_id  %>  <%= Product.find(iu.product_id).title %></td>
             <td>  <%= qty = iu.qty  %></td>
             <td>  <%= number_to_currency(price  = Product.find(iu.product_id).price) %></td>
-            <td>  <%= number_to_currency(subtotal = qty * price.to_f) %>
-            <td>  <%= number_to_currency(hst = subtotal.to_f * 0.13) %>
-            <td>  <%= number_to_currency(total = subtotal.to_f + hst.to_f) %>
+           <!-- <td>  <%#= number_to_currency(subtotal = qty * price.to_f) %>  -->
+           <!-- <td>  <%#= number_to_currency(hst = subtotal.to_f * 0.13) %> -->
+            <td>  <%= number_to_currency(total = qty * price.to_f) %>
             <td>  <%= iu.user.firstname %> </br> <%= iu.user.lastname %> </td>
 
             <td>  <%= iu.user.address1 %> </br> <%= iu.user.address2 %>  </td>
@@ -69,10 +74,16 @@
             <td>  <%= iu.user.postal %>  </td>
             <td>  <%= iu.user.country %> </td>
             <td>  <%= iu.user.email %>  </td>
+            <td>
 
+              <%= form_tag  do %>
+                <%= hidden_field_tag :id, iu.id %>
+                <%= text_field_tag :invoice, iu.invoice %>
+                <%= submit_tag "Save" %>
+              <% end %>
+
+            </td>
           </tr>
-
-
 
       <% end %>
       </tbody>
@@ -83,9 +94,7 @@
       </div>
     </div>
 
-    <%#== pagy_nav(@pagy) %>
     <%== pagy_nav_bootstrap(@pagy) %> <br/>
-    <%#= will_paginate @invoiceusers, renderer: BootstrapPagination::Rails %>
 
  </div>
 </div>
