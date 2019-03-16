@@ -1,24 +1,16 @@
 # frozen_string_literal: true
 
 source 'https://rubygems.org'
-<<<<<<< HEAD
 ruby "2.4.1"
 #ruby "2.6.2"
-=======
-ruby '2.4.1'
->>>>>>> 51acf96cb5b3fbb223a6e7ea6d323ae0d55c3565
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 # gem 'rails', '4.2.5'
 # gem 'rails', '4.2.8'
 # gem 'rails', '4.2.10'
 gem 'rails', '5.0.7'
-<<<<<<< HEAD
 #gem 'rails', '5.2.2'
 #gem 'rails', '5.1.0'
-=======
-# gem 'rails', '5.1.0'
->>>>>>> 51acf96cb5b3fbb223a6e7ea6d323ae0d55c3565
 
 # gem 'rails', '5.2.0'
 
@@ -62,15 +54,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'devise', '~> 3.5', '>= 3.5.6'
 gem 'devise'
 
-<<<<<<< HEAD
 #sassy
-# gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
-
-gem "bootstrap-sass", ">= 3.4.1"  #fix vulnerability
-=======
-# sassy
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
->>>>>>> 51acf96cb5b3fbb223a6e7ea6d323ae0d55c3565
+
+#gem "bootstrap-sass", ">= 3.4.1"  #fix vulnerability
 gem 'bootstrap-sass-extras', '~> 0.0.7'
 gem 'font-awesome-sass', '~> 4.6.2'
 
@@ -170,8 +157,4 @@ group :production do
   gem 'rails_12factor', '~> 0.0.3'
 end
 
-<<<<<<< HEAD
 gem 'sqlite3', '1.3.13', :group => [:development, :test]
-=======
-gem 'sqlite3', group: %i[development test]
->>>>>>> 51acf96cb5b3fbb223a6e7ea6d323ae0d55c3565
