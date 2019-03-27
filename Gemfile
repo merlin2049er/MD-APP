@@ -74,7 +74,8 @@ gem 'ransack', github: 'activerecord-hackery/ransack'
 # gem 'will_paginate', github: 'jonatack/will_paginate'
 # gem 'will_paginate-bootstrap'
 
-gem 'pagy'
+
+gem 'pagy', '~> 2.1', '>= 2.1.4'
 # gem 'pagy-extras' no logner needed
 
 gem 'faker'

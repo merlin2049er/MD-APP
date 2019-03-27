@@ -9,17 +9,17 @@ class InvoicingController < ApplicationController
   def index
     add_breadcrumb 'invoicing', invoicing_index_path
 
-<<<<<<< HEAD
+
     add_breadcrumb "invoicing", invoicing_index_path
 
-    @totalinvoices = Cart.where('processing' => true ).count
+  #  @totalinvoices = Cart.where('processing' => true ).count
 
-    @invoiceusers = Cart.includes(:user).where('processing' => true, 'invoice'.empty?)
-=======
+  #  @invoiceusers = Cart.includes(:user).where('processing' => true, 'invoice'.empty?)
+
     @totalinvoices = Cart.where('processing' => true).count
 
     @invoiceusers = Cart.includes(:user).where('processing' => true)
->>>>>>> 51acf96cb5b3fbb223a6e7ea6d323ae0d55c3565
+
     @pagy, @invoiceusers = pagy(@invoiceusers)
   end
 

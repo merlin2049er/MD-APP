@@ -45,21 +45,14 @@
 
           <td><%= cart.created_at.strftime("%m/%d/%Y") %> </td>
           <% product = Product.where(id: cart.product_id).first %>
-<<<<<<< HEAD
+
             <% if not product.funded? %>
           <td> <%= link_to raw(" #{cart.product_id}"), controller: "products", action: "show", id: cart.product_id %> </td>
             <% else %>
             <td> <%= cart.product_id %> </td>
 
             <% end %>
-=======
 
-          <% if not product.funded? %>
-                <td> <%= link_to raw(" #{cart.product_id}"), controller: "products", action: "show", id: cart.product_id %> </td>
-            <% else %>
-                <td> <%= cart.product_id %> </td>
-           <% end %>
->>>>>>> 51acf96cb5b3fbb223a6e7ea6d323ae0d55c3565
 
           <td> <%=  product.title  %>  </td>
           <td> <%=  cart.qty  %>  </td>
@@ -93,7 +86,7 @@
 
   <div class="pagenav">
 
-  <%== pagy_nav_bootstrap(@pagy) %> <br/>
+  <%== pagy_bootstrap_nav(@pagy) %> <br/>
   </div>
 <% else %>
 
