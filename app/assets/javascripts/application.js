@@ -14,6 +14,7 @@
 //= require turbolinks
 //= require jquery_ujs
 //= require bootstrap-sprockets
+//= require ckeditor/override
 //= require ckeditor/init
 //= require lightbox
 //= require rails.validations

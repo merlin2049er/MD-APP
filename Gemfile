@@ -135,6 +135,7 @@ gem 'client_side_validations-simple_form', '~> 6.7'
 
 gem 'rubocop', '~> 0.60.0', require: false
 
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
