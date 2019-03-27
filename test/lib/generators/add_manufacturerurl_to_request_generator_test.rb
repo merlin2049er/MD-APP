@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'test_helper'
 require 'generators/add_manufacturerurl_to_request/add_manufacturerurl_to_request_generator'
 

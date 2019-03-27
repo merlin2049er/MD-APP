@@ -1,10 +1,10 @@
-class TransactionsController < ApplicationController
+# frozen_string_literal: true
 
+class TransactionsController < ApplicationController
   include Pagy::Backend
 
-  before_action :set_transaction, only: [:show, :edit, :update, :destroy]
+  before_action :set_transaction, only: %i[show edit update destroy]
   before_action :authenticate_user!
-
 
   add_breadcrumb 'MASSDUMP', :root_path
   # GET /transactions
@@ -13,9 +13,7 @@ class TransactionsController < ApplicationController
     add_breadcrumb 'transactions', transactions_path
     # @transactions = Transaction.all
     @transactions = Transaction.where('user_id =?', current_user.id).order('created_at DESC')
-    @pagy, @transactions = pagy( @transactions)
-
-
+    @pagy, @transactions = pagy(@transactions)
   end
 
   # GET /transactions/1
@@ -32,8 +30,7 @@ class TransactionsController < ApplicationController
   end
 
   # GET /transactions/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /transactions
   # POST /transactions.json
@@ -76,15 +73,15 @@ class TransactionsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_transaction
-      @transaction = Transaction.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def transaction_params
-      #params.fetch(:transaction, {})
-      params.require(:transaction).permit(:transaction_msg , :user_id , :invoice_number, :tracking_number, :shipped, :postal_carrier )
+  # Use callbacks to share common setup or constraints between actions.
+  def set_transaction
+    @transaction = Transaction.find(params[:id])
+  end
 
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def transaction_params
+    # params.fetch(:transaction, {})
+    params.require(:transaction).permit(:transaction_msg, :user_id, :invoice_number, :tracking_number, :shipped, :postal_carrier)
+  end
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AddUserIdToTransactions < ActiveRecord::Migration
   def change
     add_column :transactions, :user_id, :integer

@@ -1,10 +1,11 @@
+# frozen_string_literal: true
+
 class CategoriesTable < ActiveRecord::Migration
-  def change
+  def change; end
+
+  def up
+    drop_table :Categories
   end
-  
-     def up
-      drop_table :Categories
-     end
 
   def down
     raise ActiveRecord::IrreversibleMigration

@@ -1,3 +1,4 @@
-class Commontator_thread < ActiveRecord::Base
+# frozen_string_literal: true
 
+class Commontator_thread < ActiveRecord::Base
 end
