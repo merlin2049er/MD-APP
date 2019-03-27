@@ -108,7 +108,10 @@ gem 'groupdate'
 
 gem 'chartkick'
 
-gem 'ckeditor', github: 'galetahub/ckeditor'
+#gem 'ckeditor', github: 'galetahub/ckeditor'
+gem "ckeditor", :git => "https://github.com/galetahub/ckeditor.git"
+
+
 
 gem 'carrierwave'
 gem 'mini_magick'
