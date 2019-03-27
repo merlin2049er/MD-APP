@@ -12,7 +12,7 @@ GIT
       polyamorous (= 2.1.1)
 
 GIT
-  remote: git://github.com/galetahub/ckeditor.git
+  remote: https://github.com/galetahub/ckeditor.git
   revision: 808747cbe6a5135b993e3bda2e7c782381dfbc1e
   specs:
     ckeditor (4.4.0)
