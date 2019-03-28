@@ -1,0 +1,48 @@
+        <!-- Introduction Row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Random Products<br/>
+                    <small>12 Random Items...</small>
+                </h1>
+            <!--    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, explicabo dolores ipsam aliquam inventore corrupti eveniet quisquam quod totam laudantium repudiandae obcaecati ea consectetur debitis velit facere nisi expedita vel?</p>
+    -->
+            </div>
+        </div>
+
+        <% if @random.blank?  %>
+        <p>Sorry, we will be updating website with some new products shortly.</p>
+        <% else %>
+
+     	<div class="cards " >
+
+         <% @random.each do |p| %>
+
+           <a class="card" href=  "<%=  product_path(p) %>" >
+
+
+
+     			<span class="card-header" style="background-image: url( <%=  p.picurl %> );">
+
+     				<span class="card-title">
+     					<h3> <%= p.title %> </h3>
+     				</span>
+     			</span>
+     			<span class="card-summary">
+             <%= truncate(p.template, length: 50 , separator: ' ')  %>
+
+     			</span>
+     			<span class="card-meta">
+     				Active: <%= p.startdate %>  - <%= p.enddate %>
+     			</span>
+     		</a>
+
+
+     <% end %>
+     </div>
+     <% end %>
+     </div>
+
+
+
+
+        <br/>

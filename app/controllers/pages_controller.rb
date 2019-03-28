@@ -40,6 +40,13 @@ class PagesController < ApplicationController
     add_breadcrumb 'about', about_path
   end
 
+  def random
+    add_breadcrumb 'random', random_path
+
+    @random = Product.published.limit(12).order("RANDOM()")
+    
+  end
+
   def error
     add_breadcrumb 'error', error_path
   end

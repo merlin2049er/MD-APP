@@ -45,6 +45,8 @@ Rails.application.routes.draw do
   get 'contact', to: 'pages#contact'
   get 'invite', to: 'pages#invite'
   get 'about', to: 'pages#about'
+  get 'random', to: 'pages#random'
+
 
   get 'error', to: 'pages#error'
   get 'terms', to: 'pages#terms'
