@@ -52,8 +52,8 @@ class PagesController < ApplicationController
     add_breadcrumb 'privacy', privacy_path
   end
 
-  def cookie
-    add_breadcrumb 'cookie', cookie_path
+  def cookies
+    add_breadcrumb 'cookies', cookies_path
   end
 
   def jobs
