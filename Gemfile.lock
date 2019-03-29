@@ -386,7 +386,7 @@ DEPENDENCIES
   groupdate
   impressionist
   jbuilder (~> 2.0)
-  jquery-rails
+  jquery-rails (~> 4.3, >= 4.3.1)
   jquery-ui-rails (~> 4.2.1)
   meta_request
   mini_magick
