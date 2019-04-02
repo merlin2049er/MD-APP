@@ -57,7 +57,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 
 #sassy
-gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+# gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+
+gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 
 #gem "bootstrap-sass", ">= 3.4.1"  #fix vulnerability
 gem 'bootstrap-sass-extras', '~> 0.0.7'
