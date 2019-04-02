@@ -11,8 +11,8 @@
 // about supported directives.
 //
 //= require jquery
-//= require turbolinks
 //= require jquery_ujs
+//= require turbolinks
 //= require bootstrap-sprockets
 //= require ckeditor/config
 //= require lightbox
