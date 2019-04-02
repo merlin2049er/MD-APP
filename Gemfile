@@ -97,7 +97,9 @@ gem 'cancan'
 
 gem 'cloudinary'
 
-gem 'jquery-ui-rails', '~> 4.2.1' # not sure it this works (with the timeout)
+# gem 'jquery-ui-rails', '~> 4.2.1' # not sure it this works (with the timeout)
+
+gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 
 gem 'auto-session-timeout'
 
