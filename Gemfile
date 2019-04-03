@@ -9,8 +9,10 @@ ruby "2.4.1"
 # gem 'rails', '4.2.8'
 # gem 'rails', '4.2.10'
 gem 'rails', '5.0.7'
-#gem 'rails', '5.2.2'
 #gem 'rails', '5.1.0'
+
+#gem 'rails', '5.2.2'
+
 
 # gem 'rails', '5.2.0'
 
