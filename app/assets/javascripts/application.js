@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require turbolinks
-//= require ckeditor/config
+//= require ckeditor
 //= require lightbox
 //= require rails.validations
 //= require rails.validations.simple_form
