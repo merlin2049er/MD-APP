@@ -117,10 +117,10 @@ gem 'groupdate'
 
 gem 'chartkick'
 
-#gem 'ckeditor', github: 'galetahub/ckeditor'
-#gem "ckeditor", :git => "https://github.com/galetahub/ckeditor.git"
 
-gem 'ckeditor', '~> 5.0'
+gem "ckeditor", :git => "https://github.com/galetahub/ckeditor.git"
+
+
 
 
 gem 'carrierwave'
