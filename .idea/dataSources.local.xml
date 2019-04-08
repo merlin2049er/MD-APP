@@ -2,14 +2,14 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="Rails MD-APP-master: production" uuid="4a1a8bfa-24b0-4741-a0dc-af206c91a4a5">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" family="POSTGRES" exact-version="0.0" />
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" exact-version="0.0" />
     </data-source>
     <data-source name="Rails MD-APP-master: development" uuid="7ada8718-4e03-4cde-b13f-d1d7a39a3548">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" family="SQLITE" exact-version="0.0" />
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0.0" />
       <introspection-schemas>*:@</introspection-schemas>
     </data-source>
     <data-source name="Rails MD-APP-master: test" uuid="bb499128-faab-48c8-b2ee-a5df715e90d1">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" family="SQLITE" exact-version="0.0" />
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0.0" />
       <introspection-schemas>*:@</introspection-schemas>
     </data-source>
   </component>
