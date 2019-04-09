@@ -12,6 +12,10 @@
  * @preserve
  */
 
+//
+$(document).on('turbolinks:load', function() {
+//
+
 // Uses Node, AMD or browser globals to create a module.
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
@@ -517,3 +521,6 @@
 
   return new Lightbox();
 }));
+
+//
+});
