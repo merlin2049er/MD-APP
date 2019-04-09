@@ -5,10 +5,6 @@
  * Licensed under MIT (https://github.com/kybarg/bootstrap-dropdown-hover/blob/master/LICENSE)
  * ======================================================================== */
 
-//
- $(document).on('turbolinks:load', function() {
-//
-
 +function ($) {
   'use strict';
 
@@ -300,5 +296,3 @@
   })
 
 }(jQuery);
-
-});
