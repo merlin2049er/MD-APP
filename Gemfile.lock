@@ -11,13 +11,6 @@ GIT
       i18n
       polyamorous (= 2.1.1)
 
-GIT
-  remote: https://github.com/galetahub/ckeditor.git
-  revision: f6ce3a98b29efec16fcff7bcf34b1e4e6827d835
-  specs:
-    ckeditor (5.0.0)
-      orm_adapter (~> 0.5.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -370,7 +363,6 @@ DEPENDENCIES
   cancan
   carrierwave
   chartkick
-  ckeditor!
   client_side_validations
   client_side_validations-simple_form (~> 6.7)
   cloudinary

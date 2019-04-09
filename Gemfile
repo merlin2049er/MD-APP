@@ -118,7 +118,7 @@ gem 'groupdate'
 gem 'chartkick'
 
 
-gem "ckeditor", :git => "https://github.com/galetahub/ckeditor.git"
+#gem "ckeditor", :git => "https://github.com/galetahub/ckeditor.git"
 
 
 

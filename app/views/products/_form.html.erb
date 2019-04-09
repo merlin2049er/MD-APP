@@ -4,21 +4,21 @@
 
  <!-- fix this -->
  <div class = "field">
-    
+
     <%= f.label :category_id %><br/>
-    
+
     <%= f.collection_select :category_id, Category.all, :id, :name %>
   </div>
   <!-- fix this, it should save the category to the model, added qty -->
-  
+
   <div class="form-inputs">
-    
+
     <%= f.input :active %>
     <%= f.input :picurl %>
     <%= f.input :title %>
     <%= f.input :qty %>
-    <%#= f.input :template %>
-    <%= f.input :template, :as => :ckeditor, input_html: {:ckeditor => {:toolbar => 'FULL'}}, class: "form-control" %>
+    <%= f.input :template %>
+    <%#= f.input :template, :as => :ckeditor, input_html: {:ckeditor => {:toolbar => 'FULL'}}, class: "form-control" %>
 
     <%= f.input :price %>
     <%= f.input :msrp %>
@@ -36,8 +36,8 @@
     <%= f.input :draft %>
 
 
-  
- 
+
+
   </div>
 
   <div class="form-actions">

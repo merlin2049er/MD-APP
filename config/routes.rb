@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   # mount ForestLiana::Engine => '/forest'
 
-  mount Ckeditor::Engine => '/ckeditor'
+  # mount Ckeditor::Engine => '/ckeditor'
   mount Commontator::Engine => '/commontator'
 
   devise_for :users, controllers: { registrations: 'registrations', confirmations: 'confirmations', passwords: 'passwords', sessions: 'sessions', omniauth_callbacks: 'users/omniauth_callbacks' }
