@@ -14,7 +14,13 @@ put a dropdown here with all, pending and invoiced as opotions
 
   <div class="panel panel-default">
     <!-- Default panel contents -->
-    <div class="panel-heading">Users listing: <%= @total %></div>
+    <div class="panel-heading">Outstanding Invoices: <% if @total == 0  %>
+       Nothing here...
+       <% else %>
+      <%= @total %>
+      <% end %>
+
+      </div>
     <div class="panel-body">
 
       <table class="table-responsive">
@@ -63,11 +69,7 @@ put a dropdown here with all, pending and invoiced as opotions
     <%== pagy_bootstrap_nav(@pagy) %> <br/>
   </div>
 </div>
-<%#= will_paginate @photo, renderer: BootstrapPagination::Rails %>
 
-  <!--
-  <%#= link_to 'New Photo', new_photo_path %>
-  -->
 
 <% else %>
 
