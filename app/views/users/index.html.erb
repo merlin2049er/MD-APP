@@ -1,20 +1,14 @@
 <% @user = current_user %>
 <% if user_signed_in? && @user.admin %>
 
-<div class="row">
-<div class="col-lg-6">
-<h1 class="page-header">Users Listing<br/>
+<div class="table-responsive">
+
+<!-- <h1 class="panel-heading">Users Listing<br/>
   <small>Show me the money!</small>
 </h1>
-
-<!--
-put a dropdown here with all, pending and invoiced as opotions
 -->
 
-
-  <div class="panel panel-default">
-    <!-- Default panel contents -->
-    <div class="panel-heading">Outstanding Invoices: <% if @total == 0  %>
+    <div class="panel-heading">Total User Listing: <% if @total == 0  %>
        Nothing here...
        <% else %>
       <%= @total %>
@@ -23,7 +17,7 @@ put a dropdown here with all, pending and invoiced as opotions
       </div>
     <div class="panel-body">
 
-      <table class="table">
+      
         <table class="table">
         <thead>
         <tr>
