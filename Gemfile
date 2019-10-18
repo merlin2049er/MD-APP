@@ -74,7 +74,7 @@ gem 'simple_form'
 # gem 'forest_liana'  -- no support for it
 
 # metasearch replacement  - ok now?
-gem 'ransack', github: 'activerecord-hackery/ransack'
+# gem 'ransack', github: 'activerecord-hackery/ransack'
 
 # pagination
 # gem 'will_paginate', github: 'jonatack/will_paginate'
@@ -148,6 +148,9 @@ gem 'client_side_validations-simple_form', '~> 6.7'
 
 gem 'rubocop', '~> 0.60.0', require: false
 
+# elasticsearch
+gem 'elasticsearch-model', github: 'elastic/elasticsearch-rails', branch: '5.x'
+gem 'elasticsearch-rails', github: 'elastic/elasticsearch-rails', branch: '5.x'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

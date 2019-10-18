@@ -1,0 +1,14 @@
+development: &default
+  host: 'http://localhost:9200/'
+  transport_options:
+  request:
+  timeout: !!integer 300
+test:
+  <<: *default
+staging:
+  <<: *default
+production:
+  host: 'https://cryptic-inlet-13518.herokuapp.com'
+  transport_options:
+    request:
+      timeout: !!integer 300

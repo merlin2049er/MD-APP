@@ -31,6 +31,9 @@ class ProductsController < ApplicationController
     @pagy, @products = pagy(@search.result)
   end
 
+def search
+
+end
   # GET /products/1
   # GET /products/1.json
   def show

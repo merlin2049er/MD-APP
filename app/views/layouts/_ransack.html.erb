@@ -1,14 +1,14 @@
 <div class="navbar-form navbar-left">
-<%= search_form_for @search do |f| %>
+<%= form_for :product,url: product_search_url,:html => {:method => :get}  do |f| %>
 
     <div class="field">
- 
-  <%#= f.label :title_or_template_cont %>
-      
 
-       
-      <%= f.text_field :title_or_template_cont , placeholder: "Search" %>
-      
+  <%#= f.label :title_or_template_cont %>
+
+
+
+      <%= f.text_field :query , placeholder: "Search" %>
+
   <!--
   <div class="actions">
  -->
@@ -16,8 +16,8 @@
  <!--
     </div>
 -->
-    
+
   </div>
-  
+
   <% end %>
 </div>
