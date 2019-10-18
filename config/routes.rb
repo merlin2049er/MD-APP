@@ -36,7 +36,6 @@ Rails.application.routes.draw do
       put 'dislike', to: 'requests#downvote'
     end
   end
-  get '/search', to: 'products#search',as: 'product_search'
 
   get 'pages/contact'
   get 'pages/invite'

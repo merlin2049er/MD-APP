@@ -70,8 +70,12 @@ class Product < ActiveRecord::Base
 
   def self.search(query)
     if !query.blank?
-      Product.where('lower(title) LIKE ? OR lower(template) LIKE ?  ' ,"%#{query.downcase}%","%#{query.downcase}%")
+     product =  Product.published.where('lower(title) LIKE ? OR lower(template) LIKE ?  ' ,"%#{query.downcase}%","%#{query.downcase}%")
+    else
+      product = Product.published
+
     end
+    return product
   end
 
 end

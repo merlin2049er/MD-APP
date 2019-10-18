@@ -11,32 +11,31 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    # @search = Product.search(params[:search])
+   @search = Product.search(params[:product][:query])
 
-    add_breadcrumb 'products', products_path
+   add_breadcrumb 'products', products_path
 
-    @total_products = Product.published.count
+   @total_products = Product.published.count
 
-    require 'time'
+   require 'time'
 
-    todaydate = Time.new
+   todaydate = Time.new
     #    set 'todaydate' equal to the current date/time.
 
     todaydate = todaydate.year.to_s + '-' + todaydate.month.to_s + '-' + todaydate.day.to_s
 
     # ransack
     # @search = Product.where( 'draft' => false,  'active' => true, 'funded' => false).where( 'enddate > ?', todaydate ).search(params[:q])
-    @search = Product.published.search(params[:q])
-    @searchtotal = @search.result.count
-    @pagy, @products = pagy(@search.result)
+    
+      @searchtotal = @search.records.count
+      @products = @search.records
+   
   end
 
-def search
-
-end
   # GET /products/1
   # GET /products/1.json
   def show
+    @product = Product.find_by_id(params[:id])
     add_breadcrumb 'product', products_path
     commontator_thread_show(@product)
 
@@ -88,7 +87,7 @@ end
         format.json { render :show, status: :created, location: @product }
       end
     end
-end
+  end
 
   # GET /products/new
   def new
@@ -167,7 +166,7 @@ end
         format.html { redirect_to :back, notice: 'Product was successfully updated in cart.' }
         format.json { render json: @cart.errors, status: :unprocessable_entity }
       end
- end
+    end
   end
 
   private
