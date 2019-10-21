@@ -1,25 +1,26 @@
 # frozen_string_literal: true
 
 class ProductsController < ApplicationController
-  include Pagy::Backend
 
-  before_action :set_product, only: %i[show edit update destroy]
-  before_filter  :authenticate_user!
+ include Pagy::Backend
 
-  add_breadcrumb 'MASSDUMP', :root_path
+ before_action :set_product, only: %i[show edit update destroy]
+ before_filter  :authenticate_user!
+
+ add_breadcrumb 'MASSDUMP', :root_path
 
   # GET /products
   # GET /products.json
   def index
-   @search = Product.search(params[:product][:query])
+    @search = Product.search(params[:query])
 
-   add_breadcrumb 'products', products_path
+    add_breadcrumb 'products', products_path
 
-   @total_products = Product.published.count
+    @total_products = Product.published.count
 
-   require 'time'
+    require 'time'
 
-   todaydate = Time.new
+    todaydate = Time.new
     #    set 'todaydate' equal to the current date/time.
 
     todaydate = todaydate.year.to_s + '-' + todaydate.month.to_s + '-' + todaydate.day.to_s
@@ -27,9 +28,9 @@ class ProductsController < ApplicationController
     # ransack
     # @search = Product.where( 'draft' => false,  'active' => true, 'funded' => false).where( 'enddate > ?', todaydate ).search(params[:q])
     
-      @searchtotal = @search.records.count
-      @products = @search.records
-   
+    @searchtotal = @search.records.count
+    @products = @search.records
+
   end
 
   # GET /products/1
@@ -104,11 +105,11 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = Product.new(product_params)
-
     respond_to do |format|
       if @product.save
         format.html { redirect_to @product, notice: 'Product was successfully created.' }
         format.json { render :show, status: :created, location: @product }
+
       else
         format.html { render :new }
         format.json { render json: @product.errors, status: :unprocessable_entity }
@@ -188,4 +189,6 @@ class ProductsController < ApplicationController
     # params.fetch(:cart, {})
     params.require(:cart).permit(:user_id, :product_id, :qty)
   end
+
+ 
 end

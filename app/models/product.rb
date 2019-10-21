@@ -1,12 +1,13 @@
 # frozen_string_literal: true
+require 'elasticsearch'
 require 'elasticsearch/model'
+
 class Product < ActiveRecord::Base
   # include PublicActivity::Model
   # tracked owner: Proc.new{ |controller, model| controller.current_user }
-
+  
   include Elasticsearch::Model
   include Elasticsearch::Model::Callbacks
-
   is_impressionable
   acts_as_commontable
 
@@ -36,7 +37,7 @@ class Product < ActiveRecord::Base
   validates_length_of :title, maximum: 35
 
   validates_date :startdate, before: :enddate,
-                             before_message: 'must be at before the end date.'
+  before_message: 'must be at before the end date.'
 
   # hopefully this works
   #  validates_numericality_of :qty, less_than_or_equal_to: 10, greater_than: 0
@@ -50,7 +51,7 @@ class Product < ActiveRecord::Base
     self.funded ||= 'false'
     self.courier ||= 'Canada Post'
     self.courierurl ||= 'https://www.canadapost.ca'
-        end
+  end
 
   # default_scope { where(draft: false, active: true, funded: false ) }
   # default_scope { where(draft: false, active: true  ) }
@@ -58,9 +59,9 @@ class Product < ActiveRecord::Base
 
   scope :published, -> {
     where(draft: false)
-      .where(active: true)
-      .where(funded: false)
-      .where('enddate > ?', DateTime.now.to_s)
+    .where(active: true)
+    .where(funded: false)
+    .where('enddate > ?', DateTime.now.to_s)
   }
 
   # scope :incart , -> { where(draft: false, active: true ) }
@@ -69,13 +70,27 @@ class Product < ActiveRecord::Base
   scope :ending_soonest, ->(limit) { order('enddate desc').limit(limit) }
 
   def self.search(query)
-    if !query.blank?
-     product =  Product.published.where('lower(title) LIKE ? OR lower(template) LIKE ?  ' ,"%#{query.downcase}%","%#{query.downcase}%")
-    else
-      product = Product.published
-
-    end
-    return product
+    __elasticsearch__.search(
+    {
+      query: {
+        multi_match: {
+          query: query,
+          fields: ['title', 'template']
+        }
+      },
+      highlight: {
+        pre_tags: ['<em class="label label-highlight">'],
+        post_tags: ['</em>'],
+        fields: {
+          title:   {},
+          template: {}
+        }
+      }
+    }
+    )
   end
 
+
+
 end
+
