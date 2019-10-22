@@ -12,8 +12,7 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @search = Product.search(params[:query])
-
+    @search = Product.published.search(params[:query])
     add_breadcrumb 'products', products_path
 
     @total_products = Product.published.count
@@ -27,9 +26,9 @@ class ProductsController < ApplicationController
 
     # ransack
     # @search = Product.where( 'draft' => false,  'active' => true, 'funded' => false).where( 'enddate > ?', todaydate ).search(params[:q])
-    
-    @searchtotal = @search.records.count
-    @products = @search.records
+    @search = @search.records.where('draft = ? and active = ? and funded = ? and enddate > ?', false , true, false , todaydate )
+    @searchtotal = @search.length
+    @products = @search
 
   end
 

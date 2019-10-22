@@ -70,24 +70,30 @@ class Product < ActiveRecord::Base
   scope :ending_soonest, ->(limit) { order('enddate desc').limit(limit) }
 
   def self.search(query)
-    __elasticsearch__.search(
-    {
-      query: {
-        multi_match: {
-          query: query,
-          fields: ['title', 'template']
-        }
-      },
-      highlight: {
-        pre_tags: ['<em class="label label-highlight">'],
-        post_tags: ['</em>'],
-        fields: {
-          title:   {},
-          template: {}
+
+    if !query.blank?
+     product =  __elasticsearch__.search(
+      {
+        query: {
+          multi_match: {
+            query: query,
+            fields: ['title', 'template']
+          }
+        },
+        highlight: {
+          pre_tags: ['<em class="label label-highlight">'],
+          post_tags: ['</em>'],
+          fields: {
+            title:   {},
+            template: {}
+          }
         }
       }
-    }
-    )
+      )
+    else
+      product = Product.published
+    end
+    return product
   end
 
 
