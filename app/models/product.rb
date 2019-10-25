@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 require 'elasticsearch'
 require 'elasticsearch/model'
+ 
 
 class Product < ActiveRecord::Base
   # include PublicActivity::Model
   # tracked owner: Proc.new{ |controller, model| controller.current_user }
-  
-  include Elasticsearch::Model
+   include Elasticsearch::Model
   include Elasticsearch::Model::Callbacks
   is_impressionable
   acts_as_commontable
@@ -68,8 +68,7 @@ class Product < ActiveRecord::Base
 
   scope :most_recent, ->(limit) { order('created_at desc').limit(limit) }
   scope :ending_soonest, ->(limit) { order('enddate desc').limit(limit) }
-
-  def self.search(query)
+   def self.search(query)
     __elasticsearch__.search(
     {
       query: {
@@ -93,4 +92,3 @@ class Product < ActiveRecord::Base
 
 
 end
-
