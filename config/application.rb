@@ -31,4 +31,8 @@ module Workspace
     config.serve_static_assets = true
   end
 
+  Raven.configure do |config|
+    config.dsn = 'https://77bde467caf7468d91ecbe9a792b710f:4ebb645f59054797b63f87116fe3d875@sentry.io/254319'
+  end
+
 end
