@@ -34,8 +34,9 @@ class ProductsController < ApplicationController
   end
 
   def show
-    #@product = Product.find_by_id(params[:id])
-    add_breadcrumb 'product', products_path
+     @product = Product.find_by_id(params[:id])
+    puts'=========',@product.inspect
+        add_breadcrumb 'product', products_path
     commontator_thread_show(@product)
     impressionist(@product)
 
@@ -145,7 +146,10 @@ class ProductsController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_product
-    @product = Product.find(params[:id]) 
+    #binding.pry
+    @product = Product.find_by_id(params[:id])
+
+    #@product = Product.find(params[:id])
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.

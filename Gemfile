@@ -93,7 +93,7 @@ gem 'breadcrumbs_on_rails'
 
 gem 'impressionist'
 
-gem 'commontator'
+ gem 'commontator'
 
 gem 'tzinfo-data'
 
