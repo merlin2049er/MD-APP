@@ -6,7 +6,7 @@ require 'elasticsearch/model'
 class Product < ActiveRecord::Base
   # include PublicActivity::Model
   # tracked owner: Proc.new{ |controller, model| controller.current_user }
-   include Elasticsearch::Model
+  include Elasticsearch::Model
   include Elasticsearch::Model::Callbacks
   is_impressionable
   acts_as_commontable
@@ -88,7 +88,7 @@ class Product < ActiveRecord::Base
             title:   {},
             template: {}
           }
- 
+
         }
       }
       )

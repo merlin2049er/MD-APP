@@ -4,7 +4,8 @@ class ProductsController < ApplicationController
 
  include Pagy::Backend
 
- before_action :set_product, only: %i[show edit update destroy]
+ #before_action :set_product, only: %i[show edit update destroy]
+ before_action :set_product, only: [ :show, :edit, :update, :destroy ]
  before_filter  :authenticate_user!
 
  add_breadcrumb 'MASSDUMP', :root_path
@@ -20,7 +21,6 @@ class ProductsController < ApplicationController
     require 'time'
 
     todaydate = Time.new
-    #    set 'todaydate' equal to the current date/time.
 
     todaydate = todaydate.year.to_s + '-' + todaydate.month.to_s + '-' + todaydate.day.to_s
     if !params[:query].blank?
@@ -28,66 +28,37 @@ class ProductsController < ApplicationController
     # @search = Product.where( 'draft' => false,  'active' => true, 'funded' => false).where( 'enddate > ?', todaydate ).search(params[:q])
     @search = @search.records.where('draft = ? and active = ? and funded = ? and enddate > ?', false , true, false , todaydate )
   end
-       @searchtotal = @search.length
+    @searchtotal = @search.length
     @products = @search
 
   end
 
-  # GET /products/1
-  # GET /products/1.json
   def show
-    @product = Product.find_by_id(params[:id])
+    #@product = Product.find_by_id(params[:id])
     add_breadcrumb 'product', products_path
     commontator_thread_show(@product)
-
     impressionist(@product)
 
     @photo = Photo.where('enabled' => true).where('product_id' => @product)
 
-    # @taken = Cart.where('product_id' => @product).count
     @taken = Cart.where('product_id' => @product).sum(:qty)
     @remaining = @product.qty - @taken
 
     if @remaining == 1
       flash.now[:warning] = 'This is the last remaining product required to complete the group order.  By adding it to your cart, it will complete the order for the campaign.'
-
     end
 
-    # start a REPL session
-    # binding.pry
-
-    # if @remaining == 0 #and @product.funded == 'false'
-
-    #       @product.funded = 'true'  # - this works...
-
-    #       respond_to do |format|
-    #         if @product.save
-    # update the cart for invoiceing...
-    #           cart = Cart.where(:product_id => @product.id).update_all(:processing => true)
-
-    #           format.html { redirect_to root_path, notice: 'Product was successfully funded.' }
-    #           format.json { render :show, status: :created, location: @product }
-    #         else
-
-    #           format.html { redirect_to root_path, notice: 'Not sure what happened... please contact tech support.'}
-
-    #           format.json { render json: @product.errors, status: :unprocessable_entity }
-    #         end
-    #       end
-
-    #     end
-
     if @remaining == 0
-
       @product.funded = 'true'
       @product.save!
-
       cart = Cart.where(product_id: @product.id).update_all(processing: true)
+
       respond_to do |format|
         format.html { redirect_to root_path, notice: 'Product was successfully funded.' }
         format.json { render :show, status: :created, location: @product }
       end
     end
+
   end
 
   # GET /products/new
@@ -174,7 +145,7 @@ class ProductsController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_product
-    @product = Product.find(params[:id])
+    @product = Product.find(params[:id]) 
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
