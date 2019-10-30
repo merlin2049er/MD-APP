@@ -19,6 +19,7 @@ class Product < ActiveRecord::Base
   belongs_to :cart
   belongs_to :category
   has_many :photos
+  accepts_nested_attributes_for :photos, reject_if: :all_blank, allow_destroy: true
 
   validates_presence_of :title
   validates_presence_of :picurl

@@ -15,6 +15,17 @@
 
     <%= f.input :active %>
     <%= f.input :picurl %>
+
+    <h4>Additional photo urls (upto 5) </h4>
+    <div id='photos'>
+      <%= f.simple_fields_for :photos do |p| %>
+        <%= render 'photo_fields', :f => p %>
+      <% end %>
+      <div class='links'>
+        <%= link_to_add_association 'Add photo url', f, :photos %>
+      </div>
+    </div>
+
     <%= f.input :title %>
     <%= f.input :qty %>
     <%= f.input :template %>

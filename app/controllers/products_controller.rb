@@ -156,7 +156,8 @@ class ProductsController < ApplicationController
   def product_params
     # params.fetch(:product, {})
     # added qty
-    params.require(:product).permit(:title, :picurl, :template, :price, :msrp, :startdate, :enddate, :draft, :active, :category_id, :qty, :length, :width, :height, :weight, :courier, :courierurl)
+    params.require(:product).permit(:title, :picurl, :template, :price, :msrp, :startdate, :enddate, :draft, :active, :category_id, :qty, :length, :width, :height, :weight, :courier, :courierurl, photos_attributes: [:product_id, :uri, :done, :_destroy])
+
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
