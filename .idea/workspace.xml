@@ -4,6 +4,7 @@
     <list default="true" id="7331a777-2244-45ce-afdd-3c1ae6d6fb83" name="Default" comment="cleaned up file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/_adminmenu.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_adminmenu.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/_analyticsmenu.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_analyticsmenu.html.erb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -679,7 +680,7 @@
       <workItem from="1572017461146" duration="337000" />
       <workItem from="1572467347516" duration="29000" />
       <workItem from="1572467431407" duration="1530000" />
-      <workItem from="1572470340258" duration="2227000" />
+      <workItem from="1572470340258" duration="2438000" />
     </task>
     <task id="LOCAL-00171" summary="addthis social buttons on product page.">
       <created>1515194877630</created>
