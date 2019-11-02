@@ -9,6 +9,7 @@
 # Array: Paginate arrays efficiently avoiding expensive array-wrapping and wihout overriding
 # See https://ddnexus.github.io/pagy/extras/array
 # require 'pagy/extras/array'
+require 'pagy/extras/elasticsearch_rails'
 
 # Bootstrap: Nav helper and templates for Bootstrap pagination
 # See https://ddnexus.github.io/pagy/extras/bootstrap
