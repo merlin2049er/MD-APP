@@ -23,13 +23,15 @@ class ProductsController < ApplicationController
     todaydate = Time.new
 
     todaydate = todaydate.year.to_s + '-' + todaydate.month.to_s + '-' + todaydate.day.to_s
-    if !params[:query].blank?
+  if !params[:query].blank?
     # ransack
     # @search = Product.where( 'draft' => false,  'active' => true, 'funded' => false).where( 'enddate > ?', todaydate ).search(params[:q])
-    @search = @search.records.where('draft = ? and active = ? and funded = ? and enddate > ?', false , true, false , todaydate )
+      @search = @search.records.where('draft = ? and active = ? and funded = ? and enddate > ?', false , true, false , todaydate )
   end
     @searchtotal = @search.length
     @products = @search
+
+    @pagy, @products = pagy(Product.order(:title))
 
   end
 
