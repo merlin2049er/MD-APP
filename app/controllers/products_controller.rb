@@ -27,19 +27,20 @@ class ProductsController < ApplicationController
     # ransack
     # @search = Product.where( 'draft' => false,  'active' => true, 'funded' => false).where( 'enddate > ?', todaydate ).search(params[:q])
     #  @search = @search.records.where('draft = ? and active = ? and funded = ? and enddate > ?', false , true, false , todaydate )
-
   end
     @searchtotal = @search.length
     @products = @search
-
   #  @pagy, @products = pagy(Product.order(:title))
-@pagy, @products = Pagy.new_from_elasticsearch_rails( @search )
+   @pagy, @products = Pagy.new_from_elasticsearch_rails( @search )
+
   end
 
   def show
      @product = Product.find_by_id(params[:id])
+
     puts'=========',@product.inspect
-        add_breadcrumb 'product', products_path
+
+    add_breadcrumb 'product', products_path
     commontator_thread_show(@product)
     impressionist(@product)
 
