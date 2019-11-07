@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7331a777-2244-45ce-afdd-3c1ae6d6fb83" name="Default" comment="add tax table">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/taxes/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/taxes/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/taxes_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/taxes_controller.rb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -706,7 +706,7 @@
       <workItem from="1572470340258" duration="2571000" />
       <workItem from="1573095636640" duration="2120000" />
       <workItem from="1573139257601" duration="198000" />
-      <workItem from="1573140588342" duration="3601000" />
+      <workItem from="1573140588342" duration="3915000" />
     </task>
     <task id="LOCAL-00172" summary="fixed value, min and max on number field on product show page&#10;removed owl carousel (temp)">
       <created>1515464901462</created>

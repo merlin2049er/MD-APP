@@ -11,7 +11,7 @@ class TaxesController < ApplicationController
 
     @taxes = Tax.count
 
-    @pagy, @taxes = pagy(Tax.all)
+    @pagy, @taxes = pagy(Tax.all.order(:prov_id))
   end
 
   def show
