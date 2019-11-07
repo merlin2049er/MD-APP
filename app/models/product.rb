@@ -8,7 +8,6 @@ class Product < ActiveRecord::Base
   # tracked owner: Proc.new{ |controller, model| controller.current_user }
   include Elasticsearch::Model
   include Elasticsearch::Model::Callbacks
-extend Pagy::Search
   is_impressionable
 
   acts_as_commontable

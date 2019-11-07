@@ -2,7 +2,7 @@
 
 class ProductsController < ApplicationController
 
- include Pagy::Backend
+  include Pagy::Backend
 
  #before_action :set_product, only: %i[show edit update destroy]
  before_action :set_product, only: [ :show, :edit, :update, :destroy ]
@@ -13,58 +13,55 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
+
     @search = Product.published.search(params[:query] )
     add_breadcrumb 'products', products_path
 
     @total_products = Product.published.count
-
     require 'time'
 
     todaydate = Time.new
 
     todaydate = todaydate.year.to_s + '-' + todaydate.month.to_s + '-' + todaydate.day.to_s
-  if !params[:query].blank?
-    # ransack
-    # @search = Product.where( 'draft' => false,  'active' => true, 'funded' => false).where( 'enddate > ?', todaydate ).search(params[:q])
-    #  @search = @search.records.where('draft = ? and active = ? and funded = ? and enddate > ?', false , true, false , todaydate )
-  end
-    @searchtotal = @search.length
+    if !params[:query].blank?
+      @search = @search.records.where('draft = ? and active = ? and funded = ? and enddate > ?', false , true, false , todaydate )
+    end
+    @searchtotal = @search.count
     @products = @search
-  #  @pagy, @products = pagy(Product.order(:title))
-   @pagy, @products = Pagy.new_from_elasticsearch_rails( @search )
-
+    @pagy, @a = Pagy.new( count: @products.count ,page: params[:page].blank? ? 1 : params[:page])
+    @products = @products[@pagy.offset, @pagy.items]
   end
 
   def show
-     @product = Product.find_by_id(params[:id])
+   @product = Product.find_by_id(params[:id])
 
-    puts'=========',@product.inspect
+   puts'=========',@product.inspect
 
-    add_breadcrumb 'product', products_path
-    commontator_thread_show(@product)
-    impressionist(@product)
+   add_breadcrumb 'product', products_path
+   commontator_thread_show(@product)
+   impressionist(@product)
 
-    @photo = Photo.where('enabled' => true).where('product_id' => @product)
+   @photo = Photo.where('enabled' => true).where('product_id' => @product)
 
-    @taken = Cart.where('product_id' => @product).sum(:qty)
-    @remaining = @product.qty - @taken
+   @taken = Cart.where('product_id' => @product).sum(:qty)
+   @remaining = @product.qty - @taken
 
-    if @remaining == 1
-      flash.now[:warning] = 'This is the last remaining product required to complete the group order.  By adding it to your cart, it will complete the order for the campaign.'
-    end
-
-    if @remaining == 0
-      @product.funded = 'true'
-      @product.save!
-      cart = Cart.where(product_id: @product.id).update_all(processing: true)
-
-      respond_to do |format|
-        format.html { redirect_to root_path, notice: 'Product was successfully funded.' }
-        format.json { render :show, status: :created, location: @product }
-      end
-    end
-
+   if @remaining == 1
+    flash.now[:warning] = 'This is the last remaining product required to complete the group order.  By adding it to your cart, it will complete the order for the campaign.'
   end
+
+  if @remaining == 0
+    @product.funded = 'true'
+    @product.save!
+    cart = Cart.where(product_id: @product.id).update_all(processing: true)
+
+    respond_to do |format|
+      format.html { redirect_to root_path, notice: 'Product was successfully funded.' }
+      format.json { render :show, status: :created, location: @product }
+    end
+  end
+
+end
 
   # GET /products/new
   def new
