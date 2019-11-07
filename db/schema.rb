@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191026181234) do
+ActiveRecord::Schema.define(version: 20191107030436) do
 
   create_table "activities", force: :cascade do |t|
     t.string   "trackable_type"
@@ -179,6 +179,15 @@ ActiveRecord::Schema.define(version: 20191026181234) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.string   "manufacturerurl"
+  end
+
+  create_table "taxes", force: :cascade do |t|
+    t.string   "prov_id"
+    t.float    "tax_rate"
+    t.boolean  "enabled"
+    t.string   "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "transactions", force: :cascade do |t|
