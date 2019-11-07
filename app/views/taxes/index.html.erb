@@ -1,0 +1,62 @@
+<% if user_signed_in? %>
+
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">Tax Rates:
+      <% if @taxes.empty? %>
+        Nothing here...
+      <% else %>
+        <%= @taxes.count %>
+      <% end %>
+
+    </div>
+    <div class="panel-body">
+<table>
+  <thead>
+  <tr>
+    <th>ID      </th>
+    <td>&nbsp;</td>
+    <th>Tax     </th>
+    <td>&nbsp;</td>
+    <th>Province</th>
+
+  </tr>
+  </thead>
+
+  <tbody>
+    <% @taxes.each do |tax| %>
+      <tr>
+        <!-- <td><%#= link_to 'Show', tax %></td> -->
+        <td><%=  tax.prov_id  %></td>
+        <td>&nbsp;</td>
+        <td><%=  tax.tax_rate  %></td>
+        <td>&nbsp;</td>
+        <td><%=  tax.comment  %></td>
+
+
+       <!-- <td><%#= link_to 'Edit', edit_tax_path(tax) %></td>  -->
+       <!-- <td><%#= link_to 'Destroy', tax, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+    </div>
+  </div>
+
+<%#= link_to 'New Tax', new_tax_path %>
+  <!-- <br> -->
+
+  <div class="pagenav">
+    <%#== pagy_nav(@pagy) %>
+    <%== pagy_bootstrap_nav(@pagy) %> <br/>
+<%#= will_paginate @request, renderer: BootstrapPagination::Rails %>
+  </div>
+
+
+
+<% else %>
+
+
+  <div class="alert alert-warning" role="alert"> You must be signed in to see the taxes.</div>
+
+<% end %>

@@ -6,7 +6,11 @@
       <schema-mapping />
     </data-source>
     <data-source name="Rails MD-APP-master: development" uuid="7ada8718-4e03-4cde-b13f-d1d7a39a3548">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0.0" />
+      <database-info product="SQLite" version="3.25.1" jdbc-version="2.1" driver-name="SQLite JDBC" driver-version="3.25.1" dbms="SQLITE" exact-version="3.25.1" exact-driver-version="3.25">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <auth-required>false</auth-required>
       <schema-mapping>
         <introspection-scope>
           <node kind="schema" qname="@" />
@@ -14,7 +18,11 @@
       </schema-mapping>
     </data-source>
     <data-source name="Rails MD-APP-master: test" uuid="bb499128-faab-48c8-b2ee-a5df715e90d1">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0.0" />
+      <database-info product="SQLite" version="3.25.1" jdbc-version="2.1" driver-name="SQLite JDBC" driver-version="3.25.1" dbms="SQLITE" exact-version="3.25.1" exact-driver-version="3.25">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <auth-required>false</auth-required>
       <schema-mapping>
         <introspection-scope>
           <node kind="schema" qname="@" />

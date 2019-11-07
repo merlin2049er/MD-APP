@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  resources :taxes
   get 'users/index'
 
   # mount ForestLiana::Engine => '/forest'
@@ -29,6 +30,7 @@ Rails.application.routes.draw do
   resources :photos
   # resources :invoicing, only: [:index, :update]
   resources :invoicing
+  resources :taxes
 
   resources :requests do
     member do
@@ -62,6 +64,7 @@ Rails.application.routes.draw do
 
   # get 'invoicing',   to: 'invoicing#index'
   get 'invitations', to: 'pages#invitations'
+
 
   match '/users', to: 'users#index', via: 'get'
   match '/users/:id', to: 'users#show', via: 'get'
