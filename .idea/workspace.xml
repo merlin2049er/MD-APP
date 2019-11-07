@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7331a777-2244-45ce-afdd-3c1ae6d6fb83" name="Default" comment="cleaned up file">
+    <list default="true" id="7331a777-2244-45ce-afdd-3c1ae6d6fb83" name="Default" comment="add tax table">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/devise.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/devise.rb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -104,7 +104,9 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectId" id="1SX0EVoBILdg8NlPtA3yoRzsZ6x" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
@@ -681,14 +683,7 @@
       <workItem from="1572467347516" duration="29000" />
       <workItem from="1572467431407" duration="1530000" />
       <workItem from="1572470340258" duration="2571000" />
-      <workItem from="1573095636640" duration="981000" />
-    </task>
-    <task id="LOCAL-00171" summary="addthis social buttons on product page.">
-      <created>1515194877630</created>
-      <option name="number" value="00171" />
-      <option name="presentableId" value="LOCAL-00171" />
-      <option name="project" value="LOCAL" />
-      <updated>1515194877632</updated>
+      <workItem from="1573095636640" duration="1724000" />
     </task>
     <task id="LOCAL-00172" summary="fixed value, min and max on number field on product show page&#10;removed owl carousel (temp)">
       <created>1515464901462</created>
@@ -1026,7 +1021,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540611659601</updated>
     </task>
-    <option name="localTasksCounter" value="220" />
+    <task id="LOCAL-00220" summary="add tax table">
+      <created>1573098196380</created>
+      <option name="number" value="00220" />
+      <option name="presentableId" value="LOCAL-00220" />
+      <option name="project" value="LOCAL" />
+      <updated>1573098196380</updated>
+    </task>
+    <option name="localTasksCounter" value="221" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1077,7 +1079,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="checked the size of photos and display that well if there are images in it." />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="fixed gallery images by assigning a class to it" />
     <MESSAGE value="fixed lightbox on product page!" />
     <MESSAGE value="removed extra raw product template" />
@@ -1102,7 +1104,8 @@
     <MESSAGE value="added invitations to the admin menu, you can see the invites against the registered users." />
     <MESSAGE value="added hotjar to production &lt;head&gt; application.html.erb" />
     <MESSAGE value="cleaned up file" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleaned up file" />
+    <MESSAGE value="add tax table" />
+    <option name="LAST_COMMIT_MESSAGE" value="add tax table" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
