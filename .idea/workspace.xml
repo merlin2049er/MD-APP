@@ -2,26 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7331a777-2244-45ce-afdd-3c1ae6d6fb83" name="Default" comment="add tax table">
-      <change afterPath="$PROJECT_DIR$/app/assets/javascripts/taxes.coffee" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/taxes.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/taxes_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/helpers/taxes_helper.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/taxes/_form.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/taxes/_tax.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/taxes/edit.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/taxes/index.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/taxes/index.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/taxes/new.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/taxes/show.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/taxes/show.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/controllers/taxes_controller_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7ada8718-4e03-4cde-b13f-d1d7a39a3548.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7ada8718-4e03-4cde-b13f-d1d7a39a3548.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bb499128-faab-48c8-b2ee-a5df715e90d1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/bb499128-faab-48c8-b2ee-a5df715e90d1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/_adminmenu.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_adminmenu.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/taxes/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/taxes/index.html.erb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -724,7 +706,7 @@
       <workItem from="1572470340258" duration="2571000" />
       <workItem from="1573095636640" duration="2120000" />
       <workItem from="1573139257601" duration="198000" />
-      <workItem from="1573140588342" duration="3360000" />
+      <workItem from="1573140588342" duration="3601000" />
     </task>
     <task id="LOCAL-00172" summary="fixed value, min and max on number field on product show page&#10;removed owl carousel (temp)">
       <created>1515464901462</created>
