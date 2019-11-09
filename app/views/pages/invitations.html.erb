@@ -47,8 +47,6 @@
               end %>
 
             </td>
-
-
           </tr>
 
 
@@ -57,7 +55,7 @@
       </tbody>
 
     </table>
-
+          </br>
         <div class="panel-footer"><%= @totalregistered %> Total registered users...
 
           <% if @totalregistered > 0  %>
@@ -71,9 +69,7 @@
       </div>
 
 
-    <%#== pagy_nav(@pagy) %>
     <%== pagy_bootstrap_nav(@pagy) %> <br/>
-    <%#= will_paginate @invoiceusers, renderer: BootstrapPagination::Rails %>
 
 <% else %>
 
