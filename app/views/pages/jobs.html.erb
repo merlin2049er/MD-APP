@@ -7,3 +7,33 @@
 No Jobs yet. I can't even find one, and I built this site.
             </div>
 </div>
+
+<hr>
+testing...<br><br>
+<button onclick="myFunction()">Try it</button>
+
+
+<div id = 'state'>
+<%= select_tag :state, options_for_select(us_states) %> <br>
+</div>
+<div id = 'prov' >
+<%= select_tag :provinces, options_for_select(canadian_provinces) %>
+</div>
+<hr>
+
+<div id = 'country'>
+
+<%= select_tag :country, options_for_select(country) %>
+</div>
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("country");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
