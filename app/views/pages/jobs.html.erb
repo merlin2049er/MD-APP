@@ -10,30 +10,33 @@ No Jobs yet. I can't even find one, and I built this site.
 
 <hr>
 testing...<br><br>
-<button onclick="myFunction()">Try it</button>
-
 
 <div id = 'state'>
-<%= select_tag :state, options_for_select(us_states) %> <br>
+<%= select_tag :state, options_for_select(us_states) %>
 </div>
+<br>
 <div id = 'prov' >
 <%= select_tag :provinces, options_for_select(canadian_provinces) %>
 </div>
-<hr>
-
+<br>
 <div id = 'country'>
 
-<%= select_tag :country, options_for_select(country) %>
+<%= select_tag  :country, options_for_select(country), :onchange => "myFunction()" %>
 </div>
 
 
 <script>
 function myFunction() {
-  var x = document.getElementById("country");
-  if (x.style.display === "none") {
-    x.style.display = "block";
+
+  var y = document.getElementById("prov");
+  if (y.style.display === "none") {
+    y.style.display = "block";
   } else {
-    x.style.display = "none";
+    y.style.display = "none";
   }
-}
+  }
+
+
+
+
 </script>
