@@ -1,4 +1,7 @@
-<% if user_signed_in? %>
+
+<% @user = current_user %>
+<% if user_signed_in? && @user.admin %>
+
 
   <div class="panel panel-default">
     <!-- Default panel contents -->
@@ -46,20 +49,10 @@
     </div>
   </div>
 
-<%#= link_to 'New Tax', new_tax_path %>
-  <!-- <br> -->
-
   <div class="pagenav">
-    <%#== pagy_nav(@pagy) %>
     <%== pagy_bootstrap_nav(@pagy) %> <br/>
-<%#= will_paginate @request, renderer: BootstrapPagination::Rails %>
   </div>
 
-
-
 <% else %>
-
-
   <div class="alert alert-warning" role="alert"> You must be signed in to see the taxes.</div>
-
 <% end %>

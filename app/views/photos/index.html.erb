@@ -1,15 +1,17 @@
 <% @user = current_user %>
 <% if user_signed_in? && @user.admin %>
 
-    <div class="table-responsive">
-      <!-- Default panel contents -->
-      <div class="panel-heading">Photos listing:  <% if @total == 0  %>
-         Nothing here...
-         <% else %>
-        <%= @total %>
-        <% end %>
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Photos listing:
+    <% if @total = 0 %>
+      Nothing here...
+    <% else %>
+      <%= @total %>
+    <% end %>
+  </div>
 
-        </div>
+
       <div class="panel-body">
 
 <table class="table">
@@ -44,17 +46,15 @@
   </tbody>
 </table>
       </div>
-    </div>
 </div>
+
 
   <div class ='pagenav'>
   <%== pagy_bootstrap_nav(@pagy) %> <br/>
   </div>
-
 <!--
 <%= link_to 'New Photo', new_photo_path %>
 -->
-
 <% else %>
 
 <div class="alert alert-warning" role="alert">You must be the administrator to see the photos.</div>
