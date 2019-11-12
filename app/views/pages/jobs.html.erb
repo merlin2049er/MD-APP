@@ -26,30 +26,38 @@ testing...<br><br>
 
 
 <script>
+
 function myFunction() {
-            
-if ($(this).find(":selected").val() == "CAN")
-{
+
+ if ($(this).find(":selected").val() == "CAN"){
+
   var y = document.getElementById("prov");
+
   if (y.style.display === "none") {
+
     y.style.display = "block";
+
   } else {
+
     y.style.display = "none";
+
   }
   
             
-  else
-  {
-         
-  var x = document.getElementById("state");
-  if (x.style.display === "none") {
-    x.style.display = "block";
   } else {
-    x.style.display = "none";
+         
+    var x = document.getElementById("state");
+   
+    if (x.style.display === "none") {
+    
+     x.style.display = "block";
+    
+    } else {
+    
+     x.style.display = "none";
+   
+    }  
   }
-  }
-  }
-
-
+}
 </script>
 
