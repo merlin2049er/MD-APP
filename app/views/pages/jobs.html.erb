@@ -29,35 +29,22 @@ testing...<br><br>
 
 function myFunction() {
 
- if ($(this).find(":selected").val() == "CAN"){
-
-  var y = document.getElementById("state");
-
-  if (y.style.display === "none") {
+ var y = document.getElementById("provinces");
+ var x = document.getElementById("state");
+ 
+ if ($("#country").find(":selected").val() == "CAN"){
 
     y.style.display = "block";
-
+    x.style.display = "none";
+ 
   } else {
-
+ 
+    x.style.display = "block";
     y.style.display = "none";
 
   }
   
-            
-  } else {
-         
-    var x = document.getElementById("prov");
-   
-    if (x.style.display === "none") {
-    
-     x.style.display = "block";
-    
-    } else {
-    
-     x.style.display = "none";
-   
-    }  
-  }
 }
 </script>
+
 
