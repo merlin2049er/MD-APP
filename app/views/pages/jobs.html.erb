@@ -28,7 +28,8 @@ testing...<br><br>
 <script>
 function myFunction() {$(this).find(":selected").val();
 
-if (this.val == 'CAN') 
+if (this.val = 'CAN') with if ($(this).find(":selected").val() == "CAN")
+{
   var y = document.getElementById("prov");
   if (y.style.display === "none") {
     y.style.display = "block";
@@ -51,3 +52,4 @@ if (this.val == 'CAN')
 
 
 </script>
+
