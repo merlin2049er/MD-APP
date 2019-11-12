@@ -26,8 +26,9 @@ testing...<br><br>
 
 
 <script>
-function myFunction() {
+function myFunction() {$(this).find(":selected").val();
 
+if (this.val == 'CAN') 
   var y = document.getElementById("prov");
   if (y.style.display === "none") {
     y.style.display = "block";
@@ -35,8 +36,18 @@ function myFunction() {
     y.style.display = "none";
   }
   }
-
-
+            
+  else
+  {
+         
+  var x = document.getElementById("state");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+  }
+  }
 
 
 </script>
