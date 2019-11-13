@@ -60,7 +60,7 @@
     <!-- <%= f.input :state, required: true, :validate => true, label: 'Prov / State' %> -->
    <hr>
    testing...helperfile<br><br>
-  <%= f.select :state, canadian_provinces , required: true, :validate => true, label: 'Prov / State' %>     
+   <%= f.input :state, :collection => canadian_provinces , required: true, :validate => true, label: 'Prov / State' %>     
    <hr>     
     <%= f.input :postal, required: true, :validate => true %>
 
