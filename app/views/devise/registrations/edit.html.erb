@@ -57,7 +57,11 @@
     <%= f.input :address1, required: true, :validate => true %>
     <%= f.input :address2, required: false %>
     <%= f.input :city, required: true, :validate => true %>
-    <%= f.input :state, required: true, :validate => true, label: 'Prov / State' %>
+    <!-- <%= f.input :state, required: true, :validate => true, label: 'Prov / State' %> -->
+   <hr>
+   testing...helperfile<br><br>
+  <%= f.select :state, prov_state , required: true, :validate => true, label: 'Prov / State' %>     
+   <hr>     
     <%= f.input :postal, required: true, :validate => true %>
 
     <%#= f.country_select :country, only: ["CA", "US"], label: 'Country', required: true  %>
