@@ -1,4 +1,4 @@
-module Prov_StateHelper
+module ProvStateHelper
 
 
 def prov_state
