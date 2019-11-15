@@ -77,9 +77,9 @@
           <td> <%= link_to 'Remove', cart, method: :delete, data: { confirm: 'Are you sure?' } %>   </td>
         <% else %>
             <%  if not cart.invoice.blank? %>
-            <td> <%= '...please pay...'  %> </td>
+            <td> <%= '......'  %> </td>
           <% else %>
-          <td> <%= '...Processing order...'  %> </td>
+          <td> <%= '...'  %> </td>
             <% end %>
 
         <% end %>
