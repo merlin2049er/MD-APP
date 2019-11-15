@@ -13,7 +13,7 @@
       <%= @carts.count %> items...
     <% end %>
 
-    <div class="pull-right"><font size="1">If a campaign is successful, you will be emailed an invoice.</font>
+    <div class="pull-right"><font size="1">If a campaign is successful, you will be emailed a reminder to pay.</font>
     </div>
 
   </div>
@@ -29,12 +29,14 @@
         <th>Item</th>
         <th>Qty</th>
         <th>Price</th>
-        <th>Total</th>
+        <th>Sub</th>
+        <th>Taxes</th>
+        <th>Total</td>
         <th>End date</th>
         <th>Funded</th>
         <th>Action</th>
 
-        <th>Invoice</th>
+        <th>Status</th>
 
       </tr>
       </thead>
@@ -61,6 +63,8 @@
           <td> <%=  cart.qty  %>  </td>
           <td> <%=  number_to_currency(product.price ) %>  </td>
           <td> <%=  number_to_currency(total = product.price * cart.qty)  %>  </td>
+          <td> <%=  number_to_currency(taxes = Calctax.Calctax(total, Lookup.getrate(current_user)) )  %> </td>
+          <td> <%=  number_to_currency(total + taxes) =%> </td>
           <td> <%=  product.enddate  %>  </td>
           <td> <%=  product.funded  %>  </td>
 
