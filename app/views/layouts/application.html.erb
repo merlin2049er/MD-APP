@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
+
 <!-- Jquery
 <%# if Rails.env.production? %>
 
@@ -65,21 +67,17 @@
 <body>
     <div class="content">
 
-<%= render 'layouts/nav' %>
-<%= bootstrap_flash %>
+      <%= render 'layouts/nav' %>
+      <%= bootstrap_flash %>
 
-<div class="container">
+    <div class="container">
 
         <%= render_breadcrumbs :tag => :li, :separator => "" %>
         <%= yield %>
 </div>
-
 </div>
 
    <%= render 'layouts/footer' %>
 
 </body>
-
-
-
 </html>
