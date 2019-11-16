@@ -11,8 +11,8 @@ class ApplicationController < ActionController::Base
   helper_method :all_products
   helper_method :all_notifications
 
-  before_filter :store_history
-  before_filter :set_search
+  before_action :store_history
+  before_action :set_search
 
   # not being used...
   #  auto_session_timeout 10.minutes  # 10 minutes to test, 30 minutes for production
