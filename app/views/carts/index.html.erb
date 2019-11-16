@@ -76,15 +76,16 @@
           <% if not product.funded? %>
           <td> <%= link_to 'Remove', cart, method: :delete, data: { confirm: 'Are you sure?' } %>   </td>
         <% else %>
-            <%  if not cart.invoice.blank? %>
+
+        <!--    <%  if not cart.invoice.blank? %>
             <td> <%= '......'  %> </td>
           <% else %>
           <td> <%= '...'  %> </td>
-            <% end %>
+            <% end %> -->
+            <td> <a href="" data-toggle="modal" data-target="#exampleModal">Pay now</a> </td>
 
         <% end %>
-            <td> <a href="" data-toggle="modal" data-target="#exampleModal">Pay now</a> </td>
-            <!-- <td> <%#= cart.invoice %> </td> -->
+             <td>  </td> 
         </tr>
       <% end %>
       </tbody>
