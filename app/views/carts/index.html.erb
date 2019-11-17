@@ -121,8 +121,8 @@
       </div>
       <div class="modal-body">
 
-        <form action="/charge" method="post" id="payment-form">
-  
+
+  <%= form_for :stripe , url: charge_url,:html=>{:id=>"payment-form"} do |f| %>
   <div class="form-row">
     <label for="card-element">
       Credit or debit card
@@ -136,7 +136,7 @@
   </div>
 <br>
   <button>Sumbit Payment</button>
-</form>
+<% end %>
 
       </div>
     </div>
