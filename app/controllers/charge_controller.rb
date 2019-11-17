@@ -7,6 +7,7 @@ class ChargeController < ApplicationController
     add_breadcrumb 'THANK YOU'
   end
 
+#
   def create
     # Set your secret key: remember to change this to your live secret key in production
     # See your keys here: https://dashboard.stripe.com/account/apikeys
@@ -21,7 +22,9 @@ class ChargeController < ApplicationController
         currency: 'can',
         description: 'Example charge',
         source: token,
-    })
+     })
+
   end
+
 
 end
