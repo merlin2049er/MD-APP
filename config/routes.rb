@@ -31,6 +31,7 @@ Rails.application.routes.draw do
   # resources :invoicing, only: [:index, :update]
   resources :invoicing
   resources :taxes
+  resources :charge
 
   resources :requests do
     member do

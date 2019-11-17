@@ -16,13 +16,14 @@ class CartsController < ApplicationController
   def index
     add_breadcrumb 'shopping cart', carts_path
 
-    @carts = Cart.where('user_id =?', current_user.id)    
+    @carts = Cart.where('user_id =?', current_user.id)
     @pagy, @carts = pagy(@carts)
   end
 
   # GET /articles/1
   # GET /articles/1.json
-  def show; end
+  def show
+  end
 
   # GET /articles/new
   def new
