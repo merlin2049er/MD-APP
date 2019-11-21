@@ -2,8 +2,6 @@ class ChargeController < ApplicationController
 
   before_action :authenticate_user!
 
-
-
 #
   def index
     # Set your secret key: remember to change this to your live secret key in production
@@ -22,5 +20,52 @@ class ChargeController < ApplicationController
 
   end
 
+
+  def add_card
+      if current_user.stripe_id.blank?
+        customer = Stripe::Customer.create(
+          email: current_user.email
+        )
+        current_user.stripe_id = customer.id
+        current_user.save
+
+        customer.sources.create(source: params[:stripeToken])
+      else
+        customer = Stripe::Customer.retrieve(current_user.stripe_id)
+        customer.source = params[:stripeToken]
+        customer.save
+      end
+
+      flash[:notice] = "Your card is saved!"
+      redirect_to payment_method_path
+    rescue Stripe::CardError => e
+      flash[:alert] = e.message
+      redirect_to payment_method_path
+    end
+
+   def charge(service, order)
+      if !order.user.stripe_id.blank?
+        customer = Stripe::Customer.retrieve(order.user.stripe_id)
+        charge   = Stripe::Charge.create(
+          :customer    => customer.id,
+          :amount      => (order.total * 100).to_i,
+          :description => service.name + ": " + service.description,
+          :currency    => "usd",
+          :transfer_data => {
+            amount: (order.total * 80).to_i,
+            destination: service.store.user.merchant_id,
+          }
+        )
+
+        if charge
+          flash[:notice] = "Order made and paid"
+        else
+          flash[:alert] = "Payment error on the order 😞"
+        end
+      end
+
+    rescue Stripe::CardError => e
+      flash[:alert] = e.message
+    end
 
 end
