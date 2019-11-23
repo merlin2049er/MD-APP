@@ -4,8 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <script src="https://js.stripe.com/v3/"></script>
-
   <% if Rails.env.production? %>
     <!-- Global site tag (gtag.js) - Google Analytics -->
      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-40488478-2"></script>
@@ -33,7 +31,7 @@
 
   <title>MASSDUMP</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true, 'rails.validations' => true %>
+  <%= javascript_include_tag 'application', 'https://js.stripe.com/v3/', 'data-turbolinks-track' => true, 'rails.validations' => true %>
   <%= csrf_meta_tags %>
 
 
