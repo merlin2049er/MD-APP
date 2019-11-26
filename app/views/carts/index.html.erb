@@ -36,7 +36,7 @@
         <th>Funded</th>
         <th>Action</th>
 
-        <th>Status</th>
+        <th>Status (Payment due)</th>
 
       </tr>
       </thead>
@@ -73,27 +73,14 @@
           <td> <%= link_to 'Remove', cart, method: :delete, data: { confirm: 'Are you sure?' } %>   </td>
         <% else %>
 
-        <!--    <%  if not cart.invoice.blank? %>
-            <td> <%= '......'  %> </td>
-          <% else %>
-          <td> <%= '...'  %> </td>
-            <% end %> -->
 
-            <td> <a href="" data-toggle="modal" data-target="#exampleModal">Pay now</a>  </td>
+
+            <td>   </td>
 
         <% end %>
              <td>
-               <p id="clock"></p>
-               <script>
-                 countdown = <%= product.enddate  %>
-  var end = new Date(countdown),
-      sec = 1000,
-      min = sec * 60,
-      hour = min * 60,
-      day = hour * 24,
-      timer;
-</script>
-
+               <a href="" data-toggle="modal" data-target="#exampleModal">Pay now</a>
+               <p id="countdown"></p>
       </td>
         </tr>
       <% end %>
@@ -233,38 +220,35 @@
 </script>
 
 <script type="text/javascript">
-  function remain() {
-      var now = new Date(),
-          between = end - now;
+// Set the date we're counting down to
 
-      var days = Math.floor(between / day),
-          hours = Math.floor((between % day) / hour),
-          minutes = Math.floor((between % hour) / min),
-          seconds = Math.floor((between % min) / sec);
+ var countDownDate = new Date("2019-12-26 15:37:25").getTime();
+//    var countDownDate = new Date(my_enddate).getTime();
 
-      var dayString = 'days ',
-          hourString = 'hrs ',
-          minString = 'mins ',
-          secString = 'secs ';
 
-      if (days == 1) {
-          dayString = 'day ';
-      };
-      if (hours == 1) {
-          hourString = 'hr ';
-      };
-      if (minutes == 1) {
-          minString = 'min ';
-      };
-      if (seconds == 1) {
-          secString = 'sec ';
-      };
-      var clock = days + dayString + hours + hourString + minutes + minString + seconds + secString;
-      document.getElementById("clock").innerHTML = clock;
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Output the result in an element with id="demo"
+  document.getElementById("countdown").innerHTML =  days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is over, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countdown").innerHTML = "EXPIRED";
   }
-
-  timer = setInterval(function () {
-      remain();
-  }, 1000);
-
+}, 1000);
 </script>
