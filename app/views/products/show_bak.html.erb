@@ -12,34 +12,38 @@
     <div id="Product" class="tab-pane fade in active">
 
   <H2><%= @product.title %></H2>
-  <% if @remaining == 0 %>
-  <%= flash.now[:warning]= 'All gone!' %>
+  <% if @remaining == 0 %> All gone!</br>
 
   <% elsif @remaining == 1 %>
 
    <!-- notify of last item in stock to complete group buy -->
-   <%= flash.now[:warning]= 'This is the last remaining product required to complete the group order.  By adding it to your cart, it will complete the order for the campaign.' %>
+   <%#= flash.now[:warning]= 'This is the last remaining product required to complete the group order.  By adding it to your cart, it will complete the order for the campaign.' %>
 
     <%= form_tag add_to_cart_product_path(@product.id), method: :post do %>
-    <% if Time.now >= @product.startdate && Time.now <= @product.enddate %>
-
        Quantity: <%= number_field_tag :qty, 1, :min => 1, :max => @remaining %>
 
       <%= submit_tag "Add to cart",  data: { confirm: "Are you sure you want to add #{@product.title} to your cart?" } %>
-<%end %>
+    <!--  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#AddtoCartModalCenter">
+        Add to Cart
+      </button> -->
+
 
     <% end %>
-
 
     </br>
   <% else %>
 
   <%= form_tag add_to_cart_product_path(@product.id), method: :post do %>
-  <% if Time.now >= @product.startdate && Time.now <= @product.enddate %>
-
      Quantity: <%= number_field_tag :qty, 1, :min => 1, :max => @remaining %>
   <%= submit_tag "Add to cart",  data: { confirm: "Are you sure you want to add #{@product.title} to your cart?" } %>
-  <% end %>
+ <!--  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#AddtoCartModalCenter">
+    Add to Cart
+  </button> -->
+
+
+    <%#= form_for :cart do |f| %>
+    <!--  Quantity: <%#= f.number_field :qty, :value => 1, :min => 1, :max => @remaining %> -->
+    <%#= f.submit "Add to cart" %>
 
     <% end %>
     </br>
@@ -52,7 +56,7 @@
     <% end_time = @product.enddate %>
 
 
-    System time: <%= time_now = Time.now%>.<br/>
+    System time: <%= time_now = Time.now %>.<br/>
     <!-- End Date: <%= @product.enddate %> <br/> -->
 
     <% if @product.active == true && time_now <= end_time %>
@@ -167,3 +171,28 @@
   <div class="alert alert-warning" role="alert">You must be signed in to see the product.</div>
 
 <% end %>
+
+
+<!-- Button trigger modal -->
+
+<!-- Modal
+<div class="modal fade" id="AddtoCartModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Please confirm...</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to add <%= @product.title %> to your cart?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+-->
