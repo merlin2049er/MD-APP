@@ -1,7 +1,6 @@
 
 <% if user_signed_in? %>
 
-
 <div class="table-responsive">
 <!--
 <div class="panel panel-default">
@@ -82,7 +81,7 @@
         <% end %>
              <td>
                <a class="paynow" href="" data-toggle="modal" data-target="#exampleModal">Pay now</a>
-               <p class="countdown"> </p>
+               <p class="<%= cart.product_id %>"></p>
       </td>
         </tr>
       <% end %>
@@ -221,12 +220,10 @@
 
 </script>
 
-<script type="text/javascript">
-
+<script>
 // Set the date we're counting down to
 
- var countDownDate = new Date("2019-11-27 15:37:25").getTime();
-
+var countDownDate = new Date("Dec,26, 2019 15:37:25").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -244,34 +241,18 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Output the result in an element with id="demo"
- //  document.getElementsByClassName("countdown").innerHTML =  days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
+  var z  =  <%= @carts.map(&:product_id)%>   ;
 
-  var z = document.getElementsByClassName("countdown");
-
-  var i;
-for (i = 0; i < z.length; i++) {
-  z[i].innerHTML =  days + "d " + hours + "h "
-   + minutes + "m " + seconds + "s ";
-}
+  //  console.log("===="+z);
+  for (var i = 0; i < z.length; i++) {
+    // console.log("=iiiii==="+z[i]);
+    $("."+z[i]+"").html( days + "d " + hours + "h " + minutes + "m ");
+  }
 
   // If the count down is over, write some text
   if (distance < 0) {
     clearInterval(x);
-  var z =  document.getElementsByClassName("paynow");
-
-  var i;
-for (i = 0; i < z.length; i++) {
-  z[i].innerHTML = "";
-}
-
-  var z =  document.getElementsByClassName("countdown");
-
-  var i;
-for (i = 0; i < z.length; i++) {
-  z[i].innerHTML = "Expired.";
-
+    document.getElementsByClassName("countdown").innerHTML = "EXPIRED";
   }
 }, 1000);
-
 </script>
