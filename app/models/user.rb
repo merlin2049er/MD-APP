@@ -12,7 +12,22 @@ class User < ActiveRecord::Base
   # add cart here
   # has_and_belongs_to_many :product
 
-  acts_as_commontator
+  #acts_as_commontator
+   include TheComments::User
+
+   # IT'S JUST AN EXAMPLE OF ANY ROLE SYSTEM
+ def admin?
+   self == User.first
+ end
+
+ # YOU HAVE TO IMPLEMENT YOUR ROLE POLICY FOR COMMENTS HERE
+ def comments_admin?
+   admin?
+ end
+
+ def comments_moderator? comment
+   id == comment.holder_id
+ end
 
   def self.new_with_session(params, session)
     super.tap do |user|

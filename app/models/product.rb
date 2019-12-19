@@ -10,7 +10,9 @@ class Product < ActiveRecord::Base
   include Elasticsearch::Model::Callbacks
   is_impressionable
 
-  acts_as_commontable
+  #acts_as_commontable
+  include TheComments::Commentable
+
   after_initialize :set_defaults
 
   # has_and_belongs_to_many :users
@@ -42,6 +44,20 @@ class Product < ActiveRecord::Base
 
   # hopefully this works
   #  validates_numericality_of :qty, less_than_or_equal_to: 10, greater_than: 0
+
+  def commentable_title
+     "Undefined Post Title"
+   end
+
+   def commentable_url
+     "#"
+   end
+
+   def commentable_state
+     "published"
+   end
+
+
 
   def set_defaults
     self.msrp ||= 0.0

@@ -9,7 +9,7 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-  
+
 //= require jquery3
 //= require jquery_ujs
 //= require bootstrap-sprockets
@@ -18,4 +18,5 @@
 //= require rails.validations
 //= require rails.validations.simple_form
 //= require cocoon
+//= require the_comments
 //= require_tree .

@@ -155,7 +155,7 @@
       <H2><%= @product.title %></H2>
 
       <div class="well well-sm">
-        <%= commontator_thread(@product) %>
+        <%= render partial: 'the_comments/tree', locals: { commentable: @product, comments_tree: @comments } %>
       </div>
 
     </div>
