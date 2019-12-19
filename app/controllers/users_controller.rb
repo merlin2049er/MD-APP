@@ -3,7 +3,6 @@
 class UsersController < ApplicationController
   include Pagy::Backend
 
-  # before_filter :authenticate_admin!, :except => [:show]
   before_action :authenticate_user!
   add_breadcrumb 'MASSDUMP', :root_path
 
