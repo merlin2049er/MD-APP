@@ -109,4 +109,7 @@ class PagesController < ApplicationController
     @inivitesusers = Invite
     @pagy, @inivitesusers = pagy(@inivitesusers)
   end
+
+  
+
 end
