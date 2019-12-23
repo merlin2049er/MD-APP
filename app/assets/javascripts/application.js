@@ -18,5 +18,5 @@
 //= require rails.validations
 //= require rails.validations.simple_form
 //= require cocoon
-//= require the_comments
+//= require commontator/application
 //= require_tree .

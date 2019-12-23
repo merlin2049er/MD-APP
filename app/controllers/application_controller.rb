@@ -7,8 +7,6 @@ class ApplicationController < ActionController::Base
 
   # include PubicActivity::StoreController
 
-  include TheComments::ViewToken
-
   helper_method :all_categories
   helper_method :all_products
   helper_method :all_notifications
