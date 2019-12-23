@@ -93,11 +93,11 @@ gem 'breadcrumbs_on_rails'
 
 gem 'impressionist'
 
- # gem 'commontator'
+gem 'commontator'
 
- gem 'the_comments', '~> 2.3', '>= 2.3.1'
- gem 'haml'                # or gem 'slim'
- gem 'awesome_nested_set'  # or same gem
+# gem 'the_comments', '~> 2.3', '>= 2.3.1'
+# gem 'haml'                # or gem 'slim'
+# gem 'awesome_nested_set'  # or same gem
 
 
 gem 'tzinfo-data'

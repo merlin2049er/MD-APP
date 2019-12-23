@@ -10,8 +10,8 @@ class Product < ActiveRecord::Base
   include Elasticsearch::Model::Callbacks
   is_impressionable
 
-  #acts_as_commontable
-  include TheComments::Commentable
+  acts_as_commontable
+  #include TheComments::Commentable
 
   after_initialize :set_defaults
 
