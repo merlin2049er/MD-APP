@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   include Pagy::Backend
 
   before_action :authenticate_user!
-  add_breadcrumb 'MASSDUMP', :root_path
+#  add_breadcrumb 'MASSDUMP', :root_path
 
   def index
     add_breadcrumb 'Users'

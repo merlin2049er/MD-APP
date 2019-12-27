@@ -6,7 +6,7 @@ class TransactionsController < ApplicationController
   before_action :set_transaction, only: %i[show edit update destroy]
   before_action :authenticate_user!
 
-  add_breadcrumb 'MASSDUMP', :root_path
+  # add_breadcrumb 'MASSDUMP', :root_path
   # GET /transactions
   # GET /transactions.json
   def index

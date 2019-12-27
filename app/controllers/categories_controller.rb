@@ -6,7 +6,7 @@ class CategoriesController < ApplicationController
   before_action :set_category, only: %i[show edit update destroy]
   before_action :authenticate_user!
 
-  add_breadcrumb 'MASSDUMP', :root_path
+  # add_breadcrumb 'MASSDUMP', :root_path
 
   # GET /categories
   # GET /categories.json
@@ -38,7 +38,7 @@ class CategoriesController < ApplicationController
     # @products = @category.products.where( 'enddate > ?', todaydate )
 
     # add_breadcrumb 'category / ' << @title, categories_path  # frozen string - had to remove it?
-    
+
   end
 
   # GET /categories/new

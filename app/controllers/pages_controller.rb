@@ -3,10 +3,11 @@
 class PagesController < ApplicationController
   include Pagy::Backend
 
-  add_breadcrumb 'MASSDUMP', :root_path
+  # this is crashing commented it out
+  #  add_breadcrumb 'MASSDUMP', :root_path
 
   def index
-    add_breadcrumb 'home', index_path
+  #   add_breadcrumb 'home', index_path
 
     @recent_products = Product.published.most_recent(6)
     @last_chance = Product.published.ending_soonest(6)

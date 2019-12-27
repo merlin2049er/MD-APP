@@ -7,7 +7,7 @@ class CartsController < ApplicationController
   before_action :set_cart, only: %i[create destroy]
   before_action :authenticate_user!
 
-  add_breadcrumb 'MASSDUMP', :root_path
+  # add_breadcrumb 'MASSDUMP', :root_path
 
   # Product.unscoped.where(:funded => 'true')
 
