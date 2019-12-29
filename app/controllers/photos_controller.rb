@@ -6,9 +6,8 @@ class PhotosController < ApplicationController
   before_action :set_photos, only: %i[show edit update destroy]
   before_action :authenticate_user!
 
-  add_breadcrumb 'MASSDUMP',  :root_path
-
   def index
+    add_breadcrumb 'MASSDUMP', :root_path
     add_breadcrumb 'Photos', :photos_path
 
     @total = Photo.count
@@ -16,15 +15,18 @@ class PhotosController < ApplicationController
   end
 
   def show
+    add_breadcrumb 'MASSDUMP', :root_path
     add_breadcrumb 'Photos', :photos_path
   end
 
   def new
+    add_breadcrumb 'MASSDUMP', :root_path
     add_breadcrumb 'Photos', :photos_path
     @photo = Photo.new
   end
 
   def edit
+    add_breadcrumb 'MASSDUMP', :root_path
     add_breadcrumb 'Photos', :photos_path
   end
 

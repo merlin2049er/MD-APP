@@ -8,8 +8,6 @@ class InvoicingController < ApplicationController
 
   def index
     add_breadcrumb 'MASSDUMP',  :root_path
-
-
     add_breadcrumb "invoicing", :invoicing_index_path
 
   #  @totalinvoices = Cart.where('processing' => true ).count

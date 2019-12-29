@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class ConfirmationsController < Devise::ConfirmationsController
-  add_breadcrumb 'MASSDUMP', :root_path
+  # add_breadcrumb 'MASSDUMP', :root_path
   add_breadcrumb 'CONFIRMATION', :user_confirmation_path
 
   private
