@@ -8,13 +8,15 @@ class CartsController < ApplicationController
   before_action :authenticate_user!
 
   # add_breadcrumb 'MASSDUMP', :root_path
+  add_breadcrumb 'MASSDUMP', :root_path
+
 
   # Product.unscoped.where(:funded => 'true')
 
   # GET /articles
   # GET /articles.json
   def index
-    add_breadcrumb 'shopping cart', carts_path
+    add_breadcrumb 'shopping cart', :carts_path
 
     @carts = Cart.where('user_id =?', current_user.id)
     @pagy, @carts = pagy(@carts)
@@ -31,7 +33,8 @@ class CartsController < ApplicationController
   end
 
   # GET /articles/1/edit
-  def edit; end
+  def edit
+  end
 
   def create
     @cart = Cart.new

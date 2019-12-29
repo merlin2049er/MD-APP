@@ -4,10 +4,10 @@ class PagesController < ApplicationController
   include Pagy::Backend
 
   # this is crashing commented it out
-  #  add_breadcrumb 'MASSDUMP', :root_path
+  #add_breadcrumb 'MASSDUMP', :root_path
 
   def index
-  #   add_breadcrumb 'home', index_path
+     add_breadcrumb 'home', :index_path
 
     @recent_products = Product.published.most_recent(6)
     @last_chance = Product.published.ending_soonest(6)
@@ -15,54 +15,54 @@ class PagesController < ApplicationController
   end
 
   def contact
-    add_breadcrumb 'contact', pages_contact_path
+    add_breadcrumb 'contact', :pages_contact_path
     @contact = Contact.new
   end
 
   def invite
-    add_breadcrumb 'invite', pages_invite_path
+    add_breadcrumb 'invite', :pages_invite_path
     @invite = Invite.new
     @message = 'Hi, please check out this awesome site and get in on the savings.'
   end
 
   def about
-    add_breadcrumb 'about', about_path
+    add_breadcrumb 'about', :about_path
   end
 
   def random
-    add_breadcrumb 'random', random_path
+    add_breadcrumb 'random', :random_path
 
     @random = Product.published.limit(12).order("RANDOM()")
 
   end
 
   def error
-    add_breadcrumb 'error', error_path
+    add_breadcrumb 'error', :error_path
   end
 
   def terms
-    add_breadcrumb 'terms', terms_path
+    add_breadcrumb 'terms', :terms_path
   end
 
   def privacy
-    add_breadcrumb 'privacy', privacy_path
+    add_breadcrumb 'privacy', :privacy_path
   end
 
   def cookies
-    add_breadcrumb 'cookies', cookies_path
+    add_breadcrumb 'cookies', :cookies_path
   end
 
   def jobs
-     add_breadcrumb "jobs", jobs_path
+     add_breadcrumb "jobs", :jobs_path
   end
 
 
   def faq
-    add_breadcrumb 'faq', terms_path
+    add_breadcrumb 'faq', :terms_path
   end
 
   def chartsgraphs
-    add_breadcrumb 'Charts and Graphs', chartsgraphs_path
+    add_breadcrumb 'Charts and Graphs', :chartsgraphs_path
 
     Chartkick.options = {
       height: '400px',
@@ -71,7 +71,7 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-    add_breadcrumb 'dashboard', dashboard_path
+    add_breadcrumb 'dashboard', :dashboard_path
 
     # user model queries
     @superuser = User.where('admin' => true)
@@ -102,7 +102,7 @@ class PagesController < ApplicationController
   end
 
   def invitations
-    add_breadcrumb 'invitations', invitations_path
+    add_breadcrumb 'invitations', :invitations_path
     @totalinvites = Invite.count
 
     @totalregistered = 0

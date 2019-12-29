@@ -6,11 +6,11 @@ class TransactionsController < ApplicationController
   before_action :set_transaction, only: %i[show edit update destroy]
   before_action :authenticate_user!
 
-  # add_breadcrumb 'MASSDUMP', :root_path
+  add_breadcrumb 'MASSDUMP',  :root_path
   # GET /transactions
   # GET /transactions.json
   def index
-    add_breadcrumb 'transactions', transactions_path
+    add_breadcrumb 'transactions', :transactions_path
     # @transactions = Transaction.all
     @transactions = Transaction.where('user_id =?', current_user.id).order('created_at DESC')
     @pagy, @transactions = pagy(@transactions)
@@ -19,12 +19,12 @@ class TransactionsController < ApplicationController
   # GET /transactions/1
   # GET /transactions/1.json
   def show
-    add_breadcrumb 'transaction', transactions_path
+    add_breadcrumb 'transaction', :transactions_path
   end
 
   # GET /transactions/new
   def new
-    add_breadcrumb 'transaction', transactions_path
+    add_breadcrumb 'transaction', :transactions_path
 
     @transaction = Transaction.new
   end

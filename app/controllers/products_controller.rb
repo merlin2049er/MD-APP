@@ -8,14 +8,14 @@ class ProductsController < ApplicationController
  before_action :set_product, only: [ :show, :edit, :update, :destroy ]
  before_action  :authenticate_user!
 
- # add_breadcrumb 'MASSDUMP', :root_path
+ add_breadcrumb 'MASSDUMP',  :root_path
 
   # GET /products
   # GET /products.json
   def index
 
     @search = Product.published.search(params[:query] )
-    add_breadcrumb 'products', products_path
+    add_breadcrumb 'products', :products_path
 
     @total_products = Product.published.count
     require 'time'
@@ -35,9 +35,9 @@ class ProductsController < ApplicationController
   def show
    @product = Product.find_by_id(params[:id])
 
-   puts'=========',@product.inspect
+   #puts'=========',@product.inspect
 
-   add_breadcrumb 'product', products_path
+   add_breadcrumb 'product', :products_path
    commontator_thread_show(@product)
   # @comments = @product.comments.with_state([:draft, :published])
 
@@ -67,13 +67,13 @@ end
 
   # GET /products/new
   def new
-    add_breadcrumb 'product', products_path
+    add_breadcrumb 'product', :products_path
     @product = Product.new
   end
 
   # GET /products/1/edit
   def edit
-    add_breadcrumb 'product', products_path
+    add_breadcrumb 'product', :products_path
   end
 
   # POST /products

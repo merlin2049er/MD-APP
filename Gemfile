@@ -117,6 +117,9 @@ gem 'validates_timeliness', '~> 4.1', '>= 4.1.1'
 gem 'breadcrumbs_on_rails'
 #gem 'breadcrumbs_on_rails', '~> 3.0', '>= 3.0.1'
 
+#gem 'breadcrumbs_rails'
+
+
 #gem 'impressionist'
 gem 'impressionist', '~> 1.6', '>= 1.6.1'
 

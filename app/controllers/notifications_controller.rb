@@ -6,12 +6,12 @@ class NotificationsController < ApplicationController
   before_action :set_notification, only: %i[show edit update destroy]
   before_action :authenticate_user!
 
-#  add_breadcrumb 'MASSDUMP', :root_path
 
   # GET /notifications
   # GET /notifications.json
   def index
-    add_breadcrumb 'notifications', notifications_path
+    add_breadcrumb 'MASSDUMP', :root_path
+    add_breadcrumb 'notifications', :notifications_path
 
     @notifications = Notification.where('user_id =?', current_user.id).order('created_at DESC')
     @pagy, @notifications = pagy(@notifications)
@@ -20,18 +20,21 @@ class NotificationsController < ApplicationController
   # GET /notifications/1
   # GET /notifications/1.json
   def show
-    add_breadcrumb 'notification', notifications_path
+    add_breadcrumb 'MASSDUMP', :root_path
+    add_breadcrumb 'notification', :notifications_path
   end
 
   # GET /notifications/new
   def new
-    add_breadcrumb 'notification', notifications_path
+    add_breadcrumb 'MASSDUMP', :root_path
+    add_breadcrumb 'notification', :notifications_path
     @notification = Notification.new
   end
 
   # GET /notifications/1/edit
   def edit
-    add_breadcrumb 'notification', notifications_path
+    add_breadcrumb 'MASSDUMP', :root_path
+    add_breadcrumb 'notification', :notifications_path
   end
 
   # POST /notifications

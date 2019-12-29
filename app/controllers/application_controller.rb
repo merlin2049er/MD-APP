@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  #add_breadcrumb 'MASSDUMP', :root_path
+
   # include PubicActivity::StoreController
 
   helper_method :all_categories

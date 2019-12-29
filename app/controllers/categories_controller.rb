@@ -6,12 +6,12 @@ class CategoriesController < ApplicationController
   before_action :set_category, only: %i[show edit update destroy]
   before_action :authenticate_user!
 
-  # add_breadcrumb 'MASSDUMP', :root_path
+  # add_breadcrumb 'MASSDUMP',  :root_path
 
   # GET /categories
   # GET /categories.json
   def index
-    add_breadcrumb 'categories', categories_path
+    add_breadcrumb 'categories', :categories_path
 
     @categories = Category.all
     # @pagy, @categories = Category.order(:name).pagy(page: params[:page] , per_page: 10)
@@ -43,13 +43,13 @@ class CategoriesController < ApplicationController
 
   # GET /categories/new
   def new
-    add_breadcrumb 'category', categories_path
+    add_breadcrumb 'category', :categories_path
     @category = Category.new
   end
 
   # GET /categories/1/edit
   def edit
-    add_breadcrumb 'category', categories_path
+    add_breadcrumb 'category', :categories_path
   end
 
   # POST /categories
