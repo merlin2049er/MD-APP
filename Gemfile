@@ -156,10 +156,14 @@ gem "sentry-raven"
 
 gem "cocoon"
 
+gem 'stripe', '~> 5.12'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'sqlite3', '~> 1.3.0'
+
 end
 
 group :development do
@@ -175,7 +179,7 @@ group :development do
 end
 
 group :production do
- 
+
   gem 'rails_12factor', '~> 0.0.3'
 end
 
