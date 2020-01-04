@@ -5,8 +5,8 @@ class CreateProducts < ActiveRecord::Migration
     create_table :products do |t|
       t.string  :title
       t.text    :template
-      t.string  :price
-      t.string  :msrp
+      t.decimal  :price
+      t.decimal  :msrp
       t.date    :enddate
 
       t.timestamps null: false
