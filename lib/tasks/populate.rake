@@ -8,9 +8,9 @@ namespace :db do
     [Category, Product, Cart, User].each(&:delete_all)
     [Photo].each(&:delete_all)
     [Activity].each(&:delete_all)
-    [Commontator_comment].each(&:delete_all)
-    [Commontator_subscription].each(&:delete_all)
-    [Commontator_thread].each(&:delete_all)
+#    [Commontator_comment].each(&:delete_all)
+#    [Commontator_subscription].each(&:delete_all)
+#    [Commontator_thread].each(&:delete_all)
     [Contact].each(&:delete_all)
     [Impression].each(&:delete_all)
     [Invite].each(&:delete_all)
@@ -33,8 +33,8 @@ namespace :db do
         product.funded = [false]
         product.category_id = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
         product.qty = [5, 10, 15]
-        product.startdate = ['2019-12-12']
-        product.enddate = ['2020-1-12']
+        product.startdate = ['2020-1-4']
+        product.enddate = ['2020-2-4']
         product.picurl = ['/photo_not_available.png']
       end
     end
