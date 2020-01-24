@@ -26,6 +26,6 @@ tax_list = [
 [ 'YT'	,   0.05]
 ]
 
-tax_list.each do |prov, rate|
-  Taxes.create( prov: prov_id, rate: tax_rate )
+tax_list.each do |tax|
+  Tax.create( prov_id: tax[0], tax_rate: tax[1] )
 end

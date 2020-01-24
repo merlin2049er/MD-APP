@@ -5,7 +5,7 @@ namespace :db do
   task populate_categories: :environment do
     require 'populator'
 
-    [Category, Product, Cart, User].each(&:delete_all)
+    [Category ].each(&:delete_all)
 
     Category.populate 15 do |category|
       category.name = Populator.words(1..2).titleize
