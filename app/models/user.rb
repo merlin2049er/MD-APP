@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   # add cart here
   # has_and_belongs_to_many :product
 
-  acts_as_commontator
+  #acts_as_commontator
   # include TheComments::User
 
    # IT'S JUST AN EXAMPLE OF ANY ROLE SYSTEM

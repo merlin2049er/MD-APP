@@ -103,9 +103,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    commontator (6.1.1)
-      rails (>= 5.0)
-      will_paginate
     compass (1.0.3)
       chunky_png (~> 1.2)
       compass-core (~> 1.0.2)
@@ -366,7 +363,6 @@ GEM
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.4)
-    will_paginate (3.2.1)
 
 PLATFORMS
   ruby
@@ -388,7 +384,6 @@ DEPENDENCIES
   cloudinary
   cocoon
   coffee-rails (~> 4.1.0)
-  commontator
   compass-rails
   country_select
   devise

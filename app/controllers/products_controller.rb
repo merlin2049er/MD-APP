@@ -39,7 +39,8 @@ class ProductsController < ApplicationController
 
    #puts'=========',@product.inspect
 
-   commontator_thread_show(@product)
+  # insert comments here...
+  # commontator_thread_show(@product)
   # @comments = @product.comments.with_state([:draft, :published])
 
    impressionist(@product)
