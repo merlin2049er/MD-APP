@@ -24,6 +24,7 @@ gem 'rails', '5.0.7'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -37,6 +38,9 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 
 # gem 'jquery-rails', '~> 2.3.0'
+
+# it conflicts with compass and sass {but needed for commontator?}
+# gem 'sassc-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
@@ -93,7 +97,7 @@ gem 'breadcrumbs_on_rails'
 
 gem 'impressionist'
 
- gem 'commontator'
+gem 'commontator'
 
 gem 'tzinfo-data'
 
