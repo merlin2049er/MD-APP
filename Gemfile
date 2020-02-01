@@ -72,7 +72,7 @@ gem 'bootstrap-sass-extras', '~> 0.0.7'
 gem 'font-awesome-sass', '~> 4.6.2'
 
 # gem 'simple_form', '~> 3.2', '>= 3.2.1'
-gem 'simple_form'
+gem "simple_form"
 
 # forest admin
 # gem 'forest_liana'  -- no support for it
