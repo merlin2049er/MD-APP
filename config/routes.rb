@@ -32,7 +32,14 @@ Rails.application.routes.draw do
   resources :invoicing
   resources :taxes
 
-post 'charge',to:"charge#index", as: :charge
+ post 'charge',to:"charge#index", as: :charge
+ 
+ scope '/checkout' do
+   post 'create', to :'checkout#create' as: 'checkout_create'
+   post 'cancel', to :'checkout#cancel' as: 'checkout_cancel'
+   post 'success', to :'checkout#success' as: 'checkout_success'
+ end
+  
   resources :requests do
     member do
       put 'like', to: 'requests#upvote'
