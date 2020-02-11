@@ -35,9 +35,9 @@ Rails.application.routes.draw do
  post 'charge',to:"charge#index", as: :charge
  
  scope '/checkout' do
-   post 'create', to :'checkout#create' as: 'checkout_create'
-   post 'cancel', to :'checkout#cancel' as: 'checkout_cancel'
-   post 'success', to :'checkout#success' as: 'checkout_success'
+   post 'create', to: 'checkout#create',   as: 'checkout_create'
+    get 'cancel', to: 'checkout#cancel',   as: 'checkout_cancel'
+    get 'success', to: 'checkout#success', as: 'checkout_success'
  end
   
   resources :requests do
