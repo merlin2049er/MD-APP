@@ -125,12 +125,24 @@
 
   <%= form_for :stripe , url: charge_url,:html=>{:id=>"payment-form"} do |f| %>
   <div class="form-row">
-    <label for="card-element">
-      Credit or debit card
-    </label>
-    <div id="card-element">
-      <!-- A Stripe Element will be inserted here. -->
-    </div>
+    	<label>Enter name </label>
+			<input type="" name="stripe[name]" placeholder="enter name here ">
+    	<label>Email </label>
+			<input type="" name="stripe[email]" placeholder="Email name here ">
+    	<label>Address </label>
+			<input type="" name="stripe[address]" placeholder="Address name here ">
+      <label>City </label>
+		  <input type="" name="stripe[city]" placeholder="City name here ">
+      <label>State </label>
+			<input type="" name="stripe[state]" placeholder="State name here ">
+      <label>Country </label>
+			<input type="" name="stripe[country]" placeholder="Country name here ">
+      <label for="card-element">
+        Credit or debit card
+      </label>
+      <div id="card-element">
+         <!-- A Stripe Element will be inserted here. -->
+      </div>
 
     <!-- Used to display Element errors. -->
     <div id="card-errors" role="alert"></div>
