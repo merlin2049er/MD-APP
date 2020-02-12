@@ -81,7 +81,7 @@
         <% end %>
              <td>
               <!-- <a class="paynow" href="" data-toggle="modal" data-target="#exampleModal">Pay now</a>  -->
-              <%= button_to 'Buy now', checkout_create_path, method: :post, params: {id: cart.product_id}, remote: true %>
+              <%= button_to 'Pay now', checkout_create_path, method: :post, params: {id: cart.product_id}, remote: true %>
                <p class="<%= cart.product_id %>"></p>
       </td>
         </tr>
