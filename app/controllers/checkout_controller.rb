@@ -14,7 +14,7 @@ class CheckoutController < ApplicationController
 # setup a stripe payment for session
 #fix product amount and add qty
   @session = Stripe::Checkout::Session.create(
-    payment_method_type: ['card'],
+    payment_method_types: ['card'],
     line_items: [{
       name: product.title,
       description:  product.template,
