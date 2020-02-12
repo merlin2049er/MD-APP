@@ -22,7 +22,7 @@ class CheckoutController < ApplicationController
       currency: 'cad',
       quantity: 1
       }],
-      success_url: checkout_success_url + '?session_id ={CHECKOUT_SESSION_ID}',
+      success_url: 'https://' + checkout_success_url + '?session_id ={CHECKOUT_SESSION_ID}',
       cancel_url: checkout_cancel_url
 
   )
