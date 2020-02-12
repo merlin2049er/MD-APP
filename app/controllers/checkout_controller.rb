@@ -18,7 +18,7 @@ class CheckoutController < ApplicationController
     line_items: [{
       name: product.title,
       description:  product.template,
-      amount: (product.price * 100),
+      amount: (product.price * 100).floor,
       currency: 'cad',
       quantity: 1
       }],
