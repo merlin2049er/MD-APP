@@ -35,6 +35,10 @@ class CheckoutController < ApplicationController
   end
 
   def cancel
+
+    render "cancel"
+    redirect_to: root_path 
+
   end
 
   def success
