@@ -37,7 +37,6 @@ class CheckoutController < ApplicationController
   def cancel
 
     render "cancel"
-    redirect_to: root_path 
 
   end
 

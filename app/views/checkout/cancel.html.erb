@@ -1,13 +1,13 @@
 <% if user_signed_in? %>
+<script> alert("Payment aborted."); </script>
 
-
-<p>Thank you for your payment.<br><br>
-Shipments begin after reciving payments from everyone in the campaign.
+<p>Your payment was cancelled.<br><br>
+The item is still in your cart, you can make a payment before the time elapses.
 </p>
 
 <%= debug @session %>
 <%= debug @payment_intent %>
- 
+
 
 <% else %>
 
