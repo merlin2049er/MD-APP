@@ -44,6 +44,11 @@ class CheckoutController < ApplicationController
     # quick and dirty
     # not a good method, use stripes webhooks for successful payment
 
+    if params[:session_id].nil?
+      redirect_to root_path
+      return
+    end
+
     @success = Stripe::Checkout::Session.retrieve(params[:session_id])
     @payment_intent = Stripe:payment_intent.retrieve(@session_payment_intent)
 
