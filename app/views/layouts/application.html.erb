@@ -26,12 +26,15 @@
             a.appendChild(r);
         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
+
+    <script src="https://js.stripe.com/v3/"></script>
+
  <% end %>
 
 
   <title>MASSDUMP</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'https://js.stripe.com/v3/', 'data-turbolinks-track' => true, 'rails.validations' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true, 'rails.validations' => true %>
   <%= csrf_meta_tags %>
 <!--  <%#= tag :meta, :name => "stripe-key", :content => STRIPE_PUBLIC_KEY %> -->
 
