@@ -1,0 +1,7 @@
+const stripe = Stripe('<%=Rails.configuration.stripe[:publishable_key] %> ');
+
+stripe.redirect_to({
+  sessionId: <'<%= @session.id %>'>
+}).then (function (result){
+  alert(result.error.message);
+});
