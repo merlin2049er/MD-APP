@@ -27,8 +27,8 @@ class CheckoutController < ApplicationController
       quantity: 1
       }],
 # avoid using sessions like this... use webhooks instead
-#     success_url: checkout_success_url + '?session_id ={CHECKOUT_SESSION_ID}',
-      success_url: checkout_success_url,
+      success_url: checkout_success_url + '?session_id ={CHECKOUT_SESSION_ID}',
+ #     success_url: checkout_success_url,
       cancel_url: checkout_cancel_url
 
   )
