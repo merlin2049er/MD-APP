@@ -3,7 +3,9 @@ class CheckoutController < ApplicationController
   def create
 
     product = Product.find(params[:id])
+    #cart = Cart.find(params[:id])
 
+    #if cart.nil?
     if product.nil?
       redirect_to root_path
       return
