@@ -21,7 +21,7 @@ class CheckoutController < ApplicationController
     line_items: [{
       name: product.title,
 #      description:  product.template,
-      images: [product.picurl],
+      images: ['https://cryptic-inlet-13518.herokuapp.com/' + product.picurl],
       amount: (product.price * 100).floor,
       currency: 'cad',
       quantity: 1
