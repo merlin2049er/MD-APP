@@ -26,7 +26,9 @@ class CheckoutController < ApplicationController
       currency: 'cad',
       quantity: 1
       }],
-      success_url: checkout_success_url + '?session_id ={CHECKOUT_SESSION_ID}',
+# avoid using sessions like this... use webhooks instead
+#     success_url: checkout_success_url + '?session_id ={CHECKOUT_SESSION_ID}',
+      success_url: checkout_success_url
       cancel_url: checkout_cancel_url
 
   )
@@ -45,13 +47,13 @@ class CheckoutController < ApplicationController
   end
 
   def success
-    # quick and dirty
-    # not a good method, use stripes webhooks for successful payment
+    
 
-    if params[:session_id].nil?
-      redirect_to root_path
-      return
-    end
+   # not sure if it returns a session id
+   # if params[:session_id].nil?
+   #   redirect_to root_path
+   #   return
+   # end
 
     @success = Stripe::Checkout::Session.retrieve(params[:session_id])
     @payment_intent = Stripe:payment_intent.retrieve(@session_payment_intent)
