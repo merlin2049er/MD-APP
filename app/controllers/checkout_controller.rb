@@ -16,6 +16,7 @@ class CheckoutController < ApplicationController
 # setup a stripe payment for session
 #fix product amount and add qty
   @session = Stripe::Checkout::Session.create(
+    billing_address_collection: 'required',
     payment_method_types: ['card'],
     line_items: [{
       name: product.title,
@@ -26,8 +27,7 @@ class CheckoutController < ApplicationController
       quantity: 1
       }],
       success_url: checkout_success_url + '?session_id ={CHECKOUT_SESSION_ID}',
-      cancel_url: checkout_cancel_url,
-      billingAddressCollection: 'required'
+      cancel_url: checkout_cancel_url
 
   )
 
