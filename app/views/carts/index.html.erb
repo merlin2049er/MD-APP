@@ -66,7 +66,7 @@
           <td> <%=  number_to_currency(total = product.price * cart.qty)  %>  </td>
           <td> <%=  number_to_currency(taxes = Calctax.Calctax(total, Lookup.getrate(current_user)) )  %> </td>
           <td> <%=  number_to_currency(total + taxes) =%> </td>
-          <td> <%=  product.enddate  %>  </td>
+	  <td> <%=  product.enddate  %>  <script> var endate = <%=  product.enddate  %>  </script>  </td>
           <td> <%=  product.funded  %>  </td>
 
 
@@ -163,7 +163,8 @@
 <script>
 // Set the date we're counting down to
 
-var countDownDate = new Date("2020-01-28 15:37:25").getTime();
+// var countDownDate = new Date("2020-01-28 15:37:25").getTime();	
+var countDownDate = new Date(enddate).getTime();	
 
 // Update the count down every 1 second
 var x = setInterval(function() {
