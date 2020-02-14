@@ -66,7 +66,7 @@
           <td> <%=  number_to_currency(total = product.price * cart.qty)  %>  </td>
           <td> <%=  number_to_currency(taxes = Calctax.Calctax(total, Lookup.getrate(current_user)) )  %> </td>
           <td> <%=  number_to_currency(total + taxes) =%> </td>
-	  <td> <%=  product.enddate %>  <script > var enddate = <%=  product.enddate %> ;console.log(enddate); </script> </td>
+	  <td> <%=  product.enddate %>  <script > var enddate = <%=  product.enddate.to_json.html_safe %> ;console.log(enddate); </script> </td>
           <td> <%=  product.funded  %> </td>
 
 
