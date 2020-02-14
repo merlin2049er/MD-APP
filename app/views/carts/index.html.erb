@@ -83,11 +83,13 @@
               <!-- <a class="paynow" href="" data-toggle="modal" data-target="#exampleModal">Pay now</a>  -->
 
             <!--   <%= button_to 'Pay now', checkout_create_path, method: :post, params: {id: cart.product_id}, remote: true,  class: 'button button1'  %> -->
+
+
 	       <%= button_to 'Pay now', checkout_create_path, method: :post, params: {id: cart.product_id}, remote: true %>
-		     
-		    
-		     
+
+
                <p class="<%= cart.product_id %>"></p>
+
       </td>
         </tr>
       <% end %>
@@ -111,81 +113,42 @@
 <% end %>
 
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Stripe Payment Gateway</h5>
-
-        <img src="/powered_by_stripe.png" alt="Powered by Stripe" >
-
-
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-
-
-  <%= form_for :stripe , url: charge_url,:html=>{:id=>"payment-form"} do |f| %>
-  <div class="form-row">
-    	<label>Enter name </label>
-			<input type="" name="stripe[name]" placeholder="enter name here ">
-    	<label>Email </label>
-			<input type="" name="stripe[email]" placeholder="Email name here ">
-    	<label>Address </label>
-			<input type="" name="stripe[address]" placeholder="Address name here ">
-      <label>City </label>
-		  <input type="" name="stripe[city]" placeholder="City name here ">
-      <label>State </label>
-			<input type="" name="stripe[state]" placeholder="State name here ">
-      <label>Country </label>
-			<input type="" name="stripe[country]" placeholder="Country name here ">
-      <label for="card-element">
-        Credit or debit card
-      </label>
-      <div id="card-element">
-         <!-- A Stripe Element will be inserted here. -->
-      </div>
-
-    <!-- Used to display Element errors. -->
-    <div id="card-errors" role="alert"></div>
-  </div>
-<br>
-  <button>Sumbit Payment</button>
-<% end %>
-
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
 <script>
 // Set the date we're counting down to
 
-// var countDownDate = new Date("2020-01-28 15:37:25").getTime();	
-var countDownDate = new Date(enddate).getTime();	
-// var countDownDate = enddate;	
-console.log(countDownDate);
+// var countDownDate = new Date("2020-01-28 15:37:25").getTime();
+var countDownDate = new Date(enddate).getTime() ;
+
+// var countDownDate = enddate;
+console.log("countdown date =" +countDownDate);
 
 // Update the count down every 1 second
 var x = setInterval(function() {
+console.log('x =' +x);
 
   // Get today's date and time
   var now = new Date().getTime();
 
+  console.log('now =' + now);
+
   // Find the distance between now and the count down date
   var distance = countDownDate - now;
 
+  console.log('distance = ' + distance);
+
+
   // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24))  ;
+  console.log('days = ' + days);
+
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  console.log('hours = ' + hours);
+
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  console.log('minutes = ' + minutes);
+
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  console.log('seconds = ' + seconds);
 
   // Output the result in an element with id="demo"
   var z  =  <%= @carts.map(&:product_id)%>   ;
@@ -197,9 +160,13 @@ var x = setInterval(function() {
   }
 
   // If the count down is over, write some text
-  if (distance < 0) {
+  if (distance > 0) {
+    console.log('distance = ' + distance);
+
     clearInterval(x);
     document.getElementsByClassName("countdown").innerHTML = "EXPIRED";
+    //  document.getElementsById("myBtn").disabled = true;
+
   }
 }, 1000);
 </script>
