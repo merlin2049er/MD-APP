@@ -1,6 +1,6 @@
 <!-- Find me in app/views/pages/index.html.erb -->
 
-<div class="container">
+
 
   <%#= current_user.inspect %>  <!-- for facebook troubleshooting -->
 
@@ -12,6 +12,7 @@
    <p>Sorry, we will be updating website with some new products shortly.</p>
    <% else %>
 
+<div class="container">
 	<div class="cards " >
 
     <% @recent_products.each do |p| %>
@@ -42,7 +43,7 @@
 </div>
 
 
-<div class="container">
+
 
   <h1 class="page-header">
    <small>Ending soon...</small>
@@ -51,6 +52,7 @@
 <p>Sorry, we will be updating website with some new products shortly.</p>
 <% else %>
 
+<div class="container">
 	<div class="cards" >
 
     <% @last_chance.each do |p| %>
