@@ -1,3 +1,30 @@
+<h2>Sign up</h2>
+
+<%= link_to "Sign up with Facebook", user_facebook_omniauth_authorize_path %><br>
+
+<div class="or-container">
+<hr class="or-hr">
+<div class="or">or</div>
+</div>
+
+<%= simple_form_for(resource, as: resource_name,  url: registration_path(resource_name), validate: true ) do |f| %>
+  <%= f.error_notification %>
+
+   <div class="form-inputs">
+
+
+    <%= f.input :email, required: true, autofocus: true , :validate => true  %>
+    <%= f.input :password, required: true,  :validate => true , hint: ("#{@minimum_password_length} characters minimum" if @validatable)  %>
+    <%= f.input :password_confirmation,  :validate => true , required: true  %>
+    </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
 
 <style>
 
@@ -26,30 +53,3 @@
     border-top: 1px solid #e4e6e8;
 }
 </style>
-
-<h2>Sign up</h2>
-
-<%= link_to "Sign up with Facebook", user_facebook_omniauth_authorize_path %></br>
-
-<div class="or-container">
-<hr class="or-hr">
-<div class="or">or</div>
-</div>
-
-<%= simple_form_for(resource, as: resource_name,  url: registration_path(resource_name), validate: true ) do |f| %>
-  <%= f.error_notification %>
-
-   <div class="form-inputs">
-
-
-    <%= f.input :email, required: true, autofocus: true , :validate => true  %>
-    <%= f.input :password, required: true,  :validate => true , hint: ("#{@minimum_password_length} characters minimum" if @validatable)  %>
-    <%= f.input :password_confirmation,  :validate => true , required: true  %>
-    </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
