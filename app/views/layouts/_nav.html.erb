@@ -19,26 +19,17 @@
       <ul class="nav navbar-nav">
          <li ><%= link_to "About",  about_path %> <span class="sr-only">(current)</span></li>
         <li><%= link_to "Contact", pages_contact_path %></li>
-
+      </ul>
+   
       <%= render 'layouts/categorydropdown' %>
-
-       </ul>
-
-        <%= render 'layouts/ransack' %>
+      <%= render 'layouts/ransack' %>
      
-        <!-- notifications dropdown -->
-
         <% if current_user %>
 
-   <!-- notification drop down here -->
    <ul class="nav navbar-nav navbar-right">
      <li ><%= link_to "Random",  random_path %> <span class="sr-only">(current)</span></li>
 
-    <!-- <%#= render 'layouts/requests_menu'  %> -->
-
-
      <%= render 'layouts/notificationsdropdown'  %>
-
 
        <% end %>
 
