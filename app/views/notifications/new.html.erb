@@ -1,4 +1,6 @@
- <!-- <#% if user_signed_in? %>   <!--fix this change to admin user -->
+<!-- views/notifications/new.html.erb --> 
+
+<!-- <#% if user_signed_in? %>   <!--fix this change to admin user -->
 
      <% if can? :manage, @notification %>
 
@@ -12,3 +14,5 @@
 <div class="alert alert-warning" role="alert">You must be signed in as administrator to add notifications.</div>
   
 <% end %> 
+
+<!-- end -->
