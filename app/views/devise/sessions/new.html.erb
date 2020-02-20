@@ -1,3 +1,25 @@
+<h2>Log in</h2>
+
+<%= link_to "Log in with Facebook", user_facebook_omniauth_authorize_path %><br>
+
+<div class="or-container">
+<hr class="or-hr">
+<div class="or">or</div>
+</div>
+
+<%= simple_form_for(resource, as: resource_name, :validate => true , url: session_path(resource_name)) do |f| %>
+  <div class="form-inputs">
+    <%= f.input :email, required: false, autofocus: true , :validate => true %>
+    <%= f.input :password, required: false  %>
+    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Log in" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
 
 <style>
 
@@ -26,26 +48,3 @@
     border-top: 1px solid #e4e6e8;
 }
 </style>
-
-<h2>Log in</h2>
-
-<%= link_to "Log in with Facebook", user_facebook_omniauth_authorize_path %></br>
-
-<div class="or-container">
-<hr class="or-hr">
-<div class="or">or</div>
-</div>
-
-<%= simple_form_for(resource, as: resource_name, :validate => true , url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email, required: false, autofocus: true , :validate => true %>
-    <%= f.input :password, required: false  %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
