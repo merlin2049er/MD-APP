@@ -1,4 +1,4 @@
-<!-- views/layouts/_ransack . is this being used? -->
+<!-- views/layouts/_ransack . is this being used? yes -->
 
 <div class="navbar-form navbar-left">
 <%= form_for :product,url: products_url,:html => {:method => :get}  do |f| %>
@@ -7,17 +7,10 @@
 
   <%#= f.label :title_or_template_cont %>
 
-
-
       <%= text_field_tag :query ,'', :placeholder=> "Search" %>
 
-  <!--
-  <div class="actions">
- -->
     <%= f.submit "Submit" %>
- <!--
-    </div>
--->
+
 
   </div>
 
