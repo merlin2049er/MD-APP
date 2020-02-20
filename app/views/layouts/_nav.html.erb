@@ -19,11 +19,12 @@
       <ul class="nav navbar-nav">
          <li ><%= link_to "About",  about_path %> <span class="sr-only">(current)</span></li>
         <li><%= link_to "Contact", pages_contact_path %></li>
-      </ul>
+     
    
       <%= render 'layouts/categorydropdown' %>
       <%= render 'layouts/ransack' %>
-     
+      </ul>
+      
         <% if current_user %>
 
    <ul class="nav navbar-nav navbar-right">
