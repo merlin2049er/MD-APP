@@ -42,12 +42,15 @@ class CheckoutController < ApplicationController
 
   def cancel
 
+    add_breadcrumb 'MASSDUMP', :root_path
+    add_breadcrumb 'Payment status'
+
     render "cancel"
 
   end
 
   def success
-    
+
 
    # not sure if it returns a session id
     if params[:session_id].nil?
