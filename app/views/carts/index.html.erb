@@ -76,9 +76,7 @@
           <td> 
 		  <% if cart.paid? %>
 		  	<%= link_to 'Remove', cart, method: :delete, data: { confirm: 'Are you sure?' } %>   
-		<% else %>
-            <td>   </td>
-
+		<% end %>
         <% end %>
 		
 	</td>
@@ -92,7 +90,7 @@
 	      <%= button_to 'Pay now', checkout_create_path, method: :post, params: {id: cart.product_id}, remote: true, class: "button button1" %>
               <p class="<%= cart.product_id %>"></p>
 	<% else %>
-	  <td>Expired! </td>
+	  <td>Expired!</td>
 
         <% end %>
 	    
