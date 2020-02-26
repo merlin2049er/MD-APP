@@ -78,7 +78,7 @@ class Product < ActiveRecord::Base
     where(draft: false)
     .where(active: true)
     .where(funded: false)
-    .where('startdate >= ?', DateTime.now.to_s )
+    #.where('startdate >= ?', DateTime.now.to_s )
     #.where('enddate <= ?' , DateTime.now.to_s )
     #.where(':date BETWEEN startdate OR enddate', date: DateTime.now.to_s)
   }
