@@ -74,7 +74,7 @@
 
           <% if not product.funded? %>
           <td> 
-		  <% if cart.paid? %>
+		  <% if not cart.paid? %>
 		  	<%= link_to 'Remove', cart, method: :delete, data: { confirm: 'Are you sure?' } %>   
 		<% end %>
 	</td>
@@ -83,7 +83,7 @@
         <% end %>
 		
              <td>
-	<% if cart.paid? %>	     
+	<% if not cart.paid? %>	     
 	      <%= button_to 'Pay now', checkout_create_path, method: :post, params: {id: cart.product_id}, remote: true, class: "button button1" %>
               <p class="<%= cart.product_id %>"></p>
 	<% else %>
