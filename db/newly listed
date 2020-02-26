@@ -9,6 +9,6 @@ SELECT id,
        picurl,
        qty
   FROM products
-  WHERE active='t' and qty > 0 and draft = 'f' and funded ='f'
+  WHERE active='t' and qty > 0 and draft = 'f' and funded ='f' and enddate < Time.now
   ORDER BY created_at ASC
   LIMIT 12;

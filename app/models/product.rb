@@ -78,7 +78,7 @@ class Product < ActiveRecord::Base
     where(draft: false)
     .where(active: true)
     .where(funded: false)
-    .where('enddate > ?', DateTime.now.to_s)
+    .where('startdate < ? OR enddate > ?' , DateTime.now.to_s, DateTime.now.to_s  )
   }
 
   # scope :incart , -> { where(draft: false, active: true ) }
