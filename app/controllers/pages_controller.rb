@@ -66,7 +66,6 @@ class PagesController < ApplicationController
      add_breadcrumb "jobs", :jobs_path
   end
 
-
   def faq
     add_breadcrumb 'MASSDUMP', :root_path
     add_breadcrumb 'faq', :terms_path
@@ -118,14 +117,9 @@ class PagesController < ApplicationController
     add_breadcrumb 'MASSDUMP', :root_path
     add_breadcrumb 'invitations', :invitations_path
     @totalinvites = Invite.count
-
     @totalregistered = 0
-
     @inivitesusers = Invite
     @pagy, @inivitesusers = pagy(@inivitesusers)
   end
-
-
-
 
 end

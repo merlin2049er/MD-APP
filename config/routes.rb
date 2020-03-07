@@ -33,13 +33,13 @@ Rails.application.routes.draw do
   resources :taxes
 
  post 'charge',to:"charge#index", as: :charge
- 
+
  scope '/checkout' do
    post 'create', to: 'checkout#create',   as: 'checkout_create'
     get 'cancel', to: 'checkout#cancel',   as: 'checkout_cancel'
     get 'success', to: 'checkout#success', as: 'checkout_success'
  end
-  
+
   resources :requests do
     member do
       put 'like', to: 'requests#upvote'
@@ -57,12 +57,10 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   get 'random', to: 'pages#random'
 
-
   get 'error', to: 'pages#error'
   get 'terms', to: 'pages#terms'
   get 'cookies', to: 'pages#cookies'
   get 'jobs', to: 'pages#jobs'
-
 
   get 'faq', to: 'pages#faq'
   get 'privacy',   to: 'pages#privacy'
@@ -72,7 +70,6 @@ Rails.application.routes.draw do
 
   # get 'invoicing',   to: 'invoicing#index'
   get 'invitations', to: 'pages#invitations'
-
 
   match '/users', to: 'users#index', via: 'get'
   match '/users/:id', to: 'users#show', via: 'get'
